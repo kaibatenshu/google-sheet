@@ -2,6 +2,7 @@ package main;
 
 import java.io.ByteArrayInputStream;
 import java.io.File;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.security.GeneralSecurityException;
@@ -75,8 +76,8 @@ public class SheetsQuickstart {
      */
     public static void main(String... args) throws IOException, GeneralSecurityException {
     	File folder = new File("./javascript");
-    	if(folder.exists()==false)
-    		folder.mkdir();
+    	BGUtility.deleteFolder(folder);
+   		folder.mkdir();
     	
         // Build a new authorized API client service.
         final NetHttpTransport HTTP_TRANSPORT = GoogleNetHttpTransport.newTrustedTransport();
@@ -91,6 +92,53 @@ public class SheetsQuickstart {
 //                // Print columns A and E, which correspond to indices 0 and 4.
 //                System.out.printf("%s, %s, %s\n", row.get(0), row.get(1), row.get(2));
 //            }
+            int numberRow = values.size();
+            int numberColumn = values.get(0).size();
+            String languageCode = "";
+            String languageName = "";
+            for(int i=1;i<numberColumn;i++) {
+            	languageCode = languageCode + ",'"+values.get(2).get(i)+"'";
+            	languageName = languageName + ",'"+values.get(1).get(i)+"'";
+            }
+            
+            FileWriter variableLanguage = new FileWriter("./javascript/language.js");
+            
+            variableLanguage.write("var languageId = 0;\n");
+            variableLanguage.write("var LanguageCode=["+languageCode.substring(1)+"];\n");
+            variableLanguage.write("var LanguageName=["+languageName.substring(1)+"];\n");
+            
+            variableLanguage.write("\nfunction Language(vl) {\n");
+            variableLanguage.write("	switch (languageId) {\n");
+            for(int j=1;j<numberColumn;j++)
+            	variableLanguage.write("		case "+(j-1)+":return MultiLang"+values.get(2).get(j)+"(vl);\n");
+            variableLanguage.write("		default:break;\n");
+            variableLanguage.write("	}\n");
+            variableLanguage.write("}\n\n");
+            
+            variableLanguage.write("class VL {\n");
+            for(int i=3;i<numberRow;i++)
+            	variableLanguage.write("	static "+values.get(i).get(0)+" = "+i+";\n");
+            variableLanguage.write("}\n\n");
+            
+            
+            for(int j=1;j<numberColumn;j++) {
+            	variableLanguage.write("function MultiLang"+values.get(2).get(j)+"(vl){\n");
+            	variableLanguage.write("	switch (vl) {\n");
+            	for(int i=3;i<numberRow;i++) 
+            		if(BGUtility.isNullOrEmpty((String) values.get(i).get(j))==false)
+            			variableLanguage.write("		case "+i+":\""+((String)values.get(i).get(j)).trim()+"\";\n");
+            	variableLanguage.write("		default:return MultiLang"+values.get(2).get(1)+"(vl);\n");
+            	variableLanguage.write("	}\n");
+            	variableLanguage.write("}\n");
+            }
+            
+            
+            variableLanguage.close();
+            
+            
+            
+            System.out.println("Ghi dữ liệu thành công!");
+            
             BGUtility.trace(values);
         }
         
