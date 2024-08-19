@@ -103,12 +103,12 @@ public class SheetsQuickstart {
             
             FileWriter variableLanguage = new FileWriter("./javascript/language.js");
             
-            variableLanguage.write("var languageId = 0;\n");
+            variableLanguage.write("var languageID = 0;\n");
             variableLanguage.write("var LanguageCode=["+languageCode.substring(1)+"];\n");
             variableLanguage.write("var LanguageName=["+languageName.substring(1)+"];\n");
             
             variableLanguage.write("\nfunction Language(vl) {\n");
-            variableLanguage.write("	switch (languageId) {\n");
+            variableLanguage.write("	switch (languageID) {\n");
             for(int j=1;j<numberColumn;j++)
             	variableLanguage.write("		case "+(j-1)+":return MultiLang"+values.get(2).get(j)+"(vl);\n");
             variableLanguage.write("		default:break;\n");
