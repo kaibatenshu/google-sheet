@@ -121,11 +121,11 @@ public class SheetsQuickstart {
             variableLanguage.write("}\n\n");
             
             
-            variableLanguage.write("function MultiLang"+values.get(2).get(0)+"(vl){\n");
+            variableLanguage.write("function MultiLang"+values.get(2).get(1)+"(vl){\n");
         	variableLanguage.write("	switch (vl) {\n");
         	for(int i=3;i<numberRow;i++) 
         		if(BGUtility.isNullOrEmpty((String) values.get(i).get(0))==false)
-        			variableLanguage.write("		case "+i+":\""+((String)values.get(i).get(0)).trim()+"\";\n");
+        			variableLanguage.write("		case "+i+":\""+((String)values.get(i).get(1)).trim()+"\";\n");
         	variableLanguage.write("		default:return null;\n");
         	variableLanguage.write("	}\n");
         	variableLanguage.write("}\n");
@@ -145,9 +145,9 @@ public class SheetsQuickstart {
             
             
             
-            System.out.println("Ghi dữ liệu thành công!");
+//            System.out.println("Ghi dữ liệu thành công!");
             
-            BGUtility.trace(values);
+//            BGUtility.trace(values);
         }
         
         
