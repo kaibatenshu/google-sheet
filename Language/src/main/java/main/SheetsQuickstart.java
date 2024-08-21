@@ -125,7 +125,7 @@ public class SheetsQuickstart {
         	variableLanguage.write("	switch (vl) {\n");
         	for(int i=3;i<numberRow;i++) 
         		if(BGUtility.isNullOrEmpty((String) values.get(i).get(0))==false)
-        			variableLanguage.write("		case "+i+":\""+((String)values.get(i).get(1)).trim()+"\";\n");
+        			variableLanguage.write("		case "+i+":return\""+((String)values.get(i).get(1)).trim()+"\";\n");
         	variableLanguage.write("		default:return null;\n");
         	variableLanguage.write("	}\n");
         	variableLanguage.write("}\n");
@@ -134,7 +134,7 @@ public class SheetsQuickstart {
             	variableLanguage.write("	switch (vl) {\n");
             	for(int i=3;i<numberRow;i++) 
             		if(j<values.get(i).size() && BGUtility.isNullOrEmpty((String) values.get(i).get(j))==false)
-            			variableLanguage.write("		case "+i+":\""+((String)values.get(i).get(j)).trim()+"\";\n");
+            			variableLanguage.write("		case "+i+":return\""+((String)values.get(i).get(j)).trim()+"\";\n");
             	variableLanguage.write("		default:return MultiLang"+values.get(2).get(1)+"(vl);\n");
             	variableLanguage.write("	}\n");
             	variableLanguage.write("}\n");
