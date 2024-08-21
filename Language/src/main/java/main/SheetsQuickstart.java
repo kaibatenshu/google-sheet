@@ -133,7 +133,7 @@ public class SheetsQuickstart {
             	variableLanguage.write("function MultiLang"+values.get(2).get(j)+"(vl){\n");
             	variableLanguage.write("	switch (vl) {\n");
             	for(int i=3;i<numberRow;i++) 
-            		if(BGUtility.isNullOrEmpty((String) values.get(i).get(j))==false)
+            		if(j<values.get(i).size() && BGUtility.isNullOrEmpty((String) values.get(i).get(j))==false)
             			variableLanguage.write("		case "+i+":\""+((String)values.get(i).get(j)).trim()+"\";\n");
             	variableLanguage.write("		default:return MultiLang"+values.get(2).get(1)+"(vl);\n");
             	variableLanguage.write("	}\n");
