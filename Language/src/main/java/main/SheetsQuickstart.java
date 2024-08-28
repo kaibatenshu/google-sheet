@@ -75,9 +75,13 @@ public class SheetsQuickstart {
      * https://docs.google.com/spreadsheets/d/1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgvE2upms/edit
      */
     public static void main(String... args) throws IOException, GeneralSecurityException {
-    	File folder = new File("./javascript");
-    	BGUtility.deleteFolder(folder);
-   		folder.mkdir();
+//    	File folder = new File("./javascript");
+//    	BGUtility.deleteFolder(folder);
+//   		folder.mkdir();
+    	String pathWritting = "C:\\Devtools\\Github\\MyMKT\\BaseMKT\\basehttp-frontend\\resource_private\\language.js";
+    	new File(pathWritting).delete();
+    	
+    	
     	
         // Build a new authorized API client service.
         final NetHttpTransport HTTP_TRANSPORT = GoogleNetHttpTransport.newTrustedTransport();
@@ -87,7 +91,7 @@ public class SheetsQuickstart {
         if (values == null || values.isEmpty()) {
             System.out.println("No data found.");
         } else {
-            System.out.println("Name, Major");
+//            System.out.println("Name, Major");
 //            for (List row : values) {
 //                // Print columns A and E, which correspond to indices 0 and 4.
 //                System.out.printf("%s, %s, %s\n", row.get(0), row.get(1), row.get(2));
@@ -101,7 +105,7 @@ public class SheetsQuickstart {
             	languageName = languageName + ",'"+values.get(1).get(i)+"'";
             }
             
-            FileWriter variableLanguage = new FileWriter("./javascript/language.js");
+            FileWriter variableLanguage = new FileWriter(pathWritting);
             
             variableLanguage.write("var languageID = 0;\n");
             variableLanguage.write("var LanguageCode=["+languageCode.substring(1)+"];\n");
@@ -142,10 +146,7 @@ public class SheetsQuickstart {
             
             
             variableLanguage.close();
-            
-            
-            
-//            System.out.println("Ghi dữ liệu thành công!");
+            System.out.println("Ghi dữ liệu thành công!");
             
 //            BGUtility.trace(values);
         }
