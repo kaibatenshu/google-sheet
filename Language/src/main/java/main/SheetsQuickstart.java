@@ -27,8 +27,8 @@ import backendgame.com.core.BGUtility;
 
 public class SheetsQuickstart {
     private static final byte[] CREDENTIALS = new byte[] {123, 34, 105, 110, 115, 116, 97, 108, 108, 101, 100, 34, 58, 123, 34, 99, 108, 105, 101, 110, 116, 95, 105, 100, 34, 58, 34, 54, 55, 51, 48, 57, 48, 54, 55, 55, 49, 48, 50, 45, 99, 114, 52, 115, 101, 106, 105, 54, 107, 108, 98, 56, 106, 56, 97, 51, 102, 103, 52, 49, 57, 116, 49, 104, 110, 108, 118, 57, 116, 108, 105, 50, 46, 97, 112, 112, 115, 46, 103, 111, 111, 103, 108, 101, 117, 115, 101, 114, 99, 111, 110, 116, 101, 110, 116, 46, 99, 111, 109, 34, 44, 34, 112, 114, 111, 106, 101, 99, 116, 95, 105, 100, 34, 58, 34, 99, 114, 97, 99, 107, 45, 109, 101, 114, 105, 100, 105, 97, 110, 45, 52, 51, 50, 56, 50, 51, 45, 106, 56, 34, 44, 34, 97, 117, 116, 104, 95, 117, 114, 105, 34, 58, 34, 104, 116, 116, 112, 115, 58, 47, 47, 97, 99, 99, 111, 117, 110, 116, 115, 46, 103, 111, 111, 103, 108, 101, 46, 99, 111, 109, 47, 111, 47, 111, 97, 117, 116, 104, 50, 47, 97, 117, 116, 104, 34, 44, 34, 116, 111, 107, 101, 110, 95, 117, 114, 105, 34, 58, 34, 104, 116, 116, 112, 115, 58, 47, 47, 111, 97, 117, 116, 104, 50, 46, 103, 111, 111, 103, 108, 101, 97, 112, 105, 115, 46, 99, 111, 109, 47, 116, 111, 107, 101, 110, 34, 44, 34, 97, 117, 116, 104, 95, 112, 114, 111, 118, 105, 100, 101, 114, 95, 120, 53, 48, 57, 95, 99, 101, 114, 116, 95, 117, 114, 108, 34, 58, 34, 104, 116, 116, 112, 115, 58, 47, 47, 119, 119, 119, 46, 103, 111, 111, 103, 108, 101, 97, 112, 105, 115, 46, 99, 111, 109, 47, 111, 97, 117, 116, 104, 50, 47, 118, 49, 47, 99, 101, 114, 116, 115, 34, 44, 34, 99, 108, 105, 101, 110, 116, 95, 115, 101, 99, 114, 101, 116, 34, 58, 34, 71, 79, 67, 83, 80, 88, 45, 104, 102, 105, 72, 85, 84, 81, 97, 45, 116, 103, 95, 110, 75, 95, 73, 95, 112, 55, 77, 80, 68, 110, 112, 51, 82, 57, 65, 34, 44, 34, 114, 101, 100, 105, 114, 101, 99, 116, 95, 117, 114, 105, 115, 34, 58, 91, 34, 104, 116, 116, 112, 58, 47, 47, 108, 111, 99, 97, 108, 104, 111, 115, 116, 34, 93, 125, 125};
-    private static final String spreadsheetId = "14h3Ebq30NOLO7ckLcuBpQK_03OAIgO7uNMMJE8V63i0";
-    private static final String range = "Employee!A:Y";
+    private static final String spreadsheetId = "1LXMrUfLQFKlFRMuhIzOIfqJ5N7dWvjIvrzYKwAL-R74";
+    private static final String range = "MyBM!A:Y";
 	
 	
     private static final String APPLICATION_NAME = "Google Sheets API Java Quickstart";
@@ -78,7 +78,7 @@ public class SheetsQuickstart {
 //    	File folder = new File("./javascript");
 //    	BGUtility.deleteFolder(folder);
 //   		folder.mkdir();
-    	String pathWritting = "C:\\Devtools\\Github\\MyMKT\\BaseMKT\\basehttp-frontend\\resource_private\\language.js";
+    	String pathWritting = "C:\\Users\\Richard\\Desktop\\language.js";
     	new File(pathWritting).delete();
     	
     	
@@ -111,7 +111,7 @@ public class SheetsQuickstart {
             variableLanguage.write("var LanguageCode=["+languageCode.substring(1)+"];\n");
             variableLanguage.write("var LanguageName=["+languageName.substring(1)+"];\n");
             
-            variableLanguage.write("\nfunction Language(vl) {\n");
+            variableLanguage.write("\nfunction getText(vl) {\n");
             variableLanguage.write("	switch (languageID) {\n");
             for(int j=1;j<numberColumn;j++)
             	variableLanguage.write("		case "+(j-1)+":return MultiLang"+values.get(2).get(j)+"(vl);\n");
