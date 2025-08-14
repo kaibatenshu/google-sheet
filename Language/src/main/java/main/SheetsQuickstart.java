@@ -78,7 +78,7 @@ public class SheetsQuickstart {
 //    	File folder = new File("./javascript");
 //    	BGUtility.deleteFolder(folder);
 //   		folder.mkdir();
-    	String pathWritting = "C:\\Users\\Richard\\Desktop\\Language.js";
+    	String pathWritting = "target\\Language.js";
     	new File(pathWritting).delete();
     	
     	
