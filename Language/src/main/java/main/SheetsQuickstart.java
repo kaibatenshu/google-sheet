@@ -78,7 +78,7 @@ public class SheetsQuickstart {
 //    	File folder = new File("./javascript");
 //    	BGUtility.deleteFolder(folder);
 //   		folder.mkdir();
-    	String pathWritting = "C:\\Users\\Richard\\Desktop\\language.js";
+    	String pathWritting = "C:\\Users\\Richard\\Desktop\\Language.js";
     	new File(pathWritting).delete();
     	
     	
@@ -108,8 +108,8 @@ public class SheetsQuickstart {
             FileWriter variableLanguage = new FileWriter(pathWritting);
             
             variableLanguage.write("var languageID = 0;\n");
-            variableLanguage.write("var LanguageCode=["+languageCode.substring(1)+"];\n");
-            variableLanguage.write("var LanguageName=["+languageName.substring(1)+"];\n");
+            variableLanguage.write("const LanguageCode=["+languageCode.substring(1)+"];\n");
+            variableLanguage.write("const LanguageName=["+languageName.substring(1)+"];\n");
             
             variableLanguage.write("\nfunction getText(vl) {\n");
             variableLanguage.write("	switch (languageID) {\n");
@@ -144,6 +144,10 @@ public class SheetsQuickstart {
             	variableLanguage.write("}\n");
             }
             
+            variableLanguage.write("export { languageID, LanguageCode, LanguageName, getText");
+            for(int j=2;j<numberColumn;j++)
+            	variableLanguage.write(", MultiLang"+values.get(2).get(j));
+            variableLanguage.write("};\n");
             
             variableLanguage.close();
             System.out.println("Ghi dữ liệu thành công!");
