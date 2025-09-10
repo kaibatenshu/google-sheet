@@ -107,14 +107,32 @@ public class SheetsQuickstart {
             
             FileWriter variableLanguage = new FileWriter(pathWritting);
             
-            variableLanguage.write("var languageID = 0;\n");
             variableLanguage.write("const LanguageCode=["+languageCode.substring(1)+"];\n");
             variableLanguage.write("const LanguageName=["+languageName.substring(1)+"];\n");
+            variableLanguage.write("let Language = [];\n");
             
-            variableLanguage.write("\nfunction getText(vl) {\n");
+            variableLanguage.write("\nfunction setLanguage(languageID) {\n");
+            variableLanguage.write("	");
+//            for(int j=2;j<numberColumn;j++) {
+////            	variableLanguage.write("function MultiLang"+values.get(2).get(j)+"(vl){\n");
+////            	variableLanguage.write("	switch (vl) {\n");
+//            	for(int i=3;i<numberRow;i++) 
+//            		if(j<values.get(i).size() && BGUtility.isNullOrEmpty((String) values.get(i).get(j))==false)
+//            			variableLanguage.write("Language["+i+"]=\""+((String)values.get(i).get(j)).trim()+"\";\n");
+//            }
+            for(int i=3;i<numberRow;i++) 
+        		if(BGUtility.isNullOrEmpty((String) values.get(i).get(2))==false)
+        			variableLanguage.write("Language["+i+"]=\""+((String)values.get(i).get(2)).trim()+"\";");
+            variableLanguage.write("\n");
+            
             variableLanguage.write("	switch (languageID) {\n");
-            for(int j=1;j<numberColumn;j++)
-            	variableLanguage.write("		case "+(j-1)+":return MultiLang"+values.get(2).get(j)+"(vl);\n");
+            for(int j=3;j<numberColumn;j++) {
+            	variableLanguage.write("		case "+(j-2)+":");
+            	for(int i=3;i<numberRow;i++) 
+            		if(j<values.get(i).size() && BGUtility.isNullOrEmpty((String) values.get(i).get(j))==false)
+            			variableLanguage.write("Language["+i+"]=\""+((String)values.get(i).get(j)).trim()+"\";");
+            	variableLanguage.write("\n		break;\n");
+            }
             variableLanguage.write("		default:break;\n");
             variableLanguage.write("	}\n");
             variableLanguage.write("}\n\n");
@@ -125,29 +143,26 @@ public class SheetsQuickstart {
             variableLanguage.write("}\n\n");
             
             
-            variableLanguage.write("function MultiLang"+values.get(2).get(1)+"(vl){\n");
-        	variableLanguage.write("	switch (vl) {\n");
-        	for(int i=3;i<numberRow;i++) 
-        		if(BGUtility.isNullOrEmpty((String) values.get(i).get(0))==false)
-        			variableLanguage.write("		case "+i+":return\""+((String)values.get(i).get(1)).trim()+"\";\n");
-        	variableLanguage.write("		default:return null;\n");
-        	variableLanguage.write("	}\n");
-        	variableLanguage.write("}\n");
-            for(int j=2;j<numberColumn;j++) {
-            	variableLanguage.write("function MultiLang"+values.get(2).get(j)+"(vl){\n");
-            	variableLanguage.write("	switch (vl) {\n");
-            	for(int i=3;i<numberRow;i++) 
-            		if(j<values.get(i).size() && BGUtility.isNullOrEmpty((String) values.get(i).get(j))==false)
-            			variableLanguage.write("		case "+i+":return\""+((String)values.get(i).get(j)).trim()+"\";\n");
-            	variableLanguage.write("		default:return MultiLang"+values.get(2).get(1)+"(vl);\n");
-            	variableLanguage.write("	}\n");
-            	variableLanguage.write("}\n");
-            }
+//            variableLanguage.write("function MultiLang"+values.get(2).get(1)+"(vl){\n");
+//        	variableLanguage.write("	switch (vl) {\n");
+//        	for(int i=3;i<numberRow;i++) 
+//        		if(BGUtility.isNullOrEmpty((String) values.get(i).get(0))==false)
+//        			variableLanguage.write("		case "+i+":return\""+((String)values.get(i).get(1)).trim()+"\";\n");
+//        	variableLanguage.write("		default:return null;\n");
+//        	variableLanguage.write("	}\n");
+//        	variableLanguage.write("}\n");
+//            for(int j=2;j<numberColumn;j++) {
+//            	variableLanguage.write("function MultiLang"+values.get(2).get(j)+"(vl){\n");
+//            	variableLanguage.write("	switch (vl) {\n");
+//            	for(int i=3;i<numberRow;i++) 
+//            		if(j<values.get(i).size() && BGUtility.isNullOrEmpty((String) values.get(i).get(j))==false)
+//            			variableLanguage.write("		case "+i+":return\""+((String)values.get(i).get(j)).trim()+"\";\n");
+//            	variableLanguage.write("		default:return MultiLang"+values.get(2).get(1)+"(vl);\n");
+//            	variableLanguage.write("	}\n");
+//            	variableLanguage.write("}\n");
+//            }
             
-            variableLanguage.write("export { languageID, LanguageCode, LanguageName, getText");
-            for(int j=2;j<numberColumn;j++)
-            	variableLanguage.write(", MultiLang"+values.get(2).get(j));
-            variableLanguage.write("};\n");
+            variableLanguage.write("export {LanguageName,setLanguage, Language, VL};");
             
             variableLanguage.close();
             System.out.println("Ghi dữ liệu thành công!");
