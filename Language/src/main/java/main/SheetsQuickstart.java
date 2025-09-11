@@ -114,7 +114,7 @@ public class SheetsQuickstart {
             variableLanguage.write("const LanguageName=["+languageName.substring(1)+"];\n");
             variableLanguage.write("let Language = [];\n");
             
-            variableLanguage.write("\nfunction setLanguage(languageID) {\n");
+            variableLanguage.write("\nfunction setLanguage(languageID:Number) {\n");
             variableLanguage.write("	");
             for(int i=3;i<numberRow;i++) 
         		if(BGUtility.isNullOrEmpty((String) values.get(i).get(2))==false)
