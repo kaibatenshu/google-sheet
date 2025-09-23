@@ -75,69 +75,67 @@ public class SheetsQuickstart {
      * https://docs.google.com/spreadsheets/d/1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgvE2upms/edit
      */
     public static void main(String... args) {
+    	System.out.println(new String(CREDENTIALS));
     	try {
-			writeTypeScript("Portal");
-			writeTypeScript("ChatAdmin");
-		} catch (IOException | GeneralSecurityException e) {
-			e.printStackTrace();
-		}
-    }
-    
-    public static void writeTypeScript(String range) throws IOException, GeneralSecurityException {
-    	String pathWritting = "target\\Language"+range+".tsx";
-    	new File(pathWritting).delete();
-        // Build a new authorized API client service.
-        final NetHttpTransport HTTP_TRANSPORT = GoogleNetHttpTransport.newTrustedTransport();
-        Sheets service = new Sheets.Builder(HTTP_TRANSPORT, JSON_FACTORY, getCredentials(HTTP_TRANSPORT)).setApplicationName(APPLICATION_NAME).build();
-        ValueRange response = service.spreadsheets().values().get(spreadsheetId, range+"!A:Y").execute();
-        List<List<Object>> values = response.getValues();
-        if (values == null || values.isEmpty()) {
-            System.out.println("No data found.");
-        } else {
+    		String pathWritting = "target\\Language.tsx";
+    		new File(pathWritting).delete();
+    		// Build a new authorized API client service.
+    		final NetHttpTransport HTTP_TRANSPORT = GoogleNetHttpTransport.newTrustedTransport();
+    		Sheets service = new Sheets.Builder(HTTP_TRANSPORT, JSON_FACTORY, getCredentials(HTTP_TRANSPORT)).setApplicationName(APPLICATION_NAME).build();
+    		ValueRange response = service.spreadsheets().values().get(spreadsheetId, "Language!A:Y").execute();
+    		List<List<Object>> values = response.getValues();
+    		if (values == null || values.isEmpty()) {
+    			System.out.println("No data found.");
+    		} else {
 //            System.out.println("Name, Major");
 //            for (List row : values) {
 //                // Print columns A and E, which correspond to indices 0 and 4.
 //                System.out.printf("%s, %s, %s\n", row.get(0), row.get(1), row.get(2));
 //            }
-            int numberRow = values.size();
-            int numberColumn = values.get(0).size();
-            String languageCode = "";
-            String languageName = "";
-            for(int i=1;i<numberColumn;i++) {
-            	languageCode = languageCode + ",'"+values.get(2).get(i)+"'";
-            	languageName = languageName + ",'"+values.get(1).get(i)+"'";
-            }
-            
-            FileWriter variableLanguage = new FileWriter(pathWritting);
-            
-            variableLanguage.write("export const LanguageCode:string[] = ["+languageCode.substring(1)+"];\n");
-            variableLanguage.write("export const LanguageName:string[] = ["+languageName.substring(1)+"];\n");
-            variableLanguage.write("export let Language:string[] = [];\n");
-            variableLanguage.write("\nexport function setLanguage(languageID:Number) {\n");
-            variableLanguage.write("	");
-            for(int i=3;i<numberRow;i++) 
-        		if(BGUtility.isNullOrEmpty((String) values.get(i).get(2))==false)
-        			variableLanguage.write("Language["+i+"]=\""+((String)values.get(i).get(2)).trim()+"\";");
-            variableLanguage.write("\n");
-            
-            variableLanguage.write("	switch (languageID) {\n");
-            for(int j=3;j<numberColumn;j++) {
-            	variableLanguage.write("		case "+(j-2)+":");
-            	for(int i=3;i<numberRow;i++) 
-            		if(j<values.get(i).size() && BGUtility.isNullOrEmpty((String) values.get(i).get(j))==false)
-            			variableLanguage.write("Language["+i+"]=\""+((String)values.get(i).get(j)).trim()+"\";");
-            	variableLanguage.write("\n		break;\n");
-            }
-            variableLanguage.write("		default:break;\n");
-            variableLanguage.write("	}\n");
-            variableLanguage.write("}\n\n");
-            
-            variableLanguage.write("export class VL {\n");
-            for(int i=3;i<numberRow;i++)
-            	variableLanguage.write("	static "+values.get(i).get(0)+" = "+i+";\n");
-            variableLanguage.write("}\n");
-            variableLanguage.close();
-            System.out.println("Ghi dữ liệu thành công!");
-        }
-	}
+    			int numberRow = values.size();
+    			int numberColumn = values.get(0).size();
+    			String languageCode = "";
+    			String languageName = "";
+    			for(int i=1;i<numberColumn;i++) {
+    				languageCode = languageCode + ",'"+values.get(2).get(i)+"'";
+    				languageName = languageName + ",'"+values.get(1).get(i)+"'";
+    			}
+    			
+    			FileWriter variableLanguage = new FileWriter(pathWritting);
+    			
+    			variableLanguage.write("export const LanguageCode:string[] = ["+languageCode.substring(1)+"];\n");
+    			variableLanguage.write("export const LanguageName:string[] = ["+languageName.substring(1)+"];\n");
+    			variableLanguage.write("export let Language:string[] = [];\n");
+    			variableLanguage.write("\nexport function setLanguage(languageID:number) {\n");
+    			variableLanguage.write("	");
+    			for(int i=3;i<numberRow;i++) 
+    				if(BGUtility.isNullOrEmpty((String) values.get(i).get(2))==false)
+    					variableLanguage.write("Language["+i+"]=\""+((String)values.get(i).get(2)).trim()+"\";");
+    			variableLanguage.write("\n");
+    			
+    			variableLanguage.write("	switch (languageID) {\n");
+    			for(int j=3;j<numberColumn;j++) {
+    				variableLanguage.write("		case "+(j-2)+":");
+    				for(int i=3;i<numberRow;i++) 
+    					if(j<values.get(i).size() && BGUtility.isNullOrEmpty((String) values.get(i).get(j))==false)
+    						variableLanguage.write("Language["+i+"]=\""+((String)values.get(i).get(j)).trim()+"\";");
+    				variableLanguage.write("\n		break;\n");
+    			}
+    			variableLanguage.write("		default:break;\n");
+    			variableLanguage.write("	}\n");
+    			variableLanguage.write("}\n\n");
+    			
+    			variableLanguage.write("export class VL {\n");
+    			for(int i=3;i<numberRow;i++)
+    				variableLanguage.write("	static "+values.get(i).get(0)+" = "+i+";\n");
+    			variableLanguage.write("}\n");
+    			variableLanguage.close();
+    			System.out.println("Ghi dữ liệu thành công!");
+    		}
+    	}catch (Exception e) {
+    		e.printStackTrace();
+		}
+    	
+    	
+    }
 }
