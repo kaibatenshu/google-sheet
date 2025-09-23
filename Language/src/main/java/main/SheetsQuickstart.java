@@ -105,16 +105,18 @@ public class SheetsQuickstart {
     			
     			variableLanguage.write("export const LanguageCode:string[] = ["+languageCode.substring(1)+"];\n");
     			variableLanguage.write("export const LanguageName:string[] = ["+languageName.substring(1)+"];\n");
-    			variableLanguage.write("export let Language:string[] = [];\n");
+    			variableLanguage.write("export const Language:string[] = [];\n");
     			variableLanguage.write("\nexport function setLanguage(languageID:number) {\n");
     			variableLanguage.write("	");
     			for(int i=3;i<numberRow;i++) 
-    				if(BGUtility.isNullOrEmpty((String) values.get(i).get(2))==false)
-    					variableLanguage.write("Language["+i+"]=\""+((String)values.get(i).get(2)).trim()+"\";");
+    				if(BGUtility.isNullOrEmpty((String) values.get(i).get(1))==false) {
+    					variableLanguage.write("Language["+i+"]=\""+((String)values.get(i).get(1)).trim()+"\";");
+//    					System.out.println((String)values.get(i).get(1));
+    				}
     			variableLanguage.write("\n");
     			
     			variableLanguage.write("	switch (languageID) {\n");
-    			for(int j=3;j<numberColumn;j++) {
+    			for(int j=2;j<numberColumn;j++) {
     				variableLanguage.write("		case "+(j-2)+":");
     				for(int i=3;i<numberRow;i++) 
     					if(j<values.get(i).size() && BGUtility.isNullOrEmpty((String) values.get(i).get(j))==false)
