@@ -2,10 +2,12 @@ package main;
 
 import java.io.ByteArrayInputStream;
 import java.io.File;
-import java.io.FileWriter;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.security.GeneralSecurityException;
+import java.io.OutputStreamWriter;
+import java.io.Writer;
+import java.nio.charset.StandardCharsets;
 import java.util.Collections;
 import java.util.List;
 
@@ -75,9 +77,9 @@ public class SheetsQuickstart {
      * https://docs.google.com/spreadsheets/d/1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgvE2upms/edit
      */
     public static void main(String... args) {
-    	System.out.println(new String(CREDENTIALS));
+//    	System.out.println(new String(CREDENTIALS));
     	try {
-    		String pathWritting = "target\\Language.tsx";
+    		String pathWritting = "./Language.tsx";
     		new File(pathWritting).delete();
     		// Build a new authorized API client service.
     		final NetHttpTransport HTTP_TRANSPORT = GoogleNetHttpTransport.newTrustedTransport();
@@ -101,7 +103,9 @@ public class SheetsQuickstart {
     				languageName = languageName + ",'"+values.get(1).get(i)+"'";
     			}
     			
-    			FileWriter variableLanguage = new FileWriter(pathWritting);
+    			FileOutputStream fileOutputStream = new FileOutputStream(pathWritting);
+    			Writer variableLanguage = new OutputStreamWriter(fileOutputStream, StandardCharsets.UTF_8);
+//    			FileWriter variableLanguage = new FileWriter(pathWritting);
     			
     			variableLanguage.write("export const LanguageCode:string[] = ["+languageCode.substring(1)+"];\n");
     			variableLanguage.write("export const LanguageName:string[] = ["+languageName.substring(1)+"];\n");
@@ -117,7 +121,7 @@ public class SheetsQuickstart {
     			
     			variableLanguage.write("	switch (languageID) {\n");
     			for(int j=2;j<numberColumn;j++) {
-    				variableLanguage.write("		case "+(j-2)+":");
+    				variableLanguage.write("		case "+(j-1)+":");
     				for(int i=3;i<numberRow;i++) 
     					if(j<values.get(i).size() && BGUtility.isNullOrEmpty((String) values.get(i).get(j))==false)
     						variableLanguage.write("Language["+i+"]=\""+((String)values.get(i).get(j)).trim()+"\";");
