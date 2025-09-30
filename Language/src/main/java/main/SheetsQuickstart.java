@@ -79,12 +79,15 @@ public class SheetsQuickstart {
     public static void main(String... args) {
 //    	System.out.println(new String(CREDENTIALS));
     	try {
-    		String pathWritting = "./Language.tsx";
+//    		String pathWritting = "./src/localDB/Language.tsx";
+    		String pathWritting = "./packages/ui/util/Language.tsx";
     		new File(pathWritting).delete();
     		// Build a new authorized API client service.
     		final NetHttpTransport HTTP_TRANSPORT = GoogleNetHttpTransport.newTrustedTransport();
     		Sheets service = new Sheets.Builder(HTTP_TRANSPORT, JSON_FACTORY, getCredentials(HTTP_TRANSPORT)).setApplicationName(APPLICATION_NAME).build();
-    		ValueRange response = service.spreadsheets().values().get(spreadsheetId, "Language!A:Y").execute();
+//    		ValueRange response = service.spreadsheets().values().get(spreadsheetId, "Language!A:Y").execute();
+    		ValueRange response = service.spreadsheets().values().get(spreadsheetId, "Private-Chat!A:Y").execute();
+//    		ValueRange response = service.spreadsheets().values().get(spreadsheetId, "Public-Corporate!A:Y").execute();
     		List<List<Object>> values = response.getValues();
     		if (values == null || values.isEmpty()) {
     			System.out.println("No data found.");
@@ -110,8 +113,9 @@ public class SheetsQuickstart {
     			variableLanguage.write("export const LanguageCode:string[] = ["+languageCode.substring(1)+"];\n");
     			variableLanguage.write("export const LanguageName:string[] = ["+languageName.substring(1)+"];\n");
     			variableLanguage.write("export const Language:string[] = [];\n");
+    			variableLanguage.write("\nexport function InitLanguage() {\n    const langID = localStorage.getItem('languageId');\n    if (!langID || langID == null)\n        setLanguage(0);\n    else\n        setLanguage(parseInt(langID));\n}\n");
     			variableLanguage.write("\nexport function setLanguage(languageID:number) {\n");
-    			variableLanguage.write("	");
+    			variableLanguage.write("	localStorage.setItem('languageId', languageID.toString());\n	");
     			for(int i=3;i<numberRow;i++) 
     				if(BGUtility.isNullOrEmpty((String) values.get(i).get(1))==false) {
     					variableLanguage.write("Language["+i+"]=\""+((String)values.get(i).get(1)).trim()+"\";");
@@ -125,9 +129,9 @@ public class SheetsQuickstart {
     				for(int i=3;i<numberRow;i++) 
     					if(j<values.get(i).size() && BGUtility.isNullOrEmpty((String) values.get(i).get(j))==false)
     						variableLanguage.write("Language["+i+"]=\""+((String)values.get(i).get(j)).trim()+"\";");
-    				variableLanguage.write("\n		break;\n");
+    				variableLanguage.write("\n			break;\n");
     			}
-    			variableLanguage.write("		default:break;\n");
+    			variableLanguage.write("		default:localStorage.setItem('languageId', '0');break;\n");
     			variableLanguage.write("	}\n");
     			variableLanguage.write("}\n\n");
     			
