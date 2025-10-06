@@ -1,0 +1,205 @@
+package main;
+
+import java.io.ByteArrayInputStream;
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
+import java.io.Writer;
+import java.nio.charset.StandardCharsets;
+import java.util.Collections;
+import java.util.List;
+
+import com.google.api.client.auth.oauth2.Credential;
+import com.google.api.client.extensions.java6.auth.oauth2.AuthorizationCodeInstalledApp;
+import com.google.api.client.extensions.jetty.auth.oauth2.LocalServerReceiver;
+import com.google.api.client.googleapis.auth.oauth2.GoogleAuthorizationCodeFlow;
+import com.google.api.client.googleapis.auth.oauth2.GoogleClientSecrets;
+import com.google.api.client.googleapis.javanet.GoogleNetHttpTransport;
+import com.google.api.client.http.javanet.NetHttpTransport;
+import com.google.api.client.json.JsonFactory;
+import com.google.api.client.json.jackson2.JacksonFactory;
+import com.google.api.client.util.store.FileDataStoreFactory;
+import com.google.api.services.sheets.v4.Sheets;
+import com.google.api.services.sheets.v4.SheetsScopes;
+import com.google.api.services.sheets.v4.model.ValueRange;
+
+import backendgame.com.core.BGUtility;
+
+public class CorporateLanguage {
+    private static final byte[] CREDENTIALS = new byte[] {123, 34, 105, 110, 115, 116, 97, 108, 108, 101, 100, 34, 58, 123, 34, 99, 108, 105, 101, 110, 116, 95, 105, 100, 34, 58, 34, 54, 55, 51, 48, 57, 48, 54, 55, 55, 49, 48, 50, 45, 99, 114, 52, 115, 101, 106, 105, 54, 107, 108, 98, 56, 106, 56, 97, 51, 102, 103, 52, 49, 57, 116, 49, 104, 110, 108, 118, 57, 116, 108, 105, 50, 46, 97, 112, 112, 115, 46, 103, 111, 111, 103, 108, 101, 117, 115, 101, 114, 99, 111, 110, 116, 101, 110, 116, 46, 99, 111, 109, 34, 44, 34, 112, 114, 111, 106, 101, 99, 116, 95, 105, 100, 34, 58, 34, 99, 114, 97, 99, 107, 45, 109, 101, 114, 105, 100, 105, 97, 110, 45, 52, 51, 50, 56, 50, 51, 45, 106, 56, 34, 44, 34, 97, 117, 116, 104, 95, 117, 114, 105, 34, 58, 34, 104, 116, 116, 112, 115, 58, 47, 47, 97, 99, 99, 111, 117, 110, 116, 115, 46, 103, 111, 111, 103, 108, 101, 46, 99, 111, 109, 47, 111, 47, 111, 97, 117, 116, 104, 50, 47, 97, 117, 116, 104, 34, 44, 34, 116, 111, 107, 101, 110, 95, 117, 114, 105, 34, 58, 34, 104, 116, 116, 112, 115, 58, 47, 47, 111, 97, 117, 116, 104, 50, 46, 103, 111, 111, 103, 108, 101, 97, 112, 105, 115, 46, 99, 111, 109, 47, 116, 111, 107, 101, 110, 34, 44, 34, 97, 117, 116, 104, 95, 112, 114, 111, 118, 105, 100, 101, 114, 95, 120, 53, 48, 57, 95, 99, 101, 114, 116, 95, 117, 114, 108, 34, 58, 34, 104, 116, 116, 112, 115, 58, 47, 47, 119, 119, 119, 46, 103, 111, 111, 103, 108, 101, 97, 112, 105, 115, 46, 99, 111, 109, 47, 111, 97, 117, 116, 104, 50, 47, 118, 49, 47, 99, 101, 114, 116, 115, 34, 44, 34, 99, 108, 105, 101, 110, 116, 95, 115, 101, 99, 114, 101, 116, 34, 58, 34, 71, 79, 67, 83, 80, 88, 45, 104, 102, 105, 72, 85, 84, 81, 97, 45, 116, 103, 95, 110, 75, 95, 73, 95, 112, 55, 77, 80, 68, 110, 112, 51, 82, 57, 65, 34, 44, 34, 114, 101, 100, 105, 114, 101, 99, 116, 95, 117, 114, 105, 115, 34, 58, 91, 34, 104, 116, 116, 112, 58, 47, 47, 108, 111, 99, 97, 108, 104, 111, 115, 116, 34, 93, 125, 125};
+    private static final String spreadsheetId = "17GrQPp6HjPoDoAmSuUbhasS7oSli54sxegbEYq9KNBM";
+	
+    private static final String APPLICATION_NAME = "Google Sheets API Java Quickstart";
+    private static final JsonFactory JSON_FACTORY = JacksonFactory.getDefaultInstance();
+   // Đây là đường dẫn thư mục sẽ lưu tạo file xác thực khi bạn đăng nhập lần đầu tiên
+    private static final String TOKENS_DIRECTORY_PATH = "./";
+
+    /**
+     * Đây là thuộc tính chỉ phạm vi quyền thực hiện với trang tính, hiện đang để là chỉ đọc
+     * Nếu sửa đổi quyền thì bạn cần xóa thư mục  tokens/ để đăng nhập lại
+     */
+    private static final List<String> SCOPES = Collections.singletonList(SheetsScopes.SPREADSHEETS_READONLY);
+//    private static final String CREDENTIALS_FILE_PATH = ".\\credentials.json";
+    /**
+     * Đây là function để lấy quyền xác thực 
+     *Creates an authorized Credential object.
+     * @param HTTP_TRANSPORT The network HTTP Transport.
+     * @return An authorized Credential object.
+     * @throws IOException If the credentials.json file cannot be found.
+     */
+    private static Credential getCredentials(final NetHttpTransport HTTP_TRANSPORT) throws IOException {
+//        // Load client secrets.
+//        InputStream in = SheetsQuickstart.class.getResourceAsStream(CREDENTIALS_FILE_PATH);
+//        if (in == null) {
+//            throw new FileNotFoundException("Resource not found: " + CREDENTIALS_FILE_PATH);
+//        }
+//        GoogleClientSecrets clientSecrets = GoogleClientSecrets.load(JSON_FACTORY, new InputStreamReader(in));
+    	ByteArrayInputStream bis = new ByteArrayInputStream(CREDENTIALS);
+        GoogleClientSecrets clientSecrets = GoogleClientSecrets.load(JSON_FACTORY, new InputStreamReader(bis));
+
+        // Build flow and trigger user authorization request.
+        GoogleAuthorizationCodeFlow flow = new GoogleAuthorizationCodeFlow.Builder(
+                HTTP_TRANSPORT, JSON_FACTORY, clientSecrets, SCOPES)
+                .setDataStoreFactory(new FileDataStoreFactory(new java.io.File(TOKENS_DIRECTORY_PATH)))
+                .setAccessType("offline")
+                .build();
+        LocalServerReceiver receiver = new LocalServerReceiver.Builder().setPort(8888).build();
+        return new AuthorizationCodeInstalledApp(flow, receiver).authorize("user");
+    }
+
+    /**
+      *Tương tác thử với một bảng tính để đọc dữ liệu bên trong
+     * Prints the names and majors of students in a sample spreadsheet:
+     * https://docs.google.com/spreadsheets/d/1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgvE2upms/edit
+     */
+    public static void main(String... args) {
+    	writeLanguage("AboutUs!A:Y", "./apps/AboutUs/src/Language.tsx");
+    	writeLanguage("Careers!A:Y", "./apps/Careers/src/Language.tsx");
+    	writeLanguage("Contact!A:Y", "./apps/Contact/src/Language.tsx");
+    	writeLanguage("Home!A:Y", "./apps/Home/src/Language.tsx");
+    	writeLanguage("InvestorRelations!A:Y", "./apps/InvestorRelations/src/Language.tsx");
+    	writeLanguage("NewsPress!A:Y", "./apps/NewsPress/src/Language.tsx");
+    	writeLanguage("ProductsServices!A:Y", "./apps/ProductsServices/src/Language.tsx");
+    	
+    	try {
+    		String pathWritting = "./packages/ui/LanguageGlobal.tsx";
+    		new File(pathWritting).delete();
+    		// Build a new authorized API client service.
+    		final NetHttpTransport HTTP_TRANSPORT = GoogleNetHttpTransport.newTrustedTransport();
+    		Sheets service = new Sheets.Builder(HTTP_TRANSPORT, JSON_FACTORY, getCredentials(HTTP_TRANSPORT)).setApplicationName(APPLICATION_NAME).build();
+    		ValueRange response = service.spreadsheets().values().get(spreadsheetId, "Global!A:Y").execute();
+    		List<List<Object>> values = response.getValues();
+    		if (values == null || values.isEmpty()) {
+    			System.out.println("No data found.");
+    		} else {
+    			int numberRow = values.size();
+    			int numberColumn = values.get(0).size();
+    			String languageCode = "";
+    			String languageName = "";
+    			for(int i=1;i<numberColumn;i++) {
+    				languageCode = languageCode + ",'"+values.get(2).get(i)+"'";
+    				languageName = languageName + ",'"+values.get(1).get(i)+"'";
+    			}
+    			
+    			FileOutputStream fileOutputStream = new FileOutputStream(pathWritting);
+    			Writer variableLanguage = new OutputStreamWriter(fileOutputStream, StandardCharsets.UTF_8);
+    			variableLanguage.write("export const LanguageGlobal:string[] = [];\n");
+
+    			variableLanguage.write("\nexport function setLanguageGlobal(languageID:number) {\n");
+    			variableLanguage.write("	");
+    			for(int i=3;i<numberRow;i++) 
+    				if(BGUtility.isNullOrEmpty((String) values.get(i).get(1))==false) {
+    					variableLanguage.write("LanguageGlobal["+i+"]=\""+((String)values.get(i).get(1)).trim()+"\";");
+//    					System.out.println((String)values.get(i).get(1));
+    				}
+    			variableLanguage.write("\n");
+    			
+    			variableLanguage.write("	switch (languageID) {\n");
+    			for(int j=2;j<numberColumn;j++) {
+    				variableLanguage.write("		case "+(j-1)+":");
+    				for(int i=3;i<numberRow;i++) 
+    					if(j<values.get(i).size() && BGUtility.isNullOrEmpty((String) values.get(i).get(j))==false)
+    						variableLanguage.write("LanguageGlobal["+i+"]=\""+((String)values.get(i).get(j)).trim()+"\";");
+    				variableLanguage.write("\n			break;\n");
+    			}
+    			variableLanguage.write("		default:localStorage.setItem('languageId', '0');break;\n");
+    			variableLanguage.write("	}\n");
+    			variableLanguage.write("}\n\n");
+    			
+    			variableLanguage.write("export class VLGlobal {\n");
+    			for(int i=3;i<numberRow;i++)
+    				variableLanguage.write("	static "+values.get(i).get(0)+" = "+i+";\n");
+    			variableLanguage.write("}\n");
+    			variableLanguage.close();
+    			System.out.println("Finish → Language Global!" );
+    		}
+    	}catch (Exception e) {
+    		e.printStackTrace();
+		}
+    }
+    
+    public static void writeLanguage(String sheetName, String pathWritting) {
+    	try {
+    		new File(pathWritting).delete();
+    		// Build a new authorized API client service.
+    		final NetHttpTransport HTTP_TRANSPORT = GoogleNetHttpTransport.newTrustedTransport();
+    		Sheets service = new Sheets.Builder(HTTP_TRANSPORT, JSON_FACTORY, getCredentials(HTTP_TRANSPORT)).setApplicationName(APPLICATION_NAME).build();
+    		ValueRange response = service.spreadsheets().values().get(spreadsheetId, sheetName).execute();
+    		List<List<Object>> values = response.getValues();
+    		if (values == null || values.isEmpty()) {
+    			System.out.println("No data found.");
+    		} else {
+    			int numberRow = values.size();
+    			int numberColumn = values.get(0).size();
+    			String languageCode = "";
+    			String languageName = "";
+    			for(int i=1;i<numberColumn;i++) {
+    				languageCode = languageCode + ",'"+values.get(2).get(i)+"'";
+    				languageName = languageName + ",'"+values.get(1).get(i)+"'";
+    			}
+    			
+    			FileOutputStream fileOutputStream = new FileOutputStream(pathWritting);
+    			Writer variableLanguage = new OutputStreamWriter(fileOutputStream, StandardCharsets.UTF_8);
+//    			FileWriter variableLanguage = new FileWriter(pathWritting);
+    			
+    			variableLanguage.write("import { setLanguageGlobal } from \"@repo/ui/LanguageGlobal\";\n\n");
+    			variableLanguage.write("export const LanguageCode:string[] = ["+languageCode.substring(1)+"];\n");
+    			variableLanguage.write("export const LanguageName:string[] = ["+languageName.substring(1)+"];\n");
+    			variableLanguage.write("export const Language:string[] = [];\n");
+    			variableLanguage.write("\nexport function InitLanguage() {\n	const langID = localStorage.getItem(\"languageId\");\n	if (!langID || langID == null) {\n		setLanguage(0);\n		setLanguageGlobal(0);\n	} else {\n		setLanguage(parseInt(langID));\n		setLanguageGlobal(parseInt(langID));\n	}\n}\n");
+    			variableLanguage.write("\nexport function setLanguage(languageID:number) {\n");
+    			variableLanguage.write("	setLanguageGlobal(languageID);\n");
+    			variableLanguage.write("	localStorage.setItem('languageId', languageID.toString());\n	");
+    			for(int i=3;i<numberRow;i++) 
+    				if(BGUtility.isNullOrEmpty((String) values.get(i).get(1))==false) {
+    					variableLanguage.write("Language["+i+"]=\""+((String)values.get(i).get(1)).trim()+"\";");
+//    					System.out.println((String)values.get(i).get(1));
+    				}
+    			variableLanguage.write("\n");
+    			
+    			variableLanguage.write("	switch (languageID) {\n");
+    			for(int j=2;j<numberColumn;j++) {
+    				variableLanguage.write("		case "+(j-1)+":");
+    				for(int i=3;i<numberRow;i++) 
+    					if(j<values.get(i).size() && BGUtility.isNullOrEmpty((String) values.get(i).get(j))==false)
+    						variableLanguage.write("Language["+i+"]=\""+((String)values.get(i).get(j)).trim()+"\";");
+    				variableLanguage.write("\n			break;\n");
+    			}
+    			variableLanguage.write("		default:localStorage.setItem('languageId', '0');break;\n");
+    			variableLanguage.write("	}\n");
+    			variableLanguage.write("}\n\n");
+    			
+    			variableLanguage.write("export class VL {\n");
+    			for(int i=3;i<numberRow;i++)
+    				variableLanguage.write("	static "+values.get(i).get(0)+" = "+i+";\n");
+    			variableLanguage.write("}\n");
+    			variableLanguage.close();
+    			System.out.println("Write language file "+pathWritting+" successful!" );
+    		}
+    	}catch (Exception e) {
+    		e.printStackTrace();
+		}
+	}
+}
