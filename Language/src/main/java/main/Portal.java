@@ -27,11 +27,9 @@ import com.google.api.services.sheets.v4.model.ValueRange;
 
 import backendgame.com.core.BGUtility;
 
-public class SheetsQuickstart {
+public class Portal {
     private static final byte[] CREDENTIALS = new byte[] {123, 34, 105, 110, 115, 116, 97, 108, 108, 101, 100, 34, 58, 123, 34, 99, 108, 105, 101, 110, 116, 95, 105, 100, 34, 58, 34, 54, 55, 51, 48, 57, 48, 54, 55, 55, 49, 48, 50, 45, 99, 114, 52, 115, 101, 106, 105, 54, 107, 108, 98, 56, 106, 56, 97, 51, 102, 103, 52, 49, 57, 116, 49, 104, 110, 108, 118, 57, 116, 108, 105, 50, 46, 97, 112, 112, 115, 46, 103, 111, 111, 103, 108, 101, 117, 115, 101, 114, 99, 111, 110, 116, 101, 110, 116, 46, 99, 111, 109, 34, 44, 34, 112, 114, 111, 106, 101, 99, 116, 95, 105, 100, 34, 58, 34, 99, 114, 97, 99, 107, 45, 109, 101, 114, 105, 100, 105, 97, 110, 45, 52, 51, 50, 56, 50, 51, 45, 106, 56, 34, 44, 34, 97, 117, 116, 104, 95, 117, 114, 105, 34, 58, 34, 104, 116, 116, 112, 115, 58, 47, 47, 97, 99, 99, 111, 117, 110, 116, 115, 46, 103, 111, 111, 103, 108, 101, 46, 99, 111, 109, 47, 111, 47, 111, 97, 117, 116, 104, 50, 47, 97, 117, 116, 104, 34, 44, 34, 116, 111, 107, 101, 110, 95, 117, 114, 105, 34, 58, 34, 104, 116, 116, 112, 115, 58, 47, 47, 111, 97, 117, 116, 104, 50, 46, 103, 111, 111, 103, 108, 101, 97, 112, 105, 115, 46, 99, 111, 109, 47, 116, 111, 107, 101, 110, 34, 44, 34, 97, 117, 116, 104, 95, 112, 114, 111, 118, 105, 100, 101, 114, 95, 120, 53, 48, 57, 95, 99, 101, 114, 116, 95, 117, 114, 108, 34, 58, 34, 104, 116, 116, 112, 115, 58, 47, 47, 119, 119, 119, 46, 103, 111, 111, 103, 108, 101, 97, 112, 105, 115, 46, 99, 111, 109, 47, 111, 97, 117, 116, 104, 50, 47, 118, 49, 47, 99, 101, 114, 116, 115, 34, 44, 34, 99, 108, 105, 101, 110, 116, 95, 115, 101, 99, 114, 101, 116, 34, 58, 34, 71, 79, 67, 83, 80, 88, 45, 104, 102, 105, 72, 85, 84, 81, 97, 45, 116, 103, 95, 110, 75, 95, 73, 95, 112, 55, 77, 80, 68, 110, 112, 51, 82, 57, 65, 34, 44, 34, 114, 101, 100, 105, 114, 101, 99, 116, 95, 117, 114, 105, 115, 34, 58, 91, 34, 104, 116, 116, 112, 58, 47, 47, 108, 111, 99, 97, 108, 104, 111, 115, 116, 34, 93, 125, 125};
-    private static final String spreadsheetId = "1LXMrUfLQFKlFRMuhIzOIfqJ5N7dWvjIvrzYKwAL-R74";
-//    private static final String range = "Portal!A:Y";
-	
+    private static final String spreadsheetId = "1tT2NQAr9IN78tx-geG7QFLtvHNMy_srHhwJ01REk8Q8";
 	
     private static final String APPLICATION_NAME = "Google Sheets API Java Quickstart";
     private static final JsonFactory JSON_FACTORY = JacksonFactory.getDefaultInstance();
@@ -77,26 +75,96 @@ public class SheetsQuickstart {
      * https://docs.google.com/spreadsheets/d/1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgvE2upms/edit
      */
     public static void main(String... args) {
-//    	System.out.println(new String(CREDENTIALS));
+    	writeLanguage("Announcements!A:Y", "./apps/Announcements/src/Language.tsx");
+    	writeLanguage("Attendance!A:Y", "./apps/Attendance/src/Language.tsx");
+    	writeLanguage("Corporate!A:Y", "./apps/Corporate/src/Language.tsx");
+    	writeLanguage("Employees!A:Y", "./apps/Employees/src/Language.tsx");
+    	writeLanguage("Equipment!A:Y", "./apps/Equipment/src/Language.tsx");
+    	writeLanguage("ExpenditurePlanning!A:Y", "./apps/ExpenditurePlanning/src/Language.tsx");
+    	writeLanguage("Expenses!A:Y", "./apps/Expenses/src/Language.tsx");
+    	writeLanguage("FAReport!A:Y", "./apps/FAReport/src/Language.tsx");
+    	writeLanguage("FundAccount!A:Y", "./apps/FundAccount/src/Language.tsx");
+    	writeLanguage("Home!A:Y", "./apps/Home/src/Language.tsx");
+    	writeLanguage("LeaveRequest!A:Y", "./apps/LeaveRequest/src/Language.tsx");
+    	writeLanguage("LeaveTracker!A:Y", "./apps/LeaveTracker/src/Language.tsx");
+    	writeLanguage("MyEquipment!A:Y", "./apps/MyEquipment/src/Language.tsx");
+    	writeLanguage("Payable!A:Y", "./apps/Payable/src/Language.tsx");
+    	writeLanguage("PayrollClerk!A:Y", "./apps/PayrollClerk/src/Language.tsx");
+    	writeLanguage("Receivable!A:Y", "./apps/Receivable/src/Language.tsx");
+    	writeLanguage("Recruitment!A:Y", "./apps/Recruitment/src/Language.tsx");
+    	writeLanguage("ShiftManagement!A:Y", "./apps/ShiftManagement/src/Language.tsx");
+    	writeLanguage("SubmitFund!A:Y", "./apps/SubmitFund/src/Language.tsx");
+    	writeLanguage("TimeTracker!A:Y", "./apps/TimeTracker/src/Language.tsx");
+//    	writeLanguage("ViewDiligence!A:Y", "./apps/ViewDiligence/src/Language.tsx");
+    	
     	try {
-//    		String pathWritting = "./src/localDB/Language.tsx";
-    		String pathWritting = "./packages/ui/util/Language.tsx";
+    		String pathWritting = "./packages/ui/LanguageGlobal.tsx";
     		new File(pathWritting).delete();
     		// Build a new authorized API client service.
     		final NetHttpTransport HTTP_TRANSPORT = GoogleNetHttpTransport.newTrustedTransport();
     		Sheets service = new Sheets.Builder(HTTP_TRANSPORT, JSON_FACTORY, getCredentials(HTTP_TRANSPORT)).setApplicationName(APPLICATION_NAME).build();
-//    		ValueRange response = service.spreadsheets().values().get(spreadsheetId, "Language!A:Y").execute();
-    		ValueRange response = service.spreadsheets().values().get(spreadsheetId, "Private-Chat!A:Y").execute();
-//    		ValueRange response = service.spreadsheets().values().get(spreadsheetId, "Public-Corporate!A:Y").execute();
+    		ValueRange response = service.spreadsheets().values().get(spreadsheetId, "Global!A:Y").execute();
     		List<List<Object>> values = response.getValues();
     		if (values == null || values.isEmpty()) {
     			System.out.println("No data found.");
     		} else {
-//            System.out.println("Name, Major");
-//            for (List row : values) {
-//                // Print columns A and E, which correspond to indices 0 and 4.
-//                System.out.printf("%s, %s, %s\n", row.get(0), row.get(1), row.get(2));
-//            }
+    			int numberRow = values.size();
+    			int numberColumn = values.get(0).size();
+    			String languageCode = "";
+    			String languageName = "";
+    			for(int i=1;i<numberColumn;i++) {
+    				languageCode = languageCode + ",'"+values.get(2).get(i)+"'";
+    				languageName = languageName + ",'"+values.get(1).get(i)+"'";
+    			}
+    			
+    			FileOutputStream fileOutputStream = new FileOutputStream(pathWritting);
+    			Writer variableLanguage = new OutputStreamWriter(fileOutputStream, StandardCharsets.UTF_8);
+    			variableLanguage.write("export const LanguageGlobal:string[] = [];\n");
+
+    			variableLanguage.write("\nexport function setLanguageGlobal(languageID:number) {\n");
+    			variableLanguage.write("	");
+    			for(int i=3;i<numberRow;i++) 
+    				if(BGUtility.isNullOrEmpty((String) values.get(i).get(1))==false) {
+    					variableLanguage.write("LanguageGlobal["+i+"]=\""+((String)values.get(i).get(1)).trim()+"\";");
+//    					System.out.println((String)values.get(i).get(1));
+    				}
+    			variableLanguage.write("\n");
+    			
+    			variableLanguage.write("	switch (languageID) {\n");
+    			for(int j=2;j<numberColumn;j++) {
+    				variableLanguage.write("		case "+(j-1)+":");
+    				for(int i=3;i<numberRow;i++) 
+    					if(j<values.get(i).size() && BGUtility.isNullOrEmpty((String) values.get(i).get(j))==false)
+    						variableLanguage.write("LanguageGlobal["+i+"]=\""+((String)values.get(i).get(j)).trim()+"\";");
+    				variableLanguage.write("\n			break;\n");
+    			}
+    			variableLanguage.write("		default:localStorage.setItem('languageId', '0');break;\n");
+    			variableLanguage.write("	}\n");
+    			variableLanguage.write("}\n\n");
+    			
+    			variableLanguage.write("export class VLGlobal {\n");
+    			for(int i=3;i<numberRow;i++)
+    				variableLanguage.write("	static "+values.get(i).get(0)+" = "+i+";\n");
+    			variableLanguage.write("}\n");
+    			variableLanguage.close();
+    			System.out.println("Finish → Language Global!" );
+    		}
+    	}catch (Exception e) {
+    		e.printStackTrace();
+		}
+    }
+    
+    public static void writeLanguage(String sheetName, String pathWritting) {
+    	try {
+    		new File(pathWritting).delete();
+    		// Build a new authorized API client service.
+    		final NetHttpTransport HTTP_TRANSPORT = GoogleNetHttpTransport.newTrustedTransport();
+    		Sheets service = new Sheets.Builder(HTTP_TRANSPORT, JSON_FACTORY, getCredentials(HTTP_TRANSPORT)).setApplicationName(APPLICATION_NAME).build();
+    		ValueRange response = service.spreadsheets().values().get(spreadsheetId, sheetName).execute();
+    		List<List<Object>> values = response.getValues();
+    		if (values == null || values.isEmpty()) {
+    			System.out.println("No data found.");
+    		} else {
     			int numberRow = values.size();
     			int numberColumn = values.get(0).size();
     			String languageCode = "";
@@ -110,11 +178,13 @@ public class SheetsQuickstart {
     			Writer variableLanguage = new OutputStreamWriter(fileOutputStream, StandardCharsets.UTF_8);
 //    			FileWriter variableLanguage = new FileWriter(pathWritting);
     			
+    			variableLanguage.write("import { setLanguageGlobal } from \"@repo/ui/LanguageGlobal\";\n\n");
     			variableLanguage.write("export const LanguageCode:string[] = ["+languageCode.substring(1)+"];\n");
     			variableLanguage.write("export const LanguageName:string[] = ["+languageName.substring(1)+"];\n");
     			variableLanguage.write("export const Language:string[] = [];\n");
-    			variableLanguage.write("\nexport function InitLanguage() {\n    const langID = localStorage.getItem('languageId');\n    if (!langID || langID == null)\n        setLanguage(0);\n    else\n        setLanguage(parseInt(langID));\n}\n");
+    			variableLanguage.write("\nexport function InitLanguage() {\n	const langID = localStorage.getItem(\"languageId\");\n	if (!langID || langID == null) {\n		setLanguage(0);\n		setLanguageGlobal(0);\n	} else {\n		setLanguage(parseInt(langID));\n		setLanguageGlobal(parseInt(langID));\n	}\n}\n");
     			variableLanguage.write("\nexport function setLanguage(languageID:number) {\n");
+    			variableLanguage.write("	setLanguageGlobal(languageID);\n");
     			variableLanguage.write("	localStorage.setItem('languageId', languageID.toString());\n	");
     			for(int i=3;i<numberRow;i++) 
     				if(BGUtility.isNullOrEmpty((String) values.get(i).get(1))==false) {
@@ -140,12 +210,10 @@ public class SheetsQuickstart {
     				variableLanguage.write("	static "+values.get(i).get(0)+" = "+i+";\n");
     			variableLanguage.write("}\n");
     			variableLanguage.close();
-    			System.out.println("Ghi dữ liệu thành công!");
+    			System.out.println("Write language file "+pathWritting+" successful!" );
     		}
     	}catch (Exception e) {
     		e.printStackTrace();
 		}
-    	
-    	
-    }
+	}
 }
