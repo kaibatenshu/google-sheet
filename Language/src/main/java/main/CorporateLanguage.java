@@ -105,8 +105,10 @@ public class CorporateLanguage {
     			
     			FileOutputStream fileOutputStream = new FileOutputStream(pathWritting);
     			Writer variableLanguage = new OutputStreamWriter(fileOutputStream, StandardCharsets.UTF_8);
+    			variableLanguage.write("export const LanguageCode:string[] = ["+languageCode.substring(1)+"];\n");
+    			variableLanguage.write("export const LanguageName:string[] = ["+languageName.substring(1)+"];\n");
     			variableLanguage.write("export const LanguageGlobal:string[] = [];\n");
-
+    			variableLanguage.write("export function InitializeLanguageGlobal() {\n	const langID = localStorage.getItem('languageId');\n	if (!langID || langID == null)\n		setLanguageGlobal(0);\n	else\n		setLanguageGlobal(parseInt(langID));\n}\n");
     			variableLanguage.write("\nexport function setLanguageGlobal(languageID:number) {\n");
     			variableLanguage.write("	");
     			for(int i=3;i<numberRow;i++) 
@@ -165,8 +167,6 @@ public class CorporateLanguage {
 //    			FileWriter variableLanguage = new FileWriter(pathWritting);
     			
     			variableLanguage.write("import { setLanguageGlobal } from \"@repo/ui/LanguageGlobal\";\n\n");
-    			variableLanguage.write("export const LanguageCode:string[] = ["+languageCode.substring(1)+"];\n");
-    			variableLanguage.write("export const LanguageName:string[] = ["+languageName.substring(1)+"];\n");
     			variableLanguage.write("export const Language:string[] = [];\n");
     			variableLanguage.write("\nexport function InitLanguage() {\n	const langID = localStorage.getItem(\"languageId\");\n	if (!langID || langID == null) {\n		setLanguage(0);\n		setLanguageGlobal(0);\n	} else {\n		setLanguage(parseInt(langID));\n		setLanguageGlobal(parseInt(langID));\n	}\n}\n");
     			variableLanguage.write("\nexport function setLanguage(languageID:number) {\n");
