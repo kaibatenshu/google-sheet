@@ -80,7 +80,7 @@ public class Portal {
     	writeLanguage("Corporate!A:Y", "./apps/Corporate/src/Language.tsx");
     	writeLanguage("Employees!A:Y", "./apps/Employees/src/Language.tsx");
     	writeLanguage("Equipment!A:Y", "./apps/Equipment/src/Language.tsx");
-    	writeLanguage("ExpenditurePlanning!A:Y", "./apps/ExpenditurePlanning/src/Language.tsx");
+    	writeLanguage("Proposal!A:Y", "./apps/Proposal/src/Language.tsx");
     	writeLanguage("Expenses!A:Y", "./apps/Expenses/src/Language.tsx");
     	writeLanguage("FAReport!A:Y", "./apps/FAReport/src/Language.tsx");
     	writeLanguage("FundAccount!A:Y", "./apps/FundAccount/src/Language.tsx");
