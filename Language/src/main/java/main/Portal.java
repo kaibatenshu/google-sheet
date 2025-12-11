@@ -77,6 +77,7 @@ public class Portal {
     public static void main(String... args) {
     	writeLanguage("Announcements!A:Y", "./apps/Announcements/src/Language.tsx");
     	writeLanguage("Attendance!A:Y", "./apps/Attendance/src/Language.tsx");
+    	writeLanguage("Common!A:Y", "./apps/Common/src/Language.tsx");
     	writeLanguage("Corporate!A:Y", "./apps/Corporate/src/Language.tsx");
     	writeLanguage("Employees!A:Y", "./apps/Employees/src/Language.tsx");
     	writeLanguage("Equipment!A:Y", "./apps/Equipment/src/Language.tsx");
