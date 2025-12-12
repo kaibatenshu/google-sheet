@@ -77,6 +77,7 @@ public class CorporateLanguage {
     public static void main(String... args) {
     	writeLanguage("AboutUs!A:Y", "./apps/AboutUs/src/Language.tsx");
     	writeLanguage("Careers!A:Y", "./apps/Careers/src/Language.tsx");
+    	writeLanguage("Common!A:Y", "./apps/Common/src/Language.tsx");
     	writeLanguage("Contact!A:Y", "./apps/Contact/src/Language.tsx");
     	writeLanguage("Home!A:Y", "./apps/Home/src/Language.tsx");
     	writeLanguage("InvestorRelations!A:Y", "./apps/InvestorRelations/src/Language.tsx");
