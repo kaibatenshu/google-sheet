@@ -96,7 +96,8 @@ public class Portal {
     	writeLanguage("ShiftManagement!A:Y", "./apps/ShiftManagement/src/Language.tsx");
     	writeLanguage("SubmitFund!A:Y", "./apps/SubmitFund/src/Language.tsx");
     	writeLanguage("TimeTracker!A:Y", "./apps/TimeTracker/src/Language.tsx");
-//    	writeLanguage("ViewDiligence!A:Y", "./apps/ViewDiligence/src/Language.tsx");
+    	writeLanguage("ScreenViewer!A:Y", "./apps/ScreenViewer/src/Language.tsx");
+    	writeLanguage("WorkHub!A:Y", "./apps/WorkHub/src/Language.tsx");
     	
     	try {
     		String pathWritting = "./packages/ui/LanguageGlobal.tsx";
