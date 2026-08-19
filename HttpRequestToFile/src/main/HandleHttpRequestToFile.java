@@ -12,13 +12,12 @@ import java.nio.file.Path;
 public class HandleHttpRequestToFile implements Runnable {
 
 	public static String saveFolder;
+	public static int fileID;
 
 	private final Socket socket;
-	private final int fileID;
 
-	public HandleHttpRequestToFile(Socket _socket, int _fileID) {
+	public HandleHttpRequestToFile(Socket _socket) {
 		socket = _socket;
-		fileID = _fileID;
 	}
 
 	@Override public void run() {
@@ -26,7 +25,7 @@ public class HandleHttpRequestToFile implements Runnable {
 			socket.setSoTimeout(10_000);
 			byte[] request = readHttpRequest(is);
 			if(request!=null && request.length>0)
-				Files.write(Path.of(saveFolder + "/" + fileID), request);
+				Files.write(Path.of(saveFolder + "/" + fileID++), request);
 			// HTTP 200 OK
 			os.write("HTTP/1.1 200 OK\r\nContent-Length: 0\r\nConnection: close\r\n\r\n".getBytes(StandardCharsets.US_ASCII));
 			os.flush();

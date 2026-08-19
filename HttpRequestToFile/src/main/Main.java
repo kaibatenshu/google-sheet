@@ -33,11 +33,11 @@ public class Main {
 		try {
 			serverSocket = new ServerSocket(8080);
 			System.out.println("Server is listening on port 8080, saving files to: "+HandleHttpRequestToFile.saveFolder);
-			int fileID=0;
+			while(Files.exists(Path.of(HandleHttpRequestToFile.saveFolder+"/"+HandleHttpRequestToFile.fileID)))
+				HandleHttpRequestToFile.fileID++;
 			while(true){
 				Socket socket = serverSocket.accept();
-				new Thread(new HandleHttpRequestToFile(socket,fileID)).start();
-				fileID++;
+				new Thread(new HandleHttpRequestToFile(socket)).start();
 			}
 		} catch (IOException e) {
 			e.printStackTrace();
