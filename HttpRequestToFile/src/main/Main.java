@@ -32,6 +32,7 @@ public class Main {
 		ServerSocket serverSocket=null;
 		try {
 			serverSocket = new ServerSocket(8080);
+			System.out.println("Server is listening on port 8080, saving files to: "+HandleHttpRequestToFile.saveFolder);
 			int fileID=0;
 			while(true){
 				Socket socket = serverSocket.accept();
