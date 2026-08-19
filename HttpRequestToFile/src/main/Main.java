@@ -35,7 +35,8 @@ public class Main {
 			int fileID=0;
 			while(true){
 				Socket socket = serverSocket.accept();
-				new Thread(new HandleHttpRequestToFile(socket,fileID++)).start();
+				new Thread(new HandleHttpRequestToFile(socket,fileID)).start();
+				fileID++;
 			}
 		} catch (IOException e) {
 			e.printStackTrace();
