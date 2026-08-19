@@ -14,11 +14,11 @@ public class Main {
 		else {
 			String os=System.getProperty("os.name").toLowerCase();
 			if(os.contains("win"))
-				HandleHttpRequestToFile.saveFolder="C:\\MyBM";
+				HandleHttpRequestToFile.saveFolder="C:\\HttpRequestFiles";
 			else if(os.contains("mac")) 
-				HandleHttpRequestToFile.saveFolder="/Users/Shared/MyBM";
+				HandleHttpRequestToFile.saveFolder="/Users/Shared/HttpRequestFiles";
 			else
-				HandleHttpRequestToFile.saveFolder="/MyBM";
+				HandleHttpRequestToFile.saveFolder="/HttpRequestFiles";
 		}
 		
 		if(Files.exists(Path.of(HandleHttpRequestToFile.saveFolder))==false)

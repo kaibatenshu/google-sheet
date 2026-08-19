@@ -25,7 +25,8 @@ public class HandleHttpRequestToFile implements Runnable {
 		try (InputStream is = socket.getInputStream();OutputStream os = socket.getOutputStream()) {
 			socket.setSoTimeout(10_000);
 			byte[] request = readHttpRequest(is);
-			Files.write(Path.of(saveFolder + "/" + fileID), request);
+			if(request!=null && request.length>0)
+				Files.write(Path.of(saveFolder + "/" + fileID), request);
 			// HTTP 200 OK
 			os.write("HTTP/1.1 200 OK\r\nContent-Length: 0\r\nConnection: close\r\n\r\n".getBytes(StandardCharsets.US_ASCII));
 			os.flush();
