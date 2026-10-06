@@ -75,7 +75,7 @@ public class Portal {
      * https://docs.google.com/spreadsheets/d/1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgvE2upms/edit
      */
     public static void main(String... args) {
-    	writeLanguage("Announcements!A:Y", "./apps/Announcements/src/Language.tsx");
+    	writeLanguage("Announcements!A:Y", "./apps/InternalCommunications/src/Language.tsx");
     	writeLanguage("Attendance!A:Y", "./apps/Attendance/src/Language.tsx");
     	writeLanguage("Common!A:Y", "./apps/Common/src/Language.tsx");
     	writeLanguage("Corporate!A:Y", "./apps/Corporate/src/Language.tsx");
