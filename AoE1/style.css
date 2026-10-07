@@ -1092,9 +1092,9 @@ footer {
   height: 25px;
 }
 
-/* HÀNG TIÊU ĐỀ: QUÂN & CÁC CỘT BINH CHỦNG (ICON LỚN, KHÔNG CHỮ XÁM) */
+/* HÀNG TIÊU ĐỀ: QUÂN & CÁC CỘT BINH CHỦNG (ICON LỚN CHUẨN AOE 1) */
 .row-header-units {
-  height: 80px;
+  height: 98px;
 }
 
 .corner-units-label {
@@ -1127,10 +1127,10 @@ footer {
   border-bottom: 2px solid var(--gold) !important;
   text-align: center;
   vertical-align: middle;
-  width: 76px;
-  min-width: 76px;
-  max-width: 80px;
-  padding: 4px 2px;
+  width: 88px;
+  min-width: 88px;
+  max-width: 92px;
+  padding: 6px 3px 6px;
 }
 
 .th-unit-content {
@@ -1138,22 +1138,22 @@ footer {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 3px;
+  gap: 4px;
 }
 
-/* 1. ICON QUÂN LỚN RÕ NÉT */
+/* 1. ICON QUÂN CHÍNH GỐC AOE 1 LỚN VÀ RÕ NÉT (60x60) */
 .sheet-unit-avatar {
-  width: 48px;
-  height: 48px;
+  width: 60px;
+  height: 60px;
   border-radius: 8px;
-  background: radial-gradient(circle, #1e293b 0%, #0f172a 100%);
-  border: 1.5px solid rgba(245, 158, 11, 0.5);
+  background: #080c14;
+  border: 2px solid rgba(245, 158, 11, 0.75);
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  box-shadow: 0 3px 8px rgba(0,0,0,0.5);
-  margin-bottom: 1px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.7), 0 0 8px rgba(245, 158, 11, 0.25);
+  margin-bottom: 2px;
 }
 
 .sheet-unit-img {
@@ -1165,18 +1165,18 @@ footer {
 }
 
 .th-unit-col:hover .sheet-unit-img {
-  transform: scale(1.1);
+  transform: scale(1.12);
 }
 
 .sheet-unit-name {
   font-weight: 800;
-  font-size: 0.76rem;
-  color: var(--text-main);
+  font-size: 0.82rem;
+  color: var(--gold-light);
   line-height: 1.15;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  max-width: 74px;
+  max-width: 84px;
 }
 
 /* STICKY COLUMN A: ĐỜI (AGE) */
@@ -1277,9 +1277,9 @@ footer {
   font-size: 0.78rem;
   line-height: 1.2;
   height: 25px;
-  width: 76px;
-  min-width: 76px;
-  max-width: 80px;
+  width: 88px;
+  min-width: 88px;
+  max-width: 92px;
   padding: 2px 2px;
   transition: background 0.15s ease;
   cursor: default;
@@ -1292,12 +1292,12 @@ footer {
 /* CHỮ GIẢI THÍCH RÚT GỌN (TOOLTIP RÊ CHUỘT) */
 .cell-desc {
   display: inline-block;
-  max-width: 72px;
+  max-width: 84px;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
   vertical-align: middle;
-  font-size: 0.74rem;
+  font-size: 0.75rem;
   cursor: help;
 }
 
