@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AOE 1 Cẩm Nang Toàn Thư | Việt Nam & Trung Quốc</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-main: #0d1117;
+      --bg-card: #161b22;
+      --bg-card-hover: #21262d;
+      --border-color: #30363d;
+      --gold: #f59e0b;
+      --gold-light: #fbbf24;
+      --gold-dark: #b45309;
+      --text-main: #f0f6fc;
+      --text-muted: #8b949e;
+      --badge-s: #ef4444;
+      --badge-a: #f59e0b;
+      --badge-b: #3b82f6;
+      --badge-c: #6b7280;
+      --font-title: 'Cinzel', serif;
+      --font-body: 'Inter', sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg-main);
+      color: var(--text-main);
+      font-family: var(--font-body);
+      line-height: 1.6;
+      padding-bottom: 60px;
+    }
+
+    /* HEADER */
+    header {
+      background: linear-gradient(180deg, rgba(245, 158, 11, 0.15) 0%, rgba(13, 17, 23, 0) 100%), #12161f;
+      border-bottom: 1px solid var(--border-color);
+      padding: 40px 20px 24px;
+      text-align: center;
+      position: relative;
+    }
+
+    .badge-top {
+      display: inline-block;
+      padding: 4px 12px;
+      border-radius: 9999px;
+      background: rgba(245, 158, 11, 0.2);
+      border: 1px solid var(--gold);
+      color: var(--gold-light);
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+
+    h1 {
+      font-family: var(--font-title);
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      color: var(--gold-light);
+      text-shadow: 0 0 20px rgba(245, 158, 11, 0.4);
+      margin-bottom: 8px;
+    }
+
+    .subtitle {
+      color: var(--text-muted);
+      font-size: 1rem;
+      max-width: 650px;
+      margin: 0 auto;
+    }
+
+    /* NAVIGATION TABS */
+    .nav-container {
+      max-width: 1200px;
+      margin: 20px auto 0;
+      padding: 0 20px;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .nav-btn {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      color: var(--text-muted);
+      padding: 10px 20px;
+      border-radius: 8px;
+      font-family: var(--font-body);
+      font-weight: 600;
+      font-size: 0.95rem;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .nav-btn:hover {
+      background: var(--bg-card-hover);
+      color: var(--text-main);
+      border-color: var(--gold);
+    }
+
+    .nav-btn.active {
+      background: var(--gold);
+      color: #000;
+      border-color: var(--gold);
+      box-shadow: 0 0 15px rgba(245, 158, 11, 0.4);
+    }
+
+    /* SEARCH & FILTER CONTROLS */
+    .controls-bar {
+      max-width: 1200px;
+      margin: 24px auto 0;
+      padding: 0 20px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .search-input {
+      flex: 1;
+      min-width: 260px;
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      color: var(--text-main);
+      padding: 10px 16px;
+      border-radius: 8px;
+      font-size: 0.95rem;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+
+    .search-input:focus {
+      border-color: var(--gold);
+    }
+
+    .filter-group {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .filter-btn {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      color: var(--text-muted);
+      padding: 6px 14px;
+      border-radius: 6px;
+      font-size: 0.85rem;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .filter-btn.active, .filter-btn:hover {
+      background: var(--bg-card-hover);
+      color: var(--gold-light);
+      border-color: var(--gold);
+    }
+
+    /* MAIN CONTAINER */
+    main {
+      max-width: 1200px;
+      margin: 24px auto;
+      padding: 0 20px;
+    }
+
+    .tab-content {
+      display: none;
+    }
+
+    .tab-content.active {
+      display: block;
+      animation: fadeIn 0.3s ease-in;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(6px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* CIV CARDS GRID */
+    .civ-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+      gap: 20px;
+    }
+
+    .civ-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: 20px;
+      transition: transform 0.2s, border-color 0.2s, box-shadow 0.2s;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .civ-card:hover {
+      transform: translateY(-4px);
+      border-color: var(--gold);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+    }
+
+    .civ-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 12px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .civ-name {
+      font-family: var(--font-title);
+      font-size: 1.4rem;
+      color: var(--gold-light);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .civ-cn-name {
+      font-size: 1rem;
+      color: var(--text-muted);
+      font-family: var(--font-body);
+    }
+
+    .civ-arch {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .tier-badges {
+      display: flex;
+      gap: 6px;
+    }
+
+    .badge {
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 2px 8px;
+      border-radius: 4px;
+      text-transform: uppercase;
+    }
+
+    .tier-s-plus { background: #dc2626; color: #fff; }
+    .tier-s { background: #ea580c; color: #fff; }
+    .tier-a { background: #d97706; color: #fff; }
+    .tier-b { background: #2563eb; color: #fff; }
+    .tier-c { background: #4b5563; color: #fff; }
+
+    .civ-section {
+      margin-bottom: 10px;
+      font-size: 0.9rem;
+    }
+
+    .civ-section-title {
+      font-weight: 600;
+      color: var(--gold);
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 3px;
+    }
+
+    .civ-highlight {
+      background: rgba(245, 158, 11, 0.08);
+      border-left: 3px solid var(--gold);
+      padding: 6px 10px;
+      border-radius: 0 6px 6px 0;
+      margin-bottom: 10px;
+      font-size: 0.88rem;
+    }
+
+    .civ-footer {
+      margin-top: auto;
+      padding-top: 10px;
+      border-top: 1px dashed rgba(255, 255, 255, 0.08);
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      font-style: italic;
+    }
+
+    /* DATA TABLE STYLES */
+    .table-responsive {
+      width: 100%;
+      overflow-x: auto;
+      border: 1px solid var(--border-color);
+      border-radius: 10px;
+      background: var(--bg-card);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+      font-size: 0.9rem;
+    }
+
+    th {
+      background: #1c2128;
+      color: var(--gold-light);
+      font-weight: 600;
+      padding: 12px 14px;
+      border-bottom: 1px solid var(--border-color);
+      white-space: nowrap;
+    }
+
+    td {
+      padding: 12px 14px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+      vertical-align: middle;
+    }
+
+    tr:nth-child(even) {
+      background: rgba(255, 255, 255, 0.02);
+    }
+
+    tr:hover {
+      background: rgba(245, 158, 11, 0.06);
+    }
+
+    /* RULES & INFO CARDS */
+    .rule-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: 24px;
+      margin-bottom: 18px;
+    }
+
+    .rule-card h3 {
+      font-family: var(--font-title);
+      color: var(--gold-light);
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .counter-chart-container {
+      background: #131720;
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: 24px;
+      margin-bottom: 24px;
+    }
+
+    /* FOOTER */
+    footer {
+      text-align: center;
+      padding: 30px 20px;
+      color: var(--text-muted);
+      font-size: 0.85rem;
+      border-top: 1px solid var(--border-color);
+      margin-top: 40px;
+    }
+
+    @media (max-width: 768px) {
+      .civ-grid {
+        grid-template-columns: 1fr;
+      }
+      .controls-bar {
+        flex-direction: column;
+        align-items: stretch;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="badge-top">Việt Nam vs Trung Quốc • Esports Cổ Điển</div>
+    <h1>AOE 1 CẨM NANG TOÀN THƯ</h1>
+    <p class="subtitle">Hệ thống tra cứu chuyên sâu 16 Nền Văn Minh, Chỉ số binh chủng, Cây công nghệ và Bộ luật thi đấu đỉnh cao giữa hai cường quốc Đế Chế.</p>
+
+    <div class="nav-container">
+      <button class="nav-btn active" onclick="switchTab('civs')">🏛️ 16 Nền Văn Minh</button>
+      <button class="nav-btn" onclick="switchTab('units')">⚔️ Đơn Vị & Công Trình</button>
+      <button class="nav-btn" onclick="switchTab('tech')">📜 Cây Công Nghệ</button>
+      <button class="nav-btn" onclick="switchTab('rules')">⚖️ Luật & Thể Thức</button>
+      <button class="nav-btn" onclick="switchTab('timeline')">⏱️ Công Thức Ép Đời</button>
+    </div>
+  </header>
+
+  <div class="controls-bar" id="controlsBar">
+    <input type="text" id="searchInput" class="search-input" placeholder="🔍 Tìm kiếm quân, đơn vị, công nghệ hoặc thể thức..." onkeyup="filterContent()">
+    <div class="filter-group" id="civFilters">
+      <button class="filter-btn active" onclick="filterTier('all')">Tất cả</button>
+      <button class="filter-btn" onclick="filterTier('S+')">Tier S+</button>
+      <button class="filter-btn" onclick="filterTier('S')">Tier S</button>
+      <button class="filter-btn" onclick="filterTier('A')">Tier A</button>
+      <button class="filter-btn" onclick="filterTier('B')">Tier B / C</button>
+    </div>
+  </div>
+
+  <main>
+    <!-- TAB 1: 16 NỀN VĂN MINH -->
+    <section id="tab-civs" class="tab-content active">
+      <div class="civ-grid" id="civGrid">
+        <!-- Render bằng Javascript -->
+      </div>
+    </section>
+
+    <!-- TAB 2: ĐƠN VỊ & CÔNG TRÌNH -->
+    <section id="tab-units" class="tab-content">
+      <div class="table-responsive">
+        <table>
+          <thead>
+            <tr>
+              <th>Đơn Vị / Công Trình</th>
+              <th>Đời</th>
+              <th>Nhà</th>
+              <th>Máu HP</th>
+              <th>Công</th>
+              <th>Giáp (Cận/Tên)</th>
+              <th>Tầm Xa</th>
+              <th>Chi Phí</th>
+              <th>Đặc Tính Nổi Bật</th>
+            </tr>
+          </thead>
+          <tbody id="unitsTableBody">
+            <!-- Render bằng Javascript -->
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- TAB 3: CÂY CÔNG NGHỆ -->
+    <section id="tab-tech" class="tab-content">
+      <div class="table-responsive">
+        <table>
+          <thead>
+            <tr>
+              <th>Công Trình</th>
+              <th>Nâng Cấp</th>
+              <th>Tên Quốc Tế</th>
+              <th>Đời</th>
+              <th>Chi Phí</th>
+              <th>Tác Dụng Chi Tiết</th>
+              <th>Đối Tượng Hưởng Lợi</th>
+            </tr>
+          </thead>
+          <tbody id="techTableBody">
+            <!-- Render bằng Javascript -->
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- TAB 4: LUẬT & THỂ THỨC -->
+    <section id="tab-rules" class="tab-content">
+      <div class="counter-chart-container">
+        <h3 style="font-family: var(--font-title); color: var(--gold-light); margin-bottom: 12px;">🔄 Sơ Đồ Tương Khắc Binh Chủng Cốt Lõi</h3>
+        <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 16px;">
+          Hiểu rõ cơ chế khắc chế là chìa khóa để giành lợi thế trong các cuộc đối đầu:
+        </p>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 14px;">
+          <div style="background: rgba(255,255,255,0.03); padding: 14px; border-radius: 8px; border-left: 3px solid #ef4444;">
+            <strong style="color: #f87171;">🏹 Cung R</strong>
+            <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 4px;">Khắc chế bộ binh chậm, dân. Bị khắc chế bởi Ngựa chém áp sát, Lạc đà, Pháo cẩu đá.</p>
+          </div>
+          <div style="background: rgba(255,255,255,0.03); padding: 14px; border-radius: 8px; border-left: 3px solid #f59e0b;">
+            <strong style="color: #fbbf24;">⚔️ Ngựa Chém</strong>
+            <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 4px;">Khắc chế Cung R đi lẻ, dân, cẩu đá. Bị khắc chế cứng bởi Lạc đà, Phù thủy, Lính xiên.</p>
+          </div>
+          <div style="background: rgba(255,255,255,0.03); padding: 14px; border-radius: 8px; border-left: 3px solid #3b82f6;">
+            <strong style="color: #60a5fa;">🐪 Lạc Đà</strong>
+            <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 4px;">Khắc tinh số 1 của mọi kỵ binh (Chém, Ngựa dò). Bị khắc chế bởi Cung R tụ đông, Phù thủy.</p>
+          </div>
+          <div style="background: rgba(255,255,255,0.03); padding: 14px; border-radius: 8px; border-left: 3px solid #a855f7;">
+            <strong style="color: #c084fc;">🧙 Phù Thủy</strong>
+            <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 4px;">Khắc chế Kỵ binh đắt tiền, Voi. Bị kháng hoàn toàn bởi Sọc đơn, Đạp đôi, Cung R tầm xa.</p>
+          </div>
+        </div>
+      </div>
+
+      <div id="rulesContainer">
+        <!-- Render bằng Javascript -->
+      </div>
+    </section>
+
+    <!-- TAB 5: TIMELINE ÉP ĐỜI -->
+    <section id="tab-timeline" class="tab-content">
+      <div class="rule-card">
+        <h3>⏱️ Công Thức Ép Đời Chuẩn 23 - 25 Dân (Kích 9x - 10x)</h3>
+        <p style="color: var(--text-muted); margin-bottom: 20px;">Áp dụng cho các nền văn minh đánh Cung R (Shang, Assyrian, Hittite, Phoenician, Egyptian):</p>
+        
+        <div style="display: flex; flex-direction: column; gap: 14px;">
+          <div style="display: flex; gap: 16px; align-items: flex-start;">
+            <span style="background: var(--gold); color: #000; font-weight: 700; padding: 4px 10px; border-radius: 6px; font-size: 0.85rem; white-space: nowrap;">0:00 - 2:00</span>
+            <div>
+              <strong>Dân 1 - 6 (Ăn Quả):</strong> 2 dân đầu đóng 2 nhà BE, lùa quả ăn kín 6 dân. Dân thứ 6 đi dò mỏ thịt tiếp theo (hươu, voi).
+            </div>
+          </div>
+          <div style="display: flex; gap: 16px; align-items: flex-start;">
+            <span style="background: var(--gold); color: #000; font-weight: 700; padding: 4px 10px; border-radius: 6px; font-size: 0.85rem; white-space: nowrap;">2:00 - 5:00</span>
+            <div>
+              <strong>Dân 7 - 12 (Chặt Gỗ & Câu Voi):</strong> Dân 7, 8, 9 chặt gỗ đóng BS đầu tiên; cắt 1 dân đi câu voi về sát Nhà Chính (TC) để tiết kiệm thời gian gánh thịt.
+            </div>
+          </div>
+          <div style="display: flex; gap: 16px; align-items: flex-start;">
+            <span style="background: var(--gold); color: #000; font-weight: 700; padding: 4px 10px; border-radius: 6px; font-size: 0.85rem; white-space: nowrap;">5:00 - 7:30</span>
+            <div>
+              <strong>Dân 13 - 25 (Ăn Hoang & Đủ 500 Thực):</strong> Lùa hươu hoặc đóng BS ăn thịt thứ hai. Nhấp nâng cấp Đời 2 ở khoảng 07:15 - 07:45. Trong khi lên đời 2, điều phối ~10 dân gỗ, ~13 dân thịt.
+            </div>
+          </div>
+          <div style="display: flex; gap: 16px; align-items: flex-start;">
+            <span style="background: var(--gold); color: #000; font-weight: 700; padding: 4px 10px; border-radius: 6px; font-size: 0.85rem; white-space: nowrap;">Lên Đời 2</span>
+            <div>
+              <strong>Đóng BM + BA/BL:</strong> Đóng ngay lập tức nhà Chợ (BM) và nhà Quân. Nhấp nâng cấp Đời 3 ở phút 08:30 - 09:15 khi đủ 800 thực.
+            </div>
+          </div>
+          <div style="display: flex; gap: 16px; align-items: flex-start;">
+            <span style="background: var(--gold); color: #000; font-weight: 700; padding: 4px 10px; border-radius: 6px; font-size: 0.85rem; white-space: nowrap;">Lên Đời 3</span>
+            <div>
+              <strong>Bánh Xe & Cơ Cấu Quân:</strong> Nâng cấp ngay Bánh xe (Wheel) trong BM và Chặt gỗ 1; đóng thêm 4-5 nhà BA để xả Cung R liên tục.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>AoE 1 Cẩm Nang Toàn Thư • Chuẩn hóa dữ liệu thể thao điện tử Việt Nam - Trung Quốc</p>
+    <p style="margin-top: 6px; color: #58a6ff;">Mở trực tiếp trên trình duyệt hoặc triển khai lên Vercel / GitHub Pages / Google Apps Script</p>
+  </footer>
+
+  <script>
+    // DỮ LIỆU 16 NỀN VĂN MINH
+    const civsData = [
+      { id: 1, name: "Shang", en: "Shang", cn: "商", arch: "Đông Á", bonus: "Dân rẻ 35 thực. Tường thành x2 HP. Ép đời chuẩn và ổn định nhất game.", cons: "Chỉ số quân không có bonus sát thương hay tốc chạy. Thiếu pháo to, voi, ngựa đôi.", u3: "Cung R (BA), Ngựa chém (BL), Sọc đơn, Phù thủy", u4: "Lính BB chém (Legion), Bắn đá nhỏ (Onager)", tierSolo: "S+", tierTeam: "A", desc: "Quân chuẩn mực nhất AoE; Solo Shang thuần tiễn là đỉnh cao vi mô Việt - Trung." },
+      { id: 2, name: "Assyrian", en: "Assyrian", cn: "亚述", arch: "Lưỡng Hà", bonus: "Dân chạy nhanh +30%. Cung R bắn nhanh +33% (tốc độ ra tên cực dày).", cons: "Không có Đầu Máu (BM) -> Cung R 75 HP. Đời 4 yếu nhất game (không cung lửa, pháo to).", u3: "Cung R (BA tuyển nhất), Phù thủy, Sọc đơn", u4: "Yếu nhất đời 4; lính BB và Cẩu đá nhỏ", tierSolo: "S+", tierTeam: "S", desc: "Bá vương đời 3; quản lý bản đồ rộng và ép đối thủ nghẹt thở; solo Assyrian là kinh điển." },
+      { id: 3, name: "Egyptian", en: "Egyptian", cn: "埃及", arch: "Ai Cập", bonus: "Cung R +33% HP (93 máu trâu nhất). Dân đào vàng +20%. Phù thủy tầm xa +3.", cons: "Không có Ngựa chém BL, không Voi, không Xiên. Đầu đời 3 thường thiếu gỗ nếu ép nhiều BA.", u3: "Cung R (93 máu trâu bò), Phù thủy, Sọc đơn", u4: "Ngựa đạp đôi max công nghệ, Cẩu đá to, Phù thủy sét", tierSolo: "S", tierTeam: "S", desc: "Quân toàn diện cả đời 3 và 4; Cung R đổi mạng cực lời; Đời 4 đạp đôi + cẩu đá to vô cùng khó chịu." },
+      { id: 4, name: "Babylonian", en: "Babylonian", cn: "巴比伦", arch: "Lưỡng Hà", bonus: "Tường & Chòi máu x2. Phù thủy hồi mana +30%. Dân đào đá +3.", cons: "Quân đội không có chỉ số chạy nhanh hay cộng sát thương trực tiếp.", u3: "Cung R, Ngựa chém, Sọc đơn, Phù thủy hồi năng lượng nhanh", u4: "Đạp đôi, Cung A 3 áo, Cẩu đá to, Chòi thần x2 máu", tierSolo: "A", tierTeam: "A", desc: "Lối đánh bền bỉ, thủ nhà dẻo; đời 4 công thủ toàn diện với Chòi thần 1000 HP và Cẩu đá to." },
+      { id: 5, name: "Hittite", en: "Hittite", cn: "西台 / 赫梯", arch: "Lưỡng Hà", bonus: "Cung R mặc định +1 công (4+1=5). Bắn đá x2 máu (300 HP đời 3). Tàu chiến bắn xa +4.", cons: "Không có Cẩu đá to nhất (Heavy Catapult), Phù thủy không có nâng cấp tốt.", u3: "Cung R (+1 công cực rát), Bắn đá x2 máu, Ngựa chém", u4: "Cung R lửa, Đạp đôi, Ngựa chém giáp 4, Bắn đá kẹp cung", tierSolo: "S", tierTeam: "S+", desc: "Quân tuyển hàng đầu trong Random; Cung R cắn dân siêu nhanh, Bắn đá trâu máu khắc mọi dàn cung." },
+      { id: 6, name: "Phoenician", en: "Phoenician", cn: "腓尼基", arch: "Lưỡng Hà", bonus: "Dân chặt gỗ +3 (13 gỗ/chuyến). Voi giảm 25% giá thực (135 thực). Tàu bắn nhanh +65%.", cons: "Giáp lính không có điểm vượt trội, không có Ngựa đôi, không Cẩu đá to.", u3: "Cung R (dồi dào gỗ), Ngựa chém, Sọc đơn", u4: "Voi húc và Voi tên giá rẻ siêu đông; Cung R lửa; Cẩu đá nhỏ", tierSolo: "A", tierTeam: "S", desc: "Khả năng hồi dân và vẽ ruộng vô đối; tích gỗ cực nhanh giúp ép nhiều nhà quân BA/BL dễ dàng." },
+      { id: 7, name: "Sumerian", en: "Sumerian", cn: "苏美尔", arch: "Lưỡng Hà", bonus: "Dân 40 HP (trâu hơn 60% dân thường). Ruộng x2 sản lượng (500 thực). Cẩu đá bắn nhanh x2.", cons: "Không có Voi, không có Ngựa đôi, không Cung lửa.", u3: "Cung R (tiết kiệm gỗ tái ruộng), Ngựa chém, Bắn đá bắn tốc độ cao", u4: "Cẩu đá to bắn liên thanh, Đạp đôi, Ngựa chém giáp 4", tierSolo: "A+", tierTeam: "S", desc: "Dân 40 máu khó bị bắt lẻ; khả năng hồi phục kinh tế tốt; cẩu đá bắn tốc độ liên thanh kinh hoàng." },
+      { id: 8, name: "Persian", en: "Persian", cn: "波斯", arch: "Lưỡng Hà", bonus: "Dân săn voi hươu nhanh +30%. Voi di chuyển nhanh +50% (chạy như ngựa).", cons: "Khởi đầu bị trừ 50 thực (150 thực). Không có Bánh xe (không có Cung R, Đạp đôi).", u3: "Ngựa chém (ép đời sớm chém rát), Lạc đà (khắc chém), Cung A 2 áo", u4: "Voi điên (Voi húc chạy thần tốc), Cung A 3 áo, Cẩu đá to", tierSolo: "B+", tierTeam: "A+", desc: "Chém Persian đầu đời 3 kích sớm là mối đe dọa lớn; Đời 4 Voi điên càn quét xuyên qua mọi hàng thủ." },
+      { id: 9, name: "Yamato", en: "Yamato", cn: "大和", arch: "Đông Á", bonus: "Dân chạy nhanh +30%. Ngựa chém rẻ hơn 25% vàng (75 vàng thay vì 100). Tàu chiến +30% máu.", cons: "Cung R yếu (không giáp tên), Đời 4 không có Đạp đôi, không Voi, không Cẩu đá to.", u3: "Ngựa chém (Vua chém số lượng áp đảo), Cung A, Phù thủy", u4: "Ngựa chém thần (Cataphract), Cung A 2 áo, Lính xiên", tierSolo: "S", tierTeam: "S", desc: "Vua của chiến thuật đánh Chém; rẻ hơn 25% vàng giúp đẻ chém không ngắt nhịp; solo Yamato đỉnh cao." },
+      { id: 10, name: "Minoan", en: "Minoan", cn: "米诺斯", arch: "Hy Lạp", bonus: "Cung A tầm xa +1 đời 3, +2 đời 4 (tầm xa tối đa 11). Ruộng +60 thực. Tàu chiến rẻ 33%.", cons: "Không có Cung R, không Ngựa chém BL, không Lạc đà. Dễ bị bắt bài nếu đối phương kẹp pháo sớm.", u3: "Cung A (tầm xa 8-9 bắn rát), Cẩu đá, Sọc đơn", u4: "Cung A tầm xa 11 kẹp Bắn đá to & Pháo lùn Ballista, Đạp đôi", tierSolo: "A", tierTeam: "S", desc: "Dàn Cung A Minoan đứng tụ sau lưng đồng đội là bức tường lửa bất khả xâm phạm; tầm xa 11 áp chế mọi thứ." },
+      { id: 11, name: "Choson", en: "Choson", cn: "朝鲜", arch: "Đông Á", bonus: "Lính BB kiếm +80 HP (tối đa 240 HP). Phù thủy giảm 30% giá vàng. Chòi canh tầm xa +2.", cons: "Không có Bánh xe (không Cung R, không Đạp đôi). Ngựa chém không có Đầu máu, không giáp 4.", u3: "Ngựa chém công giáp cơ bản, Phù thủy rẻ, Cung A, BB kẹp Phù thủy", u4: "BB chém thần (Legion 240 HP trâu bò), Phù thủy rẻ, Chòi thần tầm xa", tierSolo: "C", tierTeam: "B+", desc: "Quân đánh đời 3 khó khăn nhất; tuy nhiên Đời 4 lính BB 240 máu cùng dàn Phù thủy giá rẻ là thế lực khủng khiếp." },
+      { id: 12, name: "Roman", en: "Roman", cn: "罗马", arch: "La Mã", bonus: "Công trình rẻ 15% gỗ. Chòi canh giảm 50% đá (chỉ tốn 75 đá). Lính BB kiếm chém nhanh +33%.", cons: "Không có Bánh xe (không Cung R, không Đạp đôi). Không có Cẩu đá to đời 4.", u3: "Ngựa chém BL, BB kiếm, Dâng chòi (Tower rush), Cung A", u4: "BB chém thần (Legion máy khâu), Ngựa chém thần, Pháo lùn rẻ gỗ", tierSolo: "B", tierTeam: "A", desc: "Tiết kiệm gỗ kinh khủng; dâng chòi và đánh BB cực kỳ khó chịu; lính kiếm Roman chém nhanh như máy khâu." },
+      { id: 13, name: "Carthaginian", en: "Carthaginian", cn: "迦太基", arch: "La Mã", bonus: "Voi và Lính Xiên +25% HP (Voi 750 HP, Xiên 150-200 HP). Tháp canh lửa +50% dame.", cons: "Không có Bánh xe (không Cung R, không Đạp đôi). Không có Ngựa chém BL.", u3: "Lạc đà (chống chém), Lính Xiên (150 HP), Cung A", u4: "Voi húc 750 HP (máu dày nhất game), Xiên thần (Centurion 200 HP), Pháo lùn", tierSolo: "B", tierTeam: "A", desc: "Bậc thầy cận chiến hạng nặng; Voi 750 máu và Xiên 200 máu có thể nghiền nát mọi chướng ngại vật." },
+      { id: 14, name: "Palmyran", en: "Palmyran", cn: "帕尔米拉", arch: "La Mã", bonus: "Dân làm việc nhanh +20%. Dân có sẵn 1 giáp. Chuyển đồ thuế 0%. Lạc đà chạy nhanh nhất.", cons: "Dân đắt 75 thực/con (gấp rưỡi). Mất dân đầu game là thảm họa.", u3: "Lạc đà (siêu cơ động bắt chém), Cung R, Ngựa chém BL", u4: "Đạp đôi, Cung R lửa, Bắn đá to", tierSolo: "A+", tierTeam: "A+", desc: "Quân phát triển tốc độ cao nếu quản lý dân tốt; Lạc đà Palmyra là ác mộng của mọi loại ngựa chém." },
+      { id: 15, name: "Macedonian", en: "Macedonian", cn: "马其顿", arch: "La Mã", bonus: "Toàn quân kháng Phù thủy x4 lần. Lính bộ & Bắn đá tầm nhìn +2. Pháo rẻ 50% chi phí.", cons: "KHÔNG CÓ CHỢ (BM) -> Không Bánh xe, không Chặt gỗ, không bơm đồ, không đào vàng nhanh.", u3: "Ngựa chém BL (trâu kháng hú), Lính Xiên, Bắn đá rẻ 50%", u4: "Xiên thần, Pháo lùn Helepolis siêu rẻ, Bắn đá kẹp Xiên", tierSolo: "B+", tierTeam: "A", desc: "Khắc tinh tuyệt đối của các bài Phù thủy; pháo rẻ giúp tạo dựng hỏa lực tầm xa áp đảo với chi phí tiết kiệm." },
+      { id: 16, name: "Greek", en: "Greek", cn: "希腊", arch: "Hy Lạp", bonus: "Lính Xiên chạy nhanh +30%. Tàu chiến di chuyển nhanh +30%.", cons: "Không có Bánh xe, không Ngựa chém BL, không Lạc đà, không Voi. Cực tốn vàng.", u3: "Lính Xiên chạy nhanh, Cung A, Phù thủy, Sọc đơn", u4: "Xiên thần (Centurion) lướt gió, Cẩu đá to, Pháo lùn Helepolis", tierSolo: "C+", tierTeam: "B+", desc: "Vua lính Xiên; Xiên Greek đời 4 chạy nhanh như lướt gió áp sát tiêu diệt nhanh cả cung thủ lẫn pháo đối phương." }
+    ];
+
+    // DỮ LIỆU ĐƠN VỊ
+    const unitsData = [
+      { name: "Nông Dân (Dân)", age: "Đời 1", bld: "TC", hp: "25 (Sume 40)", atk: "3", def: "0 (Pal 1)", range: "0", cost: "50 Thực (Shang 35, Pal 75)", feat: "Nòng cốt kinh tế; Sumerian 40 HP, Palmyran có sẵn 1 giáp & hái lượm nhanh +20%." },
+      { name: "Ngựa Dò", age: "Đời 2", bld: "BL", hp: "60", atk: "3", def: "0/0", range: "0", cost: "100 Thực", feat: "Do thám mở map, câu voi, chọc quấy dân đối phương đầu game, kháng hú nhẹ." },
+      { name: "Cung R (Ngựa Cung)", age: "Đời 3", bld: "BA", hp: "70 (Egy 93, Assy 75)", atk: "4 (+1 Hittite)", def: "0/0", range: "7 (+2)", cost: "40 Gỗ, 70 Thực", feat: "Đơn vị cơ động phổ biến nhất game; Assyrian bắn nhanh +33%, Egyptian 93 máu." },
+      { name: "Ngựa Chém Thường", age: "Đời 3", bld: "BL", hp: "150", atk: "8", def: "1/0", range: "0", cost: "70 Thực, 80 Vàng (Yama 60V)", feat: "Sốc sát thương, đồ sát dân cực lẹ, khắc tinh Cung R khi áp sát; Yamato rẻ 25% vàng." },
+      { name: "Lạc Đà", age: "Đời 3", bld: "BL", hp: "125", atk: "7 (+4 vs ngựa)", def: "0/0", range: "0", cost: "70 Thực, 60 Vàng", feat: "Khắc tinh số 1 của Ngựa chém BL; giá rẻ hơn chém, chạy nhanh, chém kỵ binh đối thủ cực đau." },
+      { name: "Sọc Đơn", age: "Đời 3", bld: "BL", hp: "100", atk: "7", def: "0/0", range: "0", cost: "40 Gỗ, 70 Thực", feat: "Chỉ tốn gỗ và thực, kháng phù thủy cực cao, càn quét chống phù thủy và đỡ đòn cho cung." },
+      { name: "Cung A (2 Áo)", age: "Đời 3", bld: "BA", hp: "45", atk: "5", def: "0/0", range: "7 (Minoan 8-9)", cost: "40 Gỗ, 20 Vàng", feat: "Đòi hỏi nâng cấp trong BA; Minoan cộng tầm xa; tụ cung thủ nhà hoặc đẩy đường cực rát." },
+      { name: "Lính Xiên (Hoplite)", age: "Đời 3", bld: "BY", hp: "120 (Carthage 150)", atk: "17", def: "5/0", range: "0", cost: "60 Thực, 40 Vàng", feat: "Công 17 cực cao, giáp cứng; Greek chạy nhanh +30%, Carthaginian 150 HP trâu bò." },
+      { name: "Cẩu Đá Nhỏ", age: "Đời 3", bld: "BK", hp: "150 (Hittite 300)", atk: "50 (Lan)", def: "0/0", range: "10", cost: "180 Gỗ, 80 Vàng", feat: "Vũ khí bắn lan giải tán đám đông; ác mộng Cung R tụ lại; Hittite x2 máu (300 HP), Sumerian bắn nhanh x2." },
+      { name: "Phù Thủy (Thầy Tu)", age: "Đời 3", bld: "BP", hp: "25", atk: "0 (Hú)", def: "0/0", range: "9 (Egyptian 12)", cost: "125 Vàng (Choson 85V)", feat: "Khắc chế cứng Chém, Lạc đà, Voi; hồi máu cho quân mình; Egyptian tầm xa 12, Babylon hồi mana +30%." },
+      { name: "Ngựa Đạp Đôi", age: "Đời 4", bld: "BL", hp: "120", atk: "9", def: "2/2", range: "0", cost: "75 Gỗ, 75 Thực", feat: "Quân rác bá đạo nhất đời 4; chỉ tốn Gỗ và Thực, chém lan diện rộng, ủi nát dân và bộ binh." },
+      { name: "Ngựa Chém Thần", age: "Đời 4", bld: "BL", hp: "180", atk: "12 (+5 vs bộ)", def: "3/0", range: "0", cost: "70 Thực, 80 Vàng", feat: "Đơn vị kỵ binh vàng mạnh nhất; giáp trâu máu dày, đồ sát bộ binh và cung tên trong nháy mắt." },
+      { name: "Voi Húc Thần", age: "Đời 4", bld: "BL", hp: "600 (Carthage 750)", atk: "18 (Lan)", def: "2/1", range: "0", cost: "170 Thực, 40 Vàng", feat: "Cỗ xe tăng bọc thép; Persian chạy nhanh như ngựa; Phoenician giá rẻ; Carthage trâu 750 HP." },
+      { name: "Pháo Cẩu To", age: "Đời 4", bld: "BK", hp: "175 (Hittite 350)", atk: "60 (Lan)", def: "0/0", range: "12", cost: "180 Gỗ, 80 Vàng", feat: "Hỏa lực hủy diệt tầm xa số 1; bắn tan nát từng cụm quân và thổi bay công trình từ 12 ô." },
+      { name: "Xiên Thần", age: "Đời 4", bld: "BY", hp: "160 (Carthage 200)", atk: "30", def: "8/0", range: "0", cost: "60 Thực, 40 Vàng", feat: "Chiến binh có chỉ số công 30 giáp 8 khủng khiếp; Greek chạy cực nhanh, Carthage 200 HP." }
+    ];
+
+    // DỮ LIỆU CÔNG NGHỆ
+    const techData = [
+      { bld: "Chợ (BM)", name: "Bánh Xe", en: "Wheel", age: "Đời 3", cost: "175 Thực, 75 Gỗ", effect: "Dân chạy nhanh +30%; Mở khóa Cung R, Sọc đơn, Đạp đôi.", target: "Dân, Cung R, Sọc Đơn, Đạp Đôi." },
+      { bld: "Chợ (BM)", name: "Chặt Gỗ 1", en: "Woodworking", age: "Đời 2", cost: "120 Thực, 75 Gỗ", effect: "Cung thủ tăng +2 Tầm xa; Dân mang thêm +2 gỗ mỗi chuyến.", target: "Dân gỗ, Cung trần, Cung R, Cung A." },
+      { bld: "Chợ (BM)", name: "Chặt Gỗ 2", en: "Artisanship", age: "Đời 3", cost: "170 Thực, 150 Gỗ", effect: "Cung thủ tăng thêm +1 Tầm xa (+3 tổng cộng); Dân +2 gỗ.", target: "Cung R, Cung A, Voi tên." },
+      { bld: "Chợ (BM)", name: "Chặt Gỗ 3", en: "Craftsmanship", age: "Đời 4", cost: "240 Thực, 200 Gỗ", effect: "Cung thủ tăng thêm +1 Tầm xa (+4 tổng cộng); Dân +2 gỗ.", target: "Cung R, Cung A max tầm xa 11." },
+      { bld: "Chợ (BM)", name: "Đào Vàng 1", en: "Gold Mining", age: "Đời 2", cost: "120 Thực, 100 Gỗ", effect: "Dân đào vàng nhanh +15% và mang thêm +3 vàng.", target: "Dân vàng; cần thiết cho Ngựa chém, Lạc đà, Cung A." },
+      { bld: "Chính Phủ (BC)", name: "Đầu Máu", en: "Nobility", age: "Đời 3", cost: "175 Thực, 120 Vàng", effect: "Tăng 15% lượng Máu (HP) tối đa cho kỵ binh và voi.", target: "Ngựa chém (172 HP), Cung R (80/106 HP), Voi (690 HP)." },
+      { bld: "Chính Phủ (BC)", name: "Bắn Chặn", en: "Ballistics", age: "Đời 3", cost: "150 Thực, 75 Vàng", effect: "Vũ khí tầm xa bắn đón đầu mục tiêu đang di chuyển.", target: "Cung R, Cung A, Cẩu đá, Chòi canh." },
+      { bld: "Chính Phủ (BC)", name: "Tên Lửa", en: "Alchemy", age: "Đời 4", cost: "250 Thực, 200 Vàng", effect: "Tăng +1 Sát thương công cho tất cả vũ khí tầm xa.", target: "Cung R lửa, Cung A, Pháo cẩu, Tháp canh." },
+      { bld: "Chính Phủ (BC)", name: "Viết Chữ", en: "Writing", age: "Đời 3", cost: "150 Thực, 75 Gỗ", effect: "Chia sẻ toàn bộ bản đồ và tầm nhìn với đồng minh.", target: "Tối quan trọng trong 2v2 và 4v4." },
+      { bld: "Khoáng Sản (BS)", name: "Công Cận Chiến 1", en: "Toolworking", age: "Đời 2", cost: "100 Thực", effect: "Tăng +2 Sát thương công cho cận chiến.", target: "Lính chùy, Ngựa dò, Ngựa chém, Lạc đà." },
+      { bld: "Khoáng Sản (BS)", name: "Công Cận Chiến 2", en: "Metalworking", age: "Đời 3", cost: "160 Thực, 50 Gỗ", effect: "Tăng thêm +2 Sát thương công (+4 tổng).", target: "Ngựa chém (công 12), Lạc đà, Kiếm." },
+      { bld: "Khoáng Sản (BS)", name: "Giáp Tên Kỵ Binh 1", en: "Leather Armor Cavalry", age: "Đời 3", cost: "125 Thực, 80 Gỗ", effect: "Tăng +2 Giáp chống bắn tên cho kỵ binh.", target: "Ngựa chém và Lạc đà lao vào dàn Cung R đỡ tên tốt." },
+      { bld: "Đền Thờ (BP)", name: "Hồi Mana Thần Tốc", en: "Astrology", age: "Đời 3", cost: "150 Vàng", effect: "Phù thủy hồi năng lượng nhanh hơn +30%.", target: "Babylon kết hợp công nghệ này hồi mana liên tục." }
+    ];
+
+    // DỮ LIỆU LUẬT & THỂ THỨC
+    const rulesData = [
+      { code: "KT01", name: "Solo Shang Thuần Tiễn", civ: "Shang vs Shang", u3: "Chỉ duy nhất Cung R (BA)", ban: "Cấm chém, cấm phù thủy, cấm sọc đơn, cấm pháo, cấm thành chòi. Cấm đập móng.", style: "TQ ép đời siêu chuẩn và đi quân mẫu mực; VN đột biến, vẩy E rỉa dân." },
+      { code: "KT02", name: "Solo Assyrian Thuần Tiễn", civ: "Assyrian vs Assyrian", u3: "Chỉ duy nhất Cung R (BA)", ban: "Cấm chém, cấm phù thủy, cấm pháo, cấm thành chòi. Cấm đập móng.", style: "Cung Assyrian bắn nhanh +33%; đua dạt dân và điều rỉa rát." },
+      { code: "KT03", name: "Solo Yamato Thuần Chém", civ: "Yamato vs Yamato", u3: "Chỉ duy nhất Ngựa Chém (BL)", ban: "Cấm Cung A, cấm phù thủy, cấm pháo, cấm thành chòi. Cấm đập móng.", style: "Đua kích 3 sớm (9x); luồn lách mỏ quả ruộng lúa đồ sát nông dân." },
+      { code: "KT04", name: "2v2 Shang Hỗn Mã", civ: "Shang vs Shang", u3: "Cung R phối hợp Ngựa chém", ban: "Cấm phù thủy, cấm pháo, cấm thành chòi. Đúng phân vai 1 Cung 1 Chém.", style: "Chém làm bia đỡ đòn và càn quét, Cung R xả hỏa lực phía sau." },
+      { code: "KT07", name: "4v4 Random (Đặc Sản VN)", civ: "Random 16 quân", u3: "Tự do binh chủng đời 3 & 4", ban: "Cấm thành chòi đời 3. Tuân thủ luật bơm đồ qua BM. Cấm bug sửa ruộng.", style: "Phân vai: Đầu cánh chém rát bán máu; Trong cánh tay to sóc dân lên 4." },
+      { code: "LUAT01", name: "Luật Đời 1 - Đời 2", civ: "Mọi thể thức", u3: "Dân & Ngựa dò", ban: "CẤM ĐẬP MÓNG DÂN. Cho phép vẩy E cứu dân. Cấm công nhà đời 2.", style: "Đảm bảo trận đấu văn minh, tôn vinh kỹ năng phát triển kinh tế." },
+      { code: "LUAT02", name: "Luật Đời 3", civ: "Mọi thể thức", u3: "Theo thỏa thuận kèo", ban: "CẤM ĐẮP THÀNH (Wall) và CHÒI CANH (Tower) ở đời 3. Cấm bơm đồ khi chưa có BM.", style: "Khuyến khích lối chơi tấn công cống hiến, cơ động, phô diễn điều quân." },
+      { code: "LUAT03", name: "Luật Đời 4", civ: "Mọi thể thức", u3: "Mở khóa toàn bộ quân tuyển", ban: "ĐƯỢC PHÉP xây Thành Chòi tự do khi đã lên xong Đời 4.", style: "Cuộc chiến quân hạng nặng: Voi thần, Đạp đôi, Xiên thần, Pháo cẩu to, Tên lửa." }
+    ];
+
+    function getTierClass(tier) {
+      if (tier === 'S+') return 'tier-s-plus';
+      if (tier === 'S') return 'tier-s';
+      if (tier === 'A+' || tier === 'A') return 'tier-a';
+      if (tier === 'B+' || tier === 'B') return 'tier-b';
+      return 'tier-c';
+    }
+
+    function renderCivs(data) {
+      const container = document.getElementById('civGrid');
+      container.innerHTML = data.map(c => `
+        <div class="civ-card">
+          <div class="civ-header">
+            <div>
+              <div class="civ-name">${c.name} <span class="civ-cn-name">(${c.cn})</span></div>
+              <div class="civ-arch">${c.arch}</div>
+            </div>
+            <div class="tier-badges">
+              <span class="badge ${getTierClass(c.tierSolo)}" title="Tier Solo Đời 3">Solo: ${c.tierSolo}</span>
+              <span class="badge ${getTierClass(c.tierTeam)}" title="Tier 4v4 Random">Team: ${c.tierTeam}</span>
+            </div>
+          </div>
+          <div class="civ-highlight">
+            <strong>Ưu điểm:</strong> ${c.bonus}
+          </div>
+          <div class="civ-section">
+            <div class="civ-section-title">Nhược điểm</div>
+            <div style="color: #f87171; font-size: 0.85rem;">${c.cons}</div>
+          </div>
+          <div class="civ-section">
+            <div class="civ-section-title">Quân đời 3 & 4</div>
+            <div style="font-size: 0.85rem;"><strong style="color:var(--gold-light);">Đ3:</strong> ${c.u3}</div>
+            <div style="font-size: 0.85rem; margin-top: 2px;"><strong style="color:#60a5fa;">Đ4:</strong> ${c.u4}</div>
+          </div>
+          <div class="civ-footer">
+            ${c.desc}
+          </div>
+        </div>
+      `).join('');
+    }
+
+    function renderUnits(data) {
+      const tbody = document.getElementById('unitsTableBody');
+      tbody.innerHTML = data.map(u => `
+        <tr>
+          <td><strong style="color: var(--gold-light);">${u.name}</strong></td>
+          <td><span style="background: rgba(255,255,255,0.08); padding: 2px 6px; border-radius: 4px;">${u.age}</span></td>
+          <td><strong style="color: #60a5fa;">${u.bld}</strong></td>
+          <td>${u.hp}</td>
+          <td><span style="color: #f87171; font-weight: 600;">${u.atk}</span></td>
+          <td>${u.def}</td>
+          <td>${u.range}</td>
+          <td style="font-size: 0.85rem; color: #fbbf24;">${u.cost}</td>
+          <td style="font-size: 0.85rem; color: var(--text-muted);">${u.feat}</td>
+        </tr>
+      `).join('');
+    }
+
+    function renderTech(data) {
+      const tbody = document.getElementById('techTableBody');
+      tbody.innerHTML = data.map(t => `
+        <tr>
+          <td><strong style="color: #60a5fa;">${t.bld}</strong></td>
+          <td><strong style="color: var(--gold-light);">${t.name}</strong></td>
+          <td style="color: var(--text-muted); font-size: 0.85rem;">${t.en}</td>
+          <td><span style="background: rgba(255,255,255,0.08); padding: 2px 6px; border-radius: 4px;">${t.age}</span></td>
+          <td style="color: #fbbf24; font-size: 0.85rem;">${t.cost}</td>
+          <td style="font-size: 0.85rem;">${t.effect}</td>
+          <td style="font-size: 0.85rem; color: var(--text-muted);">${t.target}</td>
+        </tr>
+      `).join('');
+    }
+
+    function renderRules(data) {
+      const container = document.getElementById('rulesContainer');
+      container.innerHTML = data.map(r => `
+        <div class="rule-card">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+            <h3>${r.name}</h3>
+            <span style="background: var(--gold); color: #000; font-weight: 700; padding: 2px 8px; border-radius: 4px; font-size: 0.8rem;">${r.code}</span>
+          </div>
+          <p style="color: var(--gold-light); font-size: 0.9rem; margin-bottom: 6px;"><strong>Quân & Binh chủng:</strong> ${r.civ} • ${r.u3}</p>
+          <div style="background: rgba(239, 68, 68, 0.1); border-left: 3px solid #ef4444; padding: 8px 12px; border-radius: 0 6px 6px 0; margin-bottom: 8px; font-size: 0.88rem; color: #fca5a5;">
+            <strong>Điều cấm kỵ:</strong> ${r.ban}
+          </div>
+          <p style="color: var(--text-muted); font-size: 0.88rem;"><strong>Đặc trưng Việt - Trung:</strong> ${r.style}</p>
+        </div>
+      `).join('');
+    }
+
+    let activeTabId = 'civs';
+    let currentTierFilter = 'all';
+
+    function switchTab(tabId) {
+      activeTabId = tabId;
+      document.querySelectorAll('.nav-btn').forEach(btn => btn.classList.remove('active'));
+      event.currentTarget.classList.add('active');
+
+      document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
+      document.getElementById('tab-' + tabId).classList.add('active');
+
+      const civFilters = document.getElementById('civFilters');
+      if (tabId === 'civs') {
+        civFilters.style.display = 'flex';
+      } else {
+        civFilters.style.display = 'none';
+      }
+
+      filterContent();
+    }
+
+    function filterTier(tier) {
+      currentTierFilter = tier;
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      event.currentTarget.classList.add('active');
+      filterContent();
+    }
+
+    function filterContent() {
+      const query = document.getElementById('searchInput').value.toLowerCase().trim();
+
+      if (activeTabId === 'civs') {
+        const filtered = civsData.filter(c => {
+          const matchQuery = c.name.toLowerCase().includes(query) ||
+                             c.en.toLowerCase().includes(query) ||
+                             c.cn.includes(query) ||
+                             c.bonus.toLowerCase().includes(query) ||
+                             c.u3.toLowerCase().includes(query);
+          const matchTier = currentTierFilter === 'all' || 
+                            c.tierSolo.includes(currentTierFilter) || 
+                            c.tierTeam.includes(currentTierFilter);
+          return matchQuery && matchTier;
+        });
+        renderCivs(filtered);
+      } else if (activeTabId === 'units') {
+        const filtered = unitsData.filter(u => 
+          u.name.toLowerCase().includes(query) || 
+          u.bld.toLowerCase().includes(query) ||
+          u.feat.toLowerCase().includes(query)
+        );
+        renderUnits(filtered);
+      } else if (activeTabId === 'tech') {
+        const filtered = techData.filter(t => 
+          t.name.toLowerCase().includes(query) || 
+          t.en.toLowerCase().includes(query) ||
+          t.bld.toLowerCase().includes(query) ||
+          t.effect.toLowerCase().includes(query)
+        );
+        renderTech(filtered);
+      } else if (activeTabId === 'rules') {
+        const filtered = rulesData.filter(r => 
+          r.name.toLowerCase().includes(query) || 
+          r.ban.toLowerCase().includes(query) ||
+          r.style.toLowerCase().includes(query)
+        );
+        renderRules(filtered);
+      }
+    }
+
+    // Khởi tạo render lần đầu
+    renderCivs(civsData);
+    renderUnits(unitsData);
+    renderTech(techData);
+    renderRules(rulesData);
+  </script>
+</body>
+</html>

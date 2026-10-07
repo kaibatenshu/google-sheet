@@ -168,3 +168,17 @@ function formatSheetTable(sheet, headers, data, headerColor) {
     sheet.autoResizeColumn(c);
   }
 }
+
+/**
+ * HÀM XUẤT BẢN THÀNH WEB APP TRỰC TIẾP TRÊN GOOGLE APPS SCRIPT:
+ * Khi bạn bấm 'Triển khai' (Deploy) -> 'Ứng dụng web' (Web App), hàm này sẽ tự động chạy
+ * và hiển thị giao diện Web Dashboard tra cứu AoE 1 trực tiếp trên trình duyệt!
+ */
+function doGet(e) {
+  const htmlOutput = HtmlService.createHtmlOutputFromFile('index')
+    .setTitle('AOE 1 Cẩm Nang Toàn Thư | Việt Nam & Trung Quốc')
+    .setXFrameOptionsMode(HtmlService.XFrameOptionsMode.ALLOWALL)
+    .addMetaTag('viewport', 'width=device-width, initial-scale=1');
+  return htmlOutput;
+}
+

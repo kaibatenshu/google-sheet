@@ -33,7 +33,8 @@ Trong thư mục dự án này, hệ thống cơ sở dữ liệu đã được 
 | [`02_Units_Buildings.csv`](file:///c:/Devtools/Projects/google-sheet/AoE1/02_Units_Buildings.csv) | CSV (UTF-8) | Toàn bộ chỉ số lính, kỵ binh, pháo binh, phù thủy và công trình (Máu, Công, Giáp, Tầm xa, Chi phí). |
 | [`03_Tech_Tree.csv`](file:///c:/Devtools/Projects/google-sheet/AoE1/03_Tech_Tree.csv) | CSV (UTF-8) | Bảng cây công nghệ nâng cấp (Nhà BM, BC, BS, BP, Đời yêu cầu, Chi phí, Tác dụng cụ thể). |
 | [`04_Rules_Formats_VN_CN.csv`](file:///c:/Devtools/Projects/google-sheet/AoE1/04_Rules_Formats_VN_CN.csv) | CSV (UTF-8) | Bộ luật thi đấu chính thức Việt - Trung và chi tiết các thể thức kinh điển (Shang, Assyrian, Random, 2v2, 4v4). |
-| [`AoE1_GoogleSheets_Setup.gs`](file:///c:/Devtools/Projects/google-sheet/AoE1/AoE1_GoogleSheets_Setup.gs) | Apps Script | Mã nguồn Google Apps Script khởi tạo tự động 4 Sheet chuẩn đẹp 1-click. |
+| [`index.html`](file:///c:/Devtools/Projects/google-sheet/AoE1/index.html) | HTML5 / CSS3 / JS | Giao diện Web App tương tác độc lập (tra cứu, tìm kiếm, lọc Tier, timeline). |
+| [`AoE1_GoogleSheets_Setup.gs`](file:///c:/Devtools/Projects/google-sheet/AoE1/AoE1_GoogleSheets_Setup.gs) | Apps Script | Mã nguồn Google Apps Script khởi tạo tự động 4 Sheet chuẩn đẹp 1-click & hỗ trợ Web App. |
 
 ---
 
@@ -281,26 +282,35 @@ Hiểu rõ cơ chế khắc chế là chìa khóa để ra quân chuẩn xác tr
 
 ---
 
-## 🚀 8. HƯỚNG DẪN TẠO GOOGLE SHEETS TỰ ĐỘNG (1-CLICK)
+## 🚀 8. HƯỚNG DẪN ĐƯA TOÀN BỘ LÊN WEB (3 PHƯƠNG ÁN)
 
-Bạn có thể đưa toàn bộ cơ sở dữ liệu này lên Google Sheets theo 1 trong 2 cách:
+### Phương Án 1: Triển khai trực tiếp thành Web App bằng Google Apps Script (Khuyên dùng)
+Nếu bạn đã tạo Google Sheets, bạn có thể biến nó thành một Website độc lập có link truy cập công khai trong 1 phút:
+1. Trong màn hình **Google Apps Script**, nhấn nút **`+` (Thêm tệp)** bên trái ➔ Chọn **HTML** ➔ Đặt tên là `index`.
+2. Mở file [`index.html`](file:///c:/Devtools/Projects/google-sheet/AoE1/index.html) trong thư mục này, sao chép toàn bộ mã và dán vào file `index.html` trong Apps Script ➔ Nhấn Lưu.
+3. Ở góc trên bên phải màn hình Apps Script, nhấn nút xanh: **Triển khai (Deploy)** ➔ **Tùy chọn triển khai mới (New deployment)**.
+4. Chọn loại: **Ứng dụng web (Web app)**:
+   * **Mô tả:** AoE 1 Cẩm Nang Web.
+   * **Người có quyền truy cập (Who has access):** Chọn **Bất kỳ ai (Anyone)**.
+5. Nhấn **Triển khai (Deploy)** ➔ Google sẽ cấp một đường link URL dạng `https://script.google.com/macros/s/.../exec`. Bạn có thể gửi link này cho bất kỳ ai hoặc mở trên điện thoại!
 
-### Cách 1: Sử dụng Google Apps Script (Khuyên dùng - Đẹp & Chuẩn nhất)
-1. Mở trình duyệt và truy cập: [https://sheets.new](https://sheets.new) để tạo một bảng tính Google Sheets mới.
-2. Trên thanh công cụ, chọn: **Tiện ích mở rộng (Extensions)** ➔ **Apps Script**.
-3. Mở tệp [`AoE1_GoogleSheets_Setup.gs`](file:///c:/Devtools/Projects/google-sheet/AoE1/AoE1_GoogleSheets_Setup.gs) trong thư mục này, sao chép toàn bộ mã nguồn.
-4. Dán mã vào trình soạn thảo Apps Script, nhấn nút **Lưu (Save)**.
-5. Chọn hàm `initAoE1Database` và nhấn **Chạy (Run)**.
-6. Cấp quyền truy cập nếu Google yêu cầu. Bảng tính sẽ tự động sinh ra 4 Tab với màu sắc, định dạng và độ rộng cột chuẩn chỉnh!
+---
 
-### Cách 2: Nhập tệp CSV thủ công
-1. Tạo bảng tính mới tại [Google Sheets](https://sheets.new).
-2. Vào **Tệp (File)** ➔ **Nhập (Import)** ➔ **Tải lên (Upload)**.
-3. Chọn lần lượt các tệp:
-   * `01_16_Civilizations.csv` ➔ Chọn "Thay thế trang tính hiện tại".
-   * `02_Units_Buildings.csv` ➔ Chọn "Chèn trang tính mới".
-   * `03_Tech_Tree.csv` ➔ Chọn "Chèn trang tính mới".
-   * `04_Rules_Formats_VN_CN.csv` ➔ Chọn "Chèn trang tính mới".
+### Phương Án 2: Xuất bản Google Sheets trực tiếp lên Web
+Nếu bạn muốn chia sẻ bảng tính trực quan dưới dạng trang web:
+1. Mở bảng tính Google Sheets của bạn.
+2. Trên menu chọn: **Tệp (File)** ➔ **Chia sẻ (Share)** ➔ **Xuất bản lên web (Publish to web)**.
+3. Chọn xuất bản **Toàn bộ tài liệu (Entire Document)** ➔ Nhấn **Xuất bản (Publish)**. Bạn sẽ nhận được đường link web để xem trực tiếp.
+
+---
+
+### Phương Án 3: Mở trực tiếp hoặc Đưa lên Hosting Miễn Phí (Vercel / GitHub Pages / Netlify)
+Tệp [`index.html`](file:///c:/Devtools/Projects/google-sheet/AoE1/index.html) đã được thiết kế hoàn chỉnh dạng Single Page Application (Dark & Gold AoE Theme, tra cứu tức thì, lọc Tier):
+* **Xem ngay trên máy tính:** Nhấp đúp chuột vào tệp [`index.html`](file:///c:/Devtools/Projects/google-sheet/AoE1/index.html) để mở trên trình duyệt bất kỳ.
+* **Đưa lên web vĩnh viễn (0 đồng):**
+  * Kéo thả thư mục dự án vào [Netlify Drop](https://app.netlify.com/drop) để có ngay website trong 10 giây.
+  * Hoặc đẩy lên GitHub và bật tính năng **GitHub Pages** (Settings ➔ Pages ➔ Source: main branch).
+
 
 ---
 *Tài liệu được biên soạn và chuẩn hóa phục vụ cộng đồng AoE Việt Nam - Trung Quốc.*
