@@ -119,7 +119,7 @@ function renderMatrixTable() {
         const res = getUnitMatrixStats(u, civ.id, age);
 
         if (!res.isAgeAvailable) {
-          tbodyHtml += `<td class="data-cell cell-locked-age" title="${u.name} mở khóa ở Đời ${u.firstAge}">-</td>`;
+          tbodyHtml += `<td class="data-cell cell-locked-age" title="${u.name} mở khóa ở Đời ${u.firstAge}"></td>`;
         } else {
           const val = res.stats[m.key];
           const isBonus = isBonusStat(u.id, civ.id, m.key, val);
@@ -144,10 +144,10 @@ function renderMatrixTable() {
 
 // 3. ĐỊNH DẠNG GIÁ TRỊ VÀ TOOLTIP CHO CELL (GIẢI THÍCH DÀI DÒNG HIỆN KHI RÊ CHUỘT)
 function formatMatrixCell(m, val, unit) {
-  if (val === 0 || val === "0") {
+  if (val === 0 || val === "0" || val == null || val === undefined || val === "" || val === "-") {
     return {
-      display: `<span class="cell-res-text zero">-</span>`,
-      title: `${m.label}: 0`
+      display: '',
+      title: (val === 0 || val === "0") ? `${m.label}: 0` : ''
     };
   }
 
@@ -192,20 +192,21 @@ function formatMatrixCell(m, val, unit) {
     if (fullText.includes("Bắn nhanh +33%")) short = "⚡ +33% bắn";
     else if (fullText.includes("Bắn nhanh x2")) short = "⚡ x2 bắn";
     else if (fullText.includes("Chém nhanh +33%")) short = "⚡ +33% chém";
+    else if (fullText.includes("Làm việc +20%")) short = "⚡ +20% việc";
     else if (fullText.includes("Làm việc nhanh +20%")) short = "⚡ +20% việc";
-    else if (fullText.includes("Đào vàng +20%")) short = "💰 +20% vàng";
-    else if (fullText.includes("Đào đá +3")) short = "⚪ +3 đá";
-    else if (fullText.includes("Chặt gỗ +3")) short = "🪵 +3 gỗ";
+    else if (fullText.includes("Đào vàng 13")) short = "💰 +20% vàng";
+    else if (fullText.includes("Đào đá 13")) short = "⚪ +30% đá";
+    else if (fullText.includes("Chặt gỗ 13")) short = "🪵 +3 gỗ";
     else if (fullText.includes("Ăn voi hươu +30%")) short = "🥩 +30% thịt";
-    else if (fullText.includes("Kháng hú x4")) short = "🛡️ Kháng hú";
+    else if (fullText.includes("Kháng phù thủy x4") || fullText.includes("Kháng hú x4")) short = "🛡️ Kháng hú";
     else if (fullText.includes("lướt gió")) short = "⚡ +30% tốc";
     else if (fullText.includes("Lao động cơ bản")) short = "Cơ bản";
     else if (fullText.includes("Bộ binh cận chiến")) short = "Cận chiến";
     else if (fullText.includes("vs Cung thủ")) short = "+1.5 vs Cung";
+    else if (fullText.includes("vs Kỵ binh") || fullText.includes("vs Kỵ")) short = "+8 vs Kỵ";
     else if (fullText.includes("Liên thanh")) short = "Liên thanh";
     else if (fullText.includes("Tầm xa 5, giáp cận +2")) short = "+1 tầm, +2 giáp";
     else if (fullText.includes("Tầm xa 6, giáp cận +4")) short = "+2 tầm, +4 giáp";
-    else if (fullText.includes("Nâng lên Ngựa đạp đôi")) short = "Lên Đạp đôi";
     else if (fullText.length > 10) short = fullText.slice(0, 9) + '…';
 
     display = `<span class="cell-desc">${short}</span>`;
@@ -218,18 +219,30 @@ function formatMatrixCell(m, val, unit) {
 
 // KIỂM TRA CHỈ SỐ CÓ PHẢI LÀ BONUS CỦA QUỐC GIA ĐANG CHỌN KHÔNG
 function isBonusStat(unitId, civId, key, val) {
+  if (!val || val === 0 || val === "0" || val === "-") return false;
   const valStr = String(val);
-  if (valStr.includes('+') || valStr.includes('⚡') || valStr.includes('Rẻ') || valStr.includes('%') || valStr.includes('x2')) {
+  if (valStr.includes('+') || valStr.includes('⚡') || valStr.includes('Rẻ') || valStr.includes('%') || valStr.includes('x2') || valStr.includes('(-25%)') || valStr.includes('(-50%)') || valStr.includes('(-30%)')) {
     return true;
   }
 
   if (civId === 'shang' && unitId === 'villager' && key === 'food' && val === 35) return true;
-  if (civId === 'egyptian' && unitId === 'chariot_archer' && key === 'hp') return true;
-  if (civId === 'hittite' && unitId === 'chariot_archer' && key === 'atk') return true;
+  if (civId === 'egyptian' && (unitId === 'chariot_archer' || unitId === 'chariot' || unitId === 'scythe_chariot') && key === 'hp') return true;
+  if (civId === 'egyptian' && unitId === 'priest' && key === 'range') return true;
+  if (civId === 'hittite' && ['bowman', 'chariot_archer', 'composite_bowman', 'heavy_horse_archer'].includes(unitId) && key === 'atk') return true;
+  if (civId === 'hittite' && unitId === 'stone_thrower' && key === 'hp') return true;
   if (civId === 'sumerian' && unitId === 'villager' && key === 'hp' && val >= 40) return true;
   if (civId === 'choson' && (unitId === 'broad_swordsman' || unitId === 'legion') && key === 'hp') return true;
-  if (civId === 'carthaginian' && (unitId === 'armored_elephant' || unitId === 'hoplite' || unitId === 'centurion') && key === 'hp') return true;
-  if (civId === 'yamato' && (unitId === 'scout_cavalry' || unitId === 'cavalry' || unitId === 'cataphract') && (key === 'food' || key === 'gold')) return true;
+  if (civId === 'choson' && unitId === 'priest' && key === 'gold') return true;
+  if (civId === 'carthaginian' && ['armored_elephant', 'elephant_archer', 'hoplite', 'centurion'].includes(unitId) && key === 'hp') return true;
+  if (civId === 'yamato' && ['scout_cavalry', 'cavalry', 'cataphract', 'heavy_horse_archer'].includes(unitId) && (key === 'food' || key === 'gold')) return true;
+  if (civId === 'palmyran' && unitId === 'villager' && (key === 'food' || key === 'melee')) return true;
+  if (civId === 'palmyran' && unitId === 'camelry' && key === 'speed') return true;
+  if (civId === 'macedonian' && ['stone_thrower', 'heavy_catapult', 'ballista', 'helepolis'].includes(unitId) && (key === 'wood' || key === 'gold')) return true;
+  if (civId === 'macedonian' && ['hoplite', 'centurion'].includes(unitId) && key === 'pierce') return true;
+  if (civId === 'greek' && ['hoplite', 'centurion'].includes(unitId) && key === 'speed') return true;
+  if (civId === 'minoan' && unitId === 'composite_bowman' && key === 'range') return true;
+  if (civId === 'persian' && unitId === 'armored_elephant' && key === 'speed') return true;
+  if (civId === 'phoenician' && ['armored_elephant', 'elephant_archer'].includes(unitId) && key === 'food') return true;
 
   return false;
 }

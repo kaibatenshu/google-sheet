@@ -39,7 +39,7 @@ const AOE_CIVILIZATIONS = [
       horseArcher: true,
       elephant: false,
       heavyCatapult: false,
-      helepolis: true,
+      helepolis: false,
       centurion: false,
       priest: true,
       ballistaTower: false
@@ -178,20 +178,20 @@ const AOE_CIVILIZATIONS = [
     bannerColor: "#d97706",
     architecture: "Babylon / Lưỡng Hà",
     specialBonus: [
-      "Cung R mặc định +1 công (khởi điểm 4+1 = 5, nâng chặt gỗ lên 6)",
-      "Bắn đá (Catapult) gấp đôi máu (300 HP đời 3, 350 HP đời 4)",
-      "Tàu chiến bắn xa +4"
+      "Tất cả cung nhà BA mặc định +1 công (Cung T công 4, Cung R công 5, Cung A công 6, Cung C công 9)",
+      "Cẩu đá (Stone Thrower, Catapult) x2 lượng máu (300 HP đời 3, 350 HP đời 4)",
+      "Tàu chiến tầm xa +4"
     ],
-    weakness: "Không có Cẩu đá to nhất (Heavy Catapult), Phù thủy không có nâng cấp tốt.",
+    weakness: "Không có Cẩu đá to nhất (Heavy Catapult), không thể xây Đền thờ / Phù thủy (BP).",
     unitsByAge: {
       age1: ["Nông dân", "Lính chùy"],
-      age2: ["Ngựa dò", "Lính rìu", "Cung trần"],
-      age3: ["Cung R (+1 công cực rát)", "Bắn đá 300 HP trâu bò", "Ngựa chém BL"],
-      age4: ["Cung R lửa", "Đạp đôi", "Bắn đá kẹp Cung", "Ngựa chém giáp 4"]
+      age2: ["Ngựa dò", "Lính rìu", "Cung trần (+1 công)"],
+      age3: ["Cung R (+1 công cực rát)", "Cẩu đá 300 HP trâu bò", "Ngựa chém BL"],
+      age4: ["Cung R lửa", "Đạp đôi", "Cẩu đá 350 HP kẹp Cung", "Ngựa chém giáp 4"]
     },
     tierSolo: "S",
     tierTeam: "S+",
-    playStyle: "Chủ lực hoàn hảo nhất bản đồ Random; Cung R bắn đau cắn dân siêu nhanh, Bắn đá x2 máu dẹp tan dàn cung địch.",
+    playStyle: "Chủ lực hoàn hảo nhất bản đồ Random; Cung R bắn đau cắn dân siêu nhanh, Cẩu đá x2 máu dẹp tan dàn cung địch.",
     techTree: {
       wheel: true,
       chariotArcher: true,
@@ -220,15 +220,15 @@ const AOE_CIVILIZATIONS = [
     architecture: "Babylon / Lưỡng Hà",
     specialBonus: [
       "Dân chặt gỗ mang về 13 gỗ (+3 gỗ/chuyến, tích lũy gỗ siêu nhanh)",
-      "Voi húc và Voi tên giảm 25% giá thực (chỉ 135 thực thay vì 180 thực)",
+      "Voi húc và Voi tên giảm 25% giá thực (Voi húc 127.5 thực, Voi tên 135 thực)",
       "Tàu chiến bắn nhanh hơn +65%"
     ],
-    weakness: "Giáp lính bình thường, không có Ngựa đôi, không có Cẩu đá to đời 4.",
+    weakness: "Giáp lính bình thường, không có Đạp đôi, không có Cẩu đá to đời 4.",
     unitsByAge: {
       age1: ["Nông dân làm gỗ siêu nhanh", "Lính chùy"],
       age2: ["Ngựa dò", "Lính rìu", "Cung trần"],
       age3: ["Cung R (ra quân ồ ạt nhờ dồi dào gỗ)", "Ngựa chém BL", "Sọc đơn"],
-      age4: ["Voi húc & Voi tên giá rẻ siêu đông", "Cung R lửa", "Bắn đá nhỏ"]
+      age4: ["Voi húc (127.5F) & Voi tên (135F) giá rẻ siêu đông", "Cung R lửa", "Cẩu đá nhỏ"]
     },
     tierSolo: "A",
     tierTeam: "S",
@@ -342,20 +342,20 @@ const AOE_CIVILIZATIONS = [
     bannerColor: "#dc2626",
     architecture: "Đông Á (East Asian)",
     specialBonus: [
-      "Dân chạy nhanh hơn +30% (tương đương Assyrian)",
-      "Ngựa chém (Scout, Cavalry) rẻ hơn 25% vàng (75 vàng thay vì 100 vàng)",
+      "Dân di chuyển nhanh hơn +30% (tương đương Assyrian)",
+      "Tất cả kỵ binh (Ngựa dò, Ngựa chém, Chém thần, Cung C) giảm 25% chi phí (cả thực và vàng)",
       "Tàu chiến máu +30%"
     ],
-    weakness: "Cung R yếu (không có giáp tên); Đời 4 không có Đạp đôi, không có Voi, không có Cẩu đá to.",
+    weakness: "Không có Cẩu đá nhà BK; Đời 4 không có Đạp đôi, không có Voi, Cung R yếu (không giáp tên).",
     unitsByAge: {
       age1: ["Nông dân chạy nhanh +30%", "Lính chùy"],
-      age2: ["Ngựa dò rẻ vàng", "Lính rìu", "Cung trần"],
-      age3: ["Ngựa chém BL (Vua chém số lượng áp đảo)", "Cung A", "Phù thủy"],
-      age4: ["Ngựa chém thần (Cataphract)", "Cung A 2 áo", "Lính xiên"]
+      age2: ["Ngựa dò giá rẻ 75 thực", "Lính rìu", "Cung trần"],
+      age3: ["Ngựa chém BL (52.5 thực, 60 vàng - Vua ép chém)", "Cung A", "Phù thủy"],
+      age4: ["Ngựa chém thần (Cataphract 52.5 thực, 60 vàng)", "Cung C thần rẻ", "Xiên thần"]
     },
     tierSolo: "S",
     tierTeam: "S",
-    playStyle: "Vua của chiến thuật đánh Chém đời 3; giảm 25% vàng giúp đẻ chém liên tục không ngắt nhịp; solo Yamato đỉnh cao.",
+    playStyle: "Vua của chiến thuật đánh Chém đời 3; giảm 25% chi phí giúp đẻ chém liên tục không ngắt nhịp; solo Yamato đỉnh cao.",
     techTree: {
       wheel: true,
       chariotArcher: true,
@@ -383,20 +383,20 @@ const AOE_CIVILIZATIONS = [
     bannerColor: "#0284c7",
     architecture: "Hy Lạp (Greek)",
     specialBonus: [
-      "Cung A (Composite Bowman) tầm xa +1 ở đời 3, +2 ở đời 4 (tối đa 11 ô)",
-      "Ruộng +60 sản lượng thức ăn",
+      "Cung A (Composite Bowman) tầm xa +2 (khởi điểm 9 ô ở đời 3, tối đa 11 ô ở đời 4)",
+      "Ruộng rẻ hơn 33% (chỉ tốn 50 gỗ thay vì 75 gỗ)",
       "Tàu chiến rẻ hơn 33%"
     ],
     weakness: "Không có Cung R, không có Ngựa chém BL, không có Lạc đà; phụ thuộc vào việc giữ được dàn Cung A không bị áp sát.",
     unitsByAge: {
       age1: ["Nông dân", "Lính chùy"],
       age2: ["Ngựa dò", "Lính rìu", "Cung trần"],
-      age3: ["Cung A (tầm xa 8-9 bắn rát)", "Cẩu đá", "Sọc đơn"],
-      age4: ["Cung A tầm xa 11", "Cẩu đá to", "Pháo lùn Ballista", "Đạp đôi"]
+      age3: ["Cung A (tầm xa 9 bắn siêu xa)", "Cẩu đá", "Sọc đơn"],
+      age4: ["Cung A lửa tầm xa 11", "Cẩu đá to", "Pháo tép Helepolis", "Đạp đôi"]
     },
     tierSolo: "A",
     tierTeam: "S",
-    playStyle: "Vua Cung A; dàn Cung A Minoan đứng tụ sau lưng tạo bức tường lửa bất khả xâm phạm, bắn gục quân địch từ khoảng cách cực xa.",
+    playStyle: "Vua Cung A; dàn Cung A Minoan đứng tụ sau lưng tạo bức tường tên bất khả xâm phạm, bắn gục quân địch từ khoảng cách cực xa.",
     techTree: {
       wheel: true,
       chariotArcher: false,
@@ -474,7 +474,7 @@ const AOE_CIVILIZATIONS = [
       age1: ["Nông dân đóng nhà rẻ gỗ", "Lính chùy"],
       age2: ["Ngựa dò", "Chòi giảm 50% đá", "Lính rìu"],
       age3: ["Ngựa chém BL", "BB kiếm chém nhanh", "Dâng chòi (Tower Rush)", "Cung A"],
-      age4: ["BB chém thần (Legion máy khâu)", "Ngựa chém thần", "Pháo lùn rẻ gỗ"]
+      age4: ["BB chém thần (Legion máy khâu)", "Ngựa chém thần (Cataphract)", "Pháo tép Helepolis"]
     },
     tierSolo: "B",
     tierTeam: "A",
@@ -673,7 +673,7 @@ const AOE_UNITS_BY_AGE = [
     ageName: "Đời 1 (Stone Age)",
     building: "Nhà Chính (TC)",
     icon: "👨‍🌾",
-    image: "images/units/shang.png",
+    image: "images/units/villager.png",
     category: "kinh-te",
     cost: { food: 50, wood: 0, gold: 0, stone: 0 },
     costText: "50 Thực (Shang 35, Pal 75)",

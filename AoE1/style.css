@@ -1157,10 +1157,10 @@ footer {
 }
 
 .sheet-unit-img {
-  width: 42px;
-  height: 42px;
-  object-fit: contain;
-  image-rendering: -webkit-optimize-contrast;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  image-rendering: auto;
   transition: transform 0.2s ease;
 }
 
@@ -1302,8 +1302,8 @@ footer {
 }
 
 .data-cell.cell-locked-age {
-  color: #334155;
-  font-weight: 700;
+  background: rgba(10, 14, 23, 0.6);
+  cursor: default;
 }
 
 /* CELL CÓ BONUS CỦA QUỐC GIA */
