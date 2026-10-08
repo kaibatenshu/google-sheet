@@ -1,0 +1,2553 @@
+[
+  {
+    "id": 4,
+    "internalName": "Soldier-Archer1",
+    "inGameName": "Bowman",
+    "iconId": 6,
+    "buildingId": 87,
+    "building": "Nhà BA (Archery Range)",
+    "hp": 35,
+    "speed": 1.2,
+    "los": 7,
+    "attack": 3,
+    "attacks": [
+      {
+        "type": 3,
+        "amount": 3
+      }
+    ],
+    "meleeArmor": 0,
+    "pierceArmor": 0,
+    "armors": [
+      {
+        "type": 1,
+        "amount": -2
+      },
+      {
+        "type": 4,
+        "amount": 0
+      }
+    ],
+    "range": 5,
+    "minRange": 0,
+    "reloadTime": 1.4,
+    "frameDelay": 5,
+    "blastWidth": 0,
+    "trainTime": 30,
+    "costs": [
+      {
+        "type": 0,
+        "amount": 40
+      },
+      {
+        "type": 1,
+        "amount": 20
+      }
+    ],
+    "costText": "40 Thịt, 20 Gỗ"
+  },
+  {
+    "id": 5,
+    "internalName": "Soldier-Archer2",
+    "inGameName": "Improved Bowman",
+    "iconId": 7,
+    "buildingId": 87,
+    "building": "Nhà BA (Archery Range)",
+    "hp": 40,
+    "speed": 1.2,
+    "los": 8,
+    "attack": 4,
+    "attacks": [
+      {
+        "type": 3,
+        "amount": 4
+      }
+    ],
+    "meleeArmor": 0,
+    "pierceArmor": 0,
+    "armors": [
+      {
+        "type": 1,
+        "amount": -2
+      },
+      {
+        "type": 4,
+        "amount": 0
+      }
+    ],
+    "range": 6,
+    "minRange": 0,
+    "reloadTime": 1.4,
+    "frameDelay": 5,
+    "blastWidth": 0,
+    "trainTime": 30,
+    "costs": [
+      {
+        "type": 0,
+        "amount": 40
+      },
+      {
+        "type": 3,
+        "amount": 20
+      }
+    ],
+    "costText": "40 Thịt, 20 Vàng"
+  },
+  {
+    "id": 6,
+    "internalName": "Soldier-Archer3",
+    "inGameName": "Composite Bowman",
+    "iconId": 8,
+    "buildingId": 87,
+    "building": "Nhà BA (Archery Range)",
+    "hp": 45,
+    "speed": 1.2,
+    "los": 9,
+    "attack": 5,
+    "attacks": [
+      {
+        "type": 3,
+        "amount": 5
+      }
+    ],
+    "meleeArmor": 0,
+    "pierceArmor": 0,
+    "armors": [
+      {
+        "type": 1,
+        "amount": -2
+      },
+      {
+        "type": 4,
+        "amount": 0
+      }
+    ],
+    "range": 7,
+    "minRange": 0,
+    "reloadTime": 1.4,
+    "frameDelay": 5,
+    "blastWidth": 0,
+    "trainTime": 30,
+    "costs": [
+      {
+        "type": 0,
+        "amount": 40
+      },
+      {
+        "type": 3,
+        "amount": 20
+      }
+    ],
+    "costText": "40 Thịt, 20 Vàng"
+  },
+  {
+    "id": 11,
+    "internalName": "Soldier-Balista",
+    "inGameName": "Ballista",
+    "iconId": 9,
+    "buildingId": 49,
+    "building": "Nhà BK (Siege Workshop)",
+    "hp": 55,
+    "speed": 0.8,
+    "los": 11,
+    "attack": 40,
+    "attacks": [
+      {
+        "type": 0,
+        "amount": 0
+      },
+      {
+        "type": 3,
+        "amount": 40
+      }
+    ],
+    "meleeArmor": 0,
+    "pierceArmor": 0,
+    "armors": [
+      {
+        "type": 4,
+        "amount": 0
+      }
+    ],
+    "range": 9,
+    "minRange": 3,
+    "reloadTime": 3,
+    "frameDelay": 6,
+    "blastWidth": 0,
+    "trainTime": 50,
+    "costs": [
+      {
+        "type": 3,
+        "amount": 80
+      },
+      {
+        "type": 1,
+        "amount": 100
+      }
+    ],
+    "costText": "80 Vàng, 100 Gỗ"
+  },
+  {
+    "id": 13,
+    "internalName": "Boat-Fishing1",
+    "inGameName": "Fishing Boat",
+    "iconId": 18,
+    "buildingId": 45,
+    "building": "Nhà BS (Dock)",
+    "hp": 45,
+    "speed": 1.4,
+    "los": 6,
+    "attack": 0,
+    "attacks": [],
+    "meleeArmor": 0,
+    "pierceArmor": 0,
+    "armors": [
+      {
+        "type": 4,
+        "amount": 0
+      }
+    ],
+    "range": 0,
+    "minRange": 0,
+    "reloadTime": 0,
+    "frameDelay": 0,
+    "blastWidth": 0,
+    "trainTime": 40,
+    "costs": [
+      {
+        "type": 1,
+        "amount": 50
+      }
+    ],
+    "costText": "50 Gỗ"
+  },
+  {
+    "id": 14,
+    "internalName": "Boat-Fishing2",
+    "inGameName": "Fishing Ship",
+    "iconId": 20,
+    "buildingId": 45,
+    "building": "Nhà BS (Dock)",
+    "hp": 75,
+    "speed": 2,
+    "los": 6,
+    "attack": 0,
+    "attacks": [],
+    "meleeArmor": 0,
+    "pierceArmor": 0,
+    "armors": [
+      {
+        "type": 4,
+        "amount": 0
+      }
+    ],
+    "range": 0,
+    "minRange": 0,
+    "reloadTime": 0,
+    "frameDelay": 0,
+    "blastWidth": 0,
+    "trainTime": 40,
+    "costs": [
+      {
+        "type": 1,
+        "amount": 50
+      }
+    ],
+    "costText": "50 Gỗ"
+  },
+  {
+    "id": 15,
+    "internalName": "Boat-Trade1",
+    "inGameName": "Trade Boat",
+    "iconId": 19,
+    "buildingId": 45,
+    "building": "Nhà BS (Dock)",
+    "hp": 200,
+    "speed": 2,
+    "los": 4,
+    "attack": 0,
+    "attacks": [],
+    "meleeArmor": 0,
+    "pierceArmor": 0,
+    "armors": [
+      {
+        "type": 4,
+        "amount": 0
+      }
+    ],
+    "range": 0,
+    "minRange": 0,
+    "reloadTime": 0,
+    "frameDelay": 0,
+    "blastWidth": 0,
+    "trainTime": 50,
+    "costs": [
+      {
+        "type": 1,
+        "amount": 100
+      }
+    ],
+    "costText": "100 Gỗ"
+  },
+  {
+    "id": 16,
+    "internalName": "Boat-Trade2",
+    "inGameName": "Merchant Ship",
+    "iconId": 23,
+    "buildingId": 45,
+    "building": "Nhà BS (Dock)",
+    "hp": 250,
+    "speed": 2.5,
+    "los": 4,
+    "attack": 0,
+    "attacks": [],
+    "meleeArmor": 0,
+    "pierceArmor": 0,
+    "armors": [
+      {
+        "type": 4,
+        "amount": 0
+      }
+    ],
+    "range": 0,
+    "minRange": 0,
+    "reloadTime": 0,
+    "frameDelay": 0,
+    "blastWidth": 0,
+    "trainTime": 50,
+    "costs": [
+      {
+        "type": 1,
+        "amount": 100
+      }
+    ],
+    "costText": "100 Gỗ"
+  },
+  {
+    "id": 17,
+    "internalName": "Boat-Transport1",
+    "inGameName": "Light Transport",
+    "iconId": 21,
+    "buildingId": 45,
+    "building": "Nhà BS (Dock)",
+    "hp": 150,
+    "speed": 1.4,
+    "los": 4,
+    "attack": 0,
+    "attacks": [],
+    "meleeArmor": 0,
+    "pierceArmor": 0,
+    "armors": [
+      {
+        "type": 4,
+        "amount": 0
+      }
+    ],
+    "range": 0,
+    "minRange": 0,
+    "reloadTime": 0,
+    "frameDelay": 0,
+    "blastWidth": 0,
+    "trainTime": 75,
+    "costs": [
+      {
+        "type": 1,
+        "amount": 150
+      }
+    ],
+    "costText": "150 Gỗ"
+  },
+  {
+    "id": 18,
+    "internalName": "Boat-Transport2",
+    "inGameName": "Heavy Transport",
+    "iconId": 25,
+    "buildingId": 45,
+    "building": "Nhà BS (Dock)",
+    "hp": 200,
+    "speed": 1.75,
+    "los": 5,
+    "attack": 0,
+    "attacks": [],
+    "meleeArmor": 0,
+    "pierceArmor": 0,
+    "armors": [
+      {
+        "type": 4,
+        "amount": 0
+      }
+    ],
+    "range": 0,
+    "minRange": 0,
+    "reloadTime": 0,
+    "frameDelay": 0,
+    "blastWidth": 0,
+    "trainTime": 75,
+    "costs": [
+      {
+        "type": 1,
+        "amount": 150
+      }
+    ],
+    "costText": "150 Gỗ"
+  },
+  {
+    "id": 19,
+    "internalName": "Boat-War1",
+    "inGameName": "Scout Ship",
+    "iconId": 22,
+    "buildingId": 45,
+    "building": "Nhà BS (Dock)",
+    "hp": 120,
+    "speed": 1.75,
+    "los": 7,
+    "attack": 5,
+    "attacks": [
+      {
+        "type": 3,
+        "amount": 5
+      }
+    ],
+    "meleeArmor": 0,
+    "pierceArmor": 0,
+    "armors": [
+      {
+        "type": 4,
+        "amount": 0
+      }
+    ],
+    "range": 5,
+    "minRange": 0,
+    "reloadTime": 1.5,
+    "frameDelay": 1,
+    "blastWidth": 0,
+    "trainTime": 60,
+    "costs": [
+      {
+        "type": 1,
+        "amount": 135
+      }
+    ],
+    "costText": "135 Gỗ"
+  },
+  {
+    "id": 20,
+    "internalName": "Boat-War2",
+    "inGameName": "War Galley",
+    "iconId": 24,
+    "buildingId": 45,
+    "building": "Nhà BS (Dock)",
+    "hp": 160,
+    "speed": 1.75,
+    "los": 9,
+    "attack": 8,
+    "attacks": [
+      {
+        "type": 3,
+        "amount": 8
+      }
+    ],
+    "meleeArmor": 0,
+    "pierceArmor": 0,
+    "armors": [
+      {
+        "type": 4,
+        "amount": 0
+      }
+    ],
+    "range": 6,
+    "minRange": 0,
+    "reloadTime": 1.7,
+    "frameDelay": 1,
+    "blastWidth": 0,
+    "trainTime": 60,
+    "costs": [
+      {
+        "type": 1,
+        "amount": 135
+      }
+    ],
+    "costText": "135 Gỗ"
+  },
+  {
+    "id": 21,
+    "internalName": "Boat-War3",
+    "inGameName": "Trireme",
+    "iconId": 26,
+    "buildingId": 45,
+    "building": "Nhà BS (Dock)",
+    "hp": 200,
+    "speed": 1.75,
+    "los": 10,
+    "attack": 12,
+    "attacks": [
+      {
+        "type": 3,
+        "amount": 12
+      }
+    ],
+    "meleeArmor": 0,
+    "pierceArmor": 0,
+    "armors": [
+      {
+        "type": 4,
+        "amount": 0
+      }
+    ],
+    "range": 7,
+    "minRange": 0,
+    "reloadTime": 1.8,
+    "frameDelay": 1,
+    "blastWidth": 0,
+    "trainTime": 60,
+    "costs": [
+      {
+        "type": 1,
+        "amount": 135
+      }
+    ],
+    "costText": "135 Gỗ"
+  },
+  {
+    "id": 25,
+    "internalName": "Soldier-El_Archer",
+    "inGameName": "Elephant Archer",
+    "iconId": 47,
+    "buildingId": 87,
+    "building": "Nhà BA (Archery Range)",
+    "hp": 600,
+    "speed": 0.9,
+    "los": 8,
+    "attack": 5,
+    "attacks": [
+      {
+        "type": 3,
+        "amount": 5
+      }
+    ],
+    "meleeArmor": 0,
+    "pierceArmor": 0,
+    "armors": [
+      {
+        "type": 1,
+        "amount": -2
+      },
+      {
+        "type": 4,
+        "amount": 0
+      }
+    ],
+    "range": 7,
+    "minRange": 0,
+    "reloadTime": 1.5,
+    "frameDelay": 5,
+    "blastWidth": 0,
+    "trainTime": 50,
+    "costs": [
+      {
+        "type": 3,
+        "amount": 60
+      },
+      {
+        "type": 0,
+        "amount": 180
+      }
+    ],
+    "costText": "60 Vàng, 180 Thịt"
+  },
+  {
+    "id": 35,
+    "internalName": "Soldier-Catapult1",
+    "inGameName": "Stone Thrower",
+    "iconId": 14,
+    "buildingId": 49,
+    "building": "Nhà BK (Siege Workshop)",
+    "hp": 75,
+    "speed": 0.8,
+    "los": 13,
+    "attack": 50,
+    "attacks": [
+      {
+        "type": 6,
+        "amount": 0
+      },
+      {
+        "type": 4,
+        "amount": 50
+      }
+    ],
+    "meleeArmor": 0,
+    "pierceArmor": 0,
+    "armors": [
+      {
+        "type": 4,
+        "amount": 0
+      }
+    ],
+    "range": 10,
+    "minRange": 2,
+    "reloadTime": 5,
+    "frameDelay": 2,
+    "blastWidth": 0.5,
+    "trainTime": 60,
+    "costs": [
+      {
+        "type": 3,
+        "amount": 80
+      },
+      {
+        "type": 1,
+        "amount": 180
+      }
+    ],
+    "costText": "80 Vàng, 180 Gỗ"
+  },
+  {
+    "id": 36,
+    "internalName": "Soldier-Catapult2",
+    "inGameName": "Catapult",
+    "iconId": 15,
+    "buildingId": 49,
+    "building": "Nhà BK (Siege Workshop)",
+    "hp": 75,
+    "speed": 0.8,
+    "los": 15,
+    "attack": 60,
+    "attacks": [
+      {
+        "type": 6,
+        "amount": 0
+      },
+      {
+        "type": 4,
+        "amount": 60
+      }
+    ],
+    "meleeArmor": 0,
+    "pierceArmor": 0,
+    "armors": [
+      {
+        "type": 4,
+        "amount": 0
+      }
+    ],
+    "range": 12,
+    "minRange": 2,
+    "reloadTime": 5,
+    "frameDelay": 2,
+    "blastWidth": 1.5,
+    "trainTime": 60,
+    "costs": [
+      {
+        "type": 3,
+        "amount": 80
+      },
+      {
+        "type": 1,
+        "amount": 180
+      }
+    ],
+    "costText": "80 Vàng, 180 Gỗ"
+  },
+  {
+    "id": 37,
+    "internalName": "Soldier-Cavalry1",
+    "inGameName": "Cavalry",
+    "iconId": 11,
+    "buildingId": 101,
+    "building": "Nhà BL (Stable)",
+    "hp": 150,
+    "speed": 2,
+    "los": 4,
+    "attack": 8,
+    "attacks": [
+      {
+        "type": 9,
+        "amount": 0
+      },
+      {
+        "type": 4,
+        "amount": 8
+      }
+    ],
+    "meleeArmor": 0,
+    "pierceArmor": 0,
+    "armors": [
+      {
+        "type": 4,
+        "amount": 0
+      },
+      {
+        "type": 8,
+        "amount": -8
+      },
+      {
+        "type": 3,
+        "amount": 0
+      }
+    ],
+    "range": 0,
+    "minRange": 0,
+    "reloadTime": 1.5,
+    "frameDelay": 0,
+    "blastWidth": 0,
+    "trainTime": 40,
+    "costs": [
+      {
+        "type": 3,
+        "amount": 80
+      },
+      {
+        "type": 0,
+        "amount": 70
+      }
+    ],
+    "costText": "80 Vàng, 70 Thịt"
+  },
+  {
+    "id": 38,
+    "internalName": "Soldier-Cavalry2",
+    "inGameName": "Heavy Cavalry",
+    "iconId": 13,
+    "buildingId": 101,
+    "building": "Nhà BL (Stable)",
+    "hp": 150,
+    "speed": 2,
+    "los": 4,
+    "attack": 10,
+    "attacks": [
+      {
+        "type": 9,
+        "amount": 0
+      },
+      {
+        "type": 4,
+        "amount": 10
+      }
+    ],
+    "meleeArmor": 1,
+    "pierceArmor": 1,
+    "armors": [
+      {
+        "type": 4,
+        "amount": 1
+      },
+      {
+        "type": 8,
+        "amount": -8
+      },
+      {
+        "type": 3,
+        "amount": 1
+      }
+    ],
+    "range": 0,
+    "minRange": 0,
+    "reloadTime": 1.5,
+    "frameDelay": 0,
+    "blastWidth": 0,
+    "trainTime": 40,
+    "costs": [
+      {
+        "type": 3,
+        "amount": 80
+      },
+      {
+        "type": 0,
+        "amount": 70
+      }
+    ],
+    "costText": "80 Vàng, 70 Thịt"
+  },
+  {
+    "id": 39,
+    "internalName": "Soldier-Cavalry3_Arch",
+    "inGameName": "Horse Archer",
+    "iconId": 29,
+    "buildingId": 87,
+    "building": "Nhà BA (Archery Range)",
+    "hp": 60,
+    "speed": 2.2,
+    "los": 9,
+    "attack": 7,
+    "attacks": [
+      {
+        "type": 3,
+        "amount": 7
+      }
+    ],
+    "meleeArmor": 0,
+    "pierceArmor": 2,
+    "armors": [
+      {
+        "type": 1,
+        "amount": -2
+      },
+      {
+        "type": 4,
+        "amount": 0
+      },
+      {
+        "type": 8,
+        "amount": -8
+      },
+      {
+        "type": 3,
+        "amount": 2
+      }
+    ],
+    "range": 7,
+    "minRange": 0,
+    "reloadTime": 1.5,
+    "frameDelay": 7,
+    "blastWidth": 0,
+    "trainTime": 40,
+    "costs": [
+      {
+        "type": 3,
+        "amount": 70
+      },
+      {
+        "type": 0,
+        "amount": 50
+      }
+    ],
+    "costText": "70 Vàng, 50 Thịt"
+  },
+  {
+    "id": 40,
+    "internalName": "Soldier-Chariot1",
+    "inGameName": "Chariot",
+    "iconId": 10,
+    "buildingId": 101,
+    "building": "Nhà BL (Stable)",
+    "hp": 100,
+    "speed": 2,
+    "los": 4,
+    "attack": 7,
+    "attacks": [
+      {
+        "type": 7,
+        "amount": 0
+      },
+      {
+        "type": 4,
+        "amount": 7
+      }
+    ],
+    "meleeArmor": 0,
+    "pierceArmor": 0,
+    "armors": [
+      {
+        "type": 4,
+        "amount": 0
+      },
+      {
+        "type": 8,
+        "amount": -4
+      }
+    ],
+    "range": 0,
+    "minRange": 0,
+    "reloadTime": 1.5,
+    "frameDelay": 0,
+    "blastWidth": 0,
+    "trainTime": 40,
+    "costs": [
+      {
+        "type": 0,
+        "amount": 40
+      },
+      {
+        "type": 1,
+        "amount": 60
+      }
+    ],
+    "costText": "40 Thịt, 60 Gỗ"
+  },
+  {
+    "id": 41,
+    "internalName": "Soldier-Chariot2",
+    "inGameName": "Chariot Archer",
+    "iconId": 28,
+    "buildingId": 87,
+    "building": "Nhà BA (Archery Range)",
+    "hp": 70,
+    "speed": 2,
+    "los": 9,
+    "attack": 4,
+    "attacks": [
+      {
+        "type": 7,
+        "amount": 0
+      },
+      {
+        "type": 3,
+        "amount": 4
+      }
+    ],
+    "meleeArmor": 0,
+    "pierceArmor": 0,
+    "armors": [
+      {
+        "type": 1,
+        "amount": -2
+      },
+      {
+        "type": 4,
+        "amount": 0
+      },
+      {
+        "type": 8,
+        "amount": -4
+      }
+    ],
+    "range": 7,
+    "minRange": 0,
+    "reloadTime": 1.5,
+    "frameDelay": 6,
+    "blastWidth": 0,
+    "trainTime": 40,
+    "costs": [
+      {
+        "type": 0,
+        "amount": 40
+      },
+      {
+        "type": 1,
+        "amount": 70
+      }
+    ],
+    "costText": "40 Thịt, 70 Gỗ"
+  },
+  {
+    "id": 46,
+    "internalName": "Soldier-Elephant",
+    "inGameName": "War Elephant",
+    "iconId": 12,
+    "buildingId": 101,
+    "building": "Nhà BL (Stable)",
+    "hp": 600,
+    "speed": 0.9,
+    "los": 5,
+    "attack": 15,
+    "attacks": [
+      {
+        "type": 4,
+        "amount": 15
+      }
+    ],
+    "meleeArmor": 0,
+    "pierceArmor": 0,
+    "armors": [
+      {
+        "type": 4,
+        "amount": 0
+      }
+    ],
+    "range": 0,
+    "minRange": 0,
+    "reloadTime": 1.5,
+    "frameDelay": 0,
+    "blastWidth": 2,
+    "trainTime": 50,
+    "costs": [
+      {
+        "type": 3,
+        "amount": 40
+      },
+      {
+        "type": 0,
+        "amount": 170
+      }
+    ],
+    "costText": "40 Vàng, 170 Thịt"
+  },
+  {
+    "id": 60,
+    "internalName": "Lion_Trained",
+    "inGameName": "Lion - Tame",
+    "iconId": 40,
+    "buildingId": -1,
+    "building": "Nhà -1",
+    "hp": 20,
+    "speed": 1.1,
+    "los": 4,
+    "attack": 3,
+    "attacks": [
+      {
+        "type": 12,
+        "amount": 3
+      }
+    ],
+    "meleeArmor": 0,
+    "pierceArmor": 0,
+    "armors": [],
+    "range": 0,
+    "minRange": 0,
+    "reloadTime": 1,
+    "frameDelay": 0,
+    "blastWidth": 0,
+    "trainTime": 0,
+    "costs": [],
+    "costText": ""
+  },
+  {
+    "id": 73,
+    "internalName": "Soldier-Inf1",
+    "inGameName": "Clubman",
+    "iconId": 2,
+    "buildingId": 12,
+    "building": "Nhà BB (Barracks)",
+    "hp": 40,
+    "speed": 1.2,
+    "los": 4,
+    "attack": 3,
+    "attacks": [
+      {
+        "type": 4,
+        "amount": 3
+      }
+    ],
+    "meleeArmor": 0,
+    "pierceArmor": 0,
+    "armors": [
+      {
+        "type": 9,
+        "amount": -5
+      },
+      {
+        "type": 4,
+        "amount": 0
+      },
+      {
+        "type": 3,
+        "amount": 0
+      }
+    ],
+    "range": 0,
+    "minRange": 0,
+    "reloadTime": 1.5,
+    "frameDelay": 0,
+    "blastWidth": 0,
+    "trainTime": 26,
+    "costs": [
+      {
+        "type": 0,
+        "amount": 50
+      }
+    ],
+    "costText": "50 Thịt"
+  },
+  {
+    "id": 74,
+    "internalName": "Soldier-Inf2",
+    "inGameName": "Axeman",
+    "iconId": 3,
+    "buildingId": 12,
+    "building": "Nhà BB (Barracks)",
+    "hp": 50,
+    "speed": 1.2,
+    "los": 4,
+    "attack": 5,
+    "attacks": [
+      {
+        "type": 4,
+        "amount": 5
+      }
+    ],
+    "meleeArmor": 0,
+    "pierceArmor": 0,
+    "armors": [
+      {
+        "type": 9,
+        "amount": -5
+      },
+      {
+        "type": 4,
+        "amount": 0
+      },
+      {
+        "type": 3,
+        "amount": 0
+      }
+    ],
+    "range": 0,
+    "minRange": 0,
+    "reloadTime": 1.5,
+    "frameDelay": 0,
+    "blastWidth": 0,
+    "trainTime": 26,
+    "costs": [
+      {
+        "type": 0,
+        "amount": 50
+      }
+    ],
+    "costText": "50 Thịt"
+  },
+  {
+    "id": 75,
+    "internalName": "Soldier-Inf3",
+    "inGameName": "Short Swordsman",
+    "iconId": 4,
+    "buildingId": 12,
+    "building": "Nhà BB (Barracks)",
+    "hp": 60,
+    "speed": 1.2,
+    "los": 4,
+    "attack": 7,
+    "attacks": [
+      {
+        "type": 4,
+        "amount": 7
+      }
+    ],
+    "meleeArmor": 1,
+    "pierceArmor": 0,
+    "armors": [
+      {
+        "type": 9,
+        "amount": -5
+      },
+      {
+        "type": 4,
+        "amount": 1
+      },
+      {
+        "type": 3,
+        "amount": 0
+      }
+    ],
+    "range": 0,
+    "minRange": 0,
+    "reloadTime": 1.5,
+    "frameDelay": 0,
+    "blastWidth": 0,
+    "trainTime": 26,
+    "costs": [
+      {
+        "type": 0,
+        "amount": 35
+      },
+      {
+        "type": 3,
+        "amount": 15
+      }
+    ],
+    "costText": "35 Thịt, 15 Vàng"
+  },
+  {
+    "id": 76,
+    "internalName": "Soldier-Inf4",
+    "inGameName": "Broad Swordsman",
+    "iconId": 5,
+    "buildingId": 12,
+    "building": "Nhà BB (Barracks)",
+    "hp": 70,
+    "speed": 1.2,
+    "los": 4,
+    "attack": 9,
+    "attacks": [
+      {
+        "type": 4,
+        "amount": 9
+      }
+    ],
+    "meleeArmor": 1,
+    "pierceArmor": 0,
+    "armors": [
+      {
+        "type": 9,
+        "amount": -5
+      },
+      {
+        "type": 4,
+        "amount": 1
+      },
+      {
+        "type": 3,
+        "amount": 0
+      }
+    ],
+    "range": 0,
+    "minRange": 0,
+    "reloadTime": 1.5,
+    "frameDelay": 0,
+    "blastWidth": 0,
+    "trainTime": 26,
+    "costs": [
+      {
+        "type": 0,
+        "amount": 35
+      },
+      {
+        "type": 3,
+        "amount": 15
+      }
+    ],
+    "costText": "35 Thịt, 15 Vàng"
+  },
+  {
+    "id": 77,
+    "internalName": "Soldier-Inf5",
+    "inGameName": "Long Swordsman",
+    "iconId": 27,
+    "buildingId": 12,
+    "building": "Nhà BB (Barracks)",
+    "hp": 80,
+    "speed": 1.2,
+    "los": 4,
+    "attack": 11,
+    "attacks": [
+      {
+        "type": 4,
+        "amount": 11
+      }
+    ],
+    "meleeArmor": 2,
+    "pierceArmor": 0,
+    "armors": [
+      {
+        "type": 9,
+        "amount": -5
+      },
+      {
+        "type": 4,
+        "amount": 2
+      },
+      {
+        "type": 3,
+        "amount": 0
+      }
+    ],
+    "range": 0,
+    "minRange": 0,
+    "reloadTime": 1.5,
+    "frameDelay": 0,
+    "blastWidth": 0,
+    "trainTime": 26,
+    "costs": [
+      {
+        "type": 0,
+        "amount": 35
+      },
+      {
+        "type": 3,
+        "amount": 15
+      }
+    ],
+    "costText": "35 Thịt, 15 Vàng"
+  },
+  {
+    "id": 83,
+    "internalName": "Man",
+    "inGameName": "Villager",
+    "iconId": 0,
+    "buildingId": 109,
+    "building": "Nhà Chính (Town Center)",
+    "hp": 25,
+    "speed": 1.1,
+    "los": 4,
+    "attack": 3,
+    "attacks": [
+      {
+        "type": 4,
+        "amount": 3
+      },
+      {
+        "type": 10,
+        "amount": -150
+      }
+    ],
+    "meleeArmor": 0,
+    "pierceArmor": 0,
+    "armors": [
+      {
+        "type": 12,
+        "amount": 0
+      }
+    ],
+    "range": 0,
+    "minRange": 0,
+    "reloadTime": 1.5,
+    "frameDelay": 0,
+    "blastWidth": 0,
+    "trainTime": 20,
+    "costs": [
+      {
+        "type": 0,
+        "amount": 50
+      }
+    ],
+    "costText": "50 Thịt"
+  },
+  {
+    "id": 93,
+    "internalName": "Soldier-Phal1",
+    "inGameName": "Hoplite",
+    "iconId": 16,
+    "buildingId": 0,
+    "building": "Nhà BY (Academy)",
+    "hp": 120,
+    "speed": 0.9,
+    "los": 4,
+    "attack": 17,
+    "attacks": [
+      {
+        "type": 4,
+        "amount": 17
+      }
+    ],
+    "meleeArmor": 5,
+    "pierceArmor": 0,
+    "armors": [
+      {
+        "type": 4,
+        "amount": 5
+      },
+      {
+        "type": 3,
+        "amount": 0
+      }
+    ],
+    "range": 0,
+    "minRange": 0,
+    "reloadTime": 1.5,
+    "frameDelay": 0,
+    "blastWidth": 0,
+    "trainTime": 36,
+    "costs": [
+      {
+        "type": 3,
+        "amount": 40
+      },
+      {
+        "type": 0,
+        "amount": 60
+      }
+    ],
+    "costText": "40 Vàng, 60 Thịt"
+  },
+  {
+    "id": 94,
+    "internalName": "Soldier-Phal2",
+    "inGameName": "Phalanx",
+    "iconId": 17,
+    "buildingId": 0,
+    "building": "Nhà BY (Academy)",
+    "hp": 120,
+    "speed": 0.9,
+    "los": 4,
+    "attack": 20,
+    "attacks": [
+      {
+        "type": 4,
+        "amount": 20
+      }
+    ],
+    "meleeArmor": 7,
+    "pierceArmor": 0,
+    "armors": [
+      {
+        "type": 4,
+        "amount": 7
+      },
+      {
+        "type": 3,
+        "amount": 0
+      }
+    ],
+    "range": 0,
+    "minRange": 0,
+    "reloadTime": 1.5,
+    "frameDelay": 0,
+    "blastWidth": 0,
+    "trainTime": 36,
+    "costs": [
+      {
+        "type": 3,
+        "amount": 40
+      },
+      {
+        "type": 0,
+        "amount": 60
+      }
+    ],
+    "costText": "40 Vàng, 60 Thịt"
+  },
+  {
+    "id": 118,
+    "internalName": "Builder",
+    "inGameName": "Builder",
+    "iconId": 0,
+    "buildingId": -1,
+    "building": "Nhà -1",
+    "hp": 25,
+    "speed": 1.1,
+    "los": 4,
+    "attack": 0,
+    "attacks": [],
+    "meleeArmor": 0,
+    "pierceArmor": 0,
+    "armors": [
+      {
+        "type": 12,
+        "amount": 0
+      }
+    ],
+    "range": 0,
+    "minRange": 0,
+    "reloadTime": 1,
+    "frameDelay": 0,
+    "blastWidth": 0,
+    "trainTime": 0,
+    "costs": [
+      {
+        "type": 0,
+        "amount": 50
+      }
+    ],
+    "costText": "50 Thịt"
+  },
+  {
+    "id": 119,
+    "internalName": "Fisherman",
+    "inGameName": "Fisherman",
+    "iconId": 0,
+    "buildingId": -1,
+    "building": "Nhà -1",
+    "hp": 25,
+    "speed": 1.1,
+    "los": 4,
+    "attack": 3,
+    "attacks": [
+      {
+        "type": 4,
+        "amount": 3
+      }
+    ],
+    "meleeArmor": 0,
+    "pierceArmor": 0,
+    "armors": [
+      {
+        "type": 12,
+        "amount": 0
+      }
+    ],
+    "range": 0,
+    "minRange": 0,
+    "reloadTime": 1,
+    "frameDelay": 0,
+    "blastWidth": 0,
+    "trainTime": 0,
+    "costs": [
+      {
+        "type": 0,
+        "amount": 50
+      }
+    ],
+    "costText": "50 Thịt"
+  },
+  {
+    "id": 120,
+    "internalName": "Forager",
+    "inGameName": "Forager",
+    "iconId": 0,
+    "buildingId": -1,
+    "building": "Nhà -1",
+    "hp": 25,
+    "speed": 1.1,
+    "los": 4,
+    "attack": 3,
+    "attacks": [
+      {
+        "type": 4,
+        "amount": 3
+      }
+    ],
+    "meleeArmor": 0,
+    "pierceArmor": 0,
+    "armors": [
+      {
+        "type": 12,
+        "amount": 0
+      }
+    ],
+    "range": 0,
+    "minRange": 0,
+    "reloadTime": 1,
+    "frameDelay": 0,
+    "blastWidth": 0,
+    "trainTime": 0,
+    "costs": [
+      {
+        "type": 0,
+        "amount": 50
+      }
+    ],
+    "costText": "50 Thịt"
+  },
+  {
+    "id": 122,
+    "internalName": "Hunter",
+    "inGameName": "Hunter",
+    "iconId": 0,
+    "buildingId": -1,
+    "building": "Nhà -1",
+    "hp": 25,
+    "speed": 1.1,
+    "los": 4,
+    "attack": 4,
+    "attacks": [
+      {
+        "type": 4,
+        "amount": 4
+      }
+    ],
+    "meleeArmor": 0,
+    "pierceArmor": 0,
+    "armors": [
+      {
+        "type": 12,
+        "amount": 0
+      }
+    ],
+    "range": 4,
+    "minRange": 0,
+    "reloadTime": 1.5,
+    "frameDelay": 5,
+    "blastWidth": 0,
+    "trainTime": 0,
+    "costs": [
+      {
+        "type": 0,
+        "amount": 50
+      }
+    ],
+    "costText": "50 Thịt"
+  },
+  {
+    "id": 123,
+    "internalName": "Lumberjack",
+    "inGameName": "Woodcutter",
+    "iconId": 0,
+    "buildingId": -1,
+    "building": "Nhà -1",
+    "hp": 25,
+    "speed": 1.1,
+    "los": 4,
+    "attack": 3,
+    "attacks": [
+      {
+        "type": 4,
+        "amount": 3
+      }
+    ],
+    "meleeArmor": 0,
+    "pierceArmor": 0,
+    "armors": [
+      {
+        "type": 12,
+        "amount": 0
+      }
+    ],
+    "range": 0,
+    "minRange": 0,
+    "reloadTime": 1,
+    "frameDelay": 0,
+    "blastWidth": 0,
+    "trainTime": 0,
+    "costs": [
+      {
+        "type": 0,
+        "amount": 50
+      }
+    ],
+    "costText": "50 Thịt"
+  },
+  {
+    "id": 124,
+    "internalName": "Miner-Stone",
+    "inGameName": "Stone Miner",
+    "iconId": 0,
+    "buildingId": -1,
+    "building": "Nhà -1",
+    "hp": 25,
+    "speed": 1.1,
+    "los": 4,
+    "attack": 3,
+    "attacks": [
+      {
+        "type": 4,
+        "amount": 3
+      }
+    ],
+    "meleeArmor": 0,
+    "pierceArmor": 0,
+    "armors": [
+      {
+        "type": 12,
+        "amount": 0
+      }
+    ],
+    "range": 0,
+    "minRange": 0,
+    "reloadTime": 1,
+    "frameDelay": 0,
+    "blastWidth": 0,
+    "trainTime": 0,
+    "costs": [
+      {
+        "type": 0,
+        "amount": 50
+      }
+    ],
+    "costText": "50 Thịt"
+  },
+  {
+    "id": 125,
+    "internalName": "Priest",
+    "inGameName": "Priest",
+    "iconId": 1,
+    "buildingId": 104,
+    "building": "Nhà BP (Temple)",
+    "hp": 25,
+    "speed": 0.8,
+    "los": 12,
+    "attack": 0,
+    "attacks": [],
+    "meleeArmor": 0,
+    "pierceArmor": 0,
+    "armors": [
+      {
+        "type": 7,
+        "amount": -7
+      }
+    ],
+    "range": 10,
+    "minRange": 0,
+    "reloadTime": 1.5,
+    "frameDelay": 0,
+    "blastWidth": 0,
+    "trainTime": 50,
+    "costs": [
+      {
+        "type": 3,
+        "amount": 125
+      }
+    ],
+    "costText": "125 Vàng"
+  },
+  {
+    "id": 127,
+    "internalName": "Explorer",
+    "inGameName": "Explorer",
+    "iconId": 0,
+    "buildingId": -1,
+    "building": "Nhà -1",
+    "hp": 25,
+    "speed": 1.1,
+    "los": 4,
+    "attack": 0,
+    "attacks": [],
+    "meleeArmor": 0,
+    "pierceArmor": 0,
+    "armors": [
+      {
+        "type": 12,
+        "amount": 0
+      }
+    ],
+    "range": 0,
+    "minRange": 0,
+    "reloadTime": 1,
+    "frameDelay": 0,
+    "blastWidth": 0,
+    "trainTime": 0,
+    "costs": [
+      {
+        "type": 0,
+        "amount": 50
+      }
+    ],
+    "costText": "50 Thịt"
+  },
+  {
+    "id": 156,
+    "internalName": "Repair_Man",
+    "inGameName": "Repairman",
+    "iconId": 0,
+    "buildingId": -1,
+    "building": "Nhà -1",
+    "hp": 25,
+    "speed": 1.1,
+    "los": 4,
+    "attack": 0,
+    "attacks": [],
+    "meleeArmor": 0,
+    "pierceArmor": 0,
+    "armors": [
+      {
+        "type": 12,
+        "amount": 0
+      }
+    ],
+    "range": 0,
+    "minRange": 0,
+    "reloadTime": 1,
+    "frameDelay": 0,
+    "blastWidth": 0,
+    "trainTime": 0,
+    "costs": [
+      {
+        "type": 0,
+        "amount": 50
+      }
+    ],
+    "costText": "50 Thịt"
+  },
+  {
+    "id": 250,
+    "internalName": "Boat-War4",
+    "inGameName": "Catapult Trireme",
+    "iconId": 30,
+    "buildingId": 45,
+    "building": "Nhà BS (Dock)",
+    "hp": 120,
+    "speed": 1.35,
+    "los": 12,
+    "attack": 35,
+    "attacks": [
+      {
+        "type": 6,
+        "amount": 35
+      },
+      {
+        "type": 4,
+        "amount": 0
+      }
+    ],
+    "meleeArmor": 0,
+    "pierceArmor": 0,
+    "armors": [
+      {
+        "type": 4,
+        "amount": 0
+      }
+    ],
+    "range": 9,
+    "minRange": 0,
+    "reloadTime": 5,
+    "frameDelay": 1,
+    "blastWidth": 1,
+    "trainTime": 90,
+    "costs": [
+      {
+        "type": 1,
+        "amount": 135
+      },
+      {
+        "type": 3,
+        "amount": 75
+      }
+    ],
+    "costText": "135 Gỗ, 75 Vàng"
+  },
+  {
+    "id": 251,
+    "internalName": "Miner-Gold",
+    "inGameName": "Gold Miner",
+    "iconId": 0,
+    "buildingId": -1,
+    "building": "Nhà -1",
+    "hp": 25,
+    "speed": 1.1,
+    "los": 4,
+    "attack": 3,
+    "attacks": [
+      {
+        "type": 4,
+        "amount": 3
+      }
+    ],
+    "meleeArmor": 0,
+    "pierceArmor": 0,
+    "armors": [
+      {
+        "type": 12,
+        "amount": 0
+      }
+    ],
+    "range": 0,
+    "minRange": 0,
+    "reloadTime": 1,
+    "frameDelay": 0,
+    "blastWidth": 0,
+    "trainTime": 0,
+    "costs": [
+      {
+        "type": 0,
+        "amount": 50
+      }
+    ],
+    "costText": "50 Thịt"
+  },
+  {
+    "id": 259,
+    "internalName": "Farmer",
+    "inGameName": "Farmer",
+    "iconId": 0,
+    "buildingId": -1,
+    "building": "Nhà -1",
+    "hp": 25,
+    "speed": 1.1,
+    "los": 4,
+    "attack": 0,
+    "attacks": [],
+    "meleeArmor": 0,
+    "pierceArmor": 0,
+    "armors": [
+      {
+        "type": 12,
+        "amount": 0
+      }
+    ],
+    "range": 0,
+    "minRange": 0,
+    "reloadTime": 1,
+    "frameDelay": 0,
+    "blastWidth": 0,
+    "trainTime": 0,
+    "costs": [
+      {
+        "type": 0,
+        "amount": 50
+      }
+    ],
+    "costText": "50 Thịt"
+  },
+  {
+    "id": 277,
+    "internalName": "Boat-War5",
+    "inGameName": "Juggernaught",
+    "iconId": 52,
+    "buildingId": 45,
+    "building": "Nhà BS (Dock)",
+    "hp": 200,
+    "speed": 1.35,
+    "los": 13,
+    "attack": 35,
+    "attacks": [
+      {
+        "type": 6,
+        "amount": 35
+      },
+      {
+        "type": 4,
+        "amount": 0
+      }
+    ],
+    "meleeArmor": 0,
+    "pierceArmor": 0,
+    "armors": [
+      {
+        "type": 4,
+        "amount": 0
+      }
+    ],
+    "range": 10,
+    "minRange": 0,
+    "reloadTime": 5,
+    "frameDelay": 1,
+    "blastWidth": 1.5,
+    "trainTime": 90,
+    "costs": [
+      {
+        "type": 1,
+        "amount": 135
+      },
+      {
+        "type": 3,
+        "amount": 75
+      }
+    ],
+    "costText": "135 Gỗ, 75 Vàng"
+  },
+  {
+    "id": 279,
+    "internalName": "Soldier-Balista2",
+    "inGameName": "Helepolis",
+    "iconId": 53,
+    "buildingId": 49,
+    "building": "Nhà BK (Siege Workshop)",
+    "hp": 55,
+    "speed": 0.8,
+    "los": 12,
+    "attack": 40,
+    "attacks": [
+      {
+        "type": 0,
+        "amount": 0
+      },
+      {
+        "type": 3,
+        "amount": 40
+      }
+    ],
+    "meleeArmor": 0,
+    "pierceArmor": 0,
+    "armors": [
+      {
+        "type": 4,
+        "amount": 0
+      }
+    ],
+    "range": 10,
+    "minRange": 3,
+    "reloadTime": 1.5,
+    "frameDelay": 6,
+    "blastWidth": 0,
+    "trainTime": 50,
+    "costs": [
+      {
+        "type": 3,
+        "amount": 80
+      },
+      {
+        "type": 1,
+        "amount": 100
+      }
+    ],
+    "costText": "80 Vàng, 100 Gỗ"
+  },
+  {
+    "id": 280,
+    "internalName": "Soldier-Catapult3",
+    "inGameName": "Heavy Catapult",
+    "iconId": 51,
+    "buildingId": 49,
+    "building": "Nhà BK (Siege Workshop)",
+    "hp": 150,
+    "speed": 0.8,
+    "los": 16,
+    "attack": 60,
+    "attacks": [
+      {
+        "type": 6,
+        "amount": 0
+      },
+      {
+        "type": 4,
+        "amount": 60
+      }
+    ],
+    "meleeArmor": 0,
+    "pierceArmor": 0,
+    "armors": [
+      {
+        "type": 4,
+        "amount": 0
+      }
+    ],
+    "range": 13,
+    "minRange": 2,
+    "reloadTime": 5,
+    "frameDelay": 2,
+    "blastWidth": 1.5,
+    "trainTime": 60,
+    "costs": [
+      {
+        "type": 3,
+        "amount": 80
+      },
+      {
+        "type": 1,
+        "amount": 180
+      }
+    ],
+    "costText": "80 Vàng, 180 Gỗ"
+  },
+  {
+    "id": 281,
+    "internalName": "Soldier-Cavalry4",
+    "inGameName": "Heavy Horse Archer",
+    "iconId": 48,
+    "buildingId": 87,
+    "building": "Nhà BA (Archery Range)",
+    "hp": 90,
+    "speed": 2.5,
+    "los": 9,
+    "attack": 8,
+    "attacks": [
+      {
+        "type": 3,
+        "amount": 8
+      }
+    ],
+    "meleeArmor": 0,
+    "pierceArmor": 2,
+    "armors": [
+      {
+        "type": 4,
+        "amount": 0
+      },
+      {
+        "type": 8,
+        "amount": -8
+      },
+      {
+        "type": 3,
+        "amount": 2
+      }
+    ],
+    "range": 7,
+    "minRange": 0,
+    "reloadTime": 1.5,
+    "frameDelay": 7,
+    "blastWidth": 0,
+    "trainTime": 40,
+    "costs": [
+      {
+        "type": 3,
+        "amount": 70
+      },
+      {
+        "type": 0,
+        "amount": 50
+      }
+    ],
+    "costText": "70 Vàng, 50 Thịt"
+  },
+  {
+    "id": 282,
+    "internalName": "Soldier-Inf6",
+    "inGameName": "Legion",
+    "iconId": 49,
+    "buildingId": 12,
+    "building": "Nhà BB (Barracks)",
+    "hp": 160,
+    "speed": 1.2,
+    "los": 4,
+    "attack": 13,
+    "attacks": [
+      {
+        "type": 4,
+        "amount": 13
+      }
+    ],
+    "meleeArmor": 2,
+    "pierceArmor": 0,
+    "armors": [
+      {
+        "type": 9,
+        "amount": -5
+      },
+      {
+        "type": 4,
+        "amount": 2
+      },
+      {
+        "type": 3,
+        "amount": 0
+      }
+    ],
+    "range": 0,
+    "minRange": 0,
+    "reloadTime": 1.5,
+    "frameDelay": 0,
+    "blastWidth": 0,
+    "trainTime": 26,
+    "costs": [
+      {
+        "type": 0,
+        "amount": 35
+      },
+      {
+        "type": 3,
+        "amount": 15
+      }
+    ],
+    "costText": "35 Thịt, 15 Vàng"
+  },
+  {
+    "id": 283,
+    "internalName": "Soldier-Cavalry3",
+    "inGameName": "Cataphract",
+    "iconId": 54,
+    "buildingId": 101,
+    "building": "Nhà BL (Stable)",
+    "hp": 180,
+    "speed": 2,
+    "los": 4,
+    "attack": 12,
+    "attacks": [
+      {
+        "type": 9,
+        "amount": 0
+      },
+      {
+        "type": 4,
+        "amount": 12
+      }
+    ],
+    "meleeArmor": 3,
+    "pierceArmor": 1,
+    "armors": [
+      {
+        "type": 4,
+        "amount": 3
+      },
+      {
+        "type": 8,
+        "amount": -8
+      },
+      {
+        "type": 3,
+        "amount": 1
+      }
+    ],
+    "range": 0,
+    "minRange": 0,
+    "reloadTime": 1.5,
+    "frameDelay": 0,
+    "blastWidth": 0,
+    "trainTime": 40,
+    "costs": [
+      {
+        "type": 3,
+        "amount": 80
+      },
+      {
+        "type": 0,
+        "amount": 70
+      }
+    ],
+    "costText": "80 Vàng, 70 Thịt"
+  },
+  {
+    "id": 291,
+    "internalName": "Soldier-Phal3",
+    "inGameName": "Centurion",
+    "iconId": 50,
+    "buildingId": 0,
+    "building": "Nhà BY (Academy)",
+    "hp": 160,
+    "speed": 0.9,
+    "los": 4,
+    "attack": 30,
+    "attacks": [
+      {
+        "type": 4,
+        "amount": 30
+      }
+    ],
+    "meleeArmor": 8,
+    "pierceArmor": 0,
+    "armors": [
+      {
+        "type": 4,
+        "amount": 8
+      },
+      {
+        "type": 3,
+        "amount": 0
+      }
+    ],
+    "range": 0,
+    "minRange": 0,
+    "reloadTime": 1.5,
+    "frameDelay": 0,
+    "blastWidth": 0,
+    "trainTime": 36,
+    "costs": [
+      {
+        "type": 3,
+        "amount": 40
+      },
+      {
+        "type": 0,
+        "amount": 60
+      }
+    ],
+    "costText": "40 Vàng, 60 Thịt"
+  },
+  {
+    "id": 292,
+    "internalName": "Raft",
+    "inGameName": "Raft",
+    "iconId": 21,
+    "buildingId": 45,
+    "building": "Nhà BS (Dock)",
+    "hp": 40,
+    "speed": 1.5,
+    "los": 4,
+    "attack": 0,
+    "attacks": [],
+    "meleeArmor": 0,
+    "pierceArmor": 0,
+    "armors": [],
+    "range": 0,
+    "minRange": 0,
+    "reloadTime": 0,
+    "frameDelay": 0,
+    "blastWidth": 0,
+    "trainTime": 40,
+    "costs": [
+      {
+        "type": 1,
+        "amount": 40
+      }
+    ],
+    "costText": "40 Gỗ"
+  },
+  {
+    "id": 293,
+    "internalName": "Man2",
+    "inGameName": "Villager",
+    "iconId": 0,
+    "buildingId": 109,
+    "building": "Nhà Chính (Town Center)",
+    "hp": 25,
+    "speed": 1.1,
+    "los": 4,
+    "attack": 3,
+    "attacks": [
+      {
+        "type": 4,
+        "amount": 3
+      },
+      {
+        "type": 10,
+        "amount": -150
+      }
+    ],
+    "meleeArmor": 0,
+    "pierceArmor": 0,
+    "armors": [
+      {
+        "type": 12,
+        "amount": 0
+      }
+    ],
+    "range": 0,
+    "minRange": 0,
+    "reloadTime": 1.5,
+    "frameDelay": 0,
+    "blastWidth": 0,
+    "trainTime": 20,
+    "costs": [
+      {
+        "type": 0,
+        "amount": 50
+      }
+    ],
+    "costText": "50 Thịt"
+  },
+  {
+    "id": 299,
+    "internalName": "Soldier-Scout",
+    "inGameName": "Scout",
+    "iconId": 31,
+    "buildingId": 101,
+    "building": "Nhà BL (Stable)",
+    "hp": 60,
+    "speed": 2,
+    "los": 8,
+    "attack": 3,
+    "attacks": [
+      {
+        "type": 4,
+        "amount": 3
+      }
+    ],
+    "meleeArmor": 0,
+    "pierceArmor": 0,
+    "armors": [
+      {
+        "type": 4,
+        "amount": 0
+      },
+      {
+        "type": 8,
+        "amount": -8
+      },
+      {
+        "type": 3,
+        "amount": 0
+      }
+    ],
+    "range": 0,
+    "minRange": 0,
+    "reloadTime": 1.5,
+    "frameDelay": 0,
+    "blastWidth": 0,
+    "trainTime": 30,
+    "costs": [
+      {
+        "type": 0,
+        "amount": 100
+      }
+    ],
+    "costText": "100 Thịt"
+  },
+  {
+    "id": 338,
+    "internalName": "Soldier-Camel",
+    "inGameName": "Camel Rider",
+    "iconId": 57,
+    "buildingId": 101,
+    "building": "Nhà BL (Stable)",
+    "hp": 125,
+    "speed": 2,
+    "los": 4,
+    "attack": 6,
+    "attacks": [
+      {
+        "type": 4,
+        "amount": 6
+      },
+      {
+        "type": 8,
+        "amount": 0
+      }
+    ],
+    "meleeArmor": 0,
+    "pierceArmor": 0,
+    "armors": [
+      {
+        "type": 4,
+        "amount": 0
+      }
+    ],
+    "range": 0,
+    "minRange": 0,
+    "reloadTime": 1.5,
+    "frameDelay": 0,
+    "blastWidth": 0,
+    "trainTime": 30,
+    "costs": [
+      {
+        "type": 0,
+        "amount": 70
+      },
+      {
+        "type": 3,
+        "amount": 60
+      }
+    ],
+    "costText": "70 Thịt, 60 Vàng"
+  },
+  {
+    "id": 339,
+    "internalName": "Soldier-Hvy_Chariot",
+    "inGameName": "Scythe Chariot",
+    "iconId": 59,
+    "buildingId": 101,
+    "building": "Nhà BL (Stable)",
+    "hp": 120,
+    "speed": 2,
+    "los": 4,
+    "attack": 9,
+    "attacks": [
+      {
+        "type": 7,
+        "amount": 0
+      },
+      {
+        "type": 4,
+        "amount": 9
+      }
+    ],
+    "meleeArmor": 2,
+    "pierceArmor": 0,
+    "armors": [
+      {
+        "type": 4,
+        "amount": 2
+      },
+      {
+        "type": 8,
+        "amount": -4
+      },
+      {
+        "type": 3,
+        "amount": 0
+      }
+    ],
+    "range": 0,
+    "minRange": 0,
+    "reloadTime": 1.5,
+    "frameDelay": 0,
+    "blastWidth": 2,
+    "trainTime": 40,
+    "costs": [
+      {
+        "type": 0,
+        "amount": 40
+      },
+      {
+        "type": 1,
+        "amount": 60
+      }
+    ],
+    "costText": "40 Thịt, 60 Gỗ"
+  },
+  {
+    "id": 345,
+    "internalName": "Soldier-Armor_Elephant",
+    "inGameName": "Armored Elephant",
+    "iconId": 58,
+    "buildingId": 101,
+    "building": "Nhà BL (Stable)",
+    "hp": 600,
+    "speed": 0.9,
+    "los": 5,
+    "attack": 18,
+    "attacks": [
+      {
+        "type": 6,
+        "amount": -100
+      },
+      {
+        "type": 4,
+        "amount": 18
+      },
+      {
+        "type": 10,
+        "amount": 0
+      }
+    ],
+    "meleeArmor": 2,
+    "pierceArmor": 1,
+    "armors": [
+      {
+        "type": 4,
+        "amount": 2
+      },
+      {
+        "type": 3,
+        "amount": 1
+      }
+    ],
+    "range": 0,
+    "minRange": 0,
+    "reloadTime": 1.5,
+    "frameDelay": 0,
+    "blastWidth": 2,
+    "trainTime": 50,
+    "costs": [
+      {
+        "type": 3,
+        "amount": 40
+      },
+      {
+        "type": 0,
+        "amount": 170
+      }
+    ],
+    "costText": "40 Vàng, 170 Thịt"
+  },
+  {
+    "id": 347,
+    "internalName": "Soldier-Slinger",
+    "inGameName": "Slinger",
+    "iconId": 56,
+    "buildingId": 12,
+    "building": "Nhà BB (Barracks)",
+    "hp": 25,
+    "speed": 1.2,
+    "los": 5,
+    "attack": 2,
+    "attacks": [
+      {
+        "type": 1,
+        "amount": 0
+      },
+      {
+        "type": 3,
+        "amount": 2
+      }
+    ],
+    "meleeArmor": 0,
+    "pierceArmor": 2,
+    "armors": [
+      {
+        "type": 4,
+        "amount": 0
+      },
+      {
+        "type": 3,
+        "amount": 2
+      }
+    ],
+    "range": 4,
+    "minRange": 0,
+    "reloadTime": 1.5,
+    "frameDelay": 5,
+    "blastWidth": 0,
+    "trainTime": 24,
+    "costs": [
+      {
+        "type": 0,
+        "amount": 40
+      },
+      {
+        "type": 2,
+        "amount": 10
+      }
+    ],
+    "costText": "40 Thịt, 10 Đá"
+  },
+  {
+    "id": 360,
+    "internalName": "Boat-War6",
+    "inGameName": "Fire Galley",
+    "iconId": 60,
+    "buildingId": 45,
+    "building": "Nhà BS (Dock)",
+    "hp": 200,
+    "speed": 2,
+    "los": 8,
+    "attack": 24,
+    "attacks": [
+      {
+        "type": 4,
+        "amount": 24
+      }
+    ],
+    "meleeArmor": 0,
+    "pierceArmor": 0,
+    "armors": [
+      {
+        "type": 0,
+        "amount": -5
+      },
+      {
+        "type": 6,
+        "amount": -10
+      },
+      {
+        "type": 4,
+        "amount": 0
+      }
+    ],
+    "range": 1,
+    "minRange": 0,
+    "reloadTime": 1,
+    "frameDelay": 0,
+    "blastWidth": 0,
+    "trainTime": 45,
+    "costs": [
+      {
+        "type": 1,
+        "amount": 115
+      },
+      {
+        "type": 3,
+        "amount": 40
+      }
+    ],
+    "costText": "115 Gỗ, 40 Vàng"
+  }
+]

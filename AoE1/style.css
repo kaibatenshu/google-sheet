@@ -603,7 +603,11 @@ body {
 .unit-img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
+  image-rendering: pixelated;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+  background: #000;
   display: block;
 }
 
@@ -1159,8 +1163,11 @@ footer {
 .sheet-unit-img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  image-rendering: auto;
+  object-fit: contain;
+  image-rendering: pixelated;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+  background: #000;
   transition: transform 0.2s ease;
 }
 
