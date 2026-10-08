@@ -1285,19 +1285,17 @@ footer {
   cursor: default;
 }
 
-.aoe-spreadsheet tbody tr:hover td.data-cell {
-  background: #172030;
-}
-
 /* CHỮ GIẢI THÍCH RÚT GỌN (TOOLTIP RÊ CHUỘT) */
 .cell-desc {
   display: inline-block;
-  max-width: 84px;
+  max-width: 86px;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
   vertical-align: middle;
-  font-size: 0.75rem;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 0.74rem;
+  letter-spacing: -0.2px;
   cursor: help;
 }
 
@@ -1306,13 +1304,17 @@ footer {
   cursor: default;
 }
 
-/* CELL CÓ BONUS CỦA QUỐC GIA */
+/* CELL CÓ BONUS CỦA QUỐC GIA & ĐẶC TÍNH CHIẾN ĐẤU */
 .data-cell.has-bonus {
-  background: rgba(245, 158, 11, 0.12) !important;
+  background: rgba(245, 158, 11, 0.15) !important;
   color: #fbbf24 !important;
   font-weight: 700 !important;
-  border: 1px solid rgba(245, 158, 11, 0.35) !important;
-  box-shadow: inset 0 0 8px rgba(245, 158, 11, 0.15);
+  border: 1px solid rgba(245, 158, 11, 0.45) !important;
+  box-shadow: inset 0 0 8px rgba(245, 158, 11, 0.18);
+}
+
+.aoe-spreadsheet tbody tr:hover td.data-cell.has-bonus {
+  background: rgba(245, 158, 11, 0.25) !important;
 }
 
 .cell-res-text {
