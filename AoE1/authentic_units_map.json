@@ -1,0 +1,1842 @@
+{
+  "4": {
+    "id": 4,
+    "name": "Soldier-Archer1",
+    "displayName": "Bowman",
+    "hp": 35,
+    "speed": 1.2,
+    "los": 7,
+    "trainTime": 30,
+    "trainLocationId": 87,
+    "costs": {
+      "food": 40,
+      "wood": 20,
+      "gold": 0,
+      "stone": 0
+    },
+    "atk": 3,
+    "meleeArmor": 0,
+    "pierceArmor": 0,
+    "range": 5,
+    "minRange": 0,
+    "reloadTime": 1.4,
+    "blastWidth": 0,
+    "attacks": [
+      {
+        "type": 3,
+        "amount": 3
+      }
+    ],
+    "armors": [
+      {
+        "type": 1,
+        "amount": -2
+      },
+      {
+        "type": 4,
+        "amount": 0
+      }
+    ]
+  },
+  "5": {
+    "id": 5,
+    "name": "Soldier-Archer2",
+    "displayName": "Improved Bowman",
+    "hp": 40,
+    "speed": 1.2,
+    "los": 8,
+    "trainTime": 30,
+    "trainLocationId": 87,
+    "costs": {
+      "food": 40,
+      "wood": 0,
+      "gold": 20,
+      "stone": 0
+    },
+    "atk": 4,
+    "meleeArmor": 0,
+    "pierceArmor": 0,
+    "range": 6,
+    "minRange": 0,
+    "reloadTime": 1.4,
+    "blastWidth": 0,
+    "attacks": [
+      {
+        "type": 3,
+        "amount": 4
+      }
+    ],
+    "armors": [
+      {
+        "type": 1,
+        "amount": -2
+      },
+      {
+        "type": 4,
+        "amount": 0
+      }
+    ]
+  },
+  "6": {
+    "id": 6,
+    "name": "Soldier-Archer3",
+    "displayName": "Composite Bowman",
+    "hp": 45,
+    "speed": 1.2,
+    "los": 9,
+    "trainTime": 30,
+    "trainLocationId": 87,
+    "costs": {
+      "food": 40,
+      "wood": 0,
+      "gold": 20,
+      "stone": 0
+    },
+    "atk": 5,
+    "meleeArmor": 0,
+    "pierceArmor": 0,
+    "range": 7,
+    "minRange": 0,
+    "reloadTime": 1.4,
+    "blastWidth": 0,
+    "attacks": [
+      {
+        "type": 3,
+        "amount": 5
+      }
+    ],
+    "armors": [
+      {
+        "type": 1,
+        "amount": -2
+      },
+      {
+        "type": 4,
+        "amount": 0
+      }
+    ]
+  },
+  "11": {
+    "id": 11,
+    "name": "Soldier-Balista",
+    "displayName": "Ballista",
+    "hp": 55,
+    "speed": 0.8,
+    "los": 11,
+    "trainTime": 50,
+    "trainLocationId": 49,
+    "costs": {
+      "food": 0,
+      "wood": 100,
+      "gold": 80,
+      "stone": 0
+    },
+    "atk": 40,
+    "meleeArmor": 0,
+    "pierceArmor": 0,
+    "range": 9,
+    "minRange": 3,
+    "reloadTime": 3,
+    "blastWidth": 0,
+    "attacks": [
+      {
+        "type": 0,
+        "amount": 0
+      },
+      {
+        "type": 3,
+        "amount": 40
+      }
+    ],
+    "armors": [
+      {
+        "type": 4,
+        "amount": 0
+      }
+    ]
+  },
+  "13": {
+    "id": 13,
+    "name": "Boat-Fishing1",
+    "displayName": "Fishing Boat",
+    "hp": 45,
+    "speed": 1.4,
+    "los": 6,
+    "trainTime": 40,
+    "trainLocationId": 45,
+    "costs": {
+      "food": 0,
+      "wood": 50,
+      "gold": 0,
+      "stone": 0
+    },
+    "atk": 0,
+    "meleeArmor": 0,
+    "pierceArmor": 0,
+    "range": 0,
+    "minRange": 0,
+    "reloadTime": 0,
+    "blastWidth": 0,
+    "attacks": [],
+    "armors": [
+      {
+        "type": 4,
+        "amount": 0
+      }
+    ]
+  },
+  "14": {
+    "id": 14,
+    "name": "Boat-Fishing2",
+    "displayName": "Fishing Ship",
+    "hp": 75,
+    "speed": 2,
+    "los": 6,
+    "trainTime": 40,
+    "trainLocationId": 45,
+    "costs": {
+      "food": 0,
+      "wood": 50,
+      "gold": 0,
+      "stone": 0
+    },
+    "atk": 0,
+    "meleeArmor": 0,
+    "pierceArmor": 0,
+    "range": 0,
+    "minRange": 0,
+    "reloadTime": 0,
+    "blastWidth": 0,
+    "attacks": [],
+    "armors": [
+      {
+        "type": 4,
+        "amount": 0
+      }
+    ]
+  },
+  "15": {
+    "id": 15,
+    "name": "Boat-Trade1",
+    "displayName": "Trade Boat",
+    "hp": 200,
+    "speed": 2,
+    "los": 4,
+    "trainTime": 50,
+    "trainLocationId": 45,
+    "costs": {
+      "food": 0,
+      "wood": 100,
+      "gold": 0,
+      "stone": 0
+    },
+    "atk": 0,
+    "meleeArmor": 0,
+    "pierceArmor": 0,
+    "range": 0,
+    "minRange": 0,
+    "reloadTime": 0,
+    "blastWidth": 0,
+    "attacks": [],
+    "armors": [
+      {
+        "type": 4,
+        "amount": 0
+      }
+    ]
+  },
+  "16": {
+    "id": 16,
+    "name": "Boat-Trade2",
+    "displayName": "Merchant Ship",
+    "hp": 250,
+    "speed": 2.5,
+    "los": 4,
+    "trainTime": 50,
+    "trainLocationId": 45,
+    "costs": {
+      "food": 0,
+      "wood": 100,
+      "gold": 0,
+      "stone": 0
+    },
+    "atk": 0,
+    "meleeArmor": 0,
+    "pierceArmor": 0,
+    "range": 0,
+    "minRange": 0,
+    "reloadTime": 0,
+    "blastWidth": 0,
+    "attacks": [],
+    "armors": [
+      {
+        "type": 4,
+        "amount": 0
+      }
+    ]
+  },
+  "17": {
+    "id": 17,
+    "name": "Boat-Transport1",
+    "displayName": "Light Transport",
+    "hp": 150,
+    "speed": 1.4,
+    "los": 4,
+    "trainTime": 75,
+    "trainLocationId": 45,
+    "costs": {
+      "food": 0,
+      "wood": 150,
+      "gold": 0,
+      "stone": 0
+    },
+    "atk": 0,
+    "meleeArmor": 0,
+    "pierceArmor": 0,
+    "range": 0,
+    "minRange": 0,
+    "reloadTime": 0,
+    "blastWidth": 0,
+    "attacks": [],
+    "armors": [
+      {
+        "type": 4,
+        "amount": 0
+      }
+    ]
+  },
+  "18": {
+    "id": 18,
+    "name": "Boat-Transport2",
+    "displayName": "Heavy Transport",
+    "hp": 200,
+    "speed": 1.75,
+    "los": 5,
+    "trainTime": 75,
+    "trainLocationId": 45,
+    "costs": {
+      "food": 0,
+      "wood": 150,
+      "gold": 0,
+      "stone": 0
+    },
+    "atk": 0,
+    "meleeArmor": 0,
+    "pierceArmor": 0,
+    "range": 0,
+    "minRange": 0,
+    "reloadTime": 0,
+    "blastWidth": 0,
+    "attacks": [],
+    "armors": [
+      {
+        "type": 4,
+        "amount": 0
+      }
+    ]
+  },
+  "19": {
+    "id": 19,
+    "name": "Boat-War1",
+    "displayName": "Scout Ship",
+    "hp": 120,
+    "speed": 1.75,
+    "los": 7,
+    "trainTime": 60,
+    "trainLocationId": 45,
+    "costs": {
+      "food": 0,
+      "wood": 135,
+      "gold": 0,
+      "stone": 0
+    },
+    "atk": 5,
+    "meleeArmor": 0,
+    "pierceArmor": 0,
+    "range": 5,
+    "minRange": 0,
+    "reloadTime": 1.5,
+    "blastWidth": 0,
+    "attacks": [
+      {
+        "type": 3,
+        "amount": 5
+      }
+    ],
+    "armors": [
+      {
+        "type": 4,
+        "amount": 0
+      }
+    ]
+  },
+  "20": {
+    "id": 20,
+    "name": "Boat-War2",
+    "displayName": "War Galley",
+    "hp": 160,
+    "speed": 1.75,
+    "los": 9,
+    "trainTime": 60,
+    "trainLocationId": 45,
+    "costs": {
+      "food": 0,
+      "wood": 135,
+      "gold": 0,
+      "stone": 0
+    },
+    "atk": 8,
+    "meleeArmor": 0,
+    "pierceArmor": 0,
+    "range": 6,
+    "minRange": 0,
+    "reloadTime": 1.7,
+    "blastWidth": 0,
+    "attacks": [
+      {
+        "type": 3,
+        "amount": 8
+      }
+    ],
+    "armors": [
+      {
+        "type": 4,
+        "amount": 0
+      }
+    ]
+  },
+  "21": {
+    "id": 21,
+    "name": "Boat-War3",
+    "displayName": "Trireme",
+    "hp": 200,
+    "speed": 1.75,
+    "los": 10,
+    "trainTime": 60,
+    "trainLocationId": 45,
+    "costs": {
+      "food": 0,
+      "wood": 135,
+      "gold": 0,
+      "stone": 0
+    },
+    "atk": 12,
+    "meleeArmor": 0,
+    "pierceArmor": 0,
+    "range": 7,
+    "minRange": 0,
+    "reloadTime": 1.8,
+    "blastWidth": 0,
+    "attacks": [
+      {
+        "type": 3,
+        "amount": 12
+      }
+    ],
+    "armors": [
+      {
+        "type": 4,
+        "amount": 0
+      }
+    ]
+  },
+  "25": {
+    "id": 25,
+    "name": "Soldier-El_Archer",
+    "displayName": "Elephant Archer",
+    "hp": 600,
+    "speed": 0.9,
+    "los": 8,
+    "trainTime": 50,
+    "trainLocationId": 87,
+    "costs": {
+      "food": 180,
+      "wood": 0,
+      "gold": 60,
+      "stone": 0
+    },
+    "atk": 5,
+    "meleeArmor": 0,
+    "pierceArmor": 0,
+    "range": 7,
+    "minRange": 0,
+    "reloadTime": 1.5,
+    "blastWidth": 0,
+    "attacks": [
+      {
+        "type": 3,
+        "amount": 5
+      }
+    ],
+    "armors": [
+      {
+        "type": 1,
+        "amount": -2
+      },
+      {
+        "type": 4,
+        "amount": 0
+      }
+    ]
+  },
+  "35": {
+    "id": 35,
+    "name": "Soldier-Catapult1",
+    "displayName": "Stone Thrower",
+    "hp": 75,
+    "speed": 0.8,
+    "los": 13,
+    "trainTime": 60,
+    "trainLocationId": 49,
+    "costs": {
+      "food": 0,
+      "wood": 180,
+      "gold": 80,
+      "stone": 0
+    },
+    "atk": 50,
+    "meleeArmor": 0,
+    "pierceArmor": 0,
+    "range": 10,
+    "minRange": 2,
+    "reloadTime": 5,
+    "blastWidth": 0.5,
+    "attacks": [
+      {
+        "type": 6,
+        "amount": 0
+      },
+      {
+        "type": 4,
+        "amount": 50
+      }
+    ],
+    "armors": [
+      {
+        "type": 4,
+        "amount": 0
+      }
+    ]
+  },
+  "36": {
+    "id": 36,
+    "name": "Soldier-Catapult2",
+    "displayName": "Catapult",
+    "hp": 75,
+    "speed": 0.8,
+    "los": 15,
+    "trainTime": 60,
+    "trainLocationId": 49,
+    "costs": {
+      "food": 0,
+      "wood": 180,
+      "gold": 80,
+      "stone": 0
+    },
+    "atk": 60,
+    "meleeArmor": 0,
+    "pierceArmor": 0,
+    "range": 12,
+    "minRange": 2,
+    "reloadTime": 5,
+    "blastWidth": 1.5,
+    "attacks": [
+      {
+        "type": 6,
+        "amount": 0
+      },
+      {
+        "type": 4,
+        "amount": 60
+      }
+    ],
+    "armors": [
+      {
+        "type": 4,
+        "amount": 0
+      }
+    ]
+  },
+  "37": {
+    "id": 37,
+    "name": "Soldier-Cavalry1",
+    "displayName": "Cavalry",
+    "hp": 150,
+    "speed": 2,
+    "los": 4,
+    "trainTime": 40,
+    "trainLocationId": 101,
+    "costs": {
+      "food": 70,
+      "wood": 0,
+      "gold": 80,
+      "stone": 0
+    },
+    "atk": 8,
+    "meleeArmor": 0,
+    "pierceArmor": 0,
+    "range": 0,
+    "minRange": 0,
+    "reloadTime": 1.5,
+    "blastWidth": 0,
+    "attacks": [
+      {
+        "type": 9,
+        "amount": 0
+      },
+      {
+        "type": 4,
+        "amount": 8
+      }
+    ],
+    "armors": [
+      {
+        "type": 4,
+        "amount": 0
+      },
+      {
+        "type": 8,
+        "amount": -8
+      },
+      {
+        "type": 3,
+        "amount": 0
+      }
+    ]
+  },
+  "38": {
+    "id": 38,
+    "name": "Soldier-Cavalry2",
+    "displayName": "Heavy Cavalry",
+    "hp": 150,
+    "speed": 2,
+    "los": 4,
+    "trainTime": 40,
+    "trainLocationId": 101,
+    "costs": {
+      "food": 70,
+      "wood": 0,
+      "gold": 80,
+      "stone": 0
+    },
+    "atk": 10,
+    "meleeArmor": 1,
+    "pierceArmor": 1,
+    "range": 0,
+    "minRange": 0,
+    "reloadTime": 1.5,
+    "blastWidth": 0,
+    "attacks": [
+      {
+        "type": 9,
+        "amount": 0
+      },
+      {
+        "type": 4,
+        "amount": 10
+      }
+    ],
+    "armors": [
+      {
+        "type": 4,
+        "amount": 1
+      },
+      {
+        "type": 8,
+        "amount": -8
+      },
+      {
+        "type": 3,
+        "amount": 1
+      }
+    ]
+  },
+  "39": {
+    "id": 39,
+    "name": "Soldier-Cavalry3_Arch",
+    "displayName": "Horse Archer",
+    "hp": 60,
+    "speed": 2.2,
+    "los": 9,
+    "trainTime": 40,
+    "trainLocationId": 87,
+    "costs": {
+      "food": 50,
+      "wood": 0,
+      "gold": 70,
+      "stone": 0
+    },
+    "atk": 7,
+    "meleeArmor": 0,
+    "pierceArmor": 2,
+    "range": 7,
+    "minRange": 0,
+    "reloadTime": 1.5,
+    "blastWidth": 0,
+    "attacks": [
+      {
+        "type": 3,
+        "amount": 7
+      }
+    ],
+    "armors": [
+      {
+        "type": 1,
+        "amount": -2
+      },
+      {
+        "type": 4,
+        "amount": 0
+      },
+      {
+        "type": 8,
+        "amount": -8
+      },
+      {
+        "type": 3,
+        "amount": 2
+      }
+    ]
+  },
+  "40": {
+    "id": 40,
+    "name": "Soldier-Chariot1",
+    "displayName": "Chariot",
+    "hp": 100,
+    "speed": 2,
+    "los": 4,
+    "trainTime": 40,
+    "trainLocationId": 101,
+    "costs": {
+      "food": 40,
+      "wood": 60,
+      "gold": 0,
+      "stone": 0
+    },
+    "atk": 7,
+    "meleeArmor": 0,
+    "pierceArmor": 0,
+    "range": 0,
+    "minRange": 0,
+    "reloadTime": 1.5,
+    "blastWidth": 0,
+    "attacks": [
+      {
+        "type": 7,
+        "amount": 0
+      },
+      {
+        "type": 4,
+        "amount": 7
+      }
+    ],
+    "armors": [
+      {
+        "type": 4,
+        "amount": 0
+      },
+      {
+        "type": 8,
+        "amount": -4
+      }
+    ]
+  },
+  "41": {
+    "id": 41,
+    "name": "Soldier-Chariot2",
+    "displayName": "Chariot Archer",
+    "hp": 70,
+    "speed": 2,
+    "los": 9,
+    "trainTime": 40,
+    "trainLocationId": 87,
+    "costs": {
+      "food": 40,
+      "wood": 70,
+      "gold": 0,
+      "stone": 0
+    },
+    "atk": 4,
+    "meleeArmor": 0,
+    "pierceArmor": 0,
+    "range": 7,
+    "minRange": 0,
+    "reloadTime": 1.5,
+    "blastWidth": 0,
+    "attacks": [
+      {
+        "type": 7,
+        "amount": 0
+      },
+      {
+        "type": 3,
+        "amount": 4
+      }
+    ],
+    "armors": [
+      {
+        "type": 1,
+        "amount": -2
+      },
+      {
+        "type": 4,
+        "amount": 0
+      },
+      {
+        "type": 8,
+        "amount": -4
+      }
+    ]
+  },
+  "46": {
+    "id": 46,
+    "name": "Soldier-Elephant",
+    "displayName": "War Elephant",
+    "hp": 600,
+    "speed": 0.9,
+    "los": 5,
+    "trainTime": 50,
+    "trainLocationId": 101,
+    "costs": {
+      "food": 170,
+      "wood": 0,
+      "gold": 40,
+      "stone": 0
+    },
+    "atk": 15,
+    "meleeArmor": 0,
+    "pierceArmor": 0,
+    "range": 0,
+    "minRange": 0,
+    "reloadTime": 1.5,
+    "blastWidth": 2,
+    "attacks": [
+      {
+        "type": 4,
+        "amount": 15
+      }
+    ],
+    "armors": [
+      {
+        "type": 4,
+        "amount": 0
+      }
+    ]
+  },
+  "73": {
+    "id": 73,
+    "name": "Soldier-Inf1",
+    "displayName": "Clubman",
+    "hp": 40,
+    "speed": 1.2,
+    "los": 4,
+    "trainTime": 26,
+    "trainLocationId": 12,
+    "costs": {
+      "food": 50,
+      "wood": 0,
+      "gold": 0,
+      "stone": 0
+    },
+    "atk": 3,
+    "meleeArmor": 0,
+    "pierceArmor": 0,
+    "range": 0,
+    "minRange": 0,
+    "reloadTime": 1.5,
+    "blastWidth": 0,
+    "attacks": [
+      {
+        "type": 4,
+        "amount": 3
+      }
+    ],
+    "armors": [
+      {
+        "type": 9,
+        "amount": -5
+      },
+      {
+        "type": 4,
+        "amount": 0
+      },
+      {
+        "type": 3,
+        "amount": 0
+      }
+    ]
+  },
+  "74": {
+    "id": 74,
+    "name": "Soldier-Inf2",
+    "displayName": "Axeman",
+    "hp": 50,
+    "speed": 1.2,
+    "los": 4,
+    "trainTime": 26,
+    "trainLocationId": 12,
+    "costs": {
+      "food": 50,
+      "wood": 0,
+      "gold": 0,
+      "stone": 0
+    },
+    "atk": 5,
+    "meleeArmor": 0,
+    "pierceArmor": 0,
+    "range": 0,
+    "minRange": 0,
+    "reloadTime": 1.5,
+    "blastWidth": 0,
+    "attacks": [
+      {
+        "type": 4,
+        "amount": 5
+      }
+    ],
+    "armors": [
+      {
+        "type": 9,
+        "amount": -5
+      },
+      {
+        "type": 4,
+        "amount": 0
+      },
+      {
+        "type": 3,
+        "amount": 0
+      }
+    ]
+  },
+  "75": {
+    "id": 75,
+    "name": "Soldier-Inf3",
+    "displayName": "Short Swordsman",
+    "hp": 60,
+    "speed": 1.2,
+    "los": 4,
+    "trainTime": 26,
+    "trainLocationId": 12,
+    "costs": {
+      "food": 35,
+      "wood": 0,
+      "gold": 15,
+      "stone": 0
+    },
+    "atk": 7,
+    "meleeArmor": 1,
+    "pierceArmor": 0,
+    "range": 0,
+    "minRange": 0,
+    "reloadTime": 1.5,
+    "blastWidth": 0,
+    "attacks": [
+      {
+        "type": 4,
+        "amount": 7
+      }
+    ],
+    "armors": [
+      {
+        "type": 9,
+        "amount": -5
+      },
+      {
+        "type": 4,
+        "amount": 1
+      },
+      {
+        "type": 3,
+        "amount": 0
+      }
+    ]
+  },
+  "76": {
+    "id": 76,
+    "name": "Soldier-Inf4",
+    "displayName": "Broad Swordsman",
+    "hp": 70,
+    "speed": 1.2,
+    "los": 4,
+    "trainTime": 26,
+    "trainLocationId": 12,
+    "costs": {
+      "food": 35,
+      "wood": 0,
+      "gold": 15,
+      "stone": 0
+    },
+    "atk": 9,
+    "meleeArmor": 1,
+    "pierceArmor": 0,
+    "range": 0,
+    "minRange": 0,
+    "reloadTime": 1.5,
+    "blastWidth": 0,
+    "attacks": [
+      {
+        "type": 4,
+        "amount": 9
+      }
+    ],
+    "armors": [
+      {
+        "type": 9,
+        "amount": -5
+      },
+      {
+        "type": 4,
+        "amount": 1
+      },
+      {
+        "type": 3,
+        "amount": 0
+      }
+    ]
+  },
+  "77": {
+    "id": 77,
+    "name": "Soldier-Inf5",
+    "displayName": "Long Swordsman",
+    "hp": 80,
+    "speed": 1.2,
+    "los": 4,
+    "trainTime": 26,
+    "trainLocationId": 12,
+    "costs": {
+      "food": 35,
+      "wood": 0,
+      "gold": 15,
+      "stone": 0
+    },
+    "atk": 11,
+    "meleeArmor": 2,
+    "pierceArmor": 0,
+    "range": 0,
+    "minRange": 0,
+    "reloadTime": 1.5,
+    "blastWidth": 0,
+    "attacks": [
+      {
+        "type": 4,
+        "amount": 11
+      }
+    ],
+    "armors": [
+      {
+        "type": 9,
+        "amount": -5
+      },
+      {
+        "type": 4,
+        "amount": 2
+      },
+      {
+        "type": 3,
+        "amount": 0
+      }
+    ]
+  },
+  "83": {
+    "id": 83,
+    "name": "Man",
+    "displayName": "Villager",
+    "hp": 25,
+    "speed": 1.1,
+    "los": 4,
+    "trainTime": 20,
+    "trainLocationId": 109,
+    "costs": {
+      "food": 50,
+      "wood": 0,
+      "gold": 0,
+      "stone": 0
+    },
+    "atk": 3,
+    "meleeArmor": 0,
+    "pierceArmor": 0,
+    "range": 0,
+    "minRange": 0,
+    "reloadTime": 1.5,
+    "blastWidth": 0,
+    "attacks": [
+      {
+        "type": 4,
+        "amount": 3
+      },
+      {
+        "type": 10,
+        "amount": -150
+      }
+    ],
+    "armors": [
+      {
+        "type": 12,
+        "amount": 0
+      }
+    ]
+  },
+  "93": {
+    "id": 93,
+    "name": "Soldier-Phal1",
+    "displayName": "Hoplite",
+    "hp": 120,
+    "speed": 0.9,
+    "los": 4,
+    "trainTime": 36,
+    "trainLocationId": 0,
+    "costs": {
+      "food": 60,
+      "wood": 0,
+      "gold": 40,
+      "stone": 0
+    },
+    "atk": 17,
+    "meleeArmor": 5,
+    "pierceArmor": 0,
+    "range": 0,
+    "minRange": 0,
+    "reloadTime": 1.5,
+    "blastWidth": 0,
+    "attacks": [
+      {
+        "type": 4,
+        "amount": 17
+      }
+    ],
+    "armors": [
+      {
+        "type": 4,
+        "amount": 5
+      },
+      {
+        "type": 3,
+        "amount": 0
+      }
+    ]
+  },
+  "94": {
+    "id": 94,
+    "name": "Soldier-Phal2",
+    "displayName": "Phalanx",
+    "hp": 120,
+    "speed": 0.9,
+    "los": 4,
+    "trainTime": 36,
+    "trainLocationId": 0,
+    "costs": {
+      "food": 60,
+      "wood": 0,
+      "gold": 40,
+      "stone": 0
+    },
+    "atk": 20,
+    "meleeArmor": 7,
+    "pierceArmor": 0,
+    "range": 0,
+    "minRange": 0,
+    "reloadTime": 1.5,
+    "blastWidth": 0,
+    "attacks": [
+      {
+        "type": 4,
+        "amount": 20
+      }
+    ],
+    "armors": [
+      {
+        "type": 4,
+        "amount": 7
+      },
+      {
+        "type": 3,
+        "amount": 0
+      }
+    ]
+  },
+  "125": {
+    "id": 125,
+    "name": "Priest",
+    "displayName": "Priest",
+    "hp": 25,
+    "speed": 0.8,
+    "los": 12,
+    "trainTime": 50,
+    "trainLocationId": 104,
+    "costs": {
+      "food": 0,
+      "wood": 0,
+      "gold": 125,
+      "stone": 0
+    },
+    "atk": 0,
+    "meleeArmor": 0,
+    "pierceArmor": 0,
+    "range": 10,
+    "minRange": 0,
+    "reloadTime": 1.5,
+    "blastWidth": 0,
+    "attacks": [],
+    "armors": [
+      {
+        "type": 7,
+        "amount": -7
+      }
+    ]
+  },
+  "250": {
+    "id": 250,
+    "name": "Boat-War4",
+    "displayName": "Catapult Trireme",
+    "hp": 120,
+    "speed": 1.35,
+    "los": 12,
+    "trainTime": 90,
+    "trainLocationId": 45,
+    "costs": {
+      "food": 0,
+      "wood": 135,
+      "gold": 75,
+      "stone": 0
+    },
+    "atk": 35,
+    "meleeArmor": 0,
+    "pierceArmor": 0,
+    "range": 9,
+    "minRange": 0,
+    "reloadTime": 5,
+    "blastWidth": 1,
+    "attacks": [
+      {
+        "type": 6,
+        "amount": 35
+      },
+      {
+        "type": 4,
+        "amount": 0
+      }
+    ],
+    "armors": [
+      {
+        "type": 4,
+        "amount": 0
+      }
+    ]
+  },
+  "277": {
+    "id": 277,
+    "name": "Boat-War5",
+    "displayName": "Juggernaught",
+    "hp": 200,
+    "speed": 1.35,
+    "los": 13,
+    "trainTime": 90,
+    "trainLocationId": 45,
+    "costs": {
+      "food": 0,
+      "wood": 135,
+      "gold": 75,
+      "stone": 0
+    },
+    "atk": 35,
+    "meleeArmor": 0,
+    "pierceArmor": 0,
+    "range": 10,
+    "minRange": 0,
+    "reloadTime": 5,
+    "blastWidth": 1.5,
+    "attacks": [
+      {
+        "type": 6,
+        "amount": 35
+      },
+      {
+        "type": 4,
+        "amount": 0
+      }
+    ],
+    "armors": [
+      {
+        "type": 4,
+        "amount": 0
+      }
+    ]
+  },
+  "279": {
+    "id": 279,
+    "name": "Soldier-Balista2",
+    "displayName": "Helepolis",
+    "hp": 55,
+    "speed": 0.8,
+    "los": 12,
+    "trainTime": 50,
+    "trainLocationId": 49,
+    "costs": {
+      "food": 0,
+      "wood": 100,
+      "gold": 80,
+      "stone": 0
+    },
+    "atk": 40,
+    "meleeArmor": 0,
+    "pierceArmor": 0,
+    "range": 10,
+    "minRange": 3,
+    "reloadTime": 1.5,
+    "blastWidth": 0,
+    "attacks": [
+      {
+        "type": 0,
+        "amount": 0
+      },
+      {
+        "type": 3,
+        "amount": 40
+      }
+    ],
+    "armors": [
+      {
+        "type": 4,
+        "amount": 0
+      }
+    ]
+  },
+  "280": {
+    "id": 280,
+    "name": "Soldier-Catapult3",
+    "displayName": "Heavy Catapult",
+    "hp": 150,
+    "speed": 0.8,
+    "los": 16,
+    "trainTime": 60,
+    "trainLocationId": 49,
+    "costs": {
+      "food": 0,
+      "wood": 180,
+      "gold": 80,
+      "stone": 0
+    },
+    "atk": 60,
+    "meleeArmor": 0,
+    "pierceArmor": 0,
+    "range": 13,
+    "minRange": 2,
+    "reloadTime": 5,
+    "blastWidth": 1.5,
+    "attacks": [
+      {
+        "type": 6,
+        "amount": 0
+      },
+      {
+        "type": 4,
+        "amount": 60
+      }
+    ],
+    "armors": [
+      {
+        "type": 4,
+        "amount": 0
+      }
+    ]
+  },
+  "281": {
+    "id": 281,
+    "name": "Soldier-Cavalry4",
+    "displayName": "Heavy Horse Archer",
+    "hp": 90,
+    "speed": 2.5,
+    "los": 9,
+    "trainTime": 40,
+    "trainLocationId": 87,
+    "costs": {
+      "food": 50,
+      "wood": 0,
+      "gold": 70,
+      "stone": 0
+    },
+    "atk": 8,
+    "meleeArmor": 0,
+    "pierceArmor": 2,
+    "range": 7,
+    "minRange": 0,
+    "reloadTime": 1.5,
+    "blastWidth": 0,
+    "attacks": [
+      {
+        "type": 3,
+        "amount": 8
+      }
+    ],
+    "armors": [
+      {
+        "type": 4,
+        "amount": 0
+      },
+      {
+        "type": 8,
+        "amount": -8
+      },
+      {
+        "type": 3,
+        "amount": 2
+      }
+    ]
+  },
+  "282": {
+    "id": 282,
+    "name": "Soldier-Inf6",
+    "displayName": "Legion",
+    "hp": 160,
+    "speed": 1.2,
+    "los": 4,
+    "trainTime": 26,
+    "trainLocationId": 12,
+    "costs": {
+      "food": 35,
+      "wood": 0,
+      "gold": 15,
+      "stone": 0
+    },
+    "atk": 13,
+    "meleeArmor": 2,
+    "pierceArmor": 0,
+    "range": 0,
+    "minRange": 0,
+    "reloadTime": 1.5,
+    "blastWidth": 0,
+    "attacks": [
+      {
+        "type": 4,
+        "amount": 13
+      }
+    ],
+    "armors": [
+      {
+        "type": 9,
+        "amount": -5
+      },
+      {
+        "type": 4,
+        "amount": 2
+      },
+      {
+        "type": 3,
+        "amount": 0
+      }
+    ]
+  },
+  "283": {
+    "id": 283,
+    "name": "Soldier-Cavalry3",
+    "displayName": "Cataphract",
+    "hp": 180,
+    "speed": 2,
+    "los": 4,
+    "trainTime": 40,
+    "trainLocationId": 101,
+    "costs": {
+      "food": 70,
+      "wood": 0,
+      "gold": 80,
+      "stone": 0
+    },
+    "atk": 12,
+    "meleeArmor": 3,
+    "pierceArmor": 1,
+    "range": 0,
+    "minRange": 0,
+    "reloadTime": 1.5,
+    "blastWidth": 0,
+    "attacks": [
+      {
+        "type": 9,
+        "amount": 0
+      },
+      {
+        "type": 4,
+        "amount": 12
+      }
+    ],
+    "armors": [
+      {
+        "type": 4,
+        "amount": 3
+      },
+      {
+        "type": 8,
+        "amount": -8
+      },
+      {
+        "type": 3,
+        "amount": 1
+      }
+    ]
+  },
+  "291": {
+    "id": 291,
+    "name": "Soldier-Phal3",
+    "displayName": "Centurion",
+    "hp": 160,
+    "speed": 0.9,
+    "los": 4,
+    "trainTime": 36,
+    "trainLocationId": 0,
+    "costs": {
+      "food": 60,
+      "wood": 0,
+      "gold": 40,
+      "stone": 0
+    },
+    "atk": 30,
+    "meleeArmor": 8,
+    "pierceArmor": 0,
+    "range": 0,
+    "minRange": 0,
+    "reloadTime": 1.5,
+    "blastWidth": 0,
+    "attacks": [
+      {
+        "type": 4,
+        "amount": 30
+      }
+    ],
+    "armors": [
+      {
+        "type": 4,
+        "amount": 8
+      },
+      {
+        "type": 3,
+        "amount": 0
+      }
+    ]
+  },
+  "292": {
+    "id": 292,
+    "name": "Raft",
+    "displayName": "Raft",
+    "hp": 40,
+    "speed": 1.5,
+    "los": 4,
+    "trainTime": 40,
+    "trainLocationId": 45,
+    "costs": {
+      "food": 0,
+      "wood": 40,
+      "gold": 0,
+      "stone": 0
+    },
+    "atk": 0,
+    "meleeArmor": 0,
+    "pierceArmor": 0,
+    "range": 0,
+    "minRange": 0,
+    "reloadTime": 0,
+    "blastWidth": 0,
+    "attacks": [],
+    "armors": []
+  },
+  "293": {
+    "id": 293,
+    "name": "Man2",
+    "displayName": "Villager",
+    "hp": 25,
+    "speed": 1.1,
+    "los": 4,
+    "trainTime": 20,
+    "trainLocationId": 109,
+    "costs": {
+      "food": 50,
+      "wood": 0,
+      "gold": 0,
+      "stone": 0
+    },
+    "atk": 3,
+    "meleeArmor": 0,
+    "pierceArmor": 0,
+    "range": 0,
+    "minRange": 0,
+    "reloadTime": 1.5,
+    "blastWidth": 0,
+    "attacks": [
+      {
+        "type": 4,
+        "amount": 3
+      },
+      {
+        "type": 10,
+        "amount": -150
+      }
+    ],
+    "armors": [
+      {
+        "type": 12,
+        "amount": 0
+      }
+    ]
+  },
+  "299": {
+    "id": 299,
+    "name": "Soldier-Scout",
+    "displayName": "Scout",
+    "hp": 60,
+    "speed": 2,
+    "los": 8,
+    "trainTime": 30,
+    "trainLocationId": 101,
+    "costs": {
+      "food": 100,
+      "wood": 0,
+      "gold": 0,
+      "stone": 0
+    },
+    "atk": 3,
+    "meleeArmor": 0,
+    "pierceArmor": 0,
+    "range": 0,
+    "minRange": 0,
+    "reloadTime": 1.5,
+    "blastWidth": 0,
+    "attacks": [
+      {
+        "type": 4,
+        "amount": 3
+      }
+    ],
+    "armors": [
+      {
+        "type": 4,
+        "amount": 0
+      },
+      {
+        "type": 8,
+        "amount": -8
+      },
+      {
+        "type": 3,
+        "amount": 0
+      }
+    ]
+  },
+  "338": {
+    "id": 338,
+    "name": "Soldier-Camel",
+    "displayName": "Camel Rider",
+    "hp": 125,
+    "speed": 2,
+    "los": 4,
+    "trainTime": 30,
+    "trainLocationId": 101,
+    "costs": {
+      "food": 70,
+      "wood": 0,
+      "gold": 60,
+      "stone": 0
+    },
+    "atk": 6,
+    "meleeArmor": 0,
+    "pierceArmor": 0,
+    "range": 0,
+    "minRange": 0,
+    "reloadTime": 1.5,
+    "blastWidth": 0,
+    "attacks": [
+      {
+        "type": 4,
+        "amount": 6
+      },
+      {
+        "type": 8,
+        "amount": 0
+      }
+    ],
+    "armors": [
+      {
+        "type": 4,
+        "amount": 0
+      }
+    ]
+  },
+  "339": {
+    "id": 339,
+    "name": "Soldier-Hvy_Chariot",
+    "displayName": "Scythe Chariot",
+    "hp": 120,
+    "speed": 2,
+    "los": 4,
+    "trainTime": 40,
+    "trainLocationId": 101,
+    "costs": {
+      "food": 40,
+      "wood": 60,
+      "gold": 0,
+      "stone": 0
+    },
+    "atk": 9,
+    "meleeArmor": 2,
+    "pierceArmor": 0,
+    "range": 0,
+    "minRange": 0,
+    "reloadTime": 1.5,
+    "blastWidth": 2,
+    "attacks": [
+      {
+        "type": 7,
+        "amount": 0
+      },
+      {
+        "type": 4,
+        "amount": 9
+      }
+    ],
+    "armors": [
+      {
+        "type": 4,
+        "amount": 2
+      },
+      {
+        "type": 8,
+        "amount": -4
+      },
+      {
+        "type": 3,
+        "amount": 0
+      }
+    ]
+  },
+  "345": {
+    "id": 345,
+    "name": "Soldier-Armor_Elephant",
+    "displayName": "Armored Elephant",
+    "hp": 600,
+    "speed": 0.9,
+    "los": 5,
+    "trainTime": 50,
+    "trainLocationId": 101,
+    "costs": {
+      "food": 170,
+      "wood": 0,
+      "gold": 40,
+      "stone": 0
+    },
+    "atk": 18,
+    "meleeArmor": 2,
+    "pierceArmor": 1,
+    "range": 0,
+    "minRange": 0,
+    "reloadTime": 1.5,
+    "blastWidth": 2,
+    "attacks": [
+      {
+        "type": 6,
+        "amount": -100
+      },
+      {
+        "type": 4,
+        "amount": 18
+      },
+      {
+        "type": 10,
+        "amount": 0
+      }
+    ],
+    "armors": [
+      {
+        "type": 4,
+        "amount": 2
+      },
+      {
+        "type": 3,
+        "amount": 1
+      }
+    ]
+  },
+  "347": {
+    "id": 347,
+    "name": "Soldier-Slinger",
+    "displayName": "Slinger",
+    "hp": 25,
+    "speed": 1.2,
+    "los": 5,
+    "trainTime": 24,
+    "trainLocationId": 12,
+    "costs": {
+      "food": 40,
+      "wood": 0,
+      "gold": 0,
+      "stone": 10
+    },
+    "atk": 2,
+    "meleeArmor": 0,
+    "pierceArmor": 2,
+    "range": 4,
+    "minRange": 0,
+    "reloadTime": 1.5,
+    "blastWidth": 0,
+    "attacks": [
+      {
+        "type": 1,
+        "amount": 0
+      },
+      {
+        "type": 3,
+        "amount": 2
+      }
+    ],
+    "armors": [
+      {
+        "type": 4,
+        "amount": 0
+      },
+      {
+        "type": 3,
+        "amount": 2
+      }
+    ]
+  },
+  "360": {
+    "id": 360,
+    "name": "Boat-War6",
+    "displayName": "Fire Galley",
+    "hp": 200,
+    "speed": 2,
+    "los": 8,
+    "trainTime": 45,
+    "trainLocationId": 45,
+    "costs": {
+      "food": 0,
+      "wood": 115,
+      "gold": 40,
+      "stone": 0
+    },
+    "atk": 24,
+    "meleeArmor": 0,
+    "pierceArmor": 0,
+    "range": 1,
+    "minRange": 0,
+    "reloadTime": 1,
+    "blastWidth": 0,
+    "attacks": [
+      {
+        "type": 4,
+        "amount": 24
+      }
+    ],
+    "armors": [
+      {
+        "type": 0,
+        "amount": -5
+      },
+      {
+        "type": 6,
+        "amount": -10
+      },
+      {
+        "type": 4,
+        "amount": 0
+      }
+    ]
+  }
+}

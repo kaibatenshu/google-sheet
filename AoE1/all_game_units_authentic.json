@@ -1,0 +1,3859 @@
+{
+  "unitCount": 98,
+  "units": [
+    {
+      "id": 4,
+      "name": "Soldier-Archer1",
+      "displayName": "Bowman",
+      "hp": 35,
+      "speed": 1.2,
+      "los": 7,
+      "trainTime": 30,
+      "costs": [
+        {
+          "type": 0,
+          "amount": 40
+        },
+        {
+          "type": 1,
+          "amount": 20
+        }
+      ],
+      "trainLocationId": 87,
+      "combat": {
+        "displayedAttack": 3,
+        "attacks": [
+          {
+            "type": 3,
+            "amount": 3
+          }
+        ],
+        "meleeArmor": 0,
+        "pierceArmor": 0,
+        "armors": [
+          {
+            "type": 1,
+            "amount": -2
+          },
+          {
+            "type": 4,
+            "amount": 0
+          }
+        ],
+        "range": 5,
+        "minRange": 0,
+        "reloadTime": 1.4,
+        "blastWidth": 0
+      }
+    },
+    {
+      "id": 5,
+      "name": "Soldier-Archer2",
+      "displayName": "Improved Bowman",
+      "hp": 40,
+      "speed": 1.2,
+      "los": 8,
+      "trainTime": 30,
+      "costs": [
+        {
+          "type": 0,
+          "amount": 40
+        },
+        {
+          "type": 3,
+          "amount": 20
+        }
+      ],
+      "trainLocationId": 87,
+      "combat": {
+        "displayedAttack": 4,
+        "attacks": [
+          {
+            "type": 3,
+            "amount": 4
+          }
+        ],
+        "meleeArmor": 0,
+        "pierceArmor": 0,
+        "armors": [
+          {
+            "type": 1,
+            "amount": -2
+          },
+          {
+            "type": 4,
+            "amount": 0
+          }
+        ],
+        "range": 6,
+        "minRange": 0,
+        "reloadTime": 1.4,
+        "blastWidth": 0
+      }
+    },
+    {
+      "id": 6,
+      "name": "Soldier-Archer3",
+      "displayName": "Composite Bowman",
+      "hp": 45,
+      "speed": 1.2,
+      "los": 9,
+      "trainTime": 30,
+      "costs": [
+        {
+          "type": 0,
+          "amount": 40
+        },
+        {
+          "type": 3,
+          "amount": 20
+        }
+      ],
+      "trainLocationId": 87,
+      "combat": {
+        "displayedAttack": 5,
+        "attacks": [
+          {
+            "type": 3,
+            "amount": 5
+          }
+        ],
+        "meleeArmor": 0,
+        "pierceArmor": 0,
+        "armors": [
+          {
+            "type": 1,
+            "amount": -2
+          },
+          {
+            "type": 4,
+            "amount": 0
+          }
+        ],
+        "range": 7,
+        "minRange": 0,
+        "reloadTime": 1.4,
+        "blastWidth": 0
+      }
+    },
+    {
+      "id": 11,
+      "name": "Soldier-Balista",
+      "displayName": "Ballista",
+      "hp": 55,
+      "speed": 0.8,
+      "los": 11,
+      "trainTime": 50,
+      "costs": [
+        {
+          "type": 3,
+          "amount": 80
+        },
+        {
+          "type": 1,
+          "amount": 100
+        }
+      ],
+      "trainLocationId": 49,
+      "combat": {
+        "displayedAttack": 40,
+        "attacks": [
+          {
+            "type": 0,
+            "amount": 0
+          },
+          {
+            "type": 3,
+            "amount": 40
+          }
+        ],
+        "meleeArmor": 0,
+        "pierceArmor": 0,
+        "armors": [
+          {
+            "type": 4,
+            "amount": 0
+          }
+        ],
+        "range": 9,
+        "minRange": 3,
+        "reloadTime": 3,
+        "blastWidth": 0
+      }
+    },
+    {
+      "id": 13,
+      "name": "Boat-Fishing1",
+      "displayName": "Fishing Boat",
+      "hp": 45,
+      "speed": 1.4,
+      "los": 6,
+      "trainTime": 40,
+      "costs": [
+        {
+          "type": 1,
+          "amount": 50
+        }
+      ],
+      "trainLocationId": 45,
+      "combat": {
+        "displayedAttack": 0,
+        "attacks": [],
+        "meleeArmor": 0,
+        "pierceArmor": 0,
+        "armors": [
+          {
+            "type": 4,
+            "amount": 0
+          }
+        ],
+        "range": 0,
+        "minRange": 0,
+        "reloadTime": 0,
+        "blastWidth": 0
+      }
+    },
+    {
+      "id": 14,
+      "name": "Boat-Fishing2",
+      "displayName": "Fishing Ship",
+      "hp": 75,
+      "speed": 2,
+      "los": 6,
+      "trainTime": 40,
+      "costs": [
+        {
+          "type": 1,
+          "amount": 50
+        }
+      ],
+      "trainLocationId": 45,
+      "combat": {
+        "displayedAttack": 0,
+        "attacks": [],
+        "meleeArmor": 0,
+        "pierceArmor": 0,
+        "armors": [
+          {
+            "type": 4,
+            "amount": 0
+          }
+        ],
+        "range": 0,
+        "minRange": 0,
+        "reloadTime": 0,
+        "blastWidth": 0
+      }
+    },
+    {
+      "id": 15,
+      "name": "Boat-Trade1",
+      "displayName": "Trade Boat",
+      "hp": 200,
+      "speed": 2,
+      "los": 4,
+      "trainTime": 50,
+      "costs": [
+        {
+          "type": 1,
+          "amount": 100
+        }
+      ],
+      "trainLocationId": 45,
+      "combat": {
+        "displayedAttack": 0,
+        "attacks": [],
+        "meleeArmor": 0,
+        "pierceArmor": 0,
+        "armors": [
+          {
+            "type": 4,
+            "amount": 0
+          }
+        ],
+        "range": 0,
+        "minRange": 0,
+        "reloadTime": 0,
+        "blastWidth": 0
+      }
+    },
+    {
+      "id": 16,
+      "name": "Boat-Trade2",
+      "displayName": "Merchant Ship",
+      "hp": 250,
+      "speed": 2.5,
+      "los": 4,
+      "trainTime": 50,
+      "costs": [
+        {
+          "type": 1,
+          "amount": 100
+        }
+      ],
+      "trainLocationId": 45,
+      "combat": {
+        "displayedAttack": 0,
+        "attacks": [],
+        "meleeArmor": 0,
+        "pierceArmor": 0,
+        "armors": [
+          {
+            "type": 4,
+            "amount": 0
+          }
+        ],
+        "range": 0,
+        "minRange": 0,
+        "reloadTime": 0,
+        "blastWidth": 0
+      }
+    },
+    {
+      "id": 17,
+      "name": "Boat-Transport1",
+      "displayName": "Light Transport",
+      "hp": 150,
+      "speed": 1.4,
+      "los": 4,
+      "trainTime": 75,
+      "costs": [
+        {
+          "type": 1,
+          "amount": 150
+        }
+      ],
+      "trainLocationId": 45,
+      "combat": {
+        "displayedAttack": 0,
+        "attacks": [],
+        "meleeArmor": 0,
+        "pierceArmor": 0,
+        "armors": [
+          {
+            "type": 4,
+            "amount": 0
+          }
+        ],
+        "range": 0,
+        "minRange": 0,
+        "reloadTime": 0,
+        "blastWidth": 0
+      }
+    },
+    {
+      "id": 18,
+      "name": "Boat-Transport2",
+      "displayName": "Heavy Transport",
+      "hp": 200,
+      "speed": 1.75,
+      "los": 5,
+      "trainTime": 75,
+      "costs": [
+        {
+          "type": 1,
+          "amount": 150
+        }
+      ],
+      "trainLocationId": 45,
+      "combat": {
+        "displayedAttack": 0,
+        "attacks": [],
+        "meleeArmor": 0,
+        "pierceArmor": 0,
+        "armors": [
+          {
+            "type": 4,
+            "amount": 0
+          }
+        ],
+        "range": 0,
+        "minRange": 0,
+        "reloadTime": 0,
+        "blastWidth": 0
+      }
+    },
+    {
+      "id": 19,
+      "name": "Boat-War1",
+      "displayName": "Scout Ship",
+      "hp": 120,
+      "speed": 1.75,
+      "los": 7,
+      "trainTime": 60,
+      "costs": [
+        {
+          "type": 1,
+          "amount": 135
+        }
+      ],
+      "trainLocationId": 45,
+      "combat": {
+        "displayedAttack": 5,
+        "attacks": [
+          {
+            "type": 3,
+            "amount": 5
+          }
+        ],
+        "meleeArmor": 0,
+        "pierceArmor": 0,
+        "armors": [
+          {
+            "type": 4,
+            "amount": 0
+          }
+        ],
+        "range": 5,
+        "minRange": 0,
+        "reloadTime": 1.5,
+        "blastWidth": 0
+      }
+    },
+    {
+      "id": 20,
+      "name": "Boat-War2",
+      "displayName": "War Galley",
+      "hp": 160,
+      "speed": 1.75,
+      "los": 9,
+      "trainTime": 60,
+      "costs": [
+        {
+          "type": 1,
+          "amount": 135
+        }
+      ],
+      "trainLocationId": 45,
+      "combat": {
+        "displayedAttack": 8,
+        "attacks": [
+          {
+            "type": 3,
+            "amount": 8
+          }
+        ],
+        "meleeArmor": 0,
+        "pierceArmor": 0,
+        "armors": [
+          {
+            "type": 4,
+            "amount": 0
+          }
+        ],
+        "range": 6,
+        "minRange": 0,
+        "reloadTime": 1.7,
+        "blastWidth": 0
+      }
+    },
+    {
+      "id": 21,
+      "name": "Boat-War3",
+      "displayName": "Trireme",
+      "hp": 200,
+      "speed": 1.75,
+      "los": 10,
+      "trainTime": 60,
+      "costs": [
+        {
+          "type": 1,
+          "amount": 135
+        }
+      ],
+      "trainLocationId": 45,
+      "combat": {
+        "displayedAttack": 12,
+        "attacks": [
+          {
+            "type": 3,
+            "amount": 12
+          }
+        ],
+        "meleeArmor": 0,
+        "pierceArmor": 0,
+        "armors": [
+          {
+            "type": 4,
+            "amount": 0
+          }
+        ],
+        "range": 7,
+        "minRange": 0,
+        "reloadTime": 1.8,
+        "blastWidth": 0
+      }
+    },
+    {
+      "id": 25,
+      "name": "Soldier-El_Archer",
+      "displayName": "Elephant Archer",
+      "hp": 600,
+      "speed": 0.9,
+      "los": 8,
+      "trainTime": 50,
+      "costs": [
+        {
+          "type": 3,
+          "amount": 60
+        },
+        {
+          "type": 0,
+          "amount": 180
+        }
+      ],
+      "trainLocationId": 87,
+      "combat": {
+        "displayedAttack": 5,
+        "attacks": [
+          {
+            "type": 3,
+            "amount": 5
+          }
+        ],
+        "meleeArmor": 0,
+        "pierceArmor": 0,
+        "armors": [
+          {
+            "type": 1,
+            "amount": -2
+          },
+          {
+            "type": 4,
+            "amount": 0
+          }
+        ],
+        "range": 7,
+        "minRange": 0,
+        "reloadTime": 1.5,
+        "blastWidth": 0
+      }
+    },
+    {
+      "id": 35,
+      "name": "Soldier-Catapult1",
+      "displayName": "Stone Thrower",
+      "hp": 75,
+      "speed": 0.8,
+      "los": 13,
+      "trainTime": 60,
+      "costs": [
+        {
+          "type": 3,
+          "amount": 80
+        },
+        {
+          "type": 1,
+          "amount": 180
+        }
+      ],
+      "trainLocationId": 49,
+      "combat": {
+        "displayedAttack": 50,
+        "attacks": [
+          {
+            "type": 6,
+            "amount": 0
+          },
+          {
+            "type": 4,
+            "amount": 50
+          }
+        ],
+        "meleeArmor": 0,
+        "pierceArmor": 0,
+        "armors": [
+          {
+            "type": 4,
+            "amount": 0
+          }
+        ],
+        "range": 10,
+        "minRange": 2,
+        "reloadTime": 5,
+        "blastWidth": 0.5
+      }
+    },
+    {
+      "id": 36,
+      "name": "Soldier-Catapult2",
+      "displayName": "Catapult",
+      "hp": 75,
+      "speed": 0.8,
+      "los": 15,
+      "trainTime": 60,
+      "costs": [
+        {
+          "type": 3,
+          "amount": 80
+        },
+        {
+          "type": 1,
+          "amount": 180
+        }
+      ],
+      "trainLocationId": 49,
+      "combat": {
+        "displayedAttack": 60,
+        "attacks": [
+          {
+            "type": 6,
+            "amount": 0
+          },
+          {
+            "type": 4,
+            "amount": 60
+          }
+        ],
+        "meleeArmor": 0,
+        "pierceArmor": 0,
+        "armors": [
+          {
+            "type": 4,
+            "amount": 0
+          }
+        ],
+        "range": 12,
+        "minRange": 2,
+        "reloadTime": 5,
+        "blastWidth": 1.5
+      }
+    },
+    {
+      "id": 37,
+      "name": "Soldier-Cavalry1",
+      "displayName": "Cavalry",
+      "hp": 150,
+      "speed": 2,
+      "los": 4,
+      "trainTime": 40,
+      "costs": [
+        {
+          "type": 3,
+          "amount": 80
+        },
+        {
+          "type": 0,
+          "amount": 70
+        }
+      ],
+      "trainLocationId": 101,
+      "combat": {
+        "displayedAttack": 8,
+        "attacks": [
+          {
+            "type": 9,
+            "amount": 0
+          },
+          {
+            "type": 4,
+            "amount": 8
+          }
+        ],
+        "meleeArmor": 0,
+        "pierceArmor": 0,
+        "armors": [
+          {
+            "type": 4,
+            "amount": 0
+          },
+          {
+            "type": 8,
+            "amount": -8
+          },
+          {
+            "type": 3,
+            "amount": 0
+          }
+        ],
+        "range": 0,
+        "minRange": 0,
+        "reloadTime": 1.5,
+        "blastWidth": 0
+      }
+    },
+    {
+      "id": 38,
+      "name": "Soldier-Cavalry2",
+      "displayName": "Heavy Cavalry",
+      "hp": 150,
+      "speed": 2,
+      "los": 4,
+      "trainTime": 40,
+      "costs": [
+        {
+          "type": 3,
+          "amount": 80
+        },
+        {
+          "type": 0,
+          "amount": 70
+        }
+      ],
+      "trainLocationId": 101,
+      "combat": {
+        "displayedAttack": 10,
+        "attacks": [
+          {
+            "type": 9,
+            "amount": 0
+          },
+          {
+            "type": 4,
+            "amount": 10
+          }
+        ],
+        "meleeArmor": 1,
+        "pierceArmor": 1,
+        "armors": [
+          {
+            "type": 4,
+            "amount": 1
+          },
+          {
+            "type": 8,
+            "amount": -8
+          },
+          {
+            "type": 3,
+            "amount": 1
+          }
+        ],
+        "range": 0,
+        "minRange": 0,
+        "reloadTime": 1.5,
+        "blastWidth": 0
+      }
+    },
+    {
+      "id": 39,
+      "name": "Soldier-Cavalry3_Arch",
+      "displayName": "Horse Archer",
+      "hp": 60,
+      "speed": 2.2,
+      "los": 9,
+      "trainTime": 40,
+      "costs": [
+        {
+          "type": 3,
+          "amount": 70
+        },
+        {
+          "type": 0,
+          "amount": 50
+        }
+      ],
+      "trainLocationId": 87,
+      "combat": {
+        "displayedAttack": 7,
+        "attacks": [
+          {
+            "type": 3,
+            "amount": 7
+          }
+        ],
+        "meleeArmor": 0,
+        "pierceArmor": 2,
+        "armors": [
+          {
+            "type": 1,
+            "amount": -2
+          },
+          {
+            "type": 4,
+            "amount": 0
+          },
+          {
+            "type": 8,
+            "amount": -8
+          },
+          {
+            "type": 3,
+            "amount": 2
+          }
+        ],
+        "range": 7,
+        "minRange": 0,
+        "reloadTime": 1.5,
+        "blastWidth": 0
+      }
+    },
+    {
+      "id": 40,
+      "name": "Soldier-Chariot1",
+      "displayName": "Chariot",
+      "hp": 100,
+      "speed": 2,
+      "los": 4,
+      "trainTime": 40,
+      "costs": [
+        {
+          "type": 0,
+          "amount": 40
+        },
+        {
+          "type": 1,
+          "amount": 60
+        }
+      ],
+      "trainLocationId": 101,
+      "combat": {
+        "displayedAttack": 7,
+        "attacks": [
+          {
+            "type": 7,
+            "amount": 0
+          },
+          {
+            "type": 4,
+            "amount": 7
+          }
+        ],
+        "meleeArmor": 0,
+        "pierceArmor": 0,
+        "armors": [
+          {
+            "type": 4,
+            "amount": 0
+          },
+          {
+            "type": 8,
+            "amount": -4
+          }
+        ],
+        "range": 0,
+        "minRange": 0,
+        "reloadTime": 1.5,
+        "blastWidth": 0
+      }
+    },
+    {
+      "id": 41,
+      "name": "Soldier-Chariot2",
+      "displayName": "Chariot Archer",
+      "hp": 70,
+      "speed": 2,
+      "los": 9,
+      "trainTime": 40,
+      "costs": [
+        {
+          "type": 0,
+          "amount": 40
+        },
+        {
+          "type": 1,
+          "amount": 70
+        }
+      ],
+      "trainLocationId": 87,
+      "combat": {
+        "displayedAttack": 4,
+        "attacks": [
+          {
+            "type": 7,
+            "amount": 0
+          },
+          {
+            "type": 3,
+            "amount": 4
+          }
+        ],
+        "meleeArmor": 0,
+        "pierceArmor": 0,
+        "armors": [
+          {
+            "type": 1,
+            "amount": -2
+          },
+          {
+            "type": 4,
+            "amount": 0
+          },
+          {
+            "type": 8,
+            "amount": -4
+          }
+        ],
+        "range": 7,
+        "minRange": 0,
+        "reloadTime": 1.5,
+        "blastWidth": 0
+      }
+    },
+    {
+      "id": 46,
+      "name": "Soldier-Elephant",
+      "displayName": "War Elephant",
+      "hp": 600,
+      "speed": 0.9,
+      "los": 5,
+      "trainTime": 50,
+      "costs": [
+        {
+          "type": 3,
+          "amount": 40
+        },
+        {
+          "type": 0,
+          "amount": 170
+        }
+      ],
+      "trainLocationId": 101,
+      "combat": {
+        "displayedAttack": 15,
+        "attacks": [
+          {
+            "type": 4,
+            "amount": 15
+          }
+        ],
+        "meleeArmor": 0,
+        "pierceArmor": 0,
+        "armors": [
+          {
+            "type": 4,
+            "amount": 0
+          }
+        ],
+        "range": 0,
+        "minRange": 0,
+        "reloadTime": 1.5,
+        "blastWidth": 2
+      }
+    },
+    {
+      "id": 58,
+      "name": "Hero-Perseus",
+      "displayName": "Hero Perseus",
+      "hp": 100,
+      "speed": 1.2,
+      "los": 11,
+      "trainTime": 60,
+      "costs": [],
+      "trainLocationId": 87,
+      "combat": {
+        "displayedAttack": 10,
+        "attacks": [
+          {
+            "type": 3,
+            "amount": 10
+          }
+        ],
+        "meleeArmor": 3,
+        "pierceArmor": 0,
+        "armors": [
+          {
+            "type": 4,
+            "amount": 3
+          }
+        ],
+        "range": 9,
+        "minRange": 0,
+        "reloadTime": 1.5,
+        "blastWidth": 0
+      }
+    },
+    {
+      "id": 60,
+      "name": "Lion_Trained",
+      "displayName": "Lion - Tame",
+      "hp": 20,
+      "speed": 1.1,
+      "los": 4,
+      "trainTime": 0,
+      "costs": [],
+      "trainLocationId": -1,
+      "combat": {
+        "displayedAttack": 3,
+        "attacks": [
+          {
+            "type": 12,
+            "amount": 3
+          }
+        ],
+        "meleeArmor": 0,
+        "pierceArmor": 0,
+        "armors": [],
+        "range": 0,
+        "minRange": 0,
+        "reloadTime": 1,
+        "blastWidth": 0
+      }
+    },
+    {
+      "id": 62,
+      "name": "Hero-Alexander",
+      "displayName": "Hero Alexander",
+      "hp": 400,
+      "speed": 2,
+      "los": 5,
+      "trainTime": 60,
+      "costs": [],
+      "trainLocationId": 101,
+      "combat": {
+        "displayedAttack": 22,
+        "attacks": [
+          {
+            "type": 9,
+            "amount": 0
+          },
+          {
+            "type": 4,
+            "amount": 22
+          }
+        ],
+        "meleeArmor": 1,
+        "pierceArmor": 0,
+        "armors": [
+          {
+            "type": 4,
+            "amount": 1
+          }
+        ],
+        "range": 0,
+        "minRange": 0,
+        "reloadTime": 1.5,
+        "blastWidth": 0
+      }
+    },
+    {
+      "id": 63,
+      "name": "Hero-Xerxes",
+      "displayName": "Hero Xerxes",
+      "hp": 200,
+      "speed": 1.3,
+      "los": 5,
+      "trainTime": 60,
+      "costs": [],
+      "trainLocationId": 12,
+      "combat": {
+        "displayedAttack": 20,
+        "attacks": [
+          {
+            "type": 4,
+            "amount": 20
+          }
+        ],
+        "meleeArmor": 3,
+        "pierceArmor": 0,
+        "armors": [
+          {
+            "type": 7,
+            "amount": -12
+          },
+          {
+            "type": 4,
+            "amount": 3
+          }
+        ],
+        "range": 0,
+        "minRange": 0,
+        "reloadTime": 1.5,
+        "blastWidth": 0
+      }
+    },
+    {
+      "id": 73,
+      "name": "Soldier-Inf1",
+      "displayName": "Clubman",
+      "hp": 40,
+      "speed": 1.2,
+      "los": 4,
+      "trainTime": 26,
+      "costs": [
+        {
+          "type": 0,
+          "amount": 50
+        }
+      ],
+      "trainLocationId": 12,
+      "combat": {
+        "displayedAttack": 3,
+        "attacks": [
+          {
+            "type": 4,
+            "amount": 3
+          }
+        ],
+        "meleeArmor": 0,
+        "pierceArmor": 0,
+        "armors": [
+          {
+            "type": 9,
+            "amount": -5
+          },
+          {
+            "type": 4,
+            "amount": 0
+          },
+          {
+            "type": 3,
+            "amount": 0
+          }
+        ],
+        "range": 0,
+        "minRange": 0,
+        "reloadTime": 1.5,
+        "blastWidth": 0
+      }
+    },
+    {
+      "id": 74,
+      "name": "Soldier-Inf2",
+      "displayName": "Axeman",
+      "hp": 50,
+      "speed": 1.2,
+      "los": 4,
+      "trainTime": 26,
+      "costs": [
+        {
+          "type": 0,
+          "amount": 50
+        }
+      ],
+      "trainLocationId": 12,
+      "combat": {
+        "displayedAttack": 5,
+        "attacks": [
+          {
+            "type": 4,
+            "amount": 5
+          }
+        ],
+        "meleeArmor": 0,
+        "pierceArmor": 0,
+        "armors": [
+          {
+            "type": 9,
+            "amount": -5
+          },
+          {
+            "type": 4,
+            "amount": 0
+          },
+          {
+            "type": 3,
+            "amount": 0
+          }
+        ],
+        "range": 0,
+        "minRange": 0,
+        "reloadTime": 1.5,
+        "blastWidth": 0
+      }
+    },
+    {
+      "id": 75,
+      "name": "Soldier-Inf3",
+      "displayName": "Short Swordsman",
+      "hp": 60,
+      "speed": 1.2,
+      "los": 4,
+      "trainTime": 26,
+      "costs": [
+        {
+          "type": 0,
+          "amount": 35
+        },
+        {
+          "type": 3,
+          "amount": 15
+        }
+      ],
+      "trainLocationId": 12,
+      "combat": {
+        "displayedAttack": 7,
+        "attacks": [
+          {
+            "type": 4,
+            "amount": 7
+          }
+        ],
+        "meleeArmor": 1,
+        "pierceArmor": 0,
+        "armors": [
+          {
+            "type": 9,
+            "amount": -5
+          },
+          {
+            "type": 4,
+            "amount": 1
+          },
+          {
+            "type": 3,
+            "amount": 0
+          }
+        ],
+        "range": 0,
+        "minRange": 0,
+        "reloadTime": 1.5,
+        "blastWidth": 0
+      }
+    },
+    {
+      "id": 76,
+      "name": "Soldier-Inf4",
+      "displayName": "Broad Swordsman",
+      "hp": 70,
+      "speed": 1.2,
+      "los": 4,
+      "trainTime": 26,
+      "costs": [
+        {
+          "type": 0,
+          "amount": 35
+        },
+        {
+          "type": 3,
+          "amount": 15
+        }
+      ],
+      "trainLocationId": 12,
+      "combat": {
+        "displayedAttack": 9,
+        "attacks": [
+          {
+            "type": 4,
+            "amount": 9
+          }
+        ],
+        "meleeArmor": 1,
+        "pierceArmor": 0,
+        "armors": [
+          {
+            "type": 9,
+            "amount": -5
+          },
+          {
+            "type": 4,
+            "amount": 1
+          },
+          {
+            "type": 3,
+            "amount": 0
+          }
+        ],
+        "range": 0,
+        "minRange": 0,
+        "reloadTime": 1.5,
+        "blastWidth": 0
+      }
+    },
+    {
+      "id": 77,
+      "name": "Soldier-Inf5",
+      "displayName": "Long Swordsman",
+      "hp": 80,
+      "speed": 1.2,
+      "los": 4,
+      "trainTime": 26,
+      "costs": [
+        {
+          "type": 0,
+          "amount": 35
+        },
+        {
+          "type": 3,
+          "amount": 15
+        }
+      ],
+      "trainLocationId": 12,
+      "combat": {
+        "displayedAttack": 11,
+        "attacks": [
+          {
+            "type": 4,
+            "amount": 11
+          }
+        ],
+        "meleeArmor": 2,
+        "pierceArmor": 0,
+        "armors": [
+          {
+            "type": 9,
+            "amount": -5
+          },
+          {
+            "type": 4,
+            "amount": 2
+          },
+          {
+            "type": 3,
+            "amount": 0
+          }
+        ],
+        "range": 0,
+        "minRange": 0,
+        "reloadTime": 1.5,
+        "blastWidth": 0
+      }
+    },
+    {
+      "id": 78,
+      "name": "Hero-Tiberius",
+      "displayName": "Hero Tiberius",
+      "hp": 250,
+      "speed": 2,
+      "los": 5,
+      "trainTime": 60,
+      "costs": [],
+      "trainLocationId": 101,
+      "combat": {
+        "displayedAttack": 15,
+        "attacks": [
+          {
+            "type": 7,
+            "amount": 0
+          },
+          {
+            "type": 4,
+            "amount": 15
+          }
+        ],
+        "meleeArmor": 0,
+        "pierceArmor": 0,
+        "armors": [
+          {
+            "type": 4,
+            "amount": 0
+          }
+        ],
+        "range": 0,
+        "minRange": 0,
+        "reloadTime": 1.5,
+        "blastWidth": 0
+      }
+    },
+    {
+      "id": 81,
+      "name": "Hero-Amon_Ra",
+      "displayName": "Hero Amon Ra",
+      "hp": 150,
+      "speed": 1,
+      "los": 14,
+      "trainTime": 60,
+      "costs": [],
+      "trainLocationId": 104,
+      "combat": {
+        "displayedAttack": 0,
+        "attacks": [],
+        "meleeArmor": 0,
+        "pierceArmor": 0,
+        "armors": [],
+        "range": 12,
+        "minRange": 0,
+        "reloadTime": 1.5,
+        "blastWidth": 0
+      }
+    },
+    {
+      "id": 83,
+      "name": "Man",
+      "displayName": "Villager",
+      "hp": 25,
+      "speed": 1.1,
+      "los": 4,
+      "trainTime": 20,
+      "costs": [
+        {
+          "type": 0,
+          "amount": 50
+        }
+      ],
+      "trainLocationId": 109,
+      "combat": {
+        "displayedAttack": 3,
+        "attacks": [
+          {
+            "type": 4,
+            "amount": 3
+          },
+          {
+            "type": 10,
+            "amount": -150
+          }
+        ],
+        "meleeArmor": 0,
+        "pierceArmor": 0,
+        "armors": [
+          {
+            "type": 12,
+            "amount": 0
+          }
+        ],
+        "range": 0,
+        "minRange": 0,
+        "reloadTime": 1.5,
+        "blastWidth": 0
+      }
+    },
+    {
+      "id": 93,
+      "name": "Soldier-Phal1",
+      "displayName": "Hoplite",
+      "hp": 120,
+      "speed": 0.9,
+      "los": 4,
+      "trainTime": 36,
+      "costs": [
+        {
+          "type": 3,
+          "amount": 40
+        },
+        {
+          "type": 0,
+          "amount": 60
+        }
+      ],
+      "trainLocationId": 0,
+      "combat": {
+        "displayedAttack": 17,
+        "attacks": [
+          {
+            "type": 4,
+            "amount": 17
+          }
+        ],
+        "meleeArmor": 5,
+        "pierceArmor": 0,
+        "armors": [
+          {
+            "type": 4,
+            "amount": 5
+          },
+          {
+            "type": 3,
+            "amount": 0
+          }
+        ],
+        "range": 0,
+        "minRange": 0,
+        "reloadTime": 1.5,
+        "blastWidth": 0
+      }
+    },
+    {
+      "id": 94,
+      "name": "Soldier-Phal2",
+      "displayName": "Phalanx",
+      "hp": 120,
+      "speed": 0.9,
+      "los": 4,
+      "trainTime": 36,
+      "costs": [
+        {
+          "type": 3,
+          "amount": 40
+        },
+        {
+          "type": 0,
+          "amount": 60
+        }
+      ],
+      "trainLocationId": 0,
+      "combat": {
+        "displayedAttack": 20,
+        "attacks": [
+          {
+            "type": 4,
+            "amount": 20
+          }
+        ],
+        "meleeArmor": 7,
+        "pierceArmor": 0,
+        "armors": [
+          {
+            "type": 4,
+            "amount": 7
+          },
+          {
+            "type": 3,
+            "amount": 0
+          }
+        ],
+        "range": 0,
+        "minRange": 0,
+        "reloadTime": 1.5,
+        "blastWidth": 0
+      }
+    },
+    {
+      "id": 108,
+      "name": "Artifact_War_Chest",
+      "displayName": "War Chest",
+      "hp": 1,
+      "speed": 1,
+      "los": 2,
+      "trainTime": 0,
+      "costs": [],
+      "trainLocationId": -1,
+      "combat": {
+        "displayedAttack": 0,
+        "attacks": [],
+        "meleeArmor": 100,
+        "pierceArmor": 0,
+        "armors": [],
+        "range": 0,
+        "minRange": 0,
+        "reloadTime": 0,
+        "blastWidth": 0
+      }
+    },
+    {
+      "id": 118,
+      "name": "Builder",
+      "displayName": "Builder",
+      "hp": 25,
+      "speed": 1.1,
+      "los": 4,
+      "trainTime": 0,
+      "costs": [
+        {
+          "type": 0,
+          "amount": 50
+        }
+      ],
+      "trainLocationId": -1,
+      "combat": {
+        "displayedAttack": 0,
+        "attacks": [],
+        "meleeArmor": 0,
+        "pierceArmor": 0,
+        "armors": [
+          {
+            "type": 12,
+            "amount": 0
+          }
+        ],
+        "range": 0,
+        "minRange": 0,
+        "reloadTime": 1,
+        "blastWidth": 0
+      }
+    },
+    {
+      "id": 119,
+      "name": "Fisherman",
+      "displayName": "Fisherman",
+      "hp": 25,
+      "speed": 1.1,
+      "los": 4,
+      "trainTime": 0,
+      "costs": [
+        {
+          "type": 0,
+          "amount": 50
+        }
+      ],
+      "trainLocationId": -1,
+      "combat": {
+        "displayedAttack": 3,
+        "attacks": [
+          {
+            "type": 4,
+            "amount": 3
+          }
+        ],
+        "meleeArmor": 0,
+        "pierceArmor": 0,
+        "armors": [
+          {
+            "type": 12,
+            "amount": 0
+          }
+        ],
+        "range": 0,
+        "minRange": 0,
+        "reloadTime": 1,
+        "blastWidth": 0
+      }
+    },
+    {
+      "id": 120,
+      "name": "Forager",
+      "displayName": "Forager",
+      "hp": 25,
+      "speed": 1.1,
+      "los": 4,
+      "trainTime": 0,
+      "costs": [
+        {
+          "type": 0,
+          "amount": 50
+        }
+      ],
+      "trainLocationId": -1,
+      "combat": {
+        "displayedAttack": 3,
+        "attacks": [
+          {
+            "type": 4,
+            "amount": 3
+          }
+        ],
+        "meleeArmor": 0,
+        "pierceArmor": 0,
+        "armors": [
+          {
+            "type": 12,
+            "amount": 0
+          }
+        ],
+        "range": 0,
+        "minRange": 0,
+        "reloadTime": 1,
+        "blastWidth": 0
+      }
+    },
+    {
+      "id": 122,
+      "name": "Hunter",
+      "displayName": "Hunter",
+      "hp": 25,
+      "speed": 1.1,
+      "los": 4,
+      "trainTime": 0,
+      "costs": [
+        {
+          "type": 0,
+          "amount": 50
+        }
+      ],
+      "trainLocationId": -1,
+      "combat": {
+        "displayedAttack": 4,
+        "attacks": [
+          {
+            "type": 4,
+            "amount": 4
+          }
+        ],
+        "meleeArmor": 0,
+        "pierceArmor": 0,
+        "armors": [
+          {
+            "type": 12,
+            "amount": 0
+          }
+        ],
+        "range": 4,
+        "minRange": 0,
+        "reloadTime": 1.5,
+        "blastWidth": 0
+      }
+    },
+    {
+      "id": 123,
+      "name": "Lumberjack",
+      "displayName": "Woodcutter",
+      "hp": 25,
+      "speed": 1.1,
+      "los": 4,
+      "trainTime": 0,
+      "costs": [
+        {
+          "type": 0,
+          "amount": 50
+        }
+      ],
+      "trainLocationId": -1,
+      "combat": {
+        "displayedAttack": 3,
+        "attacks": [
+          {
+            "type": 4,
+            "amount": 3
+          }
+        ],
+        "meleeArmor": 0,
+        "pierceArmor": 0,
+        "armors": [
+          {
+            "type": 12,
+            "amount": 0
+          }
+        ],
+        "range": 0,
+        "minRange": 0,
+        "reloadTime": 1,
+        "blastWidth": 0
+      }
+    },
+    {
+      "id": 124,
+      "name": "Miner-Stone",
+      "displayName": "Stone Miner",
+      "hp": 25,
+      "speed": 1.1,
+      "los": 4,
+      "trainTime": 0,
+      "costs": [
+        {
+          "type": 0,
+          "amount": 50
+        }
+      ],
+      "trainLocationId": -1,
+      "combat": {
+        "displayedAttack": 3,
+        "attacks": [
+          {
+            "type": 4,
+            "amount": 3
+          }
+        ],
+        "meleeArmor": 0,
+        "pierceArmor": 0,
+        "armors": [
+          {
+            "type": 12,
+            "amount": 0
+          }
+        ],
+        "range": 0,
+        "minRange": 0,
+        "reloadTime": 1,
+        "blastWidth": 0
+      }
+    },
+    {
+      "id": 125,
+      "name": "Priest",
+      "displayName": "Priest",
+      "hp": 25,
+      "speed": 0.8,
+      "los": 12,
+      "trainTime": 50,
+      "costs": [
+        {
+          "type": 3,
+          "amount": 125
+        }
+      ],
+      "trainLocationId": 104,
+      "combat": {
+        "displayedAttack": 0,
+        "attacks": [],
+        "meleeArmor": 0,
+        "pierceArmor": 0,
+        "armors": [
+          {
+            "type": 7,
+            "amount": -7
+          }
+        ],
+        "range": 10,
+        "minRange": 0,
+        "reloadTime": 1.5,
+        "blastWidth": 0
+      }
+    },
+    {
+      "id": 127,
+      "name": "Explorer",
+      "displayName": "Explorer",
+      "hp": 25,
+      "speed": 1.1,
+      "los": 4,
+      "trainTime": 0,
+      "costs": [
+        {
+          "type": 0,
+          "amount": 50
+        }
+      ],
+      "trainLocationId": -1,
+      "combat": {
+        "displayedAttack": 0,
+        "attacks": [],
+        "meleeArmor": 0,
+        "pierceArmor": 0,
+        "armors": [
+          {
+            "type": 12,
+            "amount": 0
+          }
+        ],
+        "range": 0,
+        "minRange": 0,
+        "reloadTime": 1,
+        "blastWidth": 0
+      }
+    },
+    {
+      "id": 156,
+      "name": "Repair_Man",
+      "displayName": "Repairman",
+      "hp": 25,
+      "speed": 1.1,
+      "los": 4,
+      "trainTime": 0,
+      "costs": [
+        {
+          "type": 0,
+          "amount": 50
+        }
+      ],
+      "trainLocationId": -1,
+      "combat": {
+        "displayedAttack": 0,
+        "attacks": [],
+        "meleeArmor": 0,
+        "pierceArmor": 0,
+        "armors": [
+          {
+            "type": 12,
+            "amount": 0
+          }
+        ],
+        "range": 0,
+        "minRange": 0,
+        "reloadTime": 1,
+        "blastWidth": 0
+      }
+    },
+    {
+      "id": 158,
+      "name": "Artifact_Ruins1",
+      "displayName": "Ruins",
+      "hp": 1,
+      "speed": 0,
+      "los": 4,
+      "trainTime": 0,
+      "costs": [],
+      "trainLocationId": -1,
+      "combat": {
+        "displayedAttack": 0,
+        "attacks": [],
+        "meleeArmor": 100,
+        "pierceArmor": 0,
+        "armors": [],
+        "range": 0,
+        "minRange": 0,
+        "reloadTime": 0,
+        "blastWidth": 0
+      }
+    },
+    {
+      "id": 159,
+      "name": "Artifact1",
+      "displayName": "Artifact",
+      "hp": 1,
+      "speed": 1,
+      "los": 2,
+      "trainTime": 0,
+      "costs": [],
+      "trainLocationId": -1,
+      "combat": {
+        "displayedAttack": 0,
+        "attacks": [],
+        "meleeArmor": 100,
+        "pierceArmor": 0,
+        "armors": [],
+        "range": 0,
+        "minRange": 0,
+        "reloadTime": 0,
+        "blastWidth": 0
+      }
+    },
+    {
+      "id": 163,
+      "name": "Artifact_Ruins2",
+      "displayName": "Ruins",
+      "hp": 1,
+      "speed": 0,
+      "los": 4,
+      "trainTime": 0,
+      "costs": [],
+      "trainLocationId": -1,
+      "combat": {
+        "displayedAttack": 0,
+        "attacks": [],
+        "meleeArmor": 100,
+        "pierceArmor": 0,
+        "armors": [],
+        "range": 0,
+        "minRange": 0,
+        "reloadTime": 0,
+        "blastWidth": 0
+      }
+    },
+    {
+      "id": 227,
+      "name": "Hero_Jason",
+      "displayName": "Hero Jason",
+      "hp": 180,
+      "speed": 1.2,
+      "los": 4,
+      "trainTime": 60,
+      "costs": [],
+      "trainLocationId": 12,
+      "combat": {
+        "displayedAttack": 20,
+        "attacks": [
+          {
+            "type": 4,
+            "amount": 20
+          }
+        ],
+        "meleeArmor": 0,
+        "pierceArmor": 0,
+        "armors": [
+          {
+            "type": 4,
+            "amount": 0
+          },
+          {
+            "type": 3,
+            "amount": 0
+          }
+        ],
+        "range": 0,
+        "minRange": 0,
+        "reloadTime": 1.5,
+        "blastWidth": 0
+      }
+    },
+    {
+      "id": 228,
+      "name": "Hero_Blind_Lame_Priest",
+      "displayName": "Blind Lame Priest",
+      "hp": 25,
+      "speed": 0,
+      "los": 0,
+      "trainTime": 60,
+      "costs": [],
+      "trainLocationId": 104,
+      "combat": {
+        "displayedAttack": 0,
+        "attacks": [],
+        "meleeArmor": 0,
+        "pierceArmor": 0,
+        "armors": [],
+        "range": 2,
+        "minRange": 0,
+        "reloadTime": 1.5,
+        "blastWidth": 0
+      }
+    },
+    {
+      "id": 229,
+      "name": "Hero_Demon",
+      "displayName": "Invisible Demon",
+      "hp": 180,
+      "speed": 2,
+      "los": 5,
+      "trainTime": 60,
+      "costs": [
+        {
+          "type": 0,
+          "amount": 100
+        }
+      ],
+      "trainLocationId": -1,
+      "combat": {
+        "displayedAttack": 20,
+        "attacks": [
+          {
+            "type": 4,
+            "amount": 20
+          }
+        ],
+        "meleeArmor": 0,
+        "pierceArmor": 0,
+        "armors": [
+          {
+            "type": 4,
+            "amount": 0
+          },
+          {
+            "type": 3,
+            "amount": 0
+          }
+        ],
+        "range": 0,
+        "minRange": 0,
+        "reloadTime": 1.5,
+        "blastWidth": 0
+      }
+    },
+    {
+      "id": 230,
+      "name": "Hero_Hersifon",
+      "displayName": "Hero Hersifon",
+      "hp": 150,
+      "speed": 1.1,
+      "los": 4,
+      "trainTime": 60,
+      "costs": [
+        {
+          "type": 0,
+          "amount": 50
+        }
+      ],
+      "trainLocationId": 109,
+      "combat": {
+        "displayedAttack": 9,
+        "attacks": [
+          {
+            "type": 4,
+            "amount": 9
+          },
+          {
+            "type": 10,
+            "amount": -150
+          }
+        ],
+        "meleeArmor": 0,
+        "pierceArmor": 0,
+        "armors": [
+          {
+            "type": 12,
+            "amount": 0
+          }
+        ],
+        "range": 0,
+        "minRange": 0,
+        "reloadTime": 1.5,
+        "blastWidth": 0
+      }
+    },
+    {
+      "id": 231,
+      "name": "Hero_Corlis",
+      "displayName": "Hero Corlis",
+      "hp": 100,
+      "speed": 1.1,
+      "los": 4,
+      "trainTime": 60,
+      "costs": [
+        {
+          "type": 0,
+          "amount": 50
+        }
+      ],
+      "trainLocationId": 109,
+      "combat": {
+        "displayedAttack": 6,
+        "attacks": [
+          {
+            "type": 4,
+            "amount": 6
+          },
+          {
+            "type": 10,
+            "amount": -150
+          }
+        ],
+        "meleeArmor": 0,
+        "pierceArmor": 0,
+        "armors": [
+          {
+            "type": 12,
+            "amount": 0
+          }
+        ],
+        "range": 0,
+        "minRange": 0,
+        "reloadTime": 1.5,
+        "blastWidth": 0
+      }
+    },
+    {
+      "id": 233,
+      "name": "Hero-Hector",
+      "displayName": "Hero Hector",
+      "hp": 350,
+      "speed": 2,
+      "los": 5,
+      "trainTime": 60,
+      "costs": [],
+      "trainLocationId": 101,
+      "combat": {
+        "displayedAttack": 25,
+        "attacks": [
+          {
+            "type": 9,
+            "amount": 0
+          },
+          {
+            "type": 4,
+            "amount": 25
+          }
+        ],
+        "meleeArmor": 2,
+        "pierceArmor": 1,
+        "armors": [
+          {
+            "type": 4,
+            "amount": 2
+          },
+          {
+            "type": 3,
+            "amount": 1
+          }
+        ],
+        "range": 0,
+        "minRange": 0,
+        "reloadTime": 1.5,
+        "blastWidth": 0
+      }
+    },
+    {
+      "id": 234,
+      "name": "Hero_Spy",
+      "displayName": "Stealth Archer",
+      "hp": 75,
+      "speed": 2,
+      "los": 9,
+      "trainTime": 30,
+      "costs": [
+        {
+          "type": 0,
+          "amount": 40
+        },
+        {
+          "type": 3,
+          "amount": 20
+        }
+      ],
+      "trainLocationId": 87,
+      "combat": {
+        "displayedAttack": 10,
+        "attacks": [
+          {
+            "type": 3,
+            "amount": 10
+          }
+        ],
+        "meleeArmor": 0,
+        "pierceArmor": 0,
+        "armors": [
+          {
+            "type": 4,
+            "amount": 0
+          }
+        ],
+        "range": 7,
+        "minRange": 0,
+        "reloadTime": 1.4,
+        "blastWidth": 0
+      }
+    },
+    {
+      "id": 235,
+      "name": "Hero_Catapult",
+      "displayName": "Big Bertha",
+      "hp": 200,
+      "speed": 0.8,
+      "los": 16,
+      "trainTime": 60,
+      "costs": [
+        {
+          "type": 3,
+          "amount": 80
+        },
+        {
+          "type": 1,
+          "amount": 180
+        }
+      ],
+      "trainLocationId": 49,
+      "combat": {
+        "displayedAttack": 65,
+        "attacks": [
+          {
+            "type": 6,
+            "amount": 0
+          },
+          {
+            "type": 4,
+            "amount": 65
+          }
+        ],
+        "meleeArmor": 0,
+        "pierceArmor": 0,
+        "armors": [
+          {
+            "type": 4,
+            "amount": 0
+          }
+        ],
+        "range": 16,
+        "minRange": 2,
+        "reloadTime": 5,
+        "blastWidth": 5
+      }
+    },
+    {
+      "id": 236,
+      "name": "Hero_Tower",
+      "displayName": "Laser Tower",
+      "hp": 200,
+      "speed": 0,
+      "los": 10,
+      "trainTime": 80,
+      "costs": [
+        {
+          "type": 2,
+          "amount": 150
+        }
+      ],
+      "trainLocationId": 118,
+      "combat": {
+        "displayedAttack": 30,
+        "attacks": [
+          {
+            "type": 3,
+            "amount": 30
+          }
+        ],
+        "meleeArmor": 0,
+        "pierceArmor": 0,
+        "armors": [
+          {
+            "type": 0,
+            "amount": 0
+          },
+          {
+            "type": 6,
+            "amount": -50
+          },
+          {
+            "type": 1,
+            "amount": -7
+          },
+          {
+            "type": 3,
+            "amount": -4
+          },
+          {
+            "type": 10,
+            "amount": -40
+          }
+        ],
+        "range": 15,
+        "minRange": 0,
+        "reloadTime": 3,
+        "blastWidth": 3
+      }
+    },
+    {
+      "id": 237,
+      "name": "Hero_Horse_Archer",
+      "displayName": "Black Rider",
+      "hp": 60,
+      "speed": 2.2,
+      "los": 9,
+      "trainTime": 40,
+      "costs": [
+        {
+          "type": 3,
+          "amount": 70
+        },
+        {
+          "type": 0,
+          "amount": 50
+        }
+      ],
+      "trainLocationId": 87,
+      "combat": {
+        "displayedAttack": 8,
+        "attacks": [
+          {
+            "type": 3,
+            "amount": 8
+          }
+        ],
+        "meleeArmor": 0,
+        "pierceArmor": 2,
+        "armors": [
+          {
+            "type": 4,
+            "amount": 0
+          },
+          {
+            "type": 3,
+            "amount": 2
+          }
+        ],
+        "range": 7,
+        "minRange": 0,
+        "reloadTime": 1.5,
+        "blastWidth": 0
+      }
+    },
+    {
+      "id": 239,
+      "name": "Hero12",
+      "displayName": "Hero 12",
+      "hp": 180,
+      "speed": 2,
+      "los": 5,
+      "trainTime": 60,
+      "costs": [],
+      "trainLocationId": 101,
+      "combat": {
+        "displayedAttack": 20,
+        "attacks": [
+          {
+            "type": 4,
+            "amount": 20
+          }
+        ],
+        "meleeArmor": 0,
+        "pierceArmor": 0,
+        "armors": [
+          {
+            "type": 4,
+            "amount": 0
+          }
+        ],
+        "range": 0,
+        "minRange": 0,
+        "reloadTime": 1.5,
+        "blastWidth": 0
+      }
+    },
+    {
+      "id": 240,
+      "name": "Hero_Mercenary01",
+      "displayName": "Mercenary",
+      "hp": 170,
+      "speed": 2,
+      "los": 0,
+      "trainTime": 60,
+      "costs": [],
+      "trainLocationId": 101,
+      "combat": {
+        "displayedAttack": 10,
+        "attacks": [
+          {
+            "type": 4,
+            "amount": 10
+          }
+        ],
+        "meleeArmor": 0,
+        "pierceArmor": 1,
+        "armors": [
+          {
+            "type": 4,
+            "amount": 0
+          },
+          {
+            "type": 3,
+            "amount": 1
+          }
+        ],
+        "range": 0,
+        "minRange": 0,
+        "reloadTime": 1.5,
+        "blastWidth": 0
+      }
+    },
+    {
+      "id": 241,
+      "name": "Hero_Traitor_01",
+      "displayName": "Hero_Traitor_01",
+      "hp": 180,
+      "speed": 2,
+      "los": 5,
+      "trainTime": 60,
+      "costs": [],
+      "trainLocationId": 101,
+      "combat": {
+        "displayedAttack": 11,
+        "attacks": [
+          {
+            "type": 4,
+            "amount": 11
+          }
+        ],
+        "meleeArmor": 0,
+        "pierceArmor": 0,
+        "armors": [
+          {
+            "type": 4,
+            "amount": 0
+          }
+        ],
+        "range": 0,
+        "minRange": 0,
+        "reloadTime": 1.5,
+        "blastWidth": 0
+      }
+    },
+    {
+      "id": 245,
+      "name": "Hero-Mor_Havoc",
+      "displayName": "Hero Mor Havoc",
+      "hp": 180,
+      "speed": 1,
+      "los": 14,
+      "trainTime": 60,
+      "costs": [],
+      "trainLocationId": 104,
+      "combat": {
+        "displayedAttack": 0,
+        "attacks": [],
+        "meleeArmor": 0,
+        "pierceArmor": 0,
+        "armors": [],
+        "range": 12,
+        "minRange": 0,
+        "reloadTime": 1.5,
+        "blastWidth": 0
+      }
+    },
+    {
+      "id": 248,
+      "name": "Soldier_Nuker",
+      "displayName": "Nuke Trooper",
+      "hp": 100,
+      "speed": 2,
+      "los": 15,
+      "trainTime": 0,
+      "costs": [],
+      "trainLocationId": -1,
+      "combat": {
+        "displayedAttack": 300,
+        "attacks": [
+          {
+            "type": 6,
+            "amount": 300
+          },
+          {
+            "type": 2,
+            "amount": 300
+          }
+        ],
+        "meleeArmor": 10,
+        "pierceArmor": 0,
+        "armors": [],
+        "range": 88,
+        "minRange": 4,
+        "reloadTime": 9,
+        "blastWidth": 2.5
+      }
+    },
+    {
+      "id": 250,
+      "name": "Boat-War4",
+      "displayName": "Catapult Trireme",
+      "hp": 120,
+      "speed": 1.35,
+      "los": 12,
+      "trainTime": 90,
+      "costs": [
+        {
+          "type": 1,
+          "amount": 135
+        },
+        {
+          "type": 3,
+          "amount": 75
+        }
+      ],
+      "trainLocationId": 45,
+      "combat": {
+        "displayedAttack": 35,
+        "attacks": [
+          {
+            "type": 6,
+            "amount": 35
+          },
+          {
+            "type": 4,
+            "amount": 0
+          }
+        ],
+        "meleeArmor": 0,
+        "pierceArmor": 0,
+        "armors": [
+          {
+            "type": 4,
+            "amount": 0
+          }
+        ],
+        "range": 9,
+        "minRange": 0,
+        "reloadTime": 5,
+        "blastWidth": 1
+      }
+    },
+    {
+      "id": 251,
+      "name": "Miner-Gold",
+      "displayName": "Gold Miner",
+      "hp": 25,
+      "speed": 1.1,
+      "los": 4,
+      "trainTime": 0,
+      "costs": [
+        {
+          "type": 0,
+          "amount": 50
+        }
+      ],
+      "trainLocationId": -1,
+      "combat": {
+        "displayedAttack": 3,
+        "attacks": [
+          {
+            "type": 4,
+            "amount": 3
+          }
+        ],
+        "meleeArmor": 0,
+        "pierceArmor": 0,
+        "armors": [
+          {
+            "type": 12,
+            "amount": 0
+          }
+        ],
+        "range": 0,
+        "minRange": 0,
+        "reloadTime": 1,
+        "blastWidth": 0
+      }
+    },
+    {
+      "id": 259,
+      "name": "Farmer",
+      "displayName": "Farmer",
+      "hp": 25,
+      "speed": 1.1,
+      "los": 4,
+      "trainTime": 0,
+      "costs": [
+        {
+          "type": 0,
+          "amount": 50
+        }
+      ],
+      "trainLocationId": -1,
+      "combat": {
+        "displayedAttack": 0,
+        "attacks": [],
+        "meleeArmor": 0,
+        "pierceArmor": 0,
+        "armors": [
+          {
+            "type": 12,
+            "amount": 0
+          }
+        ],
+        "range": 0,
+        "minRange": 0,
+        "reloadTime": 1,
+        "blastWidth": 0
+      }
+    },
+    {
+      "id": 274,
+      "name": "Soldier_Laser",
+      "displayName": "Nuke Trooper",
+      "hp": 100,
+      "speed": 2,
+      "los": 15,
+      "trainTime": 0,
+      "costs": [],
+      "trainLocationId": -1,
+      "combat": {
+        "displayedAttack": 15,
+        "attacks": [
+          {
+            "type": 2,
+            "amount": 15
+          }
+        ],
+        "meleeArmor": 10,
+        "pierceArmor": 0,
+        "armors": [],
+        "range": 15,
+        "minRange": 0,
+        "reloadTime": 0.2,
+        "blastWidth": 0
+      }
+    },
+    {
+      "id": 277,
+      "name": "Boat-War5",
+      "displayName": "Juggernaught",
+      "hp": 200,
+      "speed": 1.35,
+      "los": 13,
+      "trainTime": 90,
+      "costs": [
+        {
+          "type": 1,
+          "amount": 135
+        },
+        {
+          "type": 3,
+          "amount": 75
+        }
+      ],
+      "trainLocationId": 45,
+      "combat": {
+        "displayedAttack": 35,
+        "attacks": [
+          {
+            "type": 6,
+            "amount": 35
+          },
+          {
+            "type": 4,
+            "amount": 0
+          }
+        ],
+        "meleeArmor": 0,
+        "pierceArmor": 0,
+        "armors": [
+          {
+            "type": 4,
+            "amount": 0
+          }
+        ],
+        "range": 10,
+        "minRange": 0,
+        "reloadTime": 5,
+        "blastWidth": 1.5
+      }
+    },
+    {
+      "id": 279,
+      "name": "Soldier-Balista2",
+      "displayName": "Helepolis",
+      "hp": 55,
+      "speed": 0.8,
+      "los": 12,
+      "trainTime": 50,
+      "costs": [
+        {
+          "type": 3,
+          "amount": 80
+        },
+        {
+          "type": 1,
+          "amount": 100
+        }
+      ],
+      "trainLocationId": 49,
+      "combat": {
+        "displayedAttack": 40,
+        "attacks": [
+          {
+            "type": 0,
+            "amount": 0
+          },
+          {
+            "type": 3,
+            "amount": 40
+          }
+        ],
+        "meleeArmor": 0,
+        "pierceArmor": 0,
+        "armors": [
+          {
+            "type": 4,
+            "amount": 0
+          }
+        ],
+        "range": 10,
+        "minRange": 3,
+        "reloadTime": 1.5,
+        "blastWidth": 0
+      }
+    },
+    {
+      "id": 280,
+      "name": "Soldier-Catapult3",
+      "displayName": "Heavy Catapult",
+      "hp": 150,
+      "speed": 0.8,
+      "los": 16,
+      "trainTime": 60,
+      "costs": [
+        {
+          "type": 3,
+          "amount": 80
+        },
+        {
+          "type": 1,
+          "amount": 180
+        }
+      ],
+      "trainLocationId": 49,
+      "combat": {
+        "displayedAttack": 60,
+        "attacks": [
+          {
+            "type": 6,
+            "amount": 0
+          },
+          {
+            "type": 4,
+            "amount": 60
+          }
+        ],
+        "meleeArmor": 0,
+        "pierceArmor": 0,
+        "armors": [
+          {
+            "type": 4,
+            "amount": 0
+          }
+        ],
+        "range": 13,
+        "minRange": 2,
+        "reloadTime": 5,
+        "blastWidth": 1.5
+      }
+    },
+    {
+      "id": 281,
+      "name": "Soldier-Cavalry4",
+      "displayName": "Heavy Horse Archer",
+      "hp": 90,
+      "speed": 2.5,
+      "los": 9,
+      "trainTime": 40,
+      "costs": [
+        {
+          "type": 3,
+          "amount": 70
+        },
+        {
+          "type": 0,
+          "amount": 50
+        }
+      ],
+      "trainLocationId": 87,
+      "combat": {
+        "displayedAttack": 8,
+        "attacks": [
+          {
+            "type": 3,
+            "amount": 8
+          }
+        ],
+        "meleeArmor": 0,
+        "pierceArmor": 2,
+        "armors": [
+          {
+            "type": 4,
+            "amount": 0
+          },
+          {
+            "type": 8,
+            "amount": -8
+          },
+          {
+            "type": 3,
+            "amount": 2
+          }
+        ],
+        "range": 7,
+        "minRange": 0,
+        "reloadTime": 1.5,
+        "blastWidth": 0
+      }
+    },
+    {
+      "id": 282,
+      "name": "Soldier-Inf6",
+      "displayName": "Legion",
+      "hp": 160,
+      "speed": 1.2,
+      "los": 4,
+      "trainTime": 26,
+      "costs": [
+        {
+          "type": 0,
+          "amount": 35
+        },
+        {
+          "type": 3,
+          "amount": 15
+        }
+      ],
+      "trainLocationId": 12,
+      "combat": {
+        "displayedAttack": 13,
+        "attacks": [
+          {
+            "type": 4,
+            "amount": 13
+          }
+        ],
+        "meleeArmor": 2,
+        "pierceArmor": 0,
+        "armors": [
+          {
+            "type": 9,
+            "amount": -5
+          },
+          {
+            "type": 4,
+            "amount": 2
+          },
+          {
+            "type": 3,
+            "amount": 0
+          }
+        ],
+        "range": 0,
+        "minRange": 0,
+        "reloadTime": 1.5,
+        "blastWidth": 0
+      }
+    },
+    {
+      "id": 283,
+      "name": "Soldier-Cavalry3",
+      "displayName": "Cataphract",
+      "hp": 180,
+      "speed": 2,
+      "los": 4,
+      "trainTime": 40,
+      "costs": [
+        {
+          "type": 3,
+          "amount": 80
+        },
+        {
+          "type": 0,
+          "amount": 70
+        }
+      ],
+      "trainLocationId": 101,
+      "combat": {
+        "displayedAttack": 12,
+        "attacks": [
+          {
+            "type": 9,
+            "amount": 0
+          },
+          {
+            "type": 4,
+            "amount": 12
+          }
+        ],
+        "meleeArmor": 3,
+        "pierceArmor": 1,
+        "armors": [
+          {
+            "type": 4,
+            "amount": 3
+          },
+          {
+            "type": 8,
+            "amount": -8
+          },
+          {
+            "type": 3,
+            "amount": 1
+          }
+        ],
+        "range": 0,
+        "minRange": 0,
+        "reloadTime": 1.5,
+        "blastWidth": 0
+      }
+    },
+    {
+      "id": 291,
+      "name": "Soldier-Phal3",
+      "displayName": "Centurion",
+      "hp": 160,
+      "speed": 0.9,
+      "los": 4,
+      "trainTime": 36,
+      "costs": [
+        {
+          "type": 3,
+          "amount": 40
+        },
+        {
+          "type": 0,
+          "amount": 60
+        }
+      ],
+      "trainLocationId": 0,
+      "combat": {
+        "displayedAttack": 30,
+        "attacks": [
+          {
+            "type": 4,
+            "amount": 30
+          }
+        ],
+        "meleeArmor": 8,
+        "pierceArmor": 0,
+        "armors": [
+          {
+            "type": 4,
+            "amount": 8
+          },
+          {
+            "type": 3,
+            "amount": 0
+          }
+        ],
+        "range": 0,
+        "minRange": 0,
+        "reloadTime": 1.5,
+        "blastWidth": 0
+      }
+    },
+    {
+      "id": 292,
+      "name": "Raft",
+      "displayName": "Raft",
+      "hp": 40,
+      "speed": 1.5,
+      "los": 4,
+      "trainTime": 40,
+      "costs": [
+        {
+          "type": 1,
+          "amount": 40
+        }
+      ],
+      "trainLocationId": 45,
+      "combat": {
+        "displayedAttack": 0,
+        "attacks": [],
+        "meleeArmor": 0,
+        "pierceArmor": 0,
+        "armors": [],
+        "range": 0,
+        "minRange": 0,
+        "reloadTime": 0,
+        "blastWidth": 0
+      }
+    },
+    {
+      "id": 293,
+      "name": "Man2",
+      "displayName": "Villager",
+      "hp": 25,
+      "speed": 1.1,
+      "los": 4,
+      "trainTime": 20,
+      "costs": [
+        {
+          "type": 0,
+          "amount": 50
+        }
+      ],
+      "trainLocationId": 109,
+      "combat": {
+        "displayedAttack": 3,
+        "attacks": [
+          {
+            "type": 4,
+            "amount": 3
+          },
+          {
+            "type": 10,
+            "amount": -150
+          }
+        ],
+        "meleeArmor": 0,
+        "pierceArmor": 0,
+        "armors": [
+          {
+            "type": 12,
+            "amount": 0
+          }
+        ],
+        "range": 0,
+        "minRange": 0,
+        "reloadTime": 1.5,
+        "blastWidth": 0
+      }
+    },
+    {
+      "id": 297,
+      "name": "Hero_Juggernaut",
+      "displayName": "Flying Dutchman",
+      "hp": 200,
+      "speed": 1.4,
+      "los": 13,
+      "trainTime": 75,
+      "costs": [
+        {
+          "type": 1,
+          "amount": 135
+        },
+        {
+          "type": 3,
+          "amount": 75
+        }
+      ],
+      "trainLocationId": 45,
+      "combat": {
+        "displayedAttack": 40,
+        "attacks": [
+          {
+            "type": 6,
+            "amount": 40
+          },
+          {
+            "type": 4,
+            "amount": 0
+          }
+        ],
+        "meleeArmor": 0,
+        "pierceArmor": 0,
+        "armors": [
+          {
+            "type": 4,
+            "amount": 0
+          }
+        ],
+        "range": 10,
+        "minRange": 0,
+        "reloadTime": 5,
+        "blastWidth": 1.5
+      }
+    },
+    {
+      "id": 298,
+      "name": "Hero_Medusa",
+      "displayName": "Medusa",
+      "hp": 25,
+      "speed": 1.1,
+      "los": 4,
+      "trainTime": 20,
+      "costs": [
+        {
+          "type": 0,
+          "amount": 50
+        }
+      ],
+      "trainLocationId": 109,
+      "combat": {
+        "displayedAttack": 3,
+        "attacks": [
+          {
+            "type": 4,
+            "amount": 3
+          },
+          {
+            "type": 10,
+            "amount": -150
+          }
+        ],
+        "meleeArmor": 0,
+        "pierceArmor": 0,
+        "armors": [
+          {
+            "type": 12,
+            "amount": 0
+          }
+        ],
+        "range": 0,
+        "minRange": 0,
+        "reloadTime": 1.5,
+        "blastWidth": 0
+      }
+    },
+    {
+      "id": 299,
+      "name": "Soldier-Scout",
+      "displayName": "Scout",
+      "hp": 60,
+      "speed": 2,
+      "los": 8,
+      "trainTime": 30,
+      "costs": [
+        {
+          "type": 0,
+          "amount": 100
+        }
+      ],
+      "trainLocationId": 101,
+      "combat": {
+        "displayedAttack": 3,
+        "attacks": [
+          {
+            "type": 4,
+            "amount": 3
+          }
+        ],
+        "meleeArmor": 0,
+        "pierceArmor": 0,
+        "armors": [
+          {
+            "type": 4,
+            "amount": 0
+          },
+          {
+            "type": 8,
+            "amount": -8
+          },
+          {
+            "type": 3,
+            "amount": 0
+          }
+        ],
+        "range": 0,
+        "minRange": 0,
+        "reloadTime": 1.5,
+        "blastWidth": 0
+      }
+    },
+    {
+      "id": 337,
+      "name": "Space_Ship",
+      "displayName": "Build Ballista (B)",
+      "hp": 500,
+      "speed": 5,
+      "los": 14,
+      "trainTime": 50,
+      "costs": [
+        {
+          "type": 3,
+          "amount": 80
+        },
+        {
+          "type": 1,
+          "amount": 100
+        }
+      ],
+      "trainLocationId": -1,
+      "combat": {
+        "displayedAttack": 50,
+        "attacks": [
+          {
+            "type": 3,
+            "amount": 50
+          }
+        ],
+        "meleeArmor": 0,
+        "pierceArmor": 0,
+        "armors": [],
+        "range": 14,
+        "minRange": 0,
+        "reloadTime": 1,
+        "blastWidth": 0
+      }
+    },
+    {
+      "id": 338,
+      "name": "Soldier-Camel",
+      "displayName": "Camel Rider",
+      "hp": 125,
+      "speed": 2,
+      "los": 4,
+      "trainTime": 30,
+      "costs": [
+        {
+          "type": 0,
+          "amount": 70
+        },
+        {
+          "type": 3,
+          "amount": 60
+        }
+      ],
+      "trainLocationId": 101,
+      "combat": {
+        "displayedAttack": 6,
+        "attacks": [
+          {
+            "type": 4,
+            "amount": 6
+          },
+          {
+            "type": 8,
+            "amount": 0
+          }
+        ],
+        "meleeArmor": 0,
+        "pierceArmor": 0,
+        "armors": [
+          {
+            "type": 4,
+            "amount": 0
+          }
+        ],
+        "range": 0,
+        "minRange": 0,
+        "reloadTime": 1.5,
+        "blastWidth": 0
+      }
+    },
+    {
+      "id": 339,
+      "name": "Soldier-Hvy_Chariot",
+      "displayName": "Scythe Chariot",
+      "hp": 120,
+      "speed": 2,
+      "los": 4,
+      "trainTime": 40,
+      "costs": [
+        {
+          "type": 0,
+          "amount": 40
+        },
+        {
+          "type": 1,
+          "amount": 60
+        }
+      ],
+      "trainLocationId": 101,
+      "combat": {
+        "displayedAttack": 9,
+        "attacks": [
+          {
+            "type": 7,
+            "amount": 0
+          },
+          {
+            "type": 4,
+            "amount": 9
+          }
+        ],
+        "meleeArmor": 2,
+        "pierceArmor": 0,
+        "armors": [
+          {
+            "type": 4,
+            "amount": 2
+          },
+          {
+            "type": 8,
+            "amount": -4
+          },
+          {
+            "type": 3,
+            "amount": 0
+          }
+        ],
+        "range": 0,
+        "minRange": 0,
+        "reloadTime": 1.5,
+        "blastWidth": 2
+      }
+    },
+    {
+      "id": 345,
+      "name": "Soldier-Armor_Elephant",
+      "displayName": "Armored Elephant",
+      "hp": 600,
+      "speed": 0.9,
+      "los": 5,
+      "trainTime": 50,
+      "costs": [
+        {
+          "type": 3,
+          "amount": 40
+        },
+        {
+          "type": 0,
+          "amount": 170
+        }
+      ],
+      "trainLocationId": 101,
+      "combat": {
+        "displayedAttack": 18,
+        "attacks": [
+          {
+            "type": 6,
+            "amount": -100
+          },
+          {
+            "type": 4,
+            "amount": 18
+          },
+          {
+            "type": 10,
+            "amount": 0
+          }
+        ],
+        "meleeArmor": 2,
+        "pierceArmor": 1,
+        "armors": [
+          {
+            "type": 4,
+            "amount": 2
+          },
+          {
+            "type": 3,
+            "amount": 1
+          }
+        ],
+        "range": 0,
+        "minRange": 0,
+        "reloadTime": 1.5,
+        "blastWidth": 2
+      }
+    },
+    {
+      "id": 347,
+      "name": "Soldier-Slinger",
+      "displayName": "Slinger",
+      "hp": 25,
+      "speed": 1.2,
+      "los": 5,
+      "trainTime": 24,
+      "costs": [
+        {
+          "type": 0,
+          "amount": 40
+        },
+        {
+          "type": 2,
+          "amount": 10
+        }
+      ],
+      "trainLocationId": 12,
+      "combat": {
+        "displayedAttack": 2,
+        "attacks": [
+          {
+            "type": 1,
+            "amount": 0
+          },
+          {
+            "type": 3,
+            "amount": 2
+          }
+        ],
+        "meleeArmor": 0,
+        "pierceArmor": 2,
+        "armors": [
+          {
+            "type": 4,
+            "amount": 0
+          },
+          {
+            "type": 3,
+            "amount": 2
+          }
+        ],
+        "range": 4,
+        "minRange": 0,
+        "reloadTime": 1.5,
+        "blastWidth": 0
+      }
+    },
+    {
+      "id": 360,
+      "name": "Boat-War6",
+      "displayName": "Fire Galley",
+      "hp": 200,
+      "speed": 2,
+      "los": 8,
+      "trainTime": 45,
+      "costs": [
+        {
+          "type": 1,
+          "amount": 115
+        },
+        {
+          "type": 3,
+          "amount": 40
+        }
+      ],
+      "trainLocationId": 45,
+      "combat": {
+        "displayedAttack": 24,
+        "attacks": [
+          {
+            "type": 4,
+            "amount": 24
+          }
+        ],
+        "meleeArmor": 0,
+        "pierceArmor": 0,
+        "armors": [
+          {
+            "type": 0,
+            "amount": -5
+          },
+          {
+            "type": 6,
+            "amount": -10
+          },
+          {
+            "type": 4,
+            "amount": 0
+          }
+        ],
+        "range": 1,
+        "minRange": 0,
+        "reloadTime": 1,
+        "blastWidth": 0
+      }
+    },
+    {
+      "id": 372,
+      "name": "Winsett's_Z",
+      "displayName": "Winsett's_Z",
+      "hp": 500,
+      "speed": 8,
+      "los": 17,
+      "trainTime": 0,
+      "costs": [],
+      "trainLocationId": -1,
+      "combat": {
+        "displayedAttack": 300,
+        "attacks": [
+          {
+            "type": 6,
+            "amount": 300
+          },
+          {
+            "type": 2,
+            "amount": 300
+          }
+        ],
+        "meleeArmor": 10,
+        "pierceArmor": 0,
+        "armors": [],
+        "range": 15,
+        "minRange": 2,
+        "reloadTime": 3,
+        "blastWidth": 2.5
+      }
+    },
+    {
+      "id": 375,
+      "name": "Hero_Hannibal",
+      "displayName": "Hero Hannibal",
+      "hp": 600,
+      "speed": 1.2,
+      "los": 7,
+      "trainTime": 50,
+      "costs": [
+        {
+          "type": 3,
+          "amount": 40
+        },
+        {
+          "type": 0,
+          "amount": 170
+        }
+      ],
+      "trainLocationId": 101,
+      "combat": {
+        "displayedAttack": 20,
+        "attacks": [
+          {
+            "type": 6,
+            "amount": -80
+          },
+          {
+            "type": 4,
+            "amount": 20
+          },
+          {
+            "type": 10,
+            "amount": 0
+          }
+        ],
+        "meleeArmor": 4,
+        "pierceArmor": 1,
+        "armors": [
+          {
+            "type": 4,
+            "amount": 4
+          },
+          {
+            "type": 3,
+            "amount": 1
+          }
+        ],
+        "range": 0,
+        "minRange": 0,
+        "reloadTime": 1.5,
+        "blastWidth": 2.5
+      }
+    },
+    {
+      "id": 376,
+      "name": "Hero_Caesar",
+      "displayName": "Hero Caesar",
+      "hp": 350,
+      "speed": 2.5,
+      "los": 10,
+      "trainTime": 40,
+      "costs": [
+        {
+          "type": 3,
+          "amount": 80
+        },
+        {
+          "type": 0,
+          "amount": 70
+        }
+      ],
+      "trainLocationId": 101,
+      "combat": {
+        "displayedAttack": 15,
+        "attacks": [
+          {
+            "type": 9,
+            "amount": 0
+          },
+          {
+            "type": 4,
+            "amount": 15
+          }
+        ],
+        "meleeArmor": 5,
+        "pierceArmor": 2,
+        "armors": [
+          {
+            "type": 4,
+            "amount": 5
+          },
+          {
+            "type": 8,
+            "amount": -8
+          },
+          {
+            "type": 3,
+            "amount": 2
+          }
+        ],
+        "range": 0,
+        "minRange": 0,
+        "reloadTime": 1.5,
+        "blastWidth": 0
+      }
+    },
+    {
+      "id": 377,
+      "name": "Hero_Cleopatra",
+      "displayName": "Cleopatra's Barge",
+      "hp": 500,
+      "speed": 2,
+      "los": 13,
+      "trainTime": 90,
+      "costs": [
+        {
+          "type": 1,
+          "amount": 135
+        },
+        {
+          "type": 3,
+          "amount": 75
+        }
+      ],
+      "trainLocationId": 45,
+      "combat": {
+        "displayedAttack": 60,
+        "attacks": [
+          {
+            "type": 6,
+            "amount": 0
+          },
+          {
+            "type": 4,
+            "amount": 60
+          }
+        ],
+        "meleeArmor": 0,
+        "pierceArmor": 0,
+        "armors": [],
+        "range": 10,
+        "minRange": 0,
+        "reloadTime": 3,
+        "blastWidth": 1.5
+      }
+    },
+    {
+      "id": 378,
+      "name": "Hero_Mark_Antony",
+      "displayName": "Hero Mark Antony",
+      "hp": 300,
+      "speed": 1.2,
+      "los": 4,
+      "trainTime": 26,
+      "costs": [
+        {
+          "type": 0,
+          "amount": 35
+        },
+        {
+          "type": 3,
+          "amount": 15
+        }
+      ],
+      "trainLocationId": 12,
+      "combat": {
+        "displayedAttack": 20,
+        "attacks": [
+          {
+            "type": 4,
+            "amount": 20
+          },
+          {
+            "type": 8,
+            "amount": 0
+          }
+        ],
+        "meleeArmor": 6,
+        "pierceArmor": 6,
+        "armors": [
+          {
+            "type": 4,
+            "amount": 6
+          },
+          {
+            "type": 3,
+            "amount": 6
+          }
+        ],
+        "range": 0,
+        "minRange": 0,
+        "reloadTime": 1,
+        "blastWidth": 0
+      }
+    },
+    {
+      "id": 379,
+      "name": "Hero_Scipio",
+      "displayName": "Hero Scipio",
+      "hp": 250,
+      "speed": 2.5,
+      "los": 10,
+      "trainTime": 40,
+      "costs": [
+        {
+          "type": 3,
+          "amount": 80
+        },
+        {
+          "type": 0,
+          "amount": 70
+        }
+      ],
+      "trainLocationId": 101,
+      "combat": {
+        "displayedAttack": 12,
+        "attacks": [
+          {
+            "type": 9,
+            "amount": 0
+          },
+          {
+            "type": 4,
+            "amount": 12
+          }
+        ],
+        "meleeArmor": 2,
+        "pierceArmor": 1,
+        "armors": [
+          {
+            "type": 4,
+            "amount": 2
+          },
+          {
+            "type": 8,
+            "amount": -5
+          },
+          {
+            "type": 3,
+            "amount": 1
+          }
+        ],
+        "range": 0,
+        "minRange": 0,
+        "reloadTime": 1.5,
+        "blastWidth": 0
+      }
+    },
+    {
+      "id": 381,
+      "name": "Hero_Vercingetorix",
+      "displayName": "Hero Vercingetorix",
+      "hp": 350,
+      "speed": 2,
+      "los": 5,
+      "trainTime": 60,
+      "costs": [],
+      "trainLocationId": 101,
+      "combat": {
+        "displayedAttack": 25,
+        "attacks": [
+          {
+            "type": 9,
+            "amount": 0
+          },
+          {
+            "type": 4,
+            "amount": 25
+          }
+        ],
+        "meleeArmor": 2,
+        "pierceArmor": 1,
+        "armors": [
+          {
+            "type": 4,
+            "amount": 2
+          },
+          {
+            "type": 8,
+            "amount": -8
+          },
+          {
+            "type": 3,
+            "amount": 1
+          }
+        ],
+        "range": 0,
+        "minRange": 0,
+        "reloadTime": 1.5,
+        "blastWidth": 0
+      }
+    },
+    {
+      "id": 382,
+      "name": "Hero_Archimedes",
+      "displayName": "Hero Archimedes",
+      "hp": 25,
+      "speed": 1,
+      "los": 4,
+      "trainTime": 60,
+      "costs": [],
+      "trainLocationId": -1,
+      "combat": {
+        "displayedAttack": 0,
+        "attacks": [],
+        "meleeArmor": 0,
+        "pierceArmor": 0,
+        "armors": [
+          {
+            "type": -1,
+            "amount": 0
+          }
+        ],
+        "range": 0,
+        "minRange": 0,
+        "reloadTime": 1.5,
+        "blastWidth": 0
+      }
+    },
+    {
+      "id": 386,
+      "name": "Soldier_Mech",
+      "displayName": "Zug 209",
+      "hp": 100,
+      "speed": 2,
+      "los": 15,
+      "trainTime": 0,
+      "costs": [],
+      "trainLocationId": -1,
+      "combat": {
+        "displayedAttack": 20,
+        "attacks": [
+          {
+            "type": 2,
+            "amount": 20
+          }
+        ],
+        "meleeArmor": 10,
+        "pierceArmor": 0,
+        "armors": [],
+        "range": 15,
+        "minRange": 0,
+        "reloadTime": 0.8,
+        "blastWidth": 0
+      }
+    },
+    {
+      "id": 394,
+      "name": "Saint_Francis",
+      "displayName": "Saint Francis",
+      "hp": 25,
+      "speed": 0.8,
+      "los": 12,
+      "trainTime": 0,
+      "costs": [],
+      "trainLocationId": 104,
+      "combat": {
+        "displayedAttack": 200,
+        "attacks": [
+          {
+            "type": 6,
+            "amount": 200
+          }
+        ],
+        "meleeArmor": 0,
+        "pierceArmor": 0,
+        "armors": [],
+        "range": 10,
+        "minRange": 0,
+        "reloadTime": 1.5,
+        "blastWidth": 0.5
+      }
+    },
+    {
+      "id": 397,
+      "name": "Winsett's_Mom's_Z",
+      "displayName": "Winsett's other Z",
+      "hp": 500,
+      "speed": 8,
+      "los": 17,
+      "trainTime": 0,
+      "costs": [],
+      "trainLocationId": -1,
+      "combat": {
+        "displayedAttack": 60,
+        "attacks": [
+          {
+            "type": 6,
+            "amount": 60
+          },
+          {
+            "type": 2,
+            "amount": 60
+          }
+        ],
+        "meleeArmor": 10,
+        "pierceArmor": 0,
+        "armors": [],
+        "range": 15,
+        "minRange": 0,
+        "reloadTime": 1,
+        "blastWidth": 1
+      }
+    },
+    {
+      "id": 398,
+      "name": "Winsett's_baby",
+      "displayName": "BabyPrez",
+      "hp": 500,
+      "speed": 3,
+      "los": 17,
+      "trainTime": 0,
+      "costs": [],
+      "trainLocationId": -1,
+      "combat": {
+        "displayedAttack": 50,
+        "attacks": [
+          {
+            "type": 3,
+            "amount": 50
+          }
+        ],
+        "meleeArmor": 10,
+        "pierceArmor": 0,
+        "armors": [],
+        "range": 15,
+        "minRange": 0,
+        "reloadTime": 1,
+        "blastWidth": 0
+      }
+    }
+  ]
+}

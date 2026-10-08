@@ -77,9 +77,9 @@ const MATRIX_UNITS = [
     category: "cung-thu",
     ages: {
       1: null,
-      2: { food: 40, wood: 0, gold: 0, stone: 10, hp: 25, atk: 2, melee: 0, pierce: 2, range: 4, trainTime: "24s", los: 5, tech: "BB", speed: 1.2, bonus: "+1.5 vs Cung" },
-      3: { food: 40, wood: 0, gold: 0, stone: 10, hp: 25, atk: 2, melee: 2, pierce: 2, range: 5, trainTime: "24s", los: 5, tech: "BS & BM", speed: 1.2, bonus: "+1.5 vs Cung" },
-      4: { food: 40, wood: 0, gold: 0, stone: 10, hp: 25, atk: 2, melee: 4, pierce: 2, range: 6, trainTime: "24s", los: 5, tech: "Max BS/BM", speed: 1.2, bonus: "+1.5 vs Cung" }
+      2: { food: 40, wood: 0, gold: 0, stone: 10, hp: 25, atk: 2, melee: 0, pierce: 2, range: 4, trainTime: "24s", los: 5, tech: "BB", speed: 1.2, bonus: "+2 vs Cung" },
+      3: { food: 40, wood: 0, gold: 0, stone: 10, hp: 25, atk: 2, melee: 2, pierce: 2, range: 5, trainTime: "24s", los: 5, tech: "BS & BM", speed: 1.2, bonus: "+2 vs Cung" },
+      4: { food: 40, wood: 0, gold: 0, stone: 10, hp: 25, atk: 2, melee: 4, pierce: 2, range: 6, trainTime: "24s", los: 5, tech: "Max BS/BM", speed: 1.2, bonus: "+2 vs Cung" }
     }
   },
   {
@@ -91,8 +91,8 @@ const MATRIX_UNITS = [
     category: "cung-thu",
     ages: {
       1: null,
-      2: { food: 40, wood: 20, gold: 0, stone: 0, hp: 35, atk: 3, melee: 0, pierce: 0, range: 5, trainTime: "30s", los: 6, tech: "BA", speed: 1.2, bonus: "Cơ bản" },
-      3: { food: 40, wood: 20, gold: 0, stone: 0, hp: 35, atk: 3, melee: 0, pierce: 0, range: 6, trainTime: "30s", los: 6, tech: "BA", speed: 1.2, bonus: "Tầm xa 6" },
+      2: { food: 40, wood: 20, gold: 0, stone: 0, hp: 35, atk: 3, melee: 0, pierce: 0, range: 5, trainTime: "30s", los: 7, tech: "BA", speed: 1.2, bonus: "Cơ bản" },
+      3: { food: 40, wood: 20, gold: 0, stone: 0, hp: 35, atk: 3, melee: 0, pierce: 0, range: 6, trainTime: "30s", los: 7, tech: "BA", speed: 1.2, bonus: "Tầm xa 6" },
       4: null
     }
   },
@@ -122,8 +122,8 @@ const MATRIX_UNITS = [
     ages: {
       1: null,
       2: null,
-      3: { food: 40, wood: 70, gold: 0, stone: 0, hp: 70, atk: 4, melee: 0, pierce: 0, range: 7, trainTime: "40s", los: 8, tech: "Bánh xe", speed: 2.0, bonus: "Kháng hú" },
-      4: { food: 40, wood: 70, gold: 0, stone: 0, hp: 70, atk: 5, melee: 0, pierce: 2, range: 7, trainTime: "40s", los: 8, tech: "Lửa BC", speed: 2.0, bonus: "Kháng hú" }
+      3: { food: 40, wood: 70, gold: 0, stone: 0, hp: 70, atk: 4, melee: 0, pierce: 0, range: 7, trainTime: "40s", los: 9, tech: "Bánh xe", speed: 2.0, bonus: "Kháng hú" },
+      4: { food: 40, wood: 70, gold: 0, stone: 0, hp: 70, atk: 5, melee: 0, pierce: 2, range: 7, trainTime: "40s", los: 9, tech: "Lửa BC", speed: 2.0, bonus: "Kháng hú" }
     }
   },
   {
@@ -136,8 +136,8 @@ const MATRIX_UNITS = [
     ages: {
       1: null,
       2: null,
-      3: { food: 70, wood: 0, gold: 60, stone: 0, hp: 125, atk: 6, melee: 0, pierce: 0, range: 0, trainTime: "30s", los: 5, tech: "BL", speed: 2.0, bonus: "+8 vs Kỵ, +4 vs Xe" },
-      4: { food: 70, wood: 0, gold: 60, stone: 0, hp: 150, atk: 10, melee: 4, pierce: 2, range: 0, trainTime: "30s", los: 5, tech: "Đầu máu", speed: 2.0, bonus: "+8 vs Kỵ, +4 vs Xe" }
+      3: { food: 70, wood: 0, gold: 60, stone: 0, hp: 125, atk: 6, melee: 0, pierce: 0, range: 0, trainTime: "30s", los: 4, tech: "BL", speed: 2.0, bonus: "+8 vs Kỵ, +4 vs Xe" },
+      4: { food: 70, wood: 0, gold: 60, stone: 0, hp: 150, atk: 10, melee: 4, pierce: 2, range: 0, trainTime: "30s", los: 4, tech: "Đầu máu", speed: 2.0, bonus: "+8 vs Kỵ, +4 vs Xe" }
     }
   },
   {
@@ -150,8 +150,8 @@ const MATRIX_UNITS = [
     ages: {
       1: null,
       2: null,
-      3: { food: 70, wood: 0, gold: 80, stone: 0, hp: 150, atk: 8, melee: 0, pierce: 0, range: 0, trainTime: "40s", los: 5, tech: "BL", speed: 2.0, bonus: "+5 vs BB" },
-      4: { food: 70, wood: 0, gold: 80, stone: 0, hp: 150, atk: 12, melee: 4, pierce: 2, range: 0, trainTime: "40s", los: 5, tech: "Max BS/BC", speed: 2.0, bonus: "+5 vs BB" }
+      3: { food: 70, wood: 0, gold: 80, stone: 0, hp: 150, atk: 8, melee: 0, pierce: 0, range: 0, trainTime: "40s", los: 4, tech: "BL", speed: 2.0, bonus: "+5 vs BB" },
+      4: { food: 70, wood: 0, gold: 80, stone: 0, hp: 150, atk: 12, melee: 4, pierce: 2, range: 0, trainTime: "40s", los: 4, tech: "Max BS/BC", speed: 2.0, bonus: "+5 vs BB" }
     }
   },
   {
@@ -164,8 +164,8 @@ const MATRIX_UNITS = [
     ages: {
       1: null,
       2: null,
-      3: { food: 40, wood: 60, gold: 0, stone: 0, hp: 100, atk: 7, melee: 0, pierce: 0, range: 0, trainTime: "40s", los: 5, tech: "Bánh xe", speed: 2.0, bonus: "Kháng hú" },
-      4: { food: 40, wood: 60, gold: 0, stone: 0, hp: 100, atk: 11, melee: 4, pierce: 2, range: 0, trainTime: "40s", los: 5, tech: "Max BS/BC", speed: 2.0, bonus: "Kháng hú" }
+      3: { food: 40, wood: 60, gold: 0, stone: 0, hp: 100, atk: 7, melee: 0, pierce: 0, range: 0, trainTime: "40s", los: 4, tech: "Bánh xe", speed: 2.0, bonus: "Kháng hú" },
+      4: { food: 40, wood: 60, gold: 0, stone: 0, hp: 100, atk: 11, melee: 4, pierce: 2, range: 0, trainTime: "40s", los: 4, tech: "Max BS/BC", speed: 2.0, bonus: "Kháng hú" }
     }
   },
   {
@@ -220,8 +220,8 @@ const MATRIX_UNITS = [
     ages: {
       1: null,
       2: null,
-      3: { food: 0, wood: 180, gold: 80, stone: 0, hp: 75, atk: 50, melee: 0, pierce: 0, range: 10, trainTime: "60s", los: 10, speed: 0.8, tech: "BK", bonus: "Bắn lan 1.0" },
-      4: { food: 0, wood: 180, gold: 80, stone: 0, hp: 75, atk: 60, melee: 0, pierce: 0, range: 12, trainTime: "60s", los: 12, speed: 0.8, tech: "Onager BK", bonus: "Bắn lan 1.5" }
+      3: { food: 0, wood: 180, gold: 80, stone: 0, hp: 75, atk: 50, melee: 0, pierce: 0, range: 10, trainTime: "60s", los: 13, speed: 0.8, tech: "BK", bonus: "Lan 0.5 (Min 2)" },
+      4: { food: 0, wood: 180, gold: 80, stone: 0, hp: 75, atk: 60, melee: 0, pierce: 0, range: 12, trainTime: "60s", los: 15, speed: 0.8, tech: "Onager BK", bonus: "Lan 1.5 (Min 2)" }
     }
   },
   {
@@ -234,8 +234,8 @@ const MATRIX_UNITS = [
     ages: {
       1: null,
       2: null,
-      3: { food: 0, wood: 100, gold: 80, stone: 0, hp: 55, atk: 40, melee: 0, pierce: 0, range: 9, trainTime: "50s", los: 10, speed: 0.8, tech: "BK", bonus: "Xuyên thẳng" },
-      4: { food: 0, wood: 100, gold: 80, stone: 0, hp: 55, atk: 40, melee: 0, pierce: 0, range: 9, trainTime: "50s", los: 10, speed: 0.8, tech: "BK", bonus: "Xuyên thẳng" }
+      3: { food: 0, wood: 100, gold: 80, stone: 0, hp: 55, atk: 40, melee: 0, pierce: 0, range: 9, trainTime: "50s", los: 11, speed: 0.8, tech: "BK", bonus: "Xuyên (Min 3)" },
+      4: { food: 0, wood: 100, gold: 80, stone: 0, hp: 55, atk: 40, melee: 0, pierce: 0, range: 9, trainTime: "50s", los: 11, speed: 0.8, tech: "BK", bonus: "Xuyên (Min 3)" }
     }
   },
   {
@@ -248,8 +248,8 @@ const MATRIX_UNITS = [
     ages: {
       1: null,
       2: null,
-      3: { food: 0, wood: 0, gold: 125, stone: 0, hp: 25, atk: 0, melee: 0, pierce: 0, range: 10, trainTime: "50s", los: 10, speed: 0.8, tech: "BP", bonus: "Hú & hồi" },
-      4: { food: 0, wood: 0, gold: 125, stone: 0, hp: 25, atk: 0, melee: 0, pierce: 0, range: 13, trainTime: "50s", los: 10, speed: 0.8, tech: "BP", bonus: "Hú xa & nhà" }
+      3: { food: 0, wood: 0, gold: 125, stone: 0, hp: 25, atk: 0, melee: 0, pierce: 0, range: 10, trainTime: "50s", los: 12, speed: 0.8, tech: "BP", bonus: "Hú & hồi" },
+      4: { food: 0, wood: 0, gold: 125, stone: 0, hp: 25, atk: 0, melee: 0, pierce: 0, range: 13, trainTime: "50s", los: 12, speed: 0.8, tech: "BP", bonus: "Hú xa & nhà" }
     }
   },
 
@@ -265,7 +265,7 @@ const MATRIX_UNITS = [
       1: null,
       2: null,
       3: null,
-      4: { food: 40, wood: 60, gold: 0, stone: 0, hp: 120, atk: 9, melee: 2, pierce: 0, range: 0, trainTime: "40s", los: 5, speed: 2.0, tech: "Đạp đôi", bonus: "Chém lan 37.5%" }
+      4: { food: 40, wood: 60, gold: 0, stone: 0, hp: 120, atk: 9, melee: 2, pierce: 0, range: 0, trainTime: "40s", los: 4, speed: 2.0, tech: "Đạp đôi", bonus: "Chém lan 37.5%" }
     }
   },
   {
@@ -279,7 +279,7 @@ const MATRIX_UNITS = [
       1: null,
       2: null,
       3: null,
-      4: { food: 70, wood: 0, gold: 80, stone: 0, hp: 180, atk: 12, melee: 3, pierce: 1, range: 0, trainTime: "40s", los: 5, speed: 2.0, tech: "BL", bonus: "+5 vs BB" }
+      4: { food: 70, wood: 0, gold: 80, stone: 0, hp: 180, atk: 12, melee: 3, pierce: 1, range: 0, trainTime: "40s", los: 4, speed: 2.0, tech: "BL", bonus: "+5 vs BB" }
     }
   },
   {
@@ -293,7 +293,7 @@ const MATRIX_UNITS = [
       1: null,
       2: null,
       3: null,
-      4: { food: 170, wood: 0, gold: 40, stone: 0, hp: 600, atk: 18, melee: 2, pierce: 1, range: 0, trainTime: "50s", los: 5, speed: 0.9, tech: "BL", bonus: "Dẫm lan 0.5" }
+      4: { food: 170, wood: 0, gold: 40, stone: 0, hp: 600, atk: 18, melee: 2, pierce: 1, range: 0, trainTime: "50s", los: 5, speed: 0.9, tech: "BL", bonus: "Dẫm lan (Blast 2)" }
     }
   },
   {
@@ -307,7 +307,7 @@ const MATRIX_UNITS = [
       1: null,
       2: null,
       3: null,
-      4: { food: 180, wood: 0, gold: 60, stone: 0, hp: 600, atk: 5, melee: 0, pierce: 0, range: 7, trainTime: "50s", los: 9, speed: 0.9, tech: "BA", bonus: "Trâu máu" }
+      4: { food: 180, wood: 0, gold: 60, stone: 0, hp: 600, atk: 5, melee: 0, pierce: 0, range: 7, trainTime: "50s", los: 8, speed: 0.9, tech: "BA", bonus: "Trâu máu" }
     }
   },
   {
@@ -335,7 +335,7 @@ const MATRIX_UNITS = [
       1: null,
       2: null,
       3: null,
-      4: { food: 35, wood: 0, gold: 15, stone: 0, hp: 160, atk: 13, melee: 2, pierce: 0, range: 0, trainTime: "26s", los: 5, speed: 1.2, tech: "Legion", bonus: "Choson 240 HP" }
+      4: { food: 35, wood: 0, gold: 15, stone: 0, hp: 160, atk: 13, melee: 2, pierce: 0, range: 0, trainTime: "26s", los: 4, speed: 1.2, tech: "Legion", bonus: "Choson 240 HP" }
     }
   },
   {
@@ -349,7 +349,7 @@ const MATRIX_UNITS = [
       1: null,
       2: null,
       3: null,
-      4: { food: 60, wood: 0, gold: 40, stone: 0, hp: 160, atk: 30, melee: 8, pierce: 0, range: 0, trainTime: "36s", los: 5, speed: 0.9, tech: "Centurion", bonus: "Công 30 Giáp 8" }
+      4: { food: 60, wood: 0, gold: 40, stone: 0, hp: 160, atk: 30, melee: 8, pierce: 0, range: 0, trainTime: "36s", los: 4, speed: 0.9, tech: "Centurion", bonus: "Công 30 Giáp 8" }
     }
   },
   {
@@ -363,7 +363,7 @@ const MATRIX_UNITS = [
       1: null,
       2: null,
       3: null,
-      4: { food: 0, wood: 180, gold: 80, stone: 0, hp: 150, atk: 60, melee: 0, pierce: 0, range: 13, trainTime: "60s", los: 13, speed: 0.8, tech: "Cẩu to BK", bonus: "Lan 2.0 ô" }
+      4: { food: 0, wood: 180, gold: 80, stone: 0, hp: 150, atk: 60, melee: 0, pierce: 0, range: 13, trainTime: "60s", los: 16, speed: 0.8, tech: "Cẩu to BK", bonus: "Lan 1.5 (Min 2)" }
     }
   },
   {
@@ -377,7 +377,7 @@ const MATRIX_UNITS = [
       1: null,
       2: null,
       3: null,
-      4: { food: 0, wood: 100, gold: 80, stone: 0, hp: 55, atk: 40, melee: 0, pierce: 0, range: 10, trainTime: "50s", los: 10, speed: 0.8, tech: "Helepolis BK", bonus: "Bắn RoF 1.5s" }
+      4: { food: 0, wood: 100, gold: 80, stone: 0, hp: 55, atk: 40, melee: 0, pierce: 0, range: 10, trainTime: "50s", los: 12, speed: 0.8, tech: "Helepolis BK", bonus: "RoF 1.5s (Min 3)" }
     }
   }
 ];
@@ -400,8 +400,8 @@ function getUnitMatrixStats(unit, civId, age) {
   if (unit.id === "cavalry" && !civ.techTree.cavalry) hasUnit = false;
   if (unit.id === "cataphract" && !civ.techTree.cataphract) hasUnit = false;
   if (unit.id === "camelry" && ["greek", "yamato", "egyptian", "macedonian", "roman", "assyrian", "minoan"].includes(civ.id)) hasUnit = false;
-  if (unit.id === "armored_elephant" && (!civ.techTree.elephant || ["shang", "assyrian", "egyptian", "babylonian", "hittite", "sumerian", "yamato", "minoan", "choson", "roman", "palmyran", "macedonian", "greek"].includes(civ.id))) hasUnit = false;
-  if (unit.id === "elephant_archer" && (civ.id !== "phoenician" && civ.id !== "carthaginian")) hasUnit = false;
+  if (unit.id === "armored_elephant" && !["phoenician", "carthaginian", "persian", "macedonian", "palmyran"].includes(civ.id)) hasUnit = false;
+  if (unit.id === "elephant_archer" && !["phoenician", "carthaginian", "persian", "hittite"].includes(civ.id)) hasUnit = false;
   if (unit.id === "composite_bowman" && !civ.techTree.compositeBowman) hasUnit = false;
   if (unit.id === "heavy_horse_archer" && !["hittite", "yamato", "shang"].includes(civ.id)) hasUnit = false;
   if (unit.id === "legion" && !["choson", "roman", "yamato", "greek", "macedonian", "phoenician"].includes(civ.id)) hasUnit = false;
@@ -455,6 +455,7 @@ function getUnitMatrixStats(unit, civId, age) {
       if (unit.id === "chariot_archer") s.atk = (age === 3 ? 5 : 6);
       if (unit.id === "composite_bowman") s.atk = (age === 3 ? 6 : 7);
       if (unit.id === "heavy_horse_archer") s.atk = 10;
+      if (unit.id === "elephant_archer") s.atk = 6; // +1 công cung thủ
       if (unit.id === "stone_thrower") s.hp = 150; // 75 x 2
       if (unit.id === "heavy_catapult") s.hp = 300; // 150 x 2
       break;
@@ -475,7 +476,8 @@ function getUnitMatrixStats(unit, civId, age) {
         s.bonus = "Ăn thịt +30%";
         if (age >= 3) s.speed = 1.10; // Không bánh xe
       }
-      if (unit.id === "armored_elephant") s.speed = 1.50; // Voi chạy nhanh +50%
+      if (unit.id === "armored_elephant") s.speed = 1.35; // Voi chạy nhanh +50% (gốc 0.90 * 1.5 = 1.35)
+      if (unit.id === "elephant_archer") s.speed = 1.35; // Voi chạy nhanh +50% (gốc 0.90 * 1.5 = 1.35)
       break;
 
     case "yamato":
@@ -519,7 +521,7 @@ function getUnitMatrixStats(unit, civId, age) {
         s.melee = 1; // Sẵn 1 giáp
         s.bonus = "Làm việc +20%";
       }
-      if (unit.id === "camelry") s.speed = 2.19; // +25% tốc độ
+      if (unit.id === "camelry") s.speed = 2.50; // +25% tốc độ (gốc 2.0 * 1.25 = 2.50)
       break;
 
     case "macedonian":
@@ -543,7 +545,7 @@ function getUnitMatrixStats(unit, civId, age) {
 
     case "greek":
       if (unit.id === "villager" && age >= 3) s.speed = 1.10; // Không bánh xe
-      if (unit.id === "hoplite" || unit.id === "centurion") s.speed = 1.30; // +30% tốc độ
+      if (unit.id === "hoplite" || unit.id === "centurion") s.speed = 1.17; // +30% tốc độ (gốc 0.90 * 1.3 = 1.17)
       break;
   }
 

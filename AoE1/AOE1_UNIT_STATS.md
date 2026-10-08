@@ -51,7 +51,7 @@ Nhánh bộ binh BB có ưu thế chi phí rẻ, thời gian sinh quân nhanh (2
 | **Kiếm Ngắn** | Short Swordsman | 75 | 3 | 35 Thực, 15 Vàng | 60 | 7 | 1 / 0 | 0 | 1.20 | 1.5s | 4 | 26s | Có sẵn **1 giáp cận chiến**. Nâng BS Đời 3: Công 7+4 = 11, Giáp 1+4 = 5/0. |
 | **Kiếm Bản Rộng** | Broad Swordsman | 76 | 3 | 35 Thực, 15 Vàng | 70 | 9 | 1 / 0 | 0 | 1.20 | 1.5s | 4 | 26s | Nâng từ Kiếm ngắn (140F, 50G). Nâng BS: Công 9+4 = 13, Giáp 1+4 = 5/0. |
 | **Kiếm Dài** | Long Swordsman | 77 | 4 | 35 Thực, 15 Vàng | 80 | 11 | 2 / 0 | 0 | 1.20 | 1.5s | 4 | 26s | Nâng cấp: 160F, 50G. Sẵn **2 giáp cận chiến**. Max BS: Công 18, Giáp 6/0. |
-| **Kiếm Thần (Lê Dương)** | Legion | 282 | 4 | 35 Thực, 15 Vàng | 160 | 13 | 2 / 0 | 0 | 1.20 | 1.5s | 5 | 26s | Nâng cấp: 1400F, 600G. Max BS: **Công 20, Giáp 6/0** (Choson: **240 HP**, Roman: chém +33%). |
+| **Kiếm Thần (Lê Dương)** | Legion | 282 | 4 | 35 Thực, 15 Vàng | 160 | 13 | 2 / 0 | 0 | 1.20 | 1.5s | 4 | 26s | Nâng cấp: 1400F, 600G. Max BS: **Công 20, Giáp 6/0** (Choson: **240 HP**, Roman: chém +33%). |
 
 > [!NOTE]
 > * **Cơ Chế Quẩy Đá (Slinger):** Trong bản mở rộng Rise of Rome, Quẩy đá sở hữu sẵn **2 giáp chống tên** và **Công Class 1 (+2 sát thương lên Cung thủ)**. Do Cung T (Bowman) đời 2 chỉ có 3 công, khi bắn vào Quẩy đá (2 giáp) chỉ gây được: $3 - 2 = 1$ sát thương, trong khi Quẩy đá bắn trả gây: $2 + 2 = 4$ sát thương!
@@ -72,7 +72,7 @@ Nhánh cung thủ là linh hồn chiến thuật của AoE 1, sở hữu tầm b
 | **Cung R (Ngựa Cung)** | Chariot Archer | 41 | 3 | 40 Thực, 70 Gỗ | 70 | 4 | 0 / 0 | 7 | 2.00 | 1.5s | 9 | 40s | Yêu cầu Bánh Xe. Kháng phù thủy cao. Đời 3: Tầm xa 7+2 = 9. Đời 4 có Lửa: Công 5, Tầm xa 10, Giáp tên +2. |
 | **Cung C (Ngựa Cung Vàng)** | Horse Archer | 39 | 4 | 50 Thực, 70 Vàng | 60 | 7 | 0 / 2 | 7 | 2.20 | 1.5s | 9 | 40s | **Sẵn 2 giáp chống tên**. Cơ động cao (Speed 2.2). Tên lửa: Công 8, Tầm xa 10 (Yamato: -25% giá). |
 | **Cung C Thần** | Heavy Horse Archer | 281 | 4 | 50 Thực, 70 Vàng | 90 | 8 | 0 / 2 | 7 | 2.50 | 1.5s | 9 | 40s | Nâng cấp: 1750F, 800G. Tốc độ phi cực nhanh **2.50**. Tên lửa: Công 9, Tầm xa 10. |
-| **Voi Bắn Tên** | Elephant Archer | 25 | 4 | 180 Thực, 60 Vàng | 600 | 5 | 0 / 0 | 7 | 0.90 | 1.5s | 9 | 50s | Trụ bắn di động 600 HP. Đời 4: Tên lửa (Công 6), Tầm xa 7+2 = 9 (Carthage: **750 HP**, Phoenicia: 135F). |
+| **Voi Bắn Tên** | Elephant Archer | 25 | 4 | 180 Thực, 60 Vàng | 600 | 5 | 0 / 0 | 7 | 0.90 | 1.5s | 8 | 50s | Trụ bắn di động 600 HP. Đời 4: Tên lửa (Công 6), Tầm xa 7+2 = 9 (Carthage: **750 HP**, Phoenicia: 135F). |
 
 > [!IMPORTANT]
 > * **Sự thật chi phí Cung A:** Trong `empires.dat`, chi phí sản xuất của Composite Bowman là **40 Food và 20 Gold** (hoàn toàn không tiêu tốn Gỗ).
@@ -89,14 +89,14 @@ Binh chủng kỵ binh giữ vai trò cơ động càn quét, bắt lẻ dân, k
 
 | Đơn Vị (Việt Nam) | Tên Game (DLL) | ID Game | Đời | Chi Phí Gốc | HP | Công | Giáp (Melee/Pierce) | Tầm Xa | Tốc Độ | Tốc Đánh (RoF) | Tầm Nhìn | Huấn Luyện | Điểm Đặc Trưng & Sau Khi Max Công Nghệ |
 | :--- | :--- | :---: | :---: | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :--- |
-| **Ngựa Dò** | Scout | 299 | 2 | 100 Thực | 60 | 3 | 0 / 0 | 0 | 2.00 | 1.5s | 5 | 30s | Mở bản đồ, câu voi, chọc dân. Kháng phù thủy tự nhiên. Nâng BS: Công 3+2 = 5 (Yamato: 75 Thực). |
-| **Ngựa Chém Thường** | Cavalry | 37 | 3 | 70 Thực, 80 Vàng | 150 | 8 | 0 / 0 | 0 | 2.00 | 1.5s | 5 | 40s | **+5 vs Bộ binh**. Nâng BS Đời 3: Công 8+4 = 12, Giáp 0+2 = 2/2 (Yamato: 52.5F, 60G). |
-| **Ngựa Chém Giáp** | Heavy Cavalry | 38 | 4 | 70 Thực, 80 Vàng | 150 | 10 | 1 / 1 | 0 | 2.00 | 1.5s | 5 | 40s | Nâng từ Chém (350F, 125G). **Sẵn giáp 1/1, +5 vs Bộ binh**. Max BS/BC: Công 17, Giáp 5/3. |
-| **Chém Thần (Hiệp Sĩ)** | Cataphract | 283 | 4 | 70 Thực, 80 Vàng | 180 | 12 | 3 / 1 | 0 | 2.00 | 1.5s | 5 | 40s | Nâng cấp: 2000F, 850G. **Sẵn giáp 3/1, +5 vs Bộ binh**. Max BS/BC: **Công 19, Giáp 7/3**. |
-| **Lạc Đà** | Camel Rider | 338 | 3 | 70 Thực, 60 Vàng | 125 | 6 | 0 / 0 | 0 | 2.00 | 1.5s | 5 | 30s | **Tạo cực nhanh (30s)**. **+8 vs Kỵ binh, +4 vs Xe ngựa**. Lên Đời 4 nâng Đầu máu: **150 HP** (Palmyra: Tốc độ 2.19). |
-| **Sọc Đơn (Ngựa Bánh Xe)** | Chariot | 40 | 3 | 40 Thực, 60 Gỗ | 100 | 7 | 0 / 0 | 0 | 2.00 | 1.5s | 5 | 40s | Yêu cầu Bánh Xe. Kháng hú cực cao. Nâng BS: Công 7+4 = 11, Giáp 2/2 (Egyptian: **133 HP**). |
-| **Ngựa Đạp Đôi** | Scythe Chariot | 339 | 4 | 40 Thực, 60 Gỗ | 120 | 9 | 2 / 0 | 0 | 2.00 | 1.5s | 5 | 40s | Nâng cấp: 1200F, 800W. **Sẵn 2 giáp cận chiến**. **Chém lan 37.5% diện rộng** (Egyptian: **160 HP**). |
-| **Voi Húc Thường** | War Elephant | 46 | 4 | 170 Thực, 40 Vàng | 600 | 15 | 0 / 0 | 0 | 0.90 | 1.5s | 5 | 50s | **Dẫm lan xung quanh**. Nâng BS: Công 15+4 = 19 (Persian: **Tốc độ 1.35**, Carthage: **750 HP**, Phoenicia: 127.5F). |
+| **Ngựa Dò** | Scout | 299 | 2 | 100 Thực | 60 | 3 | 0 / 0 | 0 | 2.00 | 1.5s | 8 | 30s | Mở bản đồ, câu voi, chọc dân. Kháng phù thủy tự nhiên. Nâng BS: Công 3+2 = 5 (Yamato: 75 Thực). |
+| **Ngựa Chém Thường** | Cavalry | 37 | 3 | 70 Thực, 80 Vàng | 150 | 8 | 0 / 0 | 0 | 2.00 | 1.5s | 4 | 40s | **+5 vs Bộ binh**. Nâng BS Đời 3: Công 8+4 = 12, Giáp 0+2 = 2/2 (Yamato: 52.5F, 60G). |
+| **Ngựa Chém Giáp** | Heavy Cavalry | 38 | 4 | 70 Thực, 80 Vàng | 150 | 10 | 1 / 1 | 0 | 2.00 | 1.5s | 4 | 40s | Nâng từ Chém (350F, 125G). **Sẵn giáp 1/1, +5 vs Bộ binh**. Max BS/BC: Công 17, Giáp 5/3. |
+| **Chém Thần (Hiệp Sĩ)** | Cataphract | 283 | 4 | 70 Thực, 80 Vàng | 180 | 12 | 3 / 1 | 0 | 2.00 | 1.5s | 4 | 40s | Nâng cấp: 2000F, 850G. **Sẵn giáp 3/1, +5 vs Bộ binh**. Max BS/BC: **Công 19, Giáp 7/3**. |
+| **Lạc Đà** | Camel Rider | 338 | 3 | 70 Thực, 60 Vàng | 125 | 6 | 0 / 0 | 0 | 2.00 | 1.5s | 4 | 30s | **Tạo cực nhanh (30s)**. **+8 vs Kỵ binh, +4 vs Xe ngựa**. Lên Đời 4 nâng Đầu máu: **150 HP** (Palmyra: Tốc độ 2.50). |
+| **Sọc Đơn (Ngựa Bánh Xe)** | Chariot | 40 | 3 | 40 Thực, 60 Gỗ | 100 | 7 | 0 / 0 | 0 | 2.00 | 1.5s | 4 | 40s | Yêu cầu Bánh Xe. Kháng hú cực cao. Nâng BS: Công 7+4 = 11, Giáp 2/2 (Egyptian: **133 HP**). |
+| **Ngựa Đạp Đôi** | Scythe Chariot | 339 | 4 | 40 Thực, 60 Gỗ | 120 | 9 | 2 / 0 | 0 | 2.00 | 1.5s | 4 | 40s | Nâng cấp: 1200F, 800W. **Sẵn 2 giáp cận chiến**. **Chém lan 37.5% diện rộng** (Egyptian: **160 HP**). |
+| **Voi Húc Thường** | War Elephant | 46 | 4 | 170 Thực, 40 Vàng | 600 | 15 | 0 / 0 | 0 | 0.90 | 1.5s | 4 | 50s | **Dẫm lan xung quanh**. Nâng BS: Công 15+4 = 19 (Persian: **Tốc độ 1.35**, Carthage: **750 HP**, Phoenicia: 127.5F). |
 | **Voi Húc Thần (Bọc Giáp)** | Armored Elephant | 345 | 4 | 170 Thực, 40 Vàng | 600 | 18 | 2 / 1 | 0 | 0.90 | 1.5s | 5 | 50s | Nâng cấp: 1000F, 800G. **Sẵn giáp 2/1**. **Dẫm lan hủy diệt**. Max BS: **Công 22, Giáp 6/3** (Carthage: **750 HP**). |
 
 > [!TIP]
@@ -115,7 +115,7 @@ Binh chủng thiết giáp cận chiến sở hữu chỉ số công - thủ thu
 | :--- | :--- | :---: | :---: | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :--- |
 | **Lính Xiên Thường** | Hoplite | 93 | 3 | 60 Thực, 40 Vàng | 120 | 17 | 5 / 0 | 0 | 0.90 | 1.5s | 4 | 36s | **Giáp khởi điểm 5/0**. Đời 3 nâng BS: Công 17+4 = 21, Giáp 5+4 = 9/0 (Greek: Chạy 1.17, Carthage: 150 HP). |
 | **Lính Xiên Nâng Cấp** | Phalanx | 94 | 4 | 60 Thực, 40 Vàng | 120 | 20 | 7 / 0 | 0 | 0.90 | 1.5s | 4 | 36s | Nâng cấp: 300F, 100G. **Giáp khởi điểm 7/0**. Max BS: Công 27, Giáp 13/0. |
-| **Xiên Thần** | Centurion | 291 | 4 | 60 Thực, 40 Vàng | 160 | 30 | 8 / 0 | 0 | 0.90 | 1.5s | 5 | 36s | Nâng cấp: 1800F, 700G. **Sẵn giáp 8/0, Công 30**. Max BS: **Công 37, Giáp 14/0** (Carthage: **200 HP**, Greek: Chạy nhanh +30%, Macedon: +2 Giáp tên). |
+| **Xiên Thần** | Centurion | 291 | 4 | 60 Thực, 40 Vàng | 160 | 30 | 8 / 0 | 0 | 0.90 | 1.5s | 4 | 36s | Nâng cấp: 1800F, 700G. **Sẵn giáp 8/0, Công 30**. Max BS: **Công 37, Giáp 14/0** (Carthage: **200 HP**, Greek: Chạy nhanh 1.17, Macedon: +2 Giáp tên). |
 
 > [!NOTE]
 > * **Tốc độ lính Xiên:** Tốc độ di chuyển gốc trong game là **0.90**. Lính xiên Greek nhận điểm cộng +30% tốc độ di chuyển ($0.90 \times 1.30 = 1.17$), di chuyển gần tương đương bộ binh thường.
@@ -129,11 +129,11 @@ Vũ khí công thành mang hỏa lực hủy diệt diện rộng, là khắc ti
 
 | Đơn Vị (Việt Nam) | Tên Game (DLL) | ID Game | Đời | Chi Phí Gốc | HP | Công | Giáp (Melee/Pierce) | Tầm Xa (Tối Thiểu - Tối Đa) | Tốc Độ | Tốc Đánh (RoF) | Tầm Nhìn | Huấn Luyện | Bán Kính Nổ Lan / Cơ Chế Bắn |
 | :--- | :--- | :---: | :---: | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :--- |
-| **Cẩu Đá Nhỏ** | Stone Thrower | 35 | 3 | 180 Gỗ, 80 Vàng | 75 | 50 | 0 / 0 | 2.0 - 10.0 | 0.80 | 5.0s | 10 | 60s | Nổ lan diện tích 1.0 tile. Gây sát thương lên cả quân mình. (Hittite: 150 HP, Sumerian: Bắn nhanh x2). |
-| **Bắn Đá Vừa (Onager)** | Catapult | 36 | 4 | 180 Gỗ, 80 Vàng | 75 | 60 | 0 / 0 | 2.0 - 12.0 | 0.80 | 5.0s | 12 | 60s | Nâng cấp: 300F, 250W. Bán kính nổ lan 1.5 tiles. (Hittite: 150 HP, Sumerian: Bắn nhanh x2). |
-| **Cẩu Đá To (Thần)** | Heavy Catapult | 280 | 4 | 180 Gỗ, 80 Vàng | 150 | 60 | 0 / 0 | 2.0 - 13.0 | 0.80 | 5.0s | 13 | 60s | Nâng cấp: 1800F, 900W. **Máu 150 HP**. Nổ lan cực đại 2.0 tiles. (Hittite: **300 HP**, Sumerian: **Bắn nhanh x2**). |
-| **Pháo Lùn / Cẩu Tên** | Ballista | 11 | 3 | 100 Gỗ, 80 Vàng | 55 | 40 | 0 / 0 | 3.0 - 9.0 | 0.80 | 3.0s | 10 | 50s | Bắn tên xuyên thẳng không có sát thương nổ lan. Tốc độ bắn 3.0s/phát. |
-| **Pháo Liên Thanh** | Helepolis | 279 | 4 | 100 Gỗ, 80 Vàng | 55 | 40 | 0 / 0 | 3.0 - 10.0 | 0.80 | 1.5s | 10 | 50s | Nâng cấp: 1500F, 1000W. **Tốc độ bắn 1.5s (Nhanh gấp đôi Ballista!)**, xả tên liên tục phá tan đội hình đối phương. |
+| **Cẩu Đá Nhỏ** | Stone Thrower | 35 | 3 | 180 Gỗ, 80 Vàng | 75 | 50 | 0 / 0 | 2.0 - 10.0 | 0.80 | 5.0s | 13 | 60s | Nổ lan diện tích 0.5 tile (Min 2.0). Gây sát thương lên cả quân mình. (Hittite: 150 HP, Sumerian: Bắn nhanh x2). |
+| **Bắn Đá Vừa (Catapult)** | Catapult | 36 | 4 | 180 Gỗ, 80 Vàng | 75 | 60 | 0 / 0 | 2.0 - 12.0 | 0.80 | 5.0s | 15 | 60s | Nâng cấp: 300F, 250W. Bán kính nổ lan 1.5 tiles (Min 2.0). (Hittite: 150 HP, Sumerian: Bắn nhanh x2). |
+| **Cẩu Đá To (Thần)** | Heavy Catapult | 280 | 4 | 180 Gỗ, 80 Vàng | 150 | 60 | 0 / 0 | 2.0 - 13.0 | 0.80 | 5.0s | 16 | 60s | Nâng cấp: 1800F, 900W. **Máu 150 HP**. Nổ lan 1.5 tiles (Min 2.0). (Hittite: **300 HP**, Sumerian: **Bắn nhanh x2**). |
+| **Pháo Lùn / Cẩu Tên** | Ballista | 11 | 3 | 100 Gỗ, 80 Vàng | 55 | 40 | 0 / 0 | 3.0 - 9.0 | 0.80 | 3.0s | 11 | 50s | Bắn tên xuyên thẳng không có sát thương nổ lan (Min 3.0). Tốc độ bắn 3.0s/phát. |
+| **Pháo Liên Thanh** | Helepolis | 279 | 4 | 100 Gỗ, 80 Vàng | 55 | 40 | 0 / 0 | 3.0 - 10.0 | 0.80 | 1.5s | 12 | 50s | Nâng cấp: 1500F, 1000W. **Tốc độ bắn 1.5s (Nhanh gấp đôi Ballista!)**, xả tên liên tục phá tan đội hình đối phương (Min 3.0). |
 
 > [!WARNING]
 > * **Sát thương nổ lan thực tế:** Cẩu đá gây sát thương vật lý thật trên mặt đất (Blast Attack). Nếu quân đồng minh áp sát mục tiêu đang bị bắn, đòn đạn đá sẽ tiêu diệt cả quân mình!
@@ -149,7 +149,7 @@ Binh chủng tâm linh có khả năng thu phục binh lực đối phương và
 
 | Đơn Vị (Việt Nam) | Tên Game (DLL) | ID Game | Đời | Chi Phí Gốc | HP | Công | Giáp (Melee/Pierce) | Tầm Xa | Tốc Độ | Tốc Đánh (RoF) | Tầm Nhìn | Huấn Luyện | Điểm Đặc Trưng & Công Nghệ Nâng Cấp |
 | :--- | :--- | :---: | :---: | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :--- |
-| **Phù Thủy (Thầy Tu)** | Priest | 125 | 3 | 125 Vàng | 25 | 0 | 0 / 0 | 10.0 | 0.80 | 1.5s | 10 | 50s | Thu phục quân địch, tự động hồi máu cho đồng minh. Khắc tinh cứng của Ngựa chém, Lạc đà, Voi. |
+| **Phù Thủy (Thầy Tu)** | Priest | 125 | 3 | 125 Vàng | 25 | 0 | 0 / 0 | 10.0 | 0.80 | 1.5s | 12 | 50s | Thu phục quân địch, tự động hồi máu cho đồng minh. Khắc tinh cứng của Ngựa chém, Lạc đà, Voi. |
 
 ### Các Công Nghệ Nâng Cấp Tại Nhà BP:
 * **Mysticism (Đời 3, 120G):** Tăng tầm thu phục thêm **+3 ô** (Tầm xa 10 -> 13).
@@ -189,19 +189,19 @@ Binh chủng tâm linh có khả năng thu phục binh lực đối phương và
 
 | Đơn Vị (Việt Nam) | Tên Game (DLL) | ID Game | Đời | Chi Phí Gốc | HP | Công | Giáp (Melee/Pierce) | Tầm Xa | Tốc Độ | Tốc Đánh (RoF) | Tầm Nhìn | Huấn Luyện | Đặc Tính & Nâng Cấp |
 | :--- | :--- | :---: | :---: | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :--- |
-| **Thuyền Đánh Cá Nhỏ** | Fishing Boat | 13 | 1 | 50 Gỗ | 45 | 0 | 0 / 0 | 0 | 1.40 | - | 5 | 40s | Đánh bắt cá ven bờ. |
-| **Thuyền Bè** | Raft | 292 | 1 | 40 Gỗ | 40 | 0 | 0 / 0 | 0 | 1.50 | - | 5 | 40s | Thuyền bè trinh sát sơ khai. |
-| **Thuyền Vận Tải Nhẹ** | Light Transport | 17 | 1 | 150 Gỗ | 150 | 0 | 0 / 0 | 0 | 1.40 | - | 5 | 75s | Chở tối đa 5 đơn vị bộ binh/kỵ binh qua sông. |
-| **Thuyền Đánh Cá Lớn** | Fishing Ship | 14 | 2 | 50 Gỗ | 75 | 0 | 0 / 0 | 0 | 2.00 | - | 7 | 40s | Đánh cá xa bờ và tốc độ thu gom nhanh. |
-| **Thuyền Buôn Nhỏ** | Trade Boat | 15 | 2 | 100 Gỗ | 200 | 0 | 0 / 0 | 0 | 2.00 | - | 6 | 50s | Trao đổi tài nguyên tại bến tàu đồng minh. |
+| **Thuyền Đánh Cá Nhỏ** | Fishing Boat | 13 | 1 | 50 Gỗ | 45 | 0 | 0 / 0 | 0 | 1.40 | - | 6 | 40s | Đánh bắt cá ven bờ. |
+| **Thuyền Bè** | Raft | 292 | 1 | 40 Gỗ | 40 | 0 | 0 / 0 | 0 | 1.50 | - | 4 | 40s | Thuyền bè trinh sát sơ khai. |
+| **Thuyền Vận Tải Nhẹ** | Light Transport | 17 | 1 | 150 Gỗ | 150 | 0 | 0 / 0 | 0 | 1.40 | - | 4 | 75s | Chở tối đa 5 đơn vị bộ binh/kỵ binh qua sông. |
+| **Thuyền Đánh Cá Lớn** | Fishing Ship | 14 | 2 | 50 Gỗ | 75 | 0 | 0 / 0 | 0 | 2.00 | - | 6 | 40s | Đánh cá xa bờ và tốc độ thu gom nhanh. |
+| **Thuyền Buôn Nhỏ** | Trade Boat | 15 | 2 | 100 Gỗ | 200 | 0 | 0 / 0 | 0 | 2.00 | - | 4 | 50s | Trao đổi tài nguyên tại bến tàu đồng minh. |
 | **Thuyền Tên Nhẹ** | Scout Ship | 19 | 2 | 135 Gỗ | 120 | 5 | 0 / 0 | 5 | 1.75 | 1.5s | 7 | 60s | Bắn tên kiểm soát đường thủy Đời 2. |
-| **Thuyền Tên Chiến** | War Galley | 20 | 3 | 135 Gỗ | 160 | 8 | 0 / 0 | 6 | 1.75 | 1.7s | 8 | 60s | Nâng cấp từ Scout Ship (100F, 50W). |
-| **Thuyền Lửa** | Fire Galley | 360 | 3 | 115 Gỗ, 40 Vàng | 200 | 24 | 0 / 0 | 1 | 2.00 | 1.0s | 6 | 45s | Phun lửa cận chiến tốc độ 1.0s/phát, khắc tinh thuyền tên. |
-| **Thuyền Buôn Lớn** | Merchant Ship | 16 | 3 | 100 Gỗ | 250 | 0 | 0 / 0 | 0 | 2.50 | - | 7 | 50s | Tốc độ di chuyển 2.50. |
-| **Thuyền Vận Tải Lớn** | Heavy Transport | 18 | 3 | 150 Gỗ | 200 | 0 | 0 / 0 | 0 | 1.75 | - | 6 | 75s | Chở tối đa 10 đơn vị quân đội. |
-| **Thuyền Chiến 3 Tầng** | Trireme | 21 | 4 | 135 Gỗ | 200 | 12 | 0 / 0 | 7 | 1.75 | 1.8s | 9 | 60s | Nâng cấp từ War Galley (300F, 100W). |
-| **Thuyền Bắn Đá Nhỏ** | Catapult Trireme | 250 | 4 | 135 Gỗ, 75 Vàng | 120 | 35 | 0 / 0 | 9 | 1.35 | 5.0s | 10 | 90s | Bắn đá diện rộng phá hủy công trình ven biển. |
-| **Pháo Hạm Thần** | Juggernaught | 277 | 4 | 135 Gỗ, 75 Vàng | 200 | 35 | 0 / 0 | 10 | 1.35 | 5.0s | 11 | 90s | Nâng cấp: 2000F, 900W. Pháo hạm hủy diệt tối thượng. |
+| **Thuyền Tên Chiến** | War Galley | 20 | 3 | 135 Gỗ | 160 | 8 | 0 / 0 | 6 | 1.75 | 1.7s | 9 | 60s | Nâng cấp từ Scout Ship (100F, 50W). |
+| **Thuyền Lửa** | Fire Galley | 360 | 3 | 115 Gỗ, 40 Vàng | 200 | 24 | 0 / 0 | 1 | 2.00 | 1.0s | 8 | 45s | Phun lửa cận chiến tốc độ 1.0s/phát, khắc tinh thuyền tên. |
+| **Thuyền Buôn Lớn** | Merchant Ship | 16 | 3 | 100 Gỗ | 250 | 0 | 0 / 0 | 0 | 2.50 | - | 4 | 50s | Tốc độ di chuyển 2.50. |
+| **Thuyền Vận Tải Lớn** | Heavy Transport | 18 | 3 | 150 Gỗ | 200 | 0 | 0 / 0 | 0 | 1.75 | - | 5 | 75s | Chở tối đa 10 đơn vị quân đội. |
+| **Thuyền Chiến 3 Tầng** | Trireme | 21 | 4 | 135 Gỗ | 200 | 12 | 0 / 0 | 7 | 1.75 | 1.8s | 10 | 60s | Nâng cấp từ War Galley (300F, 100W). |
+| **Thuyền Bắn Đá Nhỏ** | Catapult Trireme | 250 | 4 | 135 Gỗ, 75 Vàng | 120 | 35 | 0 / 0 | 9 | 1.35 | 5.0s | 12 | 90s | Bắn đá diện rộng phá hủy công trình ven biển. |
+| **Pháo Hạm Thần** | Juggernaught | 277 | 4 | 135 Gỗ, 75 Vàng | 200 | 35 | 0 / 0 | 10 | 1.35 | 5.0s | 13 | 90s | Nâng cấp: 2000F, 900W. Pháo hạm hủy diệt tối thượng. |
 
 ---
 
@@ -222,7 +222,7 @@ Binh chủng tâm linh có khả năng thu phục binh lực đối phương và
 | **11. Choson** | Đông Á | Dòng kiếm BB **+80 HP** (Legion đạt 240 HP); Phù thủy -30% giá (87 Gold); Tháp +2 Range | **Không có Bánh xe**; Ngựa chém không có Đầu máu, không Giáp 4 |
 | **12. Roman** | La Mã | Nhà rẻ -15% gỗ; Chòi -50% đá (75 đá); Dòng kiếm BB **chém nhanh +33%** | **Không có Bánh xe**; Không có Cẩu đá to đời 4 |
 | **13. Carthaginian** | La Mã | Voi và Lính xiên **+25% HP** (Voi 750 HP, Xiên thần 200 HP); Tháp canh lửa +50% công | **Không có Bánh xe**; Không Ngựa chém BL |
-| **14. Palmyran** | La Mã | Dân làm việc **+20%**, có sẵn **1 giáp (1/0)**; Thuế chuyển hàng 0%; Lạc đà chạy nhanh nhất **(2.19)** | Dân đắt **75 Thực**; nếu mất dân đầu game sẽ rất khó hồi phục |
+| **14. Palmyran** | La Mã | Dân làm việc **+20%**, có sẵn **1 giáp (1/0)**; Thuế chuyển hàng 0%; Lạc đà chạy nhanh nhất **(2.50)** | Dân đắt **75 Thực**; nếu mất dân đầu game sẽ rất khó hồi phục |
 | **15. Macedonian** | La Mã | Toàn quân **kháng Phù thủy x4 lần**; Lính bộ & Cẩu đá +2 tầm nhìn; Pháo BK rẻ **50% chi phí**; Lính xiên +2 giáp tên | **KHÔNG CÓ NHÀ CHỢ (BM)** (không Bánh xe, không chặt gỗ, không đào vàng/đá) |
 | **16. Greek** | Hy Lạp | Lính xiên **chạy nhanh +30% (tốc độ 1.17)**; Tàu chiến chạy nhanh +30% | **Không có Bánh xe**; Không Ngựa chém BL; Không Lạc đà; Rất tốn vàng |
 
@@ -247,9 +247,9 @@ Trong mã nguồn Genie Engine của `empires.dat`, sát thương cộng thêm �
   * Gây sát thương **gấp đôi (x2 attack)** khi chém trúng Phù thủy (Priest).
 
 ### 2. Cơ Chế Sát Thương Lan (Blast Width & Splash Damage):
-* **Ngựa đạp đôi (Scythe Chariot):** Bán kính lan 1.0 tile, gây **37.5% sát thương cơ bản** lan ra tất cả các mục tiêu đứng sát bên cạnh.
-* **Voi húc (War Elephant / Armored Elephant):** Gây **50% sát thương chà đạp** lan sang các đơn vị đứng cạnh bên mục tiêu chính trong bán kính 0.5 tile.
-* **Pháo cẩu đá (Stone Thrower / Catapult / Heavy Catapult):** Gây sát thương nổ lan hoàn toàn 100% tại tâm và giảm dần theo khoảng cách (Bán kính từ 1.0 đến 2.0 tiles). Gây sát thương lên cả quân phe mình.
+* **Ngựa đạp đôi (Scythe Chariot):** Bán kính lan 2.0 tiles, gây **37.5% sát thương cơ bản** lan ra tất cả các mục tiêu đứng sát bên cạnh.
+* **Voi húc (War Elephant / Armored Elephant):** Bán kính lan 2.0 tiles, gây **50% sát thương chà đạp** lan sang các đơn vị đứng cạnh bên mục tiêu chính.
+* **Pháo cẩu đá (Stone Thrower / Catapult / Heavy Catapult):** Gây sát thương nổ lan diện rộng (Stone Thrower: 0.5 tile; Catapult & Heavy Catapult: 1.5 tiles). Gây sát thương lên cả quân phe mình.
 
 ### 3. Cơ Chế Kháng Phù Thủy (Conversion Resistance):
 * **Đơn vị bình thường:** Tỷ lệ bị thu phục chuẩn (chu kỳ hú trung bình từ 4 - 8 lần).

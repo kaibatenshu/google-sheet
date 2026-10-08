@@ -12,6 +12,11 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 function initApp() {
+  const urlParams = new URLSearchParams(window.location.search);
+  const civParam = urlParams.get('civ');
+  if (civParam && AOE_CIVILIZATIONS.some(c => c.id === civParam)) {
+    selectedMatrixCiv = civParam;
+  }
   renderCivTabs();
   renderMatrixTable();
 }
@@ -48,8 +53,209 @@ function selectCiv(civId) {
   renderMatrixTable();
 }
 
+function getAgeShortName(age) {
+  switch (age) {
+    case 1: return 'Đời 1 (Stone Age)';
+    case 2: return 'Đời 2 (Tool Age)';
+    case 3: return 'Đời 3 (Bronze Age)';
+    case 4: return 'Đời 4 (Iron Age)';
+    default: return `Đời ${age}`;
+  }
+}
+
 // =============================================================================
-// 2. BẢNG MA TRẬN CHỈ SỐ QUÂN CHUẨN SPREADSHEET (FULLWIDTH & GỌN GÀNG)
+// THÔNG TIN CÔNG TRÌNH TẠO QUÂN (ẢNH NHÀ + TÊN NHÀ HIỂN THỊ KHI RÊ CHUỘT)
+// =============================================================================
+function getUnitBuildingInfo(unit) {
+  const map = {
+    villager: {
+      bldgNameVi: "Nhà Chính",
+      bldgNameEn: "Town Center",
+      code: "TC",
+      image: "images/buildings/town_center.png",
+      note: "Sinh sản nông dân (20s) và lên đời"
+    },
+    clubman: {
+      bldgNameVi: "Doanh Trại",
+      bldgNameEn: "Barracks",
+      code: "BB",
+      image: "images/buildings/barracks.png",
+      note: "Huấn luyện bộ binh cận chiến sơ khai"
+    },
+    axeman: {
+      bldgNameVi: "Doanh Trại",
+      bldgNameEn: "Barracks",
+      code: "BB",
+      image: "images/buildings/barracks.png",
+      note: "Nâng cấp từ Lính chùy tại BB (Đời 2)"
+    },
+    slinger: {
+      bldgNameVi: "Doanh Trại",
+      bldgNameEn: "Barracks",
+      code: "BB",
+      image: "images/buildings/barracks.png",
+      note: "Tạo tại Doanh Trại (BB), yêu cầu thêm Nhà Kho (BS)"
+    },
+    broad_swordsman: {
+      bldgNameVi: "Doanh Trại",
+      bldgNameEn: "Barracks",
+      code: "BB",
+      image: "images/buildings/barracks.png",
+      note: "Nâng cấp từ Kiếm ngắn tại BB (Đời 3)"
+    },
+    legion: {
+      bldgNameVi: "Doanh Trại",
+      bldgNameEn: "Barracks",
+      code: "BB",
+      image: "images/buildings/barracks.png",
+      note: "Nâng cấp bộ binh tối thượng tại BB (Đời 4)"
+    },
+    bowman: {
+      bldgNameVi: "Trường Bắn",
+      bldgNameEn: "Archery Range",
+      code: "BA",
+      image: "images/buildings/archery_range.png",
+      note: "Huấn luyện cung thủ sơ khai (Đời 2)"
+    },
+    chariot_archer: {
+      bldgNameVi: "Trường Bắn",
+      bldgNameEn: "Archery Range",
+      code: "BA",
+      image: "images/buildings/archery_range.png",
+      note: "Tạo tại BA, yêu cầu nâng cấp Bánh xe tại Chợ (BM)"
+    },
+    composite_bowman: {
+      bldgNameVi: "Trường Bắn",
+      bldgNameEn: "Archery Range",
+      code: "BA",
+      image: "images/buildings/archery_range.png",
+      note: "Nâng cấp từ Cung T tại BA (Đời 3)"
+    },
+    heavy_horse_archer: {
+      bldgNameVi: "Trường Bắn",
+      bldgNameEn: "Archery Range",
+      code: "BA",
+      image: "images/buildings/archery_range.png",
+      note: "Nâng cấp từ Cung C tại BA (Đời 4)"
+    },
+    elephant_archer: {
+      bldgNameVi: "Trường Bắn",
+      bldgNameEn: "Archery Range",
+      code: "BA",
+      image: "images/buildings/archery_range.png",
+      note: "Huấn luyện voi bắn cung hạng nặng (Đời 4)"
+    },
+    scout_cavalry: {
+      bldgNameVi: "Nhà Ngựa",
+      bldgNameEn: "Stable",
+      code: "BL",
+      image: "images/buildings/stable.png",
+      note: "Do thám và quấy rối mở bản đồ (Đời 2)"
+    },
+    camelry: {
+      bldgNameVi: "Nhà Ngựa",
+      bldgNameEn: "Stable",
+      code: "BL",
+      image: "images/buildings/stable.png",
+      note: "Kỵ binh khắc chế ngựa chém và kỵ binh (Đời 3)"
+    },
+    cavalry: {
+      bldgNameVi: "Nhà Ngựa",
+      bldgNameEn: "Stable",
+      code: "BL",
+      image: "images/buildings/stable.png",
+      note: "Kỵ binh sốc sát thương cận chiến (Đời 3)"
+    },
+    chariot: {
+      bldgNameVi: "Nhà Ngựa",
+      bldgNameEn: "Stable",
+      code: "BL",
+      image: "images/buildings/stable.png",
+      note: "Tạo tại BL, yêu cầu nghiên cứu Bánh xe tại Chợ (BM)"
+    },
+    scythe_chariot: {
+      bldgNameVi: "Nhà Ngựa",
+      bldgNameEn: "Stable",
+      code: "BL",
+      image: "images/buildings/stable.png",
+      note: "Tạo tại BL, yêu cầu nâng cấp Đạp đôi từ Sọc đơn (Đời 4)"
+    },
+    cataphract: {
+      bldgNameVi: "Nhà Ngựa",
+      bldgNameEn: "Stable",
+      code: "BL",
+      image: "images/buildings/stable.png",
+      note: "Nâng cấp kỵ binh chém tối thượng tại BL (Đời 4)"
+    },
+    armored_elephant: {
+      bldgNameVi: "Nhà Ngựa",
+      bldgNameEn: "Stable",
+      code: "BL",
+      image: "images/buildings/stable.png",
+      note: "Nâng cấp từ Voi húc War Elephant tại BL (Đời 4)"
+    },
+    hoplite: {
+      bldgNameVi: "Học Viện",
+      bldgNameEn: "Academy",
+      code: "BY",
+      image: "images/buildings/academy.png",
+      note: "Huấn luyện bộ binh hạng nặng giáp đồng (Đời 3)"
+    },
+    centurion: {
+      bldgNameVi: "Học Viện",
+      bldgNameEn: "Academy",
+      code: "BY",
+      image: "images/buildings/academy.png",
+      note: "Nâng cấp xiên thần tối thượng tại BY (Đời 4)"
+    },
+    stone_thrower: {
+      bldgNameVi: "Xưởng Pháo",
+      bldgNameEn: "Siege Workshop",
+      code: "BK",
+      image: "images/buildings/siege_workshop.png",
+      note: "Chế tạo máy bắn đá công thành tầm xa (Đời 3)"
+    },
+    ballista: {
+      bldgNameVi: "Xưởng Pháo",
+      bldgNameEn: "Siege Workshop",
+      code: "BK",
+      image: "images/buildings/siege_workshop.png",
+      note: "Chế tạo pháo bắn tên xuyên thấu (Đời 3)"
+    },
+    heavy_catapult: {
+      bldgNameVi: "Xưởng Pháo",
+      bldgNameEn: "Siege Workshop",
+      code: "BK",
+      image: "images/buildings/siege_workshop.png",
+      note: "Nâng cấp cẩu đá hủy diệt diện rộng tại BK (Đời 4)"
+    },
+    helepolis: {
+      bldgNameVi: "Xưởng Pháo",
+      bldgNameEn: "Siege Workshop",
+      code: "BK",
+      image: "images/buildings/siege_workshop.png",
+      note: "Nâng cấp pháo liên thanh cực nhanh tại BK (Đời 4)"
+    },
+    priest: {
+      bldgNameVi: "Đền Thờ",
+      bldgNameEn: "Temple",
+      code: "BP",
+      image: "images/buildings/temple.png",
+      note: "Đào tạo pháp sư / thầy tu thu phục và hồi máu (Đời 3)"
+    }
+  };
+
+  return map[unit.id] || {
+    bldgNameVi: "Doanh Trại",
+    bldgNameEn: "Barracks",
+    code: "BB",
+    image: "images/buildings/barracks.png",
+    note: "Công trình quân sự"
+  };
+}
+
+// =============================================================================
+// 2. BẢNG MA TRẬN CHỈ SỐ QUÂN (ĐÃ LẬT TOÀN DIỆN: CÁC ĐỜI LẬT LÊN TRÊN HÀNG CỘT)
 // =============================================================================
 
 function renderMatrixTable() {
@@ -57,92 +263,237 @@ function renderMatrixTable() {
   if (!table) return;
 
   const civ = AOE_CIVILIZATIONS.find(c => c.id === selectedMatrixCiv) || AOE_CIVILIZATIONS[0];
-
-  // 4. ẨN CÁC QUÂN KHÔNG CÓ TRONG QUỐC GIA ĐANG CHỌN (CHỈ HIỂN THỊ QUÂN CÓ TRONG TECH TREE)
-  const visibleUnits = MATRIX_UNITS.filter(u => {
-    const check = getUnitMatrixStats(u, civ.id, u.firstAge);
-    return check.hasUnit;
-  });
-
-  // Hiển thị đầy đủ cả 4 đời
   const agesToRender = [1, 2, 3, 4];
 
-  // 1. THEAD (HÀNG TIÊU ĐỀ QUÂN: ICON LỚN, ĐÃ BỎ CHỮ XÁM PHÍA DƯỚI)
+  // Lọc danh sách quân hiển thị (HÀNG DỌC BÊN TRÁI)
+  const visibleUnits = MATRIX_UNITS.filter(u => {
+    return [1, 2, 3, 4].some(age => {
+      const res = getUnitMatrixStats(u, civ.id, age);
+      return res.hasUnit && res.isAgeAvailable;
+    });
+  });
+
+  // 1. THEAD: 1 HÀNG TIÊU ĐỀ DUY NHẤT (QUÂN + 4 ĐỜI)
   let theadHtml = `
     <thead>
-      <tr class="row-header-units">
-        <th colspan="2" class="corner-units-label">
-          QUÂN
-        </th>
-        ${visibleUnits.map(u => `
-          <th class="th-unit-col" title="${u.name} (${u.nameEn}) • Mở khóa từ Đời ${u.firstAge}">
-            <div class="th-unit-content">
-              <div class="sheet-unit-avatar">
-                <img src="${u.image}" alt="${u.name}" class="sheet-unit-img">
-              </div>
-              <div class="sheet-unit-name" title="${u.name}">${u.name}</div>
-            </div>
-          </th>
-        `).join('')}
+      <tr class="row-header-eras">
+        <th class="corner-units-label-fixed">QUÂN</th>
+        <th class="th-era-col era-block-1">Đời 1</th>
+        <th class="th-era-col era-block-2">Đời 2</th>
+        <th class="th-era-col era-block-3">Đời 3</th>
+        <th class="th-era-col era-block-4">Đời 4</th>
       </tr>
     </thead>
   `;
 
-  // 2. TBODY (CỘT A: ĐỜI ROWSPAN 14, CỘT B: 14 CHỈ SỐ)
+  // 2. TBODY: MỖI HÀNG LÀ 1 QUÂN, MỖI Ô CÓ 2 DÒNG CANH GIỮA
   let tbodyHtml = '<tbody>';
 
-  agesToRender.forEach(age => {
-    MATRIX_METRICS.forEach((m, mIndex) => {
-      tbodyHtml += `<tr>`;
+  if (visibleUnits.length === 0) {
+    tbodyHtml += `
+      <tr>
+        <td colspan="5" class="empty-units-notice" style="text-align: center; padding: 35px; color: #94a3b8; font-size: 0.95rem;">
+          Không có đơn vị quân khả dụng.
+        </td>
+      </tr>
+    `;
+  } else {
+    visibleUnits.forEach(u => {
+      const bldg = getUnitBuildingInfo(u);
+      tbodyHtml += `<tr class="row-unit-full">`;
 
-      // CỘT A: ĐỜI (CHỈ TẠO Ở HÀNG ĐẦU CỦA ĐỜI)
-      if (mIndex === 0) {
-        tbodyHtml += `
-          <td rowspan="${MATRIX_METRICS.length}" class="col-age-cell age-block-${age}">
-            <div class="age-inner-text">ĐỜI ${age}</div>
-          </td>
-        `;
-      }
-
-      // CỘT B: CHỈ SỐ (ICON + TÊN)
-      const iconHtml = (m.icon && m.icon.endsWith('.png'))
-        ? `<img src="${m.icon}" class="metric-ico-img" alt="${m.label}">`
-        : `<span class="metric-ico">${m.icon}</span>`;
-
+      // CỘT QUÂN STICKY BÊN TRÁI (AVATAR ICON + TÊN QUÂN + HOVER HIỂN THỊ NHÀ TẠO QUÂN)
       tbodyHtml += `
-        <td class="col-metric-cell" title="${m.label}">
-          <div class="metric-flex">
-            ${iconHtml}
-            <span class="metric-text">${m.label}</span>
+        <td class="col-unit-name-cell-fixed">
+          <div class="unit-flex-cell">
+            <div class="sheet-unit-avatar-sm">
+              <img src="${u.image}" alt="${u.name}" class="sheet-unit-img">
+            </div>
+            <div class="unit-text-meta">
+              <div class="unit-cell-name-vi">${u.name}</div>
+              <div class="unit-cell-name-en">${u.nameEn}</div>
+            </div>
+          </div>
+
+          <!-- POPOVER HOVER: ẢNH NHÀ VÀ TÊN NHÀ TẠO RA QUÂN -->
+          <div class="unit-bldg-hover-card">
+            <div class="bldg-card-header">
+              <span class="bldg-card-tag">NƠI TẠO QUÂN</span>
+              <span class="bldg-card-code">${bldg.code}</span>
+            </div>
+            <div class="bldg-card-body">
+              <div class="bldg-card-img-wrapper">
+                <img src="${bldg.image}" alt="${bldg.bldgNameVi}" class="bldg-card-icon">
+              </div>
+              <div class="bldg-card-content">
+                <div class="bldg-card-title-vi">${bldg.bldgNameVi}</div>
+                <div class="bldg-card-title-en">${bldg.bldgNameEn}</div>
+                <div class="bldg-card-note">${bldg.note}</div>
+              </div>
+            </div>
           </div>
         </td>
       `;
 
-      // DỮ LIỆU CỦA TỪNG QUÂN (RÚT GỌN CHỮ DÀI, RÊ CHUỘT HIỆN TOOLTIP ĐẦY ĐỦ)
-      visibleUnits.forEach(u => {
-        const res = getUnitMatrixStats(u, civ.id, age);
-
-        if (!res.isAgeAvailable) {
-          tbodyHtml += `<td class="data-cell cell-locked-age" title="${u.name} mở khóa ở Đời ${u.firstAge}"></td>`;
-        } else {
-          const val = res.stats[m.key];
-          const cellObj = formatMatrixCell(m, val, u, civ, age);
-
-          tbodyHtml += `
-            <td class="data-cell ${cellObj.isBonus ? 'has-bonus' : ''}" title="${cellObj.title}">
-              ${cellObj.display}
-            </td>
-          `;
-        }
+      // 4 CỘT ĐỜI: MỖI Ô CÓ 2 DÒNG CANH GIỮA (TÀI NGUYÊN & CHỈ SỐ)
+      [1, 2, 3, 4].forEach(age => {
+        tbodyHtml += `
+          <td class="data-cell cell-age-entry era-cell-${age}">
+            ${renderUnitAgeCell(u, civ, age)}
+          </td>
+        `;
       });
 
       tbodyHtml += `</tr>`;
     });
-  });
+  }
 
   tbodyHtml += '</tbody>';
-
   table.innerHTML = theadHtml + tbodyHtml;
+}
+
+// -----------------------------------------------------------------------------
+// RENDER NỘI DUNG 2 DÒNG TRONG MỖI Ô (CANH GIỮA: DÒNG 1 TÀI NGUYÊN, DÒNG 2 CHỈ SỐ)
+// -----------------------------------------------------------------------------
+function renderUnitAgeCell(u, civ, age) {
+  const res = getUnitMatrixStats(u, civ.id, age);
+  if (!res.hasUnit || !res.isAgeAvailable) {
+    return `<div class="cell-age-locked">-</div>`;
+  }
+
+  const s = res.stats;
+
+  // DÒNG 1: TÀI NGUYÊN MUA (CANH GIỮA)
+  const costItems = [];
+  if (s.food > 0) {
+    const b = getCivBonusInfo(u.id, civ.id, 'food', s.food, age, u.name, 'Thực');
+    costItems.push(`
+      <span class="cost-item ${b.isBonus ? 'has-bonus-stat' : ''}" title="${b.tooltip}">
+        <img src="images/icons/food.png" class="res-mini-ico" alt="Thực">
+        <span class="cost-num food">${s.food}</span>
+      </span>
+    `);
+  }
+  if (s.wood > 0) {
+    const b = getCivBonusInfo(u.id, civ.id, 'wood', s.wood, age, u.name, 'Gỗ');
+    costItems.push(`
+      <span class="cost-item ${b.isBonus ? 'has-bonus-stat' : ''}" title="${b.tooltip}">
+        <img src="images/icons/wood.png" class="res-mini-ico" alt="Gỗ">
+        <span class="cost-num wood">${s.wood}</span>
+      </span>
+    `);
+  }
+  if (s.gold > 0) {
+    const b = getCivBonusInfo(u.id, civ.id, 'gold', s.gold, age, u.name, 'Vàng');
+    costItems.push(`
+      <span class="cost-item ${b.isBonus ? 'has-bonus-stat' : ''}" title="${b.tooltip}">
+        <img src="images/icons/gold.png" class="res-mini-ico" alt="Vàng">
+        <span class="cost-num gold">${s.gold}</span>
+      </span>
+    `);
+  }
+  if (s.stone > 0) {
+    const b = getCivBonusInfo(u.id, civ.id, 'stone', s.stone, age, u.name, 'Đá');
+    costItems.push(`
+      <span class="cost-item ${b.isBonus ? 'has-bonus-stat' : ''}" title="${b.tooltip}">
+        <img src="images/icons/stone.png" class="res-mini-ico" alt="Đá">
+        <span class="cost-num stone">${s.stone}</span>
+      </span>
+    `);
+  }
+  const costHtml = costItems.length > 0 ? costItems.join('') : '<span class="cost-free">0</span>';
+
+  // DÒNG 2: CÁC CHỈ SỐ (CANH GIỮA, CÓ TOOLTIP NẾU LÀ CHỈ SỐ ĐẶC BIỆT)
+  const statItems = [];
+
+  // 1. Thời gian huấn luyện (Train time)
+  if (s.trainTime && s.trainTime !== '-' && s.trainTime !== 0) {
+    const b = getCivBonusInfo(u.id, civ.id, 'trainTime', s.trainTime, age, u.name, 'Thời gian huấn luyện');
+    statItems.push(`
+      <span class="stat-pill ${b.isBonus ? 'has-bonus-stat' : ''}" title="${b.tooltip}">
+        <img src="images/icons/train_time.png" class="stat-mini-ico" alt="TG">
+        <span class="stat-pill-val">${s.trainTime}</span>
+      </span>
+    `);
+  }
+
+  // 2. Máu (HP)
+  if (s.hp > 0) {
+    const b = getCivBonusInfo(u.id, civ.id, 'hp', s.hp, age, u.name, 'Máu');
+    statItems.push(`
+      <span class="stat-pill ${b.isBonus ? 'has-bonus-stat' : ''}" title="${b.tooltip}">
+        <img src="images/icons/hp.png" class="stat-mini-ico" alt="HP">
+        <span class="stat-pill-val">${s.hp}</span>
+      </span>
+    `);
+  }
+
+  // 3. Công (Attack)
+  if (s.atk > 0) {
+    const b = getCivBonusInfo(u.id, civ.id, 'atk', s.atk, age, u.name, 'Công');
+    statItems.push(`
+      <span class="stat-pill ${b.isBonus ? 'has-bonus-stat' : ''}" title="${b.tooltip}">
+        <img src="images/icons/attack.png" class="stat-mini-ico" alt="Công">
+        <span class="stat-pill-val">${s.atk}</span>
+      </span>
+    `);
+  }
+
+  // 4. Giáp (Melee / Pierce Armor)
+  const meleeB = getCivBonusInfo(u.id, civ.id, 'melee', s.melee, age, u.name, 'Giáp cận');
+  const pierceB = getCivBonusInfo(u.id, civ.id, 'pierce', s.pierce, age, u.name, 'Giáp tên');
+  if (s.melee > 0 || s.pierce > 0 || meleeB.isBonus || pierceB.isBonus) {
+    const isArmorBonus = meleeB.isBonus || pierceB.isBonus;
+    const armorTooltip = isArmorBonus ? (meleeB.tooltip || pierceB.tooltip) : `Giáp cận: ${s.melee} | Giáp chống tên: ${s.pierce}`;
+    statItems.push(`
+      <span class="stat-pill ${isArmorBonus ? 'has-bonus-stat' : ''}" title="${armorTooltip}">
+        <img src="images/icons/melee_armor.png" class="stat-mini-ico" alt="Giáp">
+        <span class="stat-pill-val">${s.melee}/${s.pierce}</span>
+      </span>
+    `);
+  }
+
+  // 5. Tầm xa (Range)
+  if (s.range > 0) {
+    const b = getCivBonusInfo(u.id, civ.id, 'range', s.range, age, u.name, 'Tầm xa');
+    statItems.push(`
+      <span class="stat-pill ${b.isBonus ? 'has-bonus-stat' : ''}" title="${b.tooltip}">
+        <img src="images/icons/range.png" class="stat-mini-ico" alt="Tầm xa">
+        <span class="stat-pill-val">${s.range}</span>
+      </span>
+    `);
+  }
+
+  // 6. Tốc độ di chuyển (Speed)
+  if (s.speed > 0) {
+    const b = getCivBonusInfo(u.id, civ.id, 'speed', s.speed, age, u.name, 'Tốc độ');
+    statItems.push(`
+      <span class="stat-pill ${b.isBonus ? 'has-bonus-stat' : ''}" title="${b.tooltip}">
+        <img src="images/icons/speed.png" class="stat-mini-ico" alt="Tốc độ">
+        <span class="stat-pill-val">${s.speed}</span>
+      </span>
+    `);
+  }
+
+  // 7. Đặc tính / Bonus đặc biệt (nếu có)
+  if (s.bonus && s.bonus !== '-' && s.bonus !== 'Cơ bản' && s.bonus !== '0') {
+    const b = getCivBonusInfo(u.id, civ.id, 'bonus', s.bonus, age, u.name, 'Đặc tính');
+    statItems.push(`
+      <span class="stat-pill bonus-pill ${b.isBonus ? 'has-bonus-stat' : ''}" title="${b.tooltip}">
+        <img src="images/icons/bonus.png" class="stat-mini-ico" alt="Đặc tính">
+        <span class="stat-pill-val">${s.bonus}</span>
+      </span>
+    `);
+  }
+
+  const statsHtml = statItems.join('');
+
+  return `
+    <div class="cell-unit-2lines">
+      <div class="cell-line-cost">${costHtml}</div>
+      <div class="cell-line-stats">${statsHtml}</div>
+    </div>
+  `;
 }
 
 // 3. ĐỊNH DẠNG GIÁ TRỊ VÀ TOOLTIP CHO CELL (RÚT GỌN GỌN GÀNG, TOOLTIP RÕ RÀNG DỄ HIỂU)
@@ -292,7 +643,7 @@ function getCivBonusInfo(unitId, civId, key, val, age, unitName, metricLabel) {
       return { isBonus: true, tooltip: `⚡ Dân Persian: Săn hươu voi nhanh hơn 30%` };
     }
     if (unitId === "armored_elephant" && key === "speed") {
-      return { isBonus: true, tooltip: `⚡ Voi Persian: Tốc độ di chuyển tăng 50% (tốc độ 1.50)` };
+      return { isBonus: true, tooltip: `⚡ Voi Persian: Tốc độ di chuyển tăng 50% (tốc độ 1.35)` };
     }
   }
 
@@ -340,7 +691,7 @@ function getCivBonusInfo(unitId, civId, key, val, age, unitName, metricLabel) {
       return { isBonus: true, tooltip: `⚡ Dân Palmyran: Tốc độ làm việc nhanh hơn 20%` };
     }
     if (unitId === "camelry" && key === "speed") {
-      return { isBonus: true, tooltip: `⚡ Lạc đà Palmyran: Tốc độ chạy nhanh hơn 25% (tốc độ 2.19)` };
+      return { isBonus: true, tooltip: `⚡ Lạc đà Palmyran: Tốc độ chạy nhanh hơn 25% (tốc độ 2.50)` };
     }
   }
 
@@ -358,13 +709,13 @@ function getCivBonusInfo(unitId, civId, key, val, age, unitName, metricLabel) {
 
   if (civId === "greek") {
     if (["hoplite", "centurion"].includes(unitId) && key === "speed") {
-      return { isBonus: true, tooltip: `⚡ Xiên Greek: Tốc độ chạy nhanh hơn 30% (tốc độ 1.30)` };
+      return { isBonus: true, tooltip: `⚡ Xiên Greek: Tốc độ chạy nhanh hơn 30% (tốc độ 1.17)` };
     }
   }
 
   // 2. ĐẶC TÍNH KHẮC CHẾ / ĐẶC BIỆT CỦA TỪNG LOẠI QUÂN (Ô VÀNG)
   if (key === "bonus") {
-    if (val === "+1.5 vs Cung") return { isBonus: true, tooltip: `⭐ Quẩy đá: Gây thêm +1.5 sát thương khi bắn lính cung` };
+    if (val === "+2 vs Cung" || val === "+1.5 vs Cung") return { isBonus: true, tooltip: `⭐ Quẩy đá: Gây thêm +2 sát thương khi bắn lính cung` };
     if (val === "+8 vs Kỵ") return { isBonus: true, tooltip: `⭐ Lạc đà: Gây thêm +8 sát thương khi cận chiến với kỵ binh` };
     if (val === "+5 vs BB") return { isBonus: true, tooltip: `⭐ Ngựa chém: Gây thêm +5 sát thương khi cận chiến với bộ binh` };
     if (val === "x2 vs Hú") return { isBonus: true, tooltip: `⭐ Sọc đơn: Kháng phù thủy và gây sát thương x2 lên phù thủy` };
