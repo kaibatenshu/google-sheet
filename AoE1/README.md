@@ -29,6 +29,7 @@ Trong thư mục dự án này, hệ thống cơ sở dữ liệu đã được 
 
 | Tên Tệp | Định Dạng | Mô Tả Nội Dung |
 | :--- | :--- | :--- |
+| [`AOE1_UNIT_STATS.md`](file:///c:/Devtools/Projects/google-sheet/AoE1/AOE1_UNIT_STATS.md) | Markdown | **Cẩm nang tra cứu chỉ số toàn bộ binh chủng (chuẩn 100% RoR 1.0b): Máu, Công, Giáp, Tầm xa, Tốc độ, Huấn luyện, Công nghệ & Bonus.** |
 | [`01_16_Civilizations.csv`](file:///c:/Devtools/Projects/google-sheet/AoE1/01_16_Civilizations.csv) | CSV (UTF-8) | Dữ liệu đầy đủ 16 loại quân (Tên VN, Tên Anh, Tên Trung, Điểm mạnh/yếu, Tier đời 3 & 4). |
 | [`02_Units_Buildings.csv`](file:///c:/Devtools/Projects/google-sheet/AoE1/02_Units_Buildings.csv) | CSV (UTF-8) | Toàn bộ chỉ số lính, kỵ binh, pháo binh, phù thủy và công trình (Máu, Công, Giáp, Tầm xa, Chi phí). |
 | [`03_Tech_Tree.csv`](file:///c:/Devtools/Projects/google-sheet/AoE1/03_Tech_Tree.csv) | CSV (UTF-8) | Bảng cây công nghệ nâng cấp (Nhà BM, BC, BS, BP, Đời yêu cầu, Chi phí, Tác dụng cụ thể). |
@@ -111,7 +112,7 @@ Trong thư mục dự án này, hệ thống cơ sở dữ liệu đã được 
 
 ### 9. ⚔️ Yamato (大和 - Nhật Bản)
 * **Kiến trúc:** Đông Á.
-* **Đặc tính độc quyền:** Dân di chuyển nhanh **+30%** (tương tự Assyrian). Ngựa chém (Scout, Cavalry) rẻ hơn **25% vàng** (chỉ 75 vàng thay vì 100).
+* **Đặc tính độc quyền:** Tất cả đơn vị kỵ binh (Ngựa dò, Ngựa chém, Chém thần, Cung C) giảm **25% chi phí** (cả thực và vàng: Ngựa dò 75 Thực; Ngựa chém 52.5 Thực, 60 Vàng; Cung C 37.5 Thực, 52.5 Vàng). Tàu chiến **+30% HP**.
 * **Chất quân qua các đời:**
   * **Đời 3:** Vua của chiến thuật đánh Chém; đẻ ngựa chém liên tục không lo đứt nhịp vàng; cơ động bắt dân khắp bản đồ.
   * **Đời 4:** Ngựa chém thần (Cataphract), Cung A, Lính xiên. Không có Đạp đôi, không có Voi.
@@ -119,7 +120,7 @@ Trong thư mục dự án này, hệ thống cơ sở dữ liệu đã được 
 
 ### 10. 🎯 Minoan (米诺斯 - Mi-nô-an)
 * **Kiến trúc:** Hy Lạp.
-* **Đặc tính độc quyền:** Cung A (Composite Bowman) có tầm xa **+1 ở đời 3** và **+2 ở đời 4** (tầm xa tối đa lên tới **11 ô**, xa nhất game). Ruộng +60 thực.
+* **Đặc tính độc quyền:** Cung A (Composite Bowman) có tầm xa **+2 ngay từ đời 3** (cơ bản đạt 9 ô; lên đời 4 đủ công nghệ tối đa **11 ô**, xa nhất game). Ruộng +60 thực. Tàu chiến rẻ 33%.
 * **Chất quân qua các đời:**
   * **Đời 3:** Không có Cung R, không có Ngựa chém BL. Đánh Cung A (tầm xa 8-9) đứng tụ một góc; bất kỳ đạo quân nào lao vào đều ngã gục trước khi chạm tới.
   * **Đời 4:** Cung A tầm xa 11 kẹp Pháo cẩu to và Pháo lùn Ballista tạo thành pháo đài bất khả xâm phạm.

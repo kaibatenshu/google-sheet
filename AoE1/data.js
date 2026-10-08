@@ -342,13 +342,12 @@ const AOE_CIVILIZATIONS = [
     bannerColor: "#dc2626",
     architecture: "Đông Á (East Asian)",
     specialBonus: [
-      "Dân di chuyển nhanh hơn +30% (tương đương Assyrian)",
       "Tất cả kỵ binh (Ngựa dò, Ngựa chém, Chém thần, Cung C) giảm 25% chi phí (cả thực và vàng)",
-      "Tàu chiến máu +30%"
+      "Tàu chiến tăng +30% lượng máu (HP)"
     ],
     weakness: "Không có Cẩu đá nhà BK; Đời 4 không có Đạp đôi, không có Voi, Cung R yếu (không giáp tên).",
     unitsByAge: {
-      age1: ["Nông dân chạy nhanh +30%", "Lính chùy"],
+      age1: ["Nông dân chuẩn 50 thực", "Lính chùy"],
       age2: ["Ngựa dò giá rẻ 75 thực", "Lính rìu", "Cung trần"],
       age3: ["Ngựa chém BL (52.5 thực, 60 vàng - Vua ép chém)", "Cung A", "Phù thủy"],
       age4: ["Ngựa chém thần (Cataphract 52.5 thực, 60 vàng)", "Cung C thần rẻ", "Xiên thần"]
