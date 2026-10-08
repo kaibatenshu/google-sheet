@@ -105,10 +105,14 @@ function renderMatrixTable() {
       }
 
       // CỘT B: CHỈ SỐ (ICON + TÊN)
+      const iconHtml = (m.icon && m.icon.endsWith('.png'))
+        ? `<img src="${m.icon}" class="metric-ico-img" alt="${m.label}">`
+        : `<span class="metric-ico">${m.icon}</span>`;
+
       tbodyHtml += `
         <td class="col-metric-cell" title="${m.label}">
           <div class="metric-flex">
-            <span class="metric-ico">${m.icon}</span>
+            ${iconHtml}
             <span class="metric-text">${m.label}</span>
           </div>
         </td>

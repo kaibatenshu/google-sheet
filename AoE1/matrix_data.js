@@ -5,20 +5,20 @@
 
 // 1. DANH SÁCH 14 CHỈ SỐ (HÀNG B DỌC THEO TỪNG ĐỜI)
 const MATRIX_METRICS = [
-  { key: "food", icon: "🍗", label: "Thực (Food)" },
-  { key: "wood", icon: "🪵", label: "Gỗ (Wood)" },
-  { key: "gold", icon: "💰", label: "Vàng (Gold)" },
-  { key: "stone", icon: "⚪", label: "Đá (Stone)" },
-  { key: "hp", icon: "❤️", label: "Máu (HP)" },
-  { key: "atk", icon: "⚔️", label: "Công (Attack)" },
-  { key: "melee", icon: "Melee 🛡️", label: "Giáp cận chiến" },
-  { key: "pierce", icon: "Pierce 🛡️", label: "Giáp chống tên" },
-  { key: "range", icon: "🎯", label: "Tầm xa (Range)" },
-  { key: "trainTime", icon: "⏱️", label: "Thời gian huấn luyện" },
-  { key: "los", icon: "👁️", label: "Tầm nhìn (LOS)" },
-  { key: "tech", icon: "📝", label: "Nơi tạo / Nâng cấp" },
-  { key: "speed", icon: "🏃", label: "Tốc độ di chuyển" },
-  { key: "bonus", icon: "⚡", label: "Đặc tính / Bonus" }
+  { key: "food", icon: "images/icons/food.png", label: "Thực (Food)" },
+  { key: "wood", icon: "images/icons/wood.png", label: "Gỗ (Wood)" },
+  { key: "gold", icon: "images/icons/gold.png", label: "Vàng (Gold)" },
+  { key: "stone", icon: "images/icons/stone.png", label: "Đá (Stone)" },
+  { key: "hp", icon: "images/icons/hp.png", label: "Máu (HP)" },
+  { key: "atk", icon: "images/icons/attack.png", label: "Công (Attack)" },
+  { key: "melee", icon: "images/icons/melee_armor.png", label: "Giáp cận chiến" },
+  { key: "pierce", icon: "images/icons/pierce_armor.png", label: "Giáp chống tên" },
+  { key: "range", icon: "images/icons/range.png", label: "Tầm xa (Range)" },
+  { key: "trainTime", icon: "images/icons/train_time.png", label: "Thời gian huấn luyện" },
+  { key: "los", icon: "images/icons/los.png", label: "Tầm nhìn (LOS)" },
+  { key: "tech", icon: "images/icons/building.png", label: "Nơi tạo / Nâng cấp" },
+  { key: "speed", icon: "images/icons/speed.png", label: "Tốc độ di chuyển" },
+  { key: "bonus", icon: "images/icons/bonus.png", label: "Đặc tính / Bonus" }
 ];
 
 // 2. DANH SÁCH 25 ĐƠN VỊ QUÂN DÀN HÀNG NGANG THEO CỘT

@@ -500,7 +500,7 @@ const AOE_CIVILIZATIONS = [
     name: "Carthaginian",
     nameVi: "Cát-ta / Cạc-ta",
     nameCn: "迦太基",
-    icon: "🦣",
+    icon: "🐘",
     image: "images/civs/carthaginian.svg",
     bannerColor: "#7c2d12",
     architecture: "La Mã (Roman)",

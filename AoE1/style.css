@@ -1256,16 +1256,28 @@ footer {
 .metric-flex {
   display: flex;
   align-items: center;
-  gap: 4px;
-  font-size: 0.76rem;
+  gap: 6px;
+  font-size: 0.77rem;
   line-height: 1.2;
   white-space: nowrap;
 }
 
 .metric-ico {
   font-size: 0.85rem;
-  min-width: 16px;
+  min-width: 18px;
   text-align: center;
+}
+
+.metric-ico-img {
+  width: 18px;
+  height: 18px;
+  min-width: 18px;
+  object-fit: contain;
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+  flex-shrink: 0;
+  display: inline-block;
+  vertical-align: middle;
 }
 
 .metric-text {
