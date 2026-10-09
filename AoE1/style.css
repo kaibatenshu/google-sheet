@@ -1527,7 +1527,7 @@ footer {
   left: calc(100% + 12px);
   top: 50%;
   transform: translateY(-50%) translateX(6px);
-  width: 260px;
+  width: 275px;
   background: #0f172a;
   border: 1.5px solid var(--gold);
   border-radius: 8px;
@@ -1539,6 +1539,9 @@ footer {
   transition: opacity 0.18s ease, transform 0.18s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.18s;
   z-index: 9999;
   text-align: left;
+  white-space: normal;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .unit-bldg-hover-card::before {
@@ -1602,7 +1605,7 @@ footer {
 
 .bldg-card-body {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 10px;
 }
 
@@ -1631,6 +1634,8 @@ footer {
 .bldg-card-content {
   flex: 1;
   min-width: 0;
+  white-space: normal;
+  word-wrap: break-word;
 }
 
 .bldg-card-title-vi {
@@ -1650,7 +1655,10 @@ footer {
 .bldg-card-note {
   font-size: 0.73rem;
   color: #e2e8f0;
-  line-height: 1.3;
+  line-height: 1.35;
+  white-space: normal;
+  word-break: normal;
+  overflow-wrap: break-word;
 }
 
 /* 3. HÀNG TIÊU ĐỀ 4 ĐỜI (STICKY TRÊN CÙNG) */
