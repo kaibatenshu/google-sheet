@@ -49,18 +49,29 @@
   padding: 0;
 }
 
+html, body {
+  height: 100vh;
+  max-height: 100vh;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
 body {
   background-color: var(--bg-body);
   color: var(--text-main);
   font-family: var(--font-sans);
   line-height: 1.6;
-  min-height: 100vh;
+  height: 100vh;
+  max-height: 100vh;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
 }
 
 /* HEADER & HERO FULLWIDTH */
 .header-fullwidth {
+  flex-shrink: 0;
   background: #0d121c;
   border-bottom: none;
   padding: 6px 14px 2px;
@@ -165,9 +176,13 @@ body {
   width: 100% !important;
   max-width: 100% !important;
   margin: 0 !important;
-  padding: 0 14px 14px !important;
+  padding: 0 14px 10px !important;
   box-sizing: border-box !important;
-  flex: 1;
+  flex: 1 1 0;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
 }
 
 /* ACTIVE CIV BANNER TỔNG QUAN */
@@ -1059,12 +1074,13 @@ footer {
   font-style: italic;
 }
 
-/* SPREADSHEET TABLE CONTAINER (CHỈ CUỘN NGANG KHI TRÀN CỘT, KHÔNG LỒNG CUỘN DỌC) */
+/* SPREADSHEET TABLE CONTAINER (THANH CUỘN DUY NHẤT CỦA CẢ TRANG, KHÔNG LỒNG CUỘN) */
 .spreadsheet-container {
   width: 100%;
-  max-height: none;
+  flex: 1 1 0;
+  min-height: 0;
   overflow-x: auto;
-  overflow-y: visible;
+  overflow-y: auto;
   border: 1.5px solid #2d3748;
   border-top: none;
   border-radius: 0 0 var(--radius-md) var(--radius-md);
@@ -1467,7 +1483,7 @@ footer {
 }
 
 .row-unit-full {
-  height: 60px;
+  height: 48px;
   transition: all 0.15s ease-in-out;
 }
 
@@ -1706,7 +1722,7 @@ footer {
 
 /* 4. Ô NỘI DUNG 2 DÒNG CANH GIỮA TRONG TỪNG ĐỜI */
 .cell-age-entry {
-  padding: 4px 6px;
+  padding: 3px 6px 3px;
   text-align: center;
   vertical-align: middle;
   background: #0d121c;
@@ -1719,17 +1735,18 @@ footer {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 5px;
+  gap: 2px;
   width: 100%;
 }
 
-/* DÒNG 1: TÀI NGUYÊN MUA (CANH GIỮA) */
+/* DÒNG 1: TÀI NGUYÊN MUA (CANH GIỮA, CÁCH TOP 1 CHÚT XÍU) */
 .cell-line-cost {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 8px;
   flex-wrap: wrap;
+  margin-top: 1px;
 }
 
 .cost-item {
@@ -1763,13 +1780,14 @@ footer {
   font-size: 0.8rem;
 }
 
-/* DÒNG 2: CÁC CHỈ SỐ (CANH GIỮA, CÓ TOOLTIP) */
+/* DÒNG 2: CÁC CHỈ SỐ (CANH GIỮA, CÓ TOOLTIP, CÁCH BOTTOM CHÚT XÍU) */
 .cell-line-stats {
   display: flex;
   align-items: center;
   justify-content: safe center;
   gap: 4px;
   flex-wrap: wrap;
+  margin-bottom: 1px;
 }
 
 .stat-pill {
